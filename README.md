@@ -32,8 +32,8 @@ Add `.specify/extension-catalogs.yml` to a Spec-Kit project (see
 
 ```yaml
 catalogs:
-  - name: ACME Org Catalog
-    url: https://raw.githubusercontent.com/YOUR-ORG/speckit-extension-catalog/main/catalog.json
+  - name: RISK Org Catalog
+    url: https://raw.githubusercontent.com/risk/speckit-extensions/main/catalog.json
     priority: 10
     install_allowed: true
     description: Curated, org-approved Spec-Kit extensions.
@@ -95,7 +95,7 @@ defaults via environment variable.
 To build locally (e.g. to preview):
 
 ```bash
-python scripts/build.py --repo YOUR-ORG/speckit-extension-catalog --tag v0.1.0
+python scripts/build.py --repo risk/speckit-extensions --tag v0.1.0
 ```
 
 ## Catalog schema
@@ -105,7 +105,7 @@ Each entry requires: `id`, `name`, `version`, `description`, `download_url` (HTT
 
 ## First-time setup checklist
 
-- [ ] Replace every `YOUR-ORG/speckit-extension-catalog` with your real repo.
+- [ ] Confirm the repo slug `risk/speckit-extensions` matches your real GitHub repo.
 - [ ] Replace the `acme-hello` sample with your real extensions.
 - [ ] Push to GitHub and enable Actions.
 - [ ] Publish the first release to generate real `download_url`s.
