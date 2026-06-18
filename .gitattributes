@@ -1,0 +1,4 @@
+# Keep LF in the repo; scripts and workflows run on Linux CI.
+* text=auto eol=lf
+*.png binary
+*.zip binary
