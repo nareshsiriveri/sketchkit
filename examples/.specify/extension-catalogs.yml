@@ -1,0 +1,14 @@
+# SAMPLE consumer config.
+#
+# Copy this file into a Spec-Kit project as `.specify/extension-catalogs.yml`
+# to point that project at this org-wide catalog.
+#
+# Replace YOUR-ORG/speckit-extension-catalog with your real repo.
+# Lower `priority` = higher precedence in the catalog stack.
+
+catalogs:
+  - name: ACME Org Catalog
+    url: https://raw.githubusercontent.com/YOUR-ORG/speckit-extension-catalog/main/catalog.json
+    priority: 10
+    install_allowed: true
+    description: Curated, org-approved Spec-Kit extensions.

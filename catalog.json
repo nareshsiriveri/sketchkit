@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0",
+  "extensions": {
+    "acme-hello": {
+      "id": "acme-hello",
+      "name": "ACME Hello",
+      "version": "0.1.0",
+      "description": "Sample org extension that adds a greeting slash command.",
+      "download_url": "https://github.com/YOUR-ORG/speckit-extension-catalog/releases/download/v0.1.0/acme-hello-0.1.0.zip"
+    }
+  }
+}

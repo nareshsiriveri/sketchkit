@@ -1,0 +1,54 @@
+name: Publish extensions
+
+# When you publish a GitHub Release (tag like v0.1.0), this:
+#   1. Builds every extension ZIP and regenerates catalog.json with the
+#      release download URLs.
+#   2. Uploads the ZIPs as assets on that release.
+#   3. Commits the updated catalog.json back to main so consumers'
+#      raw.githubusercontent.com URL always points at the latest catalog.
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install pyyaml
+
+      - name: Build ZIPs and regenerate catalog.json
+        env:
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: python scripts/build.py
+
+      - name: Validate
+        run: python scripts/validate.py
+
+      - name: Upload ZIPs to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ github.event.release.tag_name }}" dist/*.zip --clobber
+
+      - name: Commit updated catalog.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet catalog.json; then
+            git add catalog.json
+            git commit -m "chore: update catalog.json for ${{ github.event.release.tag_name }}"
+            git push origin main
+          else
+            echo "catalog.json unchanged."
+          fi

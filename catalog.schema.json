@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/speckit/catalog.schema.json",
+  "title": "Spec-Kit Extension Catalog",
+  "description": "Schema (v1.0) for a Spec-Kit extension catalog JSON file.",
+  "type": "object",
+  "required": ["schema_version", "extensions"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0",
+      "description": "Catalog schema version. Must be the string \"1.0\"."
+    },
+    "extensions": {
+      "type": "object",
+      "description": "Map of extension id -> extension metadata.",
+      "minProperties": 1,
+      "propertyNames": {
+        "pattern": "^[a-z0-9-]+$"
+      },
+      "additionalProperties": {
+        "type": "object",
+        "required": ["id", "name", "version", "description", "download_url"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$",
+            "description": "Unique extension id. Lowercase alphanumeric and hyphens only."
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Human-readable extension name."
+          },
+          "version": {
+            "type": "string",
+            "pattern": "^\\d+\\.\\d+\\.\\d+([-+].+)?$",
+            "description": "Semantic version of the extension."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "What the extension does."
+          },
+          "download_url": {
+            "type": "string",
+            "pattern": "^https://",
+            "description": "HTTPS URL to the downloadable extension ZIP."
+          }
+        }
+      }
+    }
+  }
+}

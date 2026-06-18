@@ -1,0 +1,12 @@
+# Build output (ZIPs are published to GitHub Releases, not committed).
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
