@@ -1,0 +1,7 @@
+# gitignore-syntax patterns to EXCLUDE from the published ZIP.
+__pycache__/
+*.pyc
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db

@@ -1,0 +1,11 @@
+# Spec-Kit extension manifest.
+
+id: adr-logger
+name: ADR Logger
+version: 0.1.0
+description: Create and maintain Architecture Decision Records from the Spec-Kit workflow.
+speckit_version: ">=0.1.0"
+
+commands:
+  - speckit.adr-logger.new
+  - speckit.adr-logger.list
