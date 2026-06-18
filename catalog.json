@@ -6,7 +6,7 @@
       "name": "ACME Hello",
       "version": "0.1.0",
       "description": "Sample org extension that adds a greeting slash command.",
-      "download_url": "https://github.com/risk/speckit-extensions/releases/download/v0.1.0/acme-hello-0.1.0.zip"
+      "download_url": "https://github.com/Sketchkit/speckit-extensions/releases/download/v0.1.0/acme-hello-0.1.0.zip"
     }
   }
 }

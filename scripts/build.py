@@ -9,7 +9,7 @@ this script:
   3. Writes a catalog.json (schema_version "1.0") mapping id -> metadata.
 
 Usage:
-  python scripts/build.py --repo risk/speckit-extensions --tag v0.1.0
+  python scripts/build.py --repo Sketchkit/speckit-extensions --tag v0.1.0
 
 In CI, --repo defaults to $GITHUB_REPOSITORY and --tag to the release tag.
 """
@@ -114,7 +114,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--repo",
-        default=os.environ.get("GITHUB_REPOSITORY", "risk/speckit-extensions"),
+        default=os.environ.get("GITHUB_REPOSITORY", "Sketchkit/speckit-extensions"),
         help="GitHub org/repo used to build release download URLs.",
     )
     parser.add_argument(

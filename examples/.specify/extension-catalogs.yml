@@ -6,8 +6,8 @@
 # Lower `priority` = higher precedence in the catalog stack.
 
 catalogs:
-  - name: RISK Org Catalog
-    url: https://raw.githubusercontent.com/risk/speckit-extensions/main/catalog.json
+  - name: Sketchkit Org Catalog
+    url: https://raw.githubusercontent.com/Sketchkit/speckit-extensions/main/catalog.json
     priority: 10
     install_allowed: true
     description: Curated, org-approved Spec-Kit extensions.
