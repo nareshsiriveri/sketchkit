@@ -1,11 +1,29 @@
-# Spec-Kit extension manifest.
+schema_version: "1.0"
 
-id: adr-logger
-name: ADR Logger
-version: 0.1.0
-description: Create and maintain Architecture Decision Records from the Spec-Kit workflow.
-speckit_version: ">=0.1.0"
+extension:
+  id: adr-logger
+  name: "ADR Logger"
+  version: "0.1.0"
+  description: "Create and maintain Architecture Decision Records from the Spec-Kit workflow."
+  author: Sketchkit
+  repository: https://github.com/Sketchkit/speckit-extensions
+  license: MIT
+  category: documentation
+  effect: read-write
 
-commands:
-  - speckit.adr-logger.new
-  - speckit.adr-logger.list
+requires:
+  speckit_version: ">=0.2.0"
+
+provides:
+  commands:
+    - name: speckit.adr-logger.new
+      file: commands/speckit.adr-logger.new.md
+      description: "Create a new Architecture Decision Record in docs/adr/."
+    - name: speckit.adr-logger.list
+      file: commands/speckit.adr-logger.list.md
+      description: "List all Architecture Decision Records and their status."
+
+tags:
+  - documentation
+  - adr
+  - governance

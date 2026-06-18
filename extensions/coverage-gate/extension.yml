@@ -1,16 +1,34 @@
-# Spec-Kit extension manifest.
+schema_version: "1.0"
 
-id: coverage-gate
-name: Coverage Gate
-version: 0.1.0
-description: Enforce a minimum test-coverage threshold via a command and a lifecycle hook.
-speckit_version: ">=0.1.0"
+extension:
+  id: coverage-gate
+  name: "Coverage Gate"
+  version: "0.1.0"
+  description: "Enforce a minimum test-coverage threshold via a command and a lifecycle hook."
+  author: Sketchkit
+  repository: https://github.com/Sketchkit/speckit-extensions
+  license: MIT
+  category: quality
+  effect: read-only
 
-commands:
-  - speckit.coverage-gate.check
+requires:
+  speckit_version: ">=0.2.0"
 
-# Lifecycle hook. NOTE: confirm `event` matches a real Spec-Kit lifecycle
-# event name for your version before relying on it.
+provides:
+  commands:
+    - name: speckit.coverage-gate.check
+      file: commands/speckit.coverage-gate.check.md
+      description: "Report current test coverage and whether it meets the threshold."
+
+# Hooks are keyed by Spec-Kit lifecycle event and reference a provided command.
+# Valid events include before_/after_ {specify,plan,tasks,implement,analyze,...}.
 hooks:
-  - event: pre-implement
-    script: scripts/check_coverage.py
+  before_implement:
+    command: speckit.coverage-gate.check
+    optional: true
+    description: "Check coverage before implementation begins."
+
+tags:
+  - quality
+  - testing
+  - coverage

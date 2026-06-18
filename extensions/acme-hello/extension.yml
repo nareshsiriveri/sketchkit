@@ -1,26 +1,24 @@
-# Spec-Kit extension manifest.
-# Docs: https://github.com/github/spec-kit  (Extensions section)
+schema_version: "1.0"
 
-# Unique id. Must match ^[a-z0-9-]+$ and match this directory name.
-id: acme-hello
+extension:
+  id: acme-hello
+  name: "ACME Hello"
+  version: "0.1.0"
+  description: "Sample org extension that adds a greeting slash command. Replace with your real extensions."
+  author: Sketchkit
+  repository: https://github.com/Sketchkit/speckit-extensions
+  license: MIT
+  effect: read-only
 
-# Human-readable name surfaced in the catalog.
-name: ACME Hello
+requires:
+  speckit_version: ">=0.2.0"
 
-# Semantic version. Drives the published ZIP name: acme-hello-<version>.zip
-version: 0.1.0
+provides:
+  commands:
+    - name: speckit.acme-hello.greet
+      file: commands/speckit.acme-hello.greet.md
+      description: "Greet the user and confirm the ACME Hello extension is active."
 
-# Short description shown in the catalog.
-description: Sample org extension that adds a greeting slash command.
-
-# Minimum Spec-Kit version this extension supports.
-speckit_version: ">=0.1.0"
-
-# At least one of `commands` or `hooks` is required.
-# Command ids must follow the pattern: speckit.<ext-id>.<cmd>
-commands:
-  - speckit.acme-hello.greet
-
-# hooks:
-#   - event: pre-plan
-#     script: scripts/check.py
+tags:
+  - sample
+  - hello

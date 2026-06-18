@@ -71,7 +71,7 @@ def main() -> int:
         if url and not url.startswith("https://"):
             errors.append(f"catalog['{key}']: download_url must be HTTPS")
 
-    # Validate source manifests.
+    # Validate source manifests against the Spec-Kit nested schema.
     if EXT_DIR.exists():
         for ext_path in sorted(p for p in EXT_DIR.iterdir() if p.is_dir()):
             manifest_path = ext_path / "extension.yml"
@@ -79,18 +79,44 @@ def main() -> int:
                 errors.append(f"{ext_path.name}: missing extension.yml")
                 continue
             manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8")) or {}
-            ext_id = manifest.get("id")
+
+            if manifest.get("schema_version") != "1.0":
+                errors.append(f"{manifest_path}: schema_version must be \"1.0\"")
+
+            ext = manifest.get("extension") or {}
+            ext_id = ext.get("id")
             if ext_id != ext_path.name:
                 errors.append(
-                    f"{manifest_path}: id '{ext_id}' must match directory '{ext_path.name}'"
+                    f"{manifest_path}: extension.id '{ext_id}' must match directory '{ext_path.name}'"
                 )
             if ext_id and not ID_RE.match(str(ext_id)):
-                errors.append(f"{manifest_path}: id must match ^[a-z0-9-]+$")
-            version = manifest.get("version")
+                errors.append(f"{manifest_path}: extension.id must match ^[a-z0-9-]+$")
+            version = ext.get("version")
             if not version or not SEMVER_RE.match(str(version)):
-                errors.append(f"{manifest_path}: version '{version}' is not semver")
-            if not manifest.get("commands") and not manifest.get("hooks"):
-                errors.append(f"{manifest_path}: must declare at least one command or hook")
+                errors.append(f"{manifest_path}: extension.version '{version}' is not semver")
+            if not ext.get("description"):
+                errors.append(f"{manifest_path}: missing extension.description")
+            if ext.get("effect") and ext["effect"] not in ("read-only", "read-write"):
+                errors.append(f"{manifest_path}: extension.effect must be read-only or read-write")
+
+            if not (manifest.get("requires") or {}).get("speckit_version"):
+                errors.append(f"{manifest_path}: missing requires.speckit_version")
+
+            commands = (manifest.get("provides") or {}).get("commands") or []
+            hooks = manifest.get("hooks") or {}
+            if not commands and not hooks:
+                errors.append(f"{manifest_path}: must provide at least one command or hook")
+            for cmd in commands:
+                if not isinstance(cmd, dict) or "name" not in cmd or "file" not in cmd:
+                    errors.append(f"{manifest_path}: each command needs 'name' and 'file'")
+                    continue
+                cmd_file = ext_path / cmd["file"]
+                if not cmd_file.exists():
+                    errors.append(f"{manifest_path}: command file not found: {cmd['file']}")
+                if not str(cmd["name"]).startswith(f"speckit.{ext_id}."):
+                    errors.append(
+                        f"{manifest_path}: command '{cmd['name']}' must match speckit.{ext_id}.<cmd>"
+                    )
 
     if errors:
         print(f"FAIL: {len(errors)} problem(s):")

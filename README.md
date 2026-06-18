@@ -57,21 +57,46 @@ defaults via environment variable.
 ## Adding an extension (for catalog maintainers)
 
 1. Create `extensions/<id>/extension.yml` (`<id>` must match `^[a-z0-9-]+$` and the
-   directory name):
+   directory name). Spec-Kit manifests nest metadata under `extension:`,
+   `requires:`, and `provides:`:
 
    ```yaml
-   id: my-extension
-   name: My Extension
-   version: 0.1.0
-   description: What it does.
-   speckit_version: ">=0.1.0"
-   commands:
-     - speckit.my-extension.do-thing
+   schema_version: "1.0"
+
+   extension:
+     id: my-extension
+     name: "My Extension"
+     version: "0.1.0"
+     description: What it does.
+     author: Sketchkit
+     repository: https://github.com/Sketchkit/speckit-extensions
+     license: MIT
+     effect: read-only        # optional: read-only | read-write
+
+   requires:
+     speckit_version: ">=0.2.0"
+
+   provides:
+     commands:
+       - name: speckit.my-extension.do-thing
+         file: commands/speckit.my-extension.do-thing.md
+         description: What this command does.
+
+   # Optional lifecycle hooks. Keyed by event (before_/after_ {specify,plan,
+   # tasks,implement,analyze,clarify,checklist,constitution,converge}); each
+   # references a provided command.
+   hooks:
+     before_implement:
+       command: speckit.my-extension.do-thing
+       optional: true
+
+   tags:
+     - example
    ```
 
-2. Add command templates under `extensions/<id>/commands/`. Command files need YAML
-   frontmatter with a `description`, and command ids follow
-   `speckit.<ext-id>.<cmd>`.
+2. Add command templates under `extensions/<id>/commands/`, matching each
+   `file:` path. Command files use YAML frontmatter with a `description`, and
+   command names must follow `speckit.<ext-id>.<cmd>`.
 3. (Optional) Add `.extensionignore` to exclude files from the ZIP.
 4. Run validation locally:
 
@@ -100,8 +125,22 @@ python scripts/build.py --repo Sketchkit/speckit-extensions --tag v0.1.0
 
 ## Catalog schema
 
-`catalog.json` is validated against [`catalog.schema.json`](catalog.schema.json).
-Each entry requires: `id`, `name`, `version`, `description`, `download_url` (HTTPS).
+`catalog.json` is validated against [`catalog.schema.json`](catalog.schema.json)
+and mirrors spec-kit's own `extensions/catalog.json`. Top level: `schema_version`,
+`updated_at`, `catalog_url`, `extensions`. Each entry requires `id`, `name`,
+`version`, `description`, `download_url` (HTTPS) plus `author`, `repository`,
+`bundled`, `tags`.
+
+## Local testing
+
+Install an extension straight from this repo into any Spec-Kit project without
+publishing — note the `--dev` flag for a local path:
+
+```bash
+specify extension add --dev /path/to/this-repo/extensions/adr-logger
+specify extension list
+specify extension enable coverage-gate   # hooks are opt-in
+```
 
 ## First-time setup checklist
 

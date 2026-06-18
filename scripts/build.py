@@ -21,6 +21,7 @@ import json
 import os
 import sys
 import zipfile
+from datetime import datetime, timezone
 from pathlib import Path
 
 try:
@@ -71,10 +72,12 @@ def build_extension(ext_path: Path, repo: str, tag: str) -> tuple[str, dict]:
     manifest_path = ext_path / "extension.yml"
     manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8")) or {}
 
-    ext_id = manifest.get("id")
-    version = manifest.get("version")
+    # Spec-Kit manifests nest metadata under `extension:`.
+    ext = manifest.get("extension") or {}
+    ext_id = ext.get("id")
+    version = ext.get("version")
     if not ext_id or not version:
-        raise ValueError(f"{manifest_path}: 'id' and 'version' are required")
+        raise ValueError(f"{manifest_path}: 'extension.id' and 'extension.version' are required")
     if ext_id != ext_path.name:
         raise ValueError(
             f"{manifest_path}: id '{ext_id}' must match directory '{ext_path.name}'"
@@ -99,11 +102,16 @@ def build_extension(ext_path: Path, repo: str, tag: str) -> tuple[str, dict]:
     if file_count == 0:
         raise ValueError(f"{ext_path}: no files to package after .extensionignore")
 
+    # Catalog entry shape mirrors spec-kit's own extensions/catalog.json.
     entry = {
         "id": ext_id,
-        "name": manifest.get("name", ext_id),
+        "name": ext.get("name", ext_id),
         "version": str(version),
-        "description": manifest.get("description", ""),
+        "description": ext.get("description", ""),
+        "author": ext.get("author", ""),
+        "repository": ext.get("repository", f"https://github.com/{repo}"),
+        "bundled": False,
+        "tags": manifest.get("tags", []),
         "download_url": RELEASE_URL.format(repo=repo, tag=tag, zip_name=zip_name),
     }
     print(f"  built {zip_name} ({file_count} files)")
@@ -138,7 +146,12 @@ def main() -> int:
     if not extensions:
         sys.exit("No extensions found (each needs extensions/<id>/extension.yml)")
 
-    catalog = {"schema_version": "1.0", "extensions": extensions}
+    catalog = {
+        "schema_version": "1.0",
+        "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "catalog_url": f"https://raw.githubusercontent.com/{args.repo}/main/catalog.json",
+        "extensions": extensions,
+    }
     CATALOG_PATH.write_text(json.dumps(catalog, indent=2) + "\n", encoding="utf-8")
     print(f"\nWrote {CATALOG_PATH} with {len(extensions)} extension(s).")
     print(f"ZIPs in {DIST_DIR}/ — repo={args.repo} tag={args.tag}")

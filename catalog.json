@@ -1,11 +1,20 @@
 {
   "schema_version": "1.0",
+  "updated_at": "2026-06-18T19:40:26Z",
+  "catalog_url": "https://raw.githubusercontent.com/Sketchkit/speckit-extensions/main/catalog.json",
   "extensions": {
     "acme-hello": {
       "id": "acme-hello",
       "name": "ACME Hello",
       "version": "0.1.0",
-      "description": "Sample org extension that adds a greeting slash command.",
+      "description": "Sample org extension that adds a greeting slash command. Replace with your real extensions.",
+      "author": "Sketchkit",
+      "repository": "https://github.com/Sketchkit/speckit-extensions",
+      "bundled": false,
+      "tags": [
+        "sample",
+        "hello"
+      ],
       "download_url": "https://github.com/Sketchkit/speckit-extensions/releases/download/v0.1.0/acme-hello-0.1.0.zip"
     },
     "adr-logger": {
@@ -13,6 +22,14 @@
       "name": "ADR Logger",
       "version": "0.1.0",
       "description": "Create and maintain Architecture Decision Records from the Spec-Kit workflow.",
+      "author": "Sketchkit",
+      "repository": "https://github.com/Sketchkit/speckit-extensions",
+      "bundled": false,
+      "tags": [
+        "documentation",
+        "adr",
+        "governance"
+      ],
       "download_url": "https://github.com/Sketchkit/speckit-extensions/releases/download/v0.1.0/adr-logger-0.1.0.zip"
     },
     "coverage-gate": {
@@ -20,6 +37,14 @@
       "name": "Coverage Gate",
       "version": "0.1.0",
       "description": "Enforce a minimum test-coverage threshold via a command and a lifecycle hook.",
+      "author": "Sketchkit",
+      "repository": "https://github.com/Sketchkit/speckit-extensions",
+      "bundled": false,
+      "tags": [
+        "quality",
+        "testing",
+        "coverage"
+      ],
       "download_url": "https://github.com/Sketchkit/speckit-extensions/releases/download/v0.1.0/coverage-gate-0.1.0.zip"
     }
   }
