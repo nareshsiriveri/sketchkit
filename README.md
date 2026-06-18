@@ -33,7 +33,7 @@ Add `.specify/extension-catalogs.yml` to a Spec-Kit project (see
 ```yaml
 catalogs:
   - name: Sketchkit Org Catalog
-    url: https://raw.githubusercontent.com/Sketchkit/speckit-extensions/main/catalog.json
+    url: https://raw.githubusercontent.com/nareshsiriveri/sketchkit/main/catalog.json
     priority: 10
     install_allowed: true
     description: Curated, org-approved Spec-Kit extensions.
@@ -69,7 +69,7 @@ defaults via environment variable.
      version: "0.1.0"
      description: What it does.
      author: Sketchkit
-     repository: https://github.com/Sketchkit/speckit-extensions
+     repository: https://github.com/nareshsiriveri/sketchkit
      license: MIT
      effect: read-only        # optional: read-only | read-write
 
@@ -120,7 +120,7 @@ defaults via environment variable.
 To build locally (e.g. to preview):
 
 ```bash
-python scripts/build.py --repo Sketchkit/speckit-extensions --tag v0.1.0
+python scripts/build.py --repo nareshsiriveri/sketchkit --tag v0.1.0
 ```
 
 ## Catalog schema
@@ -144,7 +144,7 @@ specify extension enable coverage-gate   # hooks are opt-in
 
 ## First-time setup checklist
 
-- [ ] Confirm the repo slug `Sketchkit/speckit-extensions` matches your real GitHub repo.
+- [ ] Confirm the repo slug `nareshsiriveri/sketchkit` matches your real GitHub repo.
 - [ ] Replace the `acme-hello` sample with your real extensions.
 - [ ] Push to GitHub and enable Actions.
 - [ ] Publish the first release to generate real `download_url`s.

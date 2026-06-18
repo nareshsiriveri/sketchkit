@@ -6,7 +6,7 @@ extension:
   version: "0.1.0"
   description: "Create and maintain Architecture Decision Records from the Spec-Kit workflow."
   author: Sketchkit
-  repository: https://github.com/Sketchkit/speckit-extensions
+  repository: https://github.com/nareshsiriveri/sketchkit
   license: MIT
   category: documentation
   effect: read-write

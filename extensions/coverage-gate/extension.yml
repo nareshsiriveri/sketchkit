@@ -6,7 +6,7 @@ extension:
   version: "0.1.0"
   description: "Enforce a minimum test-coverage threshold via a command and a lifecycle hook."
   author: Sketchkit
-  repository: https://github.com/Sketchkit/speckit-extensions
+  repository: https://github.com/nareshsiriveri/sketchkit
   license: MIT
   category: quality
   effect: read-only

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-06-18T19:40:26Z",
-  "catalog_url": "https://raw.githubusercontent.com/Sketchkit/speckit-extensions/main/catalog.json",
+  "updated_at": "2026-06-18T19:55:25Z",
+  "catalog_url": "https://raw.githubusercontent.com/nareshsiriveri/sketchkit/main/catalog.json",
   "extensions": {
     "acme-hello": {
       "id": "acme-hello",
@@ -9,13 +9,13 @@
       "version": "0.1.0",
       "description": "Sample org extension that adds a greeting slash command. Replace with your real extensions.",
       "author": "Sketchkit",
-      "repository": "https://github.com/Sketchkit/speckit-extensions",
+      "repository": "https://github.com/nareshsiriveri/sketchkit",
       "bundled": false,
       "tags": [
         "sample",
         "hello"
       ],
-      "download_url": "https://github.com/Sketchkit/speckit-extensions/releases/download/v0.1.0/acme-hello-0.1.0.zip"
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.1.0/acme-hello-0.1.0.zip"
     },
     "adr-logger": {
       "id": "adr-logger",
@@ -23,14 +23,14 @@
       "version": "0.1.0",
       "description": "Create and maintain Architecture Decision Records from the Spec-Kit workflow.",
       "author": "Sketchkit",
-      "repository": "https://github.com/Sketchkit/speckit-extensions",
+      "repository": "https://github.com/nareshsiriveri/sketchkit",
       "bundled": false,
       "tags": [
         "documentation",
         "adr",
         "governance"
       ],
-      "download_url": "https://github.com/Sketchkit/speckit-extensions/releases/download/v0.1.0/adr-logger-0.1.0.zip"
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.1.0/adr-logger-0.1.0.zip"
     },
     "coverage-gate": {
       "id": "coverage-gate",
@@ -38,14 +38,14 @@
       "version": "0.1.0",
       "description": "Enforce a minimum test-coverage threshold via a command and a lifecycle hook.",
       "author": "Sketchkit",
-      "repository": "https://github.com/Sketchkit/speckit-extensions",
+      "repository": "https://github.com/nareshsiriveri/sketchkit",
       "bundled": false,
       "tags": [
         "quality",
         "testing",
         "coverage"
       ],
-      "download_url": "https://github.com/Sketchkit/speckit-extensions/releases/download/v0.1.0/coverage-gate-0.1.0.zip"
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.1.0/coverage-gate-0.1.0.zip"
     }
   }
 }

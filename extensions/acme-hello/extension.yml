@@ -6,7 +6,7 @@ extension:
   version: "0.1.0"
   description: "Sample org extension that adds a greeting slash command. Replace with your real extensions."
   author: Sketchkit
-  repository: https://github.com/Sketchkit/speckit-extensions
+  repository: https://github.com/nareshsiriveri/sketchkit
   license: MIT
   effect: read-only
 
