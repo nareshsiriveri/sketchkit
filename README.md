@@ -5,6 +5,8 @@ extensions. Extension **source** lives here, CI builds it into **ZIPs published 
 GitHub Release assets**, and a generated [`catalog.json`](catalog.json) lets any
 Spec-Kit project discover and install the org-approved extensions.
 
+📚 **Browse all available extensions in [`EXTENSIONS.md`](EXTENSIONS.md)** — 23 extensions, 184 commands.
+
 ## How it fits together
 
 ```
