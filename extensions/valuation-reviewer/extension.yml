@@ -1,0 +1,43 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: valuation-reviewer
+  name: valuation-reviewer
+  version: 0.1.1
+  description: Ingests GP packages, runs valuation template, stages LP reporting
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.valuation-reviewer.ic-memo
+    file: skills/ic-memo/SKILL.md
+    description: "Draft a structured investment committee memo for PE deal approval. Synthesizes due diligence\
+      \ findings, financial analysis, and deal terms into a professional IC-ready document. Use when preparing\
+      \ for\u2026"
+  - name: speckit.valuation-reviewer.portfolio-monitoring
+    file: skills/portfolio-monitoring/SKILL.md
+    description: "Track and analyze portfolio company performance against plan. Ingests monthly/quarterly\
+      \ financial packages (Excel, PDF), extracts KPIs, flags variances to budget, and produces summary\
+      \ dashboards. Use\u2026"
+  - name: speckit.valuation-reviewer.returns-analysis
+    file: skills/returns-analysis/SKILL.md
+    description: "Build quick IRR/MOIC sensitivity tables for PE deal evaluation. Models returns across\
+      \ entry multiple, leverage, exit multiple, growth, and hold period scenarios. Use when sizing up\
+      \ a deal, stress-tes\u2026"
+  - name: speckit.valuation-reviewer.xlsx-author
+    file: skills/xlsx-author/SKILL.md
+    description: "Produce a .xlsx file on disk (headless) instead of driving a live Excel workbook \u2014\
+      \ for managed-agent sessions with no open Office app."
+  - name: speckit.valuation-reviewer.agent-valuation-reviewer
+    file: agents/valuation-reviewer.md
+    description: "Ingests GP valuation packages for a fund, runs them through the valuation template,\
+      \ and stages LP reporting. Use for quarter-end portfolio valuation review \u2014 not for deal-time\
+      \ underwriting (use model\u2026"
+tags:
+- financial-services

@@ -1,0 +1,37 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: statement-auditor
+  name: statement-auditor
+  version: 0.1.0
+  description: Audits pre-generated LP statements before distribution
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.statement-auditor.audit-xls
+    file: skills/audit-xls/SKILL.md
+    description: "Audit a spreadsheet for formula accuracy, errors, and common mistakes. Scopes to a selected\
+      \ range, a single sheet, or the entire model (including financial-model integrity checks like BS\
+      \ balance, cas\u2026"
+  - name: speckit.statement-auditor.nav-tieout
+    file: skills/nav-tieout/SKILL.md
+    description: "Tie an LP statement to the fund's NAV pack \u2014 recompute the LP's capital account\
+      \ from the NAV components and flag any line that doesn't agree. Use before LP statements are distributed."
+  - name: speckit.statement-auditor.xlsx-author
+    file: skills/xlsx-author/SKILL.md
+    description: "Produce a .xlsx file on disk (headless) instead of driving a live Excel workbook \u2014\
+      \ for managed-agent sessions with no open Office app."
+  - name: speckit.statement-auditor.agent-statement-auditor
+    file: agents/statement-auditor.md
+    description: "Audits a batch of pre-generated LP capital-account statements against the fund NAV pack\
+      \ before distribution \u2014 ties out balances, allocations, and fees, and flags discrepancies.\
+      \ Use as the final check\u2026"
+tags:
+- financial-services

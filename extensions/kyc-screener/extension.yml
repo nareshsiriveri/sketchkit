@@ -1,0 +1,38 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: kyc-screener
+  name: kyc-screener
+  version: 0.1.0
+  description: Parses onboarding docs, runs the rules engine, flags gaps
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.kyc-screener.kyc-doc-parse
+    file: skills/kyc-doc-parse/SKILL.md
+    description: "Parse an investor or client onboarding packet into structured KYC fields \u2014 identity,\
+      \ ownership, control, source of funds, and document inventory. Use as the first step of KYC screening;\
+      \ output feeds\u2026"
+  - name: speckit.kyc-screener.kyc-rules
+    file: skills/kyc-rules/SKILL.md
+    description: "Apply the firm's KYC/AML rules grid to a parsed onboarding record \u2014 assign a risk\
+      \ rating, list every rule outcome with the rule cited, and flag what's missing or escalation-worthy.\
+      \ Use after kyc-doc-\u2026"
+  - name: speckit.kyc-screener.xlsx-author
+    file: skills/xlsx-author/SKILL.md
+    description: "Produce a .xlsx file on disk (headless) instead of driving a live Excel workbook \u2014\
+      \ for managed-agent sessions with no open Office app."
+  - name: speckit.kyc-screener.agent-kyc-screener
+    file: agents/kyc-screener.md
+    description: "Parses an onboarding document packet, runs the firm's KYC/AML rules engine, screens\
+      \ against sanctions and PEP lists, and flags gaps for escalation. Use for new-client onboarding\
+      \ or periodic refresh \u2014\u2026"
+tags:
+- financial-services

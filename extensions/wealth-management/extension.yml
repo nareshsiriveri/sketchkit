@@ -1,0 +1,68 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: wealth-management
+  name: wealth-management
+  version: 0.1.2
+  description: 'Wealth management and financial advisory tools: client reviews, financial planning, portfolio
+    analysis, and client reporting'
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.wealth-management.client-report
+    file: commands/client-report.md
+    description: Generate a client performance report
+  - name: speckit.wealth-management.client-review
+    file: commands/client-review.md
+    description: Prep for a client review meeting
+  - name: speckit.wealth-management.financial-plan
+    file: commands/financial-plan.md
+    description: Build or update a financial plan
+  - name: speckit.wealth-management.proposal
+    file: commands/proposal.md
+    description: Create an investment proposal for a prospect
+  - name: speckit.wealth-management.rebalance
+    file: commands/rebalance.md
+    description: Analyze drift and generate rebalancing trades
+  - name: speckit.wealth-management.tlh
+    file: commands/tlh.md
+    description: Identify tax-loss harvesting opportunities
+  - name: speckit.wealth-management.client-report-skill
+    file: skills/client-report/SKILL.md
+    description: "Generate professional client-facing performance reports with portfolio returns, allocation\
+      \ breakdowns, and market commentary. Suitable for quarterly or annual distribution. Triggers on\
+      \ \"client report\u2026"
+  - name: speckit.wealth-management.client-review-skill
+    file: skills/client-review/SKILL.md
+    description: "Prepare for client review meetings with portfolio performance summary, allocation analysis,\
+      \ talking points, and action items. Pulls together account data into a concise meeting-ready format.\
+      \ Use befo\u2026"
+  - name: speckit.wealth-management.financial-plan-skill
+    file: skills/financial-plan/SKILL.md
+    description: "Build or update a comprehensive financial plan covering retirement projections, education\
+      \ funding, estate planning, and cash flow analysis. Use for new client onboarding, annual plan reviews,\
+      \ or scen\u2026"
+  - name: speckit.wealth-management.investment-proposal
+    file: skills/investment-proposal/SKILL.md
+    description: "Create professional investment proposals for prospective clients. Covers the firm's\
+      \ approach, proposed allocation, expected outcomes, and fee structure. Use when pitching new clients\
+      \ or presenting a\u2026"
+  - name: speckit.wealth-management.portfolio-rebalance
+    file: skills/portfolio-rebalance/SKILL.md
+    description: "Analyze portfolio allocation drift and generate rebalancing trade recommendations across\
+      \ accounts. Considers tax implications, transaction costs, and wash sale rules. Triggers on \"rebalance\"\
+      , \"portfo\u2026"
+  - name: speckit.wealth-management.tax-loss-harvesting
+    file: skills/tax-loss-harvesting/SKILL.md
+    description: "Identify tax-loss harvesting opportunities across taxable accounts. Finds positions\
+      \ with unrealized losses, suggests replacement securities, and tracks wash sale windows. Triggers\
+      \ on \"tax-loss harves\u2026"
+tags:
+- financial-services

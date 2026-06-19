@@ -1,0 +1,48 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: market-researcher
+  name: market-researcher
+  version: 0.1.1
+  description: Sector or theme to industry overview, competitive landscape, peer comps, and ideas shortlist
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.market-researcher.competitive-analysis
+    file: skills/competitive-analysis/SKILL.md
+    description: "Framework for building competitive landscape decks \u2014 market positioning, competitor\
+      \ deep-dives, comparative analysis, strategic synthesis. Use when the user asks for a competitive\
+      \ landscape, competit\u2026"
+  - name: speckit.market-researcher.comps-analysis
+    file: skills/comps-analysis/SKILL.md
+    description: "Build institutional-grade comparable company analyses with operating metrics, valuation\
+      \ multiples, and statistical benchmarking in Excel/spreadsheet format. **Perfect for:** - Public\
+      \ company valuatio\u2026"
+  - name: speckit.market-researcher.idea-generation
+    file: skills/idea-generation/SKILL.md
+    description: "Systematic stock screening and investment idea sourcing. Combines quantitative screens,\
+      \ thematic research, and pattern recognition to surface new long and short ideas. Use when looking\
+      \ for new ideas,\u2026"
+  - name: speckit.market-researcher.pptx-author
+    file: skills/pptx-author/SKILL.md
+    description: "Produce a .pptx file on disk (headless) instead of driving a live PowerPoint document\
+      \ \u2014 for managed-agent sessions with no open Office app."
+  - name: speckit.market-researcher.sector-overview
+    file: skills/sector-overview/SKILL.md
+    description: "Create comprehensive industry and sector landscape reports covering market dynamics,\
+      \ competitive positioning, key players, and thematic trends. Use for client requests, sector initiations,\
+      \ thematic r\u2026"
+  - name: speckit.market-researcher.agent-market-researcher
+    file: agents/market-researcher.md
+    description: "Produces sector or thematic market research \u2014 industry overview, competitive landscape,\
+      \ trading-comps spread of the peer set, and a thematic ideas shortlist \u2014 packaged as a research\
+      \ note with optiona\u2026"
+tags:
+- financial-services

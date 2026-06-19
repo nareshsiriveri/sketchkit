@@ -1,0 +1,53 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: model-builder
+  name: model-builder
+  version: 0.1.0
+  description: DCF, LBO, 3-statement, comps - live in Excel
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.model-builder.3-statement-model
+    file: skills/3-statement-model/SKILL.md
+    description: "Complete, populate and fill out 3-statement financial model templates (Income Statement,\
+      \ Balance Sheet, Cash Flow Statement) . Use when asked to fill out model templates, complete existing\
+      \ model fram\u2026"
+  - name: speckit.model-builder.audit-xls
+    file: skills/audit-xls/SKILL.md
+    description: "Audit a spreadsheet for formula accuracy, errors, and common mistakes. Scopes to a selected\
+      \ range, a single sheet, or the entire model (including financial-model integrity checks like BS\
+      \ balance, cas\u2026"
+  - name: speckit.model-builder.comps-analysis
+    file: skills/comps-analysis/SKILL.md
+    description: "Build institutional-grade comparable company analyses with operating metrics, valuation\
+      \ multiples, and statistical benchmarking in Excel/spreadsheet format. **Perfect for:** - Public\
+      \ company valuatio\u2026"
+  - name: speckit.model-builder.dcf-model
+    file: skills/dcf-model/SKILL.md
+    description: "Real DCF (Discounted Cash Flow) model creation for equity valuation. Retrieves financial\
+      \ data from SEC filings and analyst reports, builds comprehensive cash flow projections with proper\
+      \ WACC calcula\u2026"
+  - name: speckit.model-builder.lbo-model
+    file: skills/lbo-model/SKILL.md
+    description: "This skill should be used when completing LBO (Leveraged Buyout) model templates in\
+      \ Excel for private equity transactions, deal materials, or investment committee presentations.\
+      \ The skill fills in fo\u2026"
+  - name: speckit.model-builder.xlsx-author
+    file: skills/xlsx-author/SKILL.md
+    description: "Produce a .xlsx file on disk (headless) instead of driving a live Excel workbook \u2014\
+      \ for managed-agent sessions with no open Office app."
+  - name: speckit.model-builder.agent-model-builder
+    file: agents/model-builder.md
+    description: "Builds DCF, LBO, three-statement, and trading-comps models live in Excel from a ticker\
+      \ and assumption set. Use when you need a clean model from scratch \u2014 not for updating an existing\
+      \ coverage model (\u2026"
+tags:
+- financial-services

@@ -1,0 +1,41 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: claude-for-msft-365-install
+  name: claude-for-msft-365-install
+  version: 0.1.5
+  description: Provision direct cloud access (Vertex AI, Bedrock, or LLM gateway) for the Claude Office
+    add-in. Generates the customized add-in manifest, walks through Azure admin consent, and writes per-user
+    config via Microsoft Graph extension attributes.
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.claude-for-msft-365-install.bootstrap
+    file: commands/bootstrap.md
+    description: "Build the bootstrap endpoint \u2014 per-user MCP servers, skills, dynamic config"
+  - name: speckit.claude-for-msft-365-install.consent
+    file: commands/consent.md
+    description: "Azure admin consent URLs \u2014 one-time tenant approval for Entra SSO and Outlook Graph\
+      \ access"
+  - name: speckit.claude-for-msft-365-install.debug
+    file: commands/debug.md
+    description: Diagnose deployment issues (stale config, connect failures, missing add-in)
+  - name: speckit.claude-for-msft-365-install.manifest
+    file: commands/manifest.md
+    description: Generate the add-in manifest XML with your cloud config baked in
+  - name: speckit.claude-for-msft-365-install.setup
+    file: commands/setup.md
+    description: "Setup wizard \u2014 provision Vertex/Bedrock/Foundry/gateway, admin consent, generate\
+      \ manifest(s)"
+  - name: speckit.claude-for-msft-365-install.update-user-attrs
+    file: commands/update-user-attrs.md
+    description: Set per-user config (tokens, region overrides) via Azure AD extension attributes
+tags:
+- financial-services

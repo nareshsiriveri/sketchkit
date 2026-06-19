@@ -1,0 +1,104 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: financial-analysis
+  name: financial-analysis
+  version: 0.1.1
+  description: 'Core financial modeling and analysis tools: DCF, comps, LBO, 3-statement models, competitive
+    analysis, and deck QC'
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.financial-analysis.3-statement-model
+    file: commands/3-statement-model.md
+    description: Fill out a 3-statement financial model template
+  - name: speckit.financial-analysis.competitive-analysis
+    file: commands/competitive-analysis.md
+    description: Create a competitive landscape analysis
+  - name: speckit.financial-analysis.comps
+    file: commands/comps.md
+    description: Build a comparable company analysis with trading multiples
+  - name: speckit.financial-analysis.dcf
+    file: commands/dcf.md
+    description: Build a DCF valuation model with comps-informed terminal multiples
+  - name: speckit.financial-analysis.debug-model
+    file: commands/debug-model.md
+    description: Debug and audit a financial model for errors
+  - name: speckit.financial-analysis.lbo
+    file: commands/lbo.md
+    description: Build an LBO model for a PE acquisition
+  - name: speckit.financial-analysis.ppt-template
+    file: commands/ppt-template.md
+    description: Create a reusable PPT template skill from a PowerPoint template file
+  - name: speckit.financial-analysis.3-statement-model-skill
+    file: skills/3-statement-model/SKILL.md
+    description: "Complete, populate and fill out 3-statement financial model templates (Income Statement,\
+      \ Balance Sheet, Cash Flow Statement) . Use when asked to fill out model templates, complete existing\
+      \ model fram\u2026"
+  - name: speckit.financial-analysis.audit-xls
+    file: skills/audit-xls/SKILL.md
+    description: "Audit a spreadsheet for formula accuracy, errors, and common mistakes. Scopes to a selected\
+      \ range, a single sheet, or the entire model (including financial-model integrity checks like BS\
+      \ balance, cas\u2026"
+  - name: speckit.financial-analysis.clean-data-xls
+    file: skills/clean-data-xls/SKILL.md
+    description: "Clean up messy spreadsheet data \u2014 trim whitespace, fix inconsistent casing, convert\
+      \ numbers-stored-as-text, standardize dates, remove duplicates, and flag mixed-type columns. Use\
+      \ when data is messy,\u2026"
+  - name: speckit.financial-analysis.competitive-analysis-skill
+    file: skills/competitive-analysis/SKILL.md
+    description: "Framework for building competitive landscape decks \u2014 market positioning, competitor\
+      \ deep-dives, comparative analysis, strategic synthesis. Use when the user asks for a competitive\
+      \ landscape, competit\u2026"
+  - name: speckit.financial-analysis.comps-analysis
+    file: skills/comps-analysis/SKILL.md
+    description: "Build institutional-grade comparable company analyses with operating metrics, valuation\
+      \ multiples, and statistical benchmarking in Excel/spreadsheet format. **Perfect for:** - Public\
+      \ company valuatio\u2026"
+  - name: speckit.financial-analysis.dcf-model
+    file: skills/dcf-model/SKILL.md
+    description: "Real DCF (Discounted Cash Flow) model creation for equity valuation. Retrieves financial\
+      \ data from SEC filings and analyst reports, builds comprehensive cash flow projections with proper\
+      \ WACC calcula\u2026"
+  - name: speckit.financial-analysis.deck-refresh
+    file: skills/deck-refresh/SKILL.md
+    description: "Updates a presentation with new numbers \u2014 quarterly refreshes, earnings updates,\
+      \ comp rolls, rebased market data. Use whenever the user asks to \"update the deck with Q4 numbers\"\
+      , \"refresh the comps\",\u2026"
+  - name: speckit.financial-analysis.ib-check-deck
+    file: skills/ib-check-deck/SKILL.md
+    description: "Investment banking presentation quality checker. Reviews a pitch deck or client-ready\
+      \ presentation for (1) number consistency across slides, (2) data-narrative alignment, (3) language\
+      \ polish against\u2026"
+  - name: speckit.financial-analysis.lbo-model
+    file: skills/lbo-model/SKILL.md
+    description: "This skill should be used when completing LBO (Leveraged Buyout) model templates in\
+      \ Excel for private equity transactions, deal materials, or investment committee presentations.\
+      \ The skill fills in fo\u2026"
+  - name: speckit.financial-analysis.ppt-template-creator
+    file: skills/ppt-template-creator/SKILL.md
+    description: "Creates self-contained PPT template SKILLS (not presentations) from user-provided PowerPoint\
+      \ templates. Use ONLY when a user wants to create a reusable skill from their template. For creating\
+      \ actual\u2026"
+  - name: speckit.financial-analysis.pptx-author
+    file: skills/pptx-author/SKILL.md
+    description: "Produce a .pptx file on disk (headless) instead of driving a live PowerPoint document\
+      \ \u2014 for managed-agent sessions with no open Office app."
+  - name: speckit.financial-analysis.skill-creator
+    file: skills/skill-creator/SKILL.md
+    description: "Guide for creating effective skills. This skill should be used when users want to create\
+      \ a new skill (or update an existing skill) that extends Claude's capabilities with specialized\
+      \ knowledge, workf\u2026"
+  - name: speckit.financial-analysis.xlsx-author
+    file: skills/xlsx-author/SKILL.md
+    description: "Produce a .xlsx file on disk (headless) instead of driving a live Excel workbook \u2014\
+      \ for managed-agent sessions with no open Office app."
+tags:
+- financial-services

@@ -1,0 +1,53 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: earnings-reviewer
+  name: earnings-reviewer
+  version: 0.1.1
+  description: Earnings call and filings to model update to note draft
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.earnings-reviewer.audit-xls
+    file: skills/audit-xls/SKILL.md
+    description: "Audit a spreadsheet for formula accuracy, errors, and common mistakes. Scopes to a selected\
+      \ range, a single sheet, or the entire model (including financial-model integrity checks like BS\
+      \ balance, cas\u2026"
+  - name: speckit.earnings-reviewer.earnings-analysis
+    file: skills/earnings-analysis/SKILL.md
+    description: "Create professional equity research earnings update reports (8-12 pages, 3,000-5,000\
+      \ words) analyzing quarterly results for companies already under coverage. Fast-turnaround format\
+      \ focusing on beat/m\u2026"
+  - name: speckit.earnings-reviewer.earnings-preview
+    file: skills/earnings-preview/SKILL.md
+    description: "Build pre-earnings analysis with estimate models, scenario frameworks, and key metrics\
+      \ to watch. Use before a company reports quarterly earnings to prepare positioning notes, set up\
+      \ bull/bear scenari\u2026"
+  - name: speckit.earnings-reviewer.model-update
+    file: skills/model-update/SKILL.md
+    description: "Update financial models with new data \u2014 quarterly earnings, management guidance,\
+      \ macro changes, or revised assumptions. Adjusts estimates, recalculates valuation, and flags material\
+      \ changes. Use afte\u2026"
+  - name: speckit.earnings-reviewer.morning-note
+    file: skills/morning-note/SKILL.md
+    description: "Draft concise morning meeting notes summarizing overnight developments, trade ideas,\
+      \ and key events for coverage stocks. Designed for the 7am morning meeting format \u2014 tight,\
+      \ opinionated, actionable.\u2026"
+  - name: speckit.earnings-reviewer.xlsx-author
+    file: skills/xlsx-author/SKILL.md
+    description: "Produce a .xlsx file on disk (headless) instead of driving a live Excel workbook \u2014\
+      \ for managed-agent sessions with no open Office app."
+  - name: speckit.earnings-reviewer.agent-earnings-reviewer
+    file: agents/earnings-reviewer.md
+    description: "Processes an earnings event end to end \u2014 reads the call transcript and filings,\
+      \ updates the coverage model, and drafts the post-earnings note. Use when a covered name reports;\
+      \ for a single name inter\u2026"
+tags:
+- financial-services

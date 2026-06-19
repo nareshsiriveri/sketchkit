@@ -1,0 +1,43 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: gl-reconciler
+  name: gl-reconciler
+  version: 0.1.0
+  description: Finds breaks, traces root cause, routes for sign-off
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.gl-reconciler.audit-xls
+    file: skills/audit-xls/SKILL.md
+    description: "Audit a spreadsheet for formula accuracy, errors, and common mistakes. Scopes to a selected\
+      \ range, a single sheet, or the entire model (including financial-model integrity checks like BS\
+      \ balance, cas\u2026"
+  - name: speckit.gl-reconciler.break-trace
+    file: skills/break-trace/SKILL.md
+    description: "Root-cause a reconciliation break to its source transaction or posting \u2014 follow\
+      \ the audit trail from the break row back to the originating entry on each side and state what differs\
+      \ and why. Use after\u2026"
+  - name: speckit.gl-reconciler.gl-recon
+    file: skills/gl-recon/SKILL.md
+    description: "Reconcile general ledger to subledger for a trade date or period \u2014 match at the\
+      \ position or transaction level, surface breaks, and classify each break by likely cause. Use for\
+      \ daily or month-end reco\u2026"
+  - name: speckit.gl-reconciler.xlsx-author
+    file: skills/xlsx-author/SKILL.md
+    description: "Produce a .xlsx file on disk (headless) instead of driving a live Excel workbook \u2014\
+      \ for managed-agent sessions with no open Office app."
+  - name: speckit.gl-reconciler.agent-gl-reconciler
+    file: agents/gl-reconciler.md
+    description: "Reconciles general ledger to subledger across asset classes for a trade date \u2014\
+      \ finds breaks, traces root cause, and routes the exception report for sign-off. Use for daily or\
+      \ month-end recon runs; no\u2026"
+tags:
+- financial-services

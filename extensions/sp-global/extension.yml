@@ -1,0 +1,41 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: sp-global
+  name: sp-global
+  version: 1.0.1
+  description: S&P Global - Financial data and analytics skills including company tearsheets, earnings
+    previews, and transaction summaries
+  author: Kensho Technologies
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.sp-global.earnings-preview-beta
+    file: skills/earnings-preview-beta/SKILL.md
+    description: "Generate a concise 4-5 page equity research earnings preview for a single company. Analyzes\
+      \ the most recent earnings transcript, competitor landscape, valuation, and recent news to produce\
+      \ a professi\u2026"
+  - name: speckit.sp-global.funding-digest
+    file: skills/funding-digest/SKILL.md
+    description: "Generate a polished one-page PowerPoint slide summarizing key takeaways from recent\
+      \ funding rounds and notable capital markets activity across a user's watched sectors or companies.\
+      \ Use this skill wh\u2026"
+  - name: speckit.sp-global.tear-sheet
+    file: skills/tear-sheet/SKILL.md
+    description: "Generate professional company tear sheets using S&P Capital IQ data via the Kensho LLM-ready\
+      \ API MCP server. Use this skill whenever the user asks for a tear sheet, company one-pager, company\
+      \ profile\u2026"
+tags:
+- sp-global
+- finance
+- capital-iq
+- tearsheets
+- earnings
+- transactions
+- excel

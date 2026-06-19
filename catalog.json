@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-06-18T20:13:44Z",
+  "updated_at": "2026-06-19T17:30:33Z",
   "catalog_url": "https://raw.githubusercontent.com/nareshsiriveri/sketchkit/main/catalog.json",
   "extensions": {
     "acme-hello": {
@@ -15,7 +15,7 @@
         "sample",
         "hello"
       ],
-      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.1.0/acme-hello-0.1.0.zip"
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/acme-hello-0.1.0.zip"
     },
     "adr-logger": {
       "id": "adr-logger",
@@ -30,7 +30,20 @@
         "adr",
         "governance"
       ],
-      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.1.0/adr-logger-0.1.0.zip"
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/adr-logger-0.1.0.zip"
+    },
+    "claude-for-msft-365-install": {
+      "id": "claude-for-msft-365-install",
+      "name": "claude-for-msft-365-install",
+      "version": "0.1.5",
+      "description": "Provision direct cloud access (Vertex AI, Bedrock, or LLM gateway) for the Claude Office add-in. Generates the customized add-in manifest, walks through Azure admin consent, and writes per-user config via Microsoft Graph extension attributes.",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/claude-for-msft-365-install-0.1.5.zip"
     },
     "coverage-gate": {
       "id": "coverage-gate",
@@ -45,7 +58,260 @@
         "testing",
         "coverage"
       ],
-      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.1.0/coverage-gate-0.1.0.zip"
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/coverage-gate-0.1.0.zip"
+    },
+    "earnings-reviewer": {
+      "id": "earnings-reviewer",
+      "name": "earnings-reviewer",
+      "version": "0.1.1",
+      "description": "Earnings call and filings to model update to note draft",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/earnings-reviewer-0.1.1.zip"
+    },
+    "equity-research": {
+      "id": "equity-research",
+      "name": "equity-research",
+      "version": "0.1.2",
+      "description": "Equity research tools: earnings analysis, initiating coverage reports, and research workflows",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/equity-research-0.1.2.zip"
+    },
+    "financial-analysis": {
+      "id": "financial-analysis",
+      "name": "financial-analysis",
+      "version": "0.1.1",
+      "description": "Core financial modeling and analysis tools: DCF, comps, LBO, 3-statement models, competitive analysis, and deck QC",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/financial-analysis-0.1.1.zip"
+    },
+    "fund-admin": {
+      "id": "fund-admin",
+      "name": "fund-admin",
+      "version": "0.1.0",
+      "description": "Fund administration and finance ops skills: GL reconciliation, break tracing, accruals, roll-forwards, variance commentary, NAV tie-out",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/fund-admin-0.1.0.zip"
+    },
+    "gl-reconciler": {
+      "id": "gl-reconciler",
+      "name": "gl-reconciler",
+      "version": "0.1.0",
+      "description": "Finds breaks, traces root cause, routes for sign-off",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/gl-reconciler-0.1.0.zip"
+    },
+    "investment-banking": {
+      "id": "investment-banking",
+      "name": "investment-banking",
+      "version": "0.2.1",
+      "description": "Investment banking productivity tools: client and market insights, deck creation, financial analysis, and transaction management",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/investment-banking-0.2.1.zip"
+    },
+    "kyc-screener": {
+      "id": "kyc-screener",
+      "name": "kyc-screener",
+      "version": "0.1.0",
+      "description": "Parses onboarding docs, runs the rules engine, flags gaps",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/kyc-screener-0.1.0.zip"
+    },
+    "lseg": {
+      "id": "lseg",
+      "name": "lseg",
+      "version": "1.0.0",
+      "description": "Price bonds, analyze yield curves, evaluate FX carry trades, value options, and build macro dashboards using LSEG financial data and analytics.",
+      "author": "LSEG",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/lseg-1.0.0.zip"
+    },
+    "market-researcher": {
+      "id": "market-researcher",
+      "name": "market-researcher",
+      "version": "0.1.1",
+      "description": "Sector or theme to industry overview, competitive landscape, peer comps, and ideas shortlist",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/market-researcher-0.1.1.zip"
+    },
+    "meeting-prep-agent": {
+      "id": "meeting-prep-agent",
+      "name": "meeting-prep-agent",
+      "version": "0.1.1",
+      "description": "Briefing pack before every client meeting",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/meeting-prep-agent-0.1.1.zip"
+    },
+    "model-builder": {
+      "id": "model-builder",
+      "name": "model-builder",
+      "version": "0.1.0",
+      "description": "DCF, LBO, 3-statement, comps - live in Excel",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/model-builder-0.1.0.zip"
+    },
+    "month-end-closer": {
+      "id": "month-end-closer",
+      "name": "month-end-closer",
+      "version": "0.1.0",
+      "description": "Accruals, roll-forwards, variance commentary",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/month-end-closer-0.1.0.zip"
+    },
+    "operations": {
+      "id": "operations",
+      "name": "operations",
+      "version": "0.1.0",
+      "description": "Operational workflows: KYC document parsing and rules-grid evaluation",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/operations-0.1.0.zip"
+    },
+    "pitch-agent": {
+      "id": "pitch-agent",
+      "name": "pitch-agent",
+      "version": "0.1.1",
+      "description": "Comps, precedents, LBO to a branded pitch deck, end to end",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/pitch-agent-0.1.1.zip"
+    },
+    "private-equity": {
+      "id": "private-equity",
+      "name": "private-equity",
+      "version": "0.1.2",
+      "description": "Private equity deal sourcing and workflow tools: company discovery, CRM integration, and founder outreach",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/private-equity-0.1.2.zip"
+    },
+    "sp-global": {
+      "id": "sp-global",
+      "name": "sp-global",
+      "version": "1.0.1",
+      "description": "S&P Global - Financial data and analytics skills including company tearsheets, earnings previews, and transaction summaries",
+      "author": "Kensho Technologies",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "sp-global",
+        "finance",
+        "capital-iq",
+        "tearsheets",
+        "earnings",
+        "transactions",
+        "excel"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/sp-global-1.0.1.zip"
+    },
+    "statement-auditor": {
+      "id": "statement-auditor",
+      "name": "statement-auditor",
+      "version": "0.1.0",
+      "description": "Audits pre-generated LP statements before distribution",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/statement-auditor-0.1.0.zip"
+    },
+    "valuation-reviewer": {
+      "id": "valuation-reviewer",
+      "name": "valuation-reviewer",
+      "version": "0.1.1",
+      "description": "Ingests GP packages, runs valuation template, stages LP reporting",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/valuation-reviewer-0.1.1.zip"
+    },
+    "wealth-management": {
+      "id": "wealth-management",
+      "name": "wealth-management",
+      "version": "0.1.2",
+      "description": "Wealth management and financial advisory tools: client reviews, financial planning, portfolio analysis, and client reporting",
+      "author": "Anthropic FSI",
+      "repository": "https://github.com/anthropics/financial-services",
+      "bundled": false,
+      "tags": [
+        "financial-services"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/wealth-management-0.1.2.zip"
     }
   }
 }

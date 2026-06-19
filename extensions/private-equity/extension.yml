@@ -1,0 +1,100 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: private-equity
+  name: private-equity
+  version: 0.1.2
+  description: 'Private equity deal sourcing and workflow tools: company discovery, CRM integration, and
+    founder outreach'
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.private-equity.ai-readiness
+    file: commands/ai-readiness.md
+    description: Scan the portfolio for the highest-leverage AI opportunities
+  - name: speckit.private-equity.dd-checklist
+    file: commands/dd-checklist.md
+    description: Generate a due diligence checklist
+  - name: speckit.private-equity.dd-prep
+    file: commands/dd-prep.md
+    description: Prep for a diligence meeting or expert call
+  - name: speckit.private-equity.ic-memo
+    file: commands/ic-memo.md
+    description: Draft an investment committee memo
+  - name: speckit.private-equity.portfolio
+    file: commands/portfolio.md
+    description: Review portfolio company performance
+  - name: speckit.private-equity.returns
+    file: commands/returns.md
+    description: Build IRR/MOIC sensitivity tables
+  - name: speckit.private-equity.screen-deal
+    file: commands/screen-deal.md
+    description: Screen an inbound deal (CIM or teaser)
+  - name: speckit.private-equity.source
+    file: commands/source.md
+    description: "Source deals \u2014 discover companies and draft founder outreach"
+  - name: speckit.private-equity.unit-economics
+    file: commands/unit-economics.md
+    description: Analyze unit economics (ARR cohorts, LTV/CAC, retention)
+  - name: speckit.private-equity.value-creation
+    file: commands/value-creation.md
+    description: Build a post-acquisition value creation plan
+  - name: speckit.private-equity.ai-readiness-skill
+    file: skills/ai-readiness/SKILL.md
+    description: "Scan the portfolio for the highest-leverage AI opportunities and rank where to deploy\
+      \ operating-partner time. Ingests quarterly updates and financials across multiple portfolio companies,\
+      \ identifies\u2026"
+  - name: speckit.private-equity.dd-checklist-skill
+    file: skills/dd-checklist/SKILL.md
+    description: "Generate and track comprehensive due diligence checklists tailored to the target company's\
+      \ sector, deal type, and complexity. Covers all major workstreams with request lists, status tracking,\
+      \ and red\u2026"
+  - name: speckit.private-equity.dd-meeting-prep
+    file: skills/dd-meeting-prep/SKILL.md
+    description: "Prepare for due diligence meetings \u2014 management presentations, expert network calls,\
+      \ customer references, and advisor sessions. Generates targeted question lists, benchmarks to reference,\
+      \ and red fla\u2026"
+  - name: speckit.private-equity.deal-screening
+    file: skills/deal-screening/SKILL.md
+    description: "Quickly screen inbound deal flow \u2014 CIMs, teasers, and broker materials \u2014 against\
+      \ the fund's investment criteria. Extracts key deal metrics, runs a pass/fail framework, and outputs\
+      \ a one-page screenin\u2026"
+  - name: speckit.private-equity.deal-sourcing
+    file: skills/deal-sourcing/SKILL.md
+    description: "PE deal sourcing workflow \u2014 discover target companies, check CRM for existing relationships,\
+      \ and draft personalized founder outreach emails. Use when sourcing new deals, prospecting companies\
+      \ in a se\u2026"
+  - name: speckit.private-equity.ic-memo-skill
+    file: skills/ic-memo/SKILL.md
+    description: "Draft a structured investment committee memo for PE deal approval. Synthesizes due diligence\
+      \ findings, financial analysis, and deal terms into a professional IC-ready document. Use when preparing\
+      \ for\u2026"
+  - name: speckit.private-equity.portfolio-monitoring
+    file: skills/portfolio-monitoring/SKILL.md
+    description: "Track and analyze portfolio company performance against plan. Ingests monthly/quarterly\
+      \ financial packages (Excel, PDF), extracts KPIs, flags variances to budget, and produces summary\
+      \ dashboards. Use\u2026"
+  - name: speckit.private-equity.returns-analysis
+    file: skills/returns-analysis/SKILL.md
+    description: "Build quick IRR/MOIC sensitivity tables for PE deal evaluation. Models returns across\
+      \ entry multiple, leverage, exit multiple, growth, and hold period scenarios. Use when sizing up\
+      \ a deal, stress-tes\u2026"
+  - name: speckit.private-equity.unit-economics-skill
+    file: skills/unit-economics/SKILL.md
+    description: "Analyze unit economics for PE targets \u2014 ARR cohorts, LTV/CAC, net retention, payback\
+      \ periods, revenue quality, and margin waterfall. Essential for software/SaaS, recurring revenue,\
+      \ and subscription b\u2026"
+  - name: speckit.private-equity.value-creation-plan
+    file: skills/value-creation-plan/SKILL.md
+    description: "Structure post-acquisition value creation plans with revenue, cost, and operational\
+      \ levers mapped to an EBITDA bridge. Includes 100-day priorities, KPI targets, and accountability\
+      \ frameworks. Use whe\u2026"
+tags:
+- financial-services

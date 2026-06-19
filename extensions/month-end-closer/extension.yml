@@ -1,0 +1,48 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: month-end-closer
+  name: month-end-closer
+  version: 0.1.0
+  description: Accruals, roll-forwards, variance commentary
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.month-end-closer.accrual-schedule
+    file: skills/accrual-schedule/SKILL.md
+    description: "Build the period-end accrual schedule \u2014 for each accrual, compute the entry, cite\
+      \ the support, and draft the JE. Use during month-end close; the JE is a draft for controller approval,\
+      \ not a posting."
+  - name: speckit.month-end-closer.audit-xls
+    file: skills/audit-xls/SKILL.md
+    description: "Audit a spreadsheet for formula accuracy, errors, and common mistakes. Scopes to a selected\
+      \ range, a single sheet, or the entire model (including financial-model integrity checks like BS\
+      \ balance, cas\u2026"
+  - name: speckit.month-end-closer.roll-forward
+    file: skills/roll-forward/SKILL.md
+    description: "Build a roll-forward schedule for a balance-sheet account \u2014 beginning balance plus\
+      \ activity less reversals equals ending balance, with each component tied to GL. Use for month-end\
+      \ close packages and\u2026"
+  - name: speckit.month-end-closer.variance-commentary
+    file: skills/variance-commentary/SKILL.md
+    description: "Write flux commentary for every P&L and balance-sheet line over threshold \u2014 current\
+      \ vs prior period and vs budget, with the driver explained from underlying activity. Use for the\
+      \ month-end close pack\u2026"
+  - name: speckit.month-end-closer.xlsx-author
+    file: skills/xlsx-author/SKILL.md
+    description: "Produce a .xlsx file on disk (headless) instead of driving a live Excel workbook \u2014\
+      \ for managed-agent sessions with no open Office app."
+  - name: speckit.month-end-closer.agent-month-end-closer
+    file: agents/month-end-closer.md
+    description: "Runs the month-end close for an entity \u2014 accruals, roll-forwards, and variance\
+      \ commentary \u2014 and stages the close package for controller sign-off. Use for period-end close;\
+      \ not for daily reconciliatio\u2026"
+tags:
+- financial-services

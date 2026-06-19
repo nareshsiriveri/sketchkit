@@ -1,0 +1,29 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: operations
+  name: operations
+  version: 0.1.0
+  description: 'Operational workflows: KYC document parsing and rules-grid evaluation'
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.operations.kyc-doc-parse
+    file: skills/kyc-doc-parse/SKILL.md
+    description: "Parse an investor or client onboarding packet into structured KYC fields \u2014 identity,\
+      \ ownership, control, source of funds, and document inventory. Use as the first step of KYC screening;\
+      \ output feeds\u2026"
+  - name: speckit.operations.kyc-rules
+    file: skills/kyc-rules/SKILL.md
+    description: "Apply the firm's KYC/AML rules grid to a parsed onboarding record \u2014 assign a risk\
+      \ rating, list every rule outcome with the rule cited, and flag what's missing or escalation-worthy.\
+      \ Use after kyc-doc-\u2026"
+tags:
+- financial-services

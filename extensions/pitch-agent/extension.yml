@@ -1,0 +1,77 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: pitch-agent
+  name: pitch-agent
+  version: 0.1.1
+  description: Comps, precedents, LBO to a branded pitch deck, end to end
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.pitch-agent.3-statement-model
+    file: skills/3-statement-model/SKILL.md
+    description: "Complete, populate and fill out 3-statement financial model templates (Income Statement,\
+      \ Balance Sheet, Cash Flow Statement) . Use when asked to fill out model templates, complete existing\
+      \ model fram\u2026"
+  - name: speckit.pitch-agent.audit-xls
+    file: skills/audit-xls/SKILL.md
+    description: "Audit a spreadsheet for formula accuracy, errors, and common mistakes. Scopes to a selected\
+      \ range, a single sheet, or the entire model (including financial-model integrity checks like BS\
+      \ balance, cas\u2026"
+  - name: speckit.pitch-agent.comps-analysis
+    file: skills/comps-analysis/SKILL.md
+    description: "Build institutional-grade comparable company analyses with operating metrics, valuation\
+      \ multiples, and statistical benchmarking in Excel/spreadsheet format. **Perfect for:** - Public\
+      \ company valuatio\u2026"
+  - name: speckit.pitch-agent.dcf-model
+    file: skills/dcf-model/SKILL.md
+    description: "Real DCF (Discounted Cash Flow) model creation for equity valuation. Retrieves financial\
+      \ data from SEC filings and analyst reports, builds comprehensive cash flow projections with proper\
+      \ WACC calcula\u2026"
+  - name: speckit.pitch-agent.deck-refresh
+    file: skills/deck-refresh/SKILL.md
+    description: "Updates a presentation with new numbers \u2014 quarterly refreshes, earnings updates,\
+      \ comp rolls, rebased market data. Use whenever the user asks to \"update the deck with Q4 numbers\"\
+      , \"refresh the comps\",\u2026"
+  - name: speckit.pitch-agent.ib-check-deck
+    file: skills/ib-check-deck/SKILL.md
+    description: "Investment banking presentation quality checker. Reviews a pitch deck or client-ready\
+      \ presentation for (1) number consistency across slides, (2) data-narrative alignment, (3) language\
+      \ polish against\u2026"
+  - name: speckit.pitch-agent.lbo-model
+    file: skills/lbo-model/SKILL.md
+    description: "This skill should be used when completing LBO (Leveraged Buyout) model templates in\
+      \ Excel for private equity transactions, deal materials, or investment committee presentations.\
+      \ The skill fills in fo\u2026"
+  - name: speckit.pitch-agent.pitch-deck
+    file: skills/pitch-deck/SKILL.md
+    description: "Populates investment banking pitch deck templates with data from source files. Use when:\
+      \ user provides a PowerPoint template to fill in, user has source data (Excel/CSV) to populate into\
+      \ slides, user\u2026"
+  - name: speckit.pitch-agent.pptx-author
+    file: skills/pptx-author/SKILL.md
+    description: "Produce a .pptx file on disk (headless) instead of driving a live PowerPoint document\
+      \ \u2014 for managed-agent sessions with no open Office app."
+  - name: speckit.pitch-agent.sector-overview
+    file: skills/sector-overview/SKILL.md
+    description: "Create comprehensive industry and sector landscape reports covering market dynamics,\
+      \ competitive positioning, key players, and thematic trends. Use for client requests, sector initiations,\
+      \ thematic r\u2026"
+  - name: speckit.pitch-agent.xlsx-author
+    file: skills/xlsx-author/SKILL.md
+    description: "Produce a .xlsx file on disk (headless) instead of driving a live Excel workbook \u2014\
+      \ for managed-agent sessions with no open Office app."
+  - name: speckit.pitch-agent.agent-pitch-agent
+    file: agents/pitch-agent.md
+    description: "End-to-end investment banking pitch agent. Given a target company and a strategic situation\
+      \ (e.g., \"exploring strategic alternatives\"), autonomously pulls comps and precedents from market\
+      \ data, build\u2026"
+tags:
+- financial-services

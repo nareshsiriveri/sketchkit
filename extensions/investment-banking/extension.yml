@@ -1,0 +1,86 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: investment-banking
+  name: investment-banking
+  version: 0.2.1
+  description: 'Investment banking productivity tools: client and market insights, deck creation, financial
+    analysis, and transaction management'
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.investment-banking.buyer-list
+    file: commands/buyer-list.md
+    description: Build a buyer universe for a sell-side process
+  - name: speckit.investment-banking.cim
+    file: commands/cim.md
+    description: Draft a Confidential Information Memorandum
+  - name: speckit.investment-banking.deal-tracker
+    file: commands/deal-tracker.md
+    description: Track and review live deal pipeline
+  - name: speckit.investment-banking.merger-model
+    file: commands/merger-model.md
+    description: Build an accretion/dilution merger model
+  - name: speckit.investment-banking.one-pager
+    file: commands/one-pager.md
+    description: Create a one-page company strip profile using branded PPT template
+  - name: speckit.investment-banking.process-letter
+    file: commands/process-letter.md
+    description: Draft a process letter or bid instructions
+  - name: speckit.investment-banking.teaser
+    file: commands/teaser.md
+    description: Draft an anonymous one-page teaser
+  - name: speckit.investment-banking.buyer-list-skill
+    file: skills/buyer-list/SKILL.md
+    description: "Build and organize a universe of potential acquirers for sell-side M&A processes. Identifies\
+      \ strategic and financial buyers, assesses fit, and prioritizes outreach. Use when preparing for\
+      \ a sell-side\u2026"
+  - name: speckit.investment-banking.cim-builder
+    file: skills/cim-builder/SKILL.md
+    description: "Structure and draft a Confidential Information Memorandum for sell-side M&A processes.\
+      \ Organizes company information into a professional, investor-ready document with consistent formatting\
+      \ and narrat\u2026"
+  - name: speckit.investment-banking.datapack-builder
+    file: skills/datapack-builder/SKILL.md
+    description: "Build professional financial services data packs from various sources including CIMs,\
+      \ offering memorandums, SEC filings, web search, or MCP servers. Extract, normalize, and standardize\
+      \ financial data\u2026"
+  - name: speckit.investment-banking.deal-tracker-skill
+    file: skills/deal-tracker/SKILL.md
+    description: "Track multiple live deals with milestones, deadlines, action items, and status updates.\
+      \ Maintains a deal pipeline view and surfaces upcoming deadlines and overdue items. Use when managing\
+      \ a book of b\u2026"
+  - name: speckit.investment-banking.merger-model-skill
+    file: skills/merger-model/SKILL.md
+    description: "Build accretion/dilution analysis for M&A transactions. Models pro forma EPS impact,\
+      \ synergy sensitivities, and purchase price allocation. Use when evaluating a potential acquisition,\
+      \ preparing merge\u2026"
+  - name: speckit.investment-banking.pitch-deck
+    file: skills/pitch-deck/SKILL.md
+    description: "Populates investment banking pitch deck templates with data from source files. Use when:\
+      \ user provides a PowerPoint template to fill in, user has source data (Excel/CSV) to populate into\
+      \ slides, user\u2026"
+  - name: speckit.investment-banking.process-letter-skill
+    file: skills/process-letter/SKILL.md
+    description: "Draft process letters and bid instructions for sell-side M&A processes. Covers initial\
+      \ indication of interest (IOI) instructions, final bid procedures, and management meeting logistics.\
+      \ Triggers on \"\u2026"
+  - name: speckit.investment-banking.strip-profile
+    file: skills/strip-profile/SKILL.md
+    description: "Creates professional investment banking strip profiles (company profiles) for pitch\
+      \ books, deal materials, and client presentations. Generates 1-4 information-dense slides with quadrant\
+      \ layouts, char\u2026"
+  - name: speckit.investment-banking.teaser-skill
+    file: skills/teaser/SKILL.md
+    description: "Draft anonymous one-page company teasers for sell-side M&A processes. Creates a compelling\
+      \ summary without revealing the company's identity, designed to gauge buyer interest before NDA\
+      \ execution. Tri\u2026"
+tags:
+- financial-services

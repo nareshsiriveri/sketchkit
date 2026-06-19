@@ -1,0 +1,91 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: lseg
+  name: lseg
+  version: 1.0.0
+  description: Price bonds, analyze yield curves, evaluate FX carry trades, value options, and build macro
+    dashboards using LSEG financial data and analytics.
+  author: LSEG
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.lseg.analyze-bond-basis
+    file: commands/analyze-bond-basis.md
+    description: Analyze the bond futures basis with CTD identification, implied repo rate, and basis
+      trade assessment
+  - name: speckit.lseg.analyze-bond-rv
+    file: commands/analyze-bond-rv.md
+    description: Analyze a bond's relative value vs yield curves and credit spreads with scenario stress
+      testing
+  - name: speckit.lseg.analyze-fx-carry
+    file: commands/analyze-fx-carry.md
+    description: Evaluate FX carry trade opportunities with spot, forwards, vol surface, and historical
+      context
+  - name: speckit.lseg.analyze-option-vol
+    file: commands/analyze-option-vol.md
+    description: Analyze option volatility with vol surface, Greeks, and implied vs realized vol comparison
+  - name: speckit.lseg.analyze-swap-curve
+    file: commands/analyze-swap-curve.md
+    description: Analyze the swap curve with government and inflation overlays to identify curve trade
+      opportunities
+  - name: speckit.lseg.macro-rates
+    file: commands/macro-rates.md
+    description: Build a macro and rates dashboard with economic indicators, yield curves, inflation,
+      and swap spreads
+  - name: speckit.lseg.research-equity
+    file: commands/research-equity.md
+    description: Generate a comprehensive equity research snapshot with consensus estimates, fundamentals,
+      and price performance
+  - name: speckit.lseg.review-fi-portfolio
+    file: commands/review-fi-portfolio.md
+    description: Review a fixed income portfolio with pricing, reference data, cashflows, and scenario
+      analysis
+  - name: speckit.lseg.bond-futures-basis
+    file: skills/bond-futures-basis/SKILL.md
+    description: "Analyze the bond futures basis by pricing futures, identifying the cheapest-to-deliver,\
+      \ and comparing with yield curves to assess delivery option value and basis trading opportunities.\
+      \ Use when analy\u2026"
+  - name: speckit.lseg.bond-relative-value
+    file: skills/bond-relative-value/SKILL.md
+    description: "Perform relative value analysis on bonds by combining pricing, yield curve context,\
+      \ credit spreads, and scenario stress testing. Use when analyzing bond richness/cheapness, computing\
+      \ spread decomposi\u2026"
+  - name: speckit.lseg.equity-research
+    file: skills/equity-research/SKILL.md
+    description: "Generate comprehensive equity research snapshots combining analyst consensus estimates,\
+      \ company fundamentals, historical prices, and macroeconomic context. Use when researching stocks,\
+      \ comparing esti\u2026"
+  - name: speckit.lseg.fixed-income-portfolio
+    file: skills/fixed-income-portfolio/SKILL.md
+    description: "Review fixed income portfolios by pricing multiple bonds, retrieving reference data,\
+      \ analyzing cashflows, and running scenario analysis. Use when reviewing bond portfolios, computing\
+      \ portfolio durati\u2026"
+  - name: speckit.lseg.fx-carry-trade
+    file: skills/fx-carry-trade/SKILL.md
+    description: "Evaluate FX carry trade opportunities by combining spot rates, forward points, interest\
+      \ rate differentials, volatility surface analysis, and historical price trends. Use when analyzing\
+      \ carry trades,\u2026"
+  - name: speckit.lseg.macro-rates-monitor
+    file: skills/macro-rates-monitor/SKILL.md
+    description: "Build macroeconomic and rates dashboards combining macro indicators, yield curves, inflation\
+      \ breakevens, and swap rates. Use when monitoring macro conditions, analyzing yield curve shape,\
+      \ decomposing\u2026"
+  - name: speckit.lseg.option-vol-analysis
+    file: skills/option-vol-analysis/SKILL.md
+    description: "Analyze option volatility by combining vol surface data, option pricing with Greeks,\
+      \ and historical price data to assess implied vs realized volatility. Use when pricing options,\
+      \ analyzing volatility\u2026"
+  - name: speckit.lseg.swap-curve-strategy
+    file: skills/swap-curve-strategy/SKILL.md
+    description: "Analyze the interest rate swap curve by pricing swaps at multiple tenors, overlaying\
+      \ government and inflation curves, and identifying curve trade opportunities. Use when analyzing\
+      \ swap curves, comput\u2026"
+tags:
+- financial-services

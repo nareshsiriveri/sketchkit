@@ -1,0 +1,43 @@
+# Converted from a Claude Code plugin in anthropics/financial-services
+# Source: https://github.com/anthropics/financial-services
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: meeting-prep-agent
+  name: meeting-prep-agent
+  version: 0.1.1
+  description: Briefing pack before every client meeting
+  author: Anthropic FSI
+  license: Apache-2.0
+  repository: https://github.com/anthropics/financial-services
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.meeting-prep-agent.client-report
+    file: skills/client-report/SKILL.md
+    description: "Generate professional client-facing performance reports with portfolio returns, allocation\
+      \ breakdowns, and market commentary. Suitable for quarterly or annual distribution. Triggers on\
+      \ \"client report\u2026"
+  - name: speckit.meeting-prep-agent.client-review
+    file: skills/client-review/SKILL.md
+    description: "Prepare for client review meetings with portfolio performance summary, allocation analysis,\
+      \ talking points, and action items. Pulls together account data into a concise meeting-ready format.\
+      \ Use befo\u2026"
+  - name: speckit.meeting-prep-agent.investment-proposal
+    file: skills/investment-proposal/SKILL.md
+    description: "Create professional investment proposals for prospective clients. Covers the firm's\
+      \ approach, proposed allocation, expected outcomes, and fee structure. Use when pitching new clients\
+      \ or presenting a\u2026"
+  - name: speckit.meeting-prep-agent.pptx-author
+    file: skills/pptx-author/SKILL.md
+    description: "Produce a .pptx file on disk (headless) instead of driving a live PowerPoint document\
+      \ \u2014 for managed-agent sessions with no open Office app."
+  - name: speckit.meeting-prep-agent.agent-meeting-prep-agent
+    file: agents/meeting-prep-agent.md
+    description: "Builds a briefing pack before a client or prospect meeting \u2014 relationship history\
+      \ from CRM, holdings and recent activity, market context, and a suggested agenda. Use ahead of any\
+      \ client meeting; pair\u2026"
+tags:
+- financial-services
