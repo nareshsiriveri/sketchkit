@@ -1,0 +1,99 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/carta/plugins)
+# Source: https://carta.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: carta-cap-table
+  name: carta-cap-table
+  version: 6.21.5
+  description: "Carta Cap Table plugin \u2014 skills and hooks for querying cap tables, grants, SAFEs,\
+    \ 409A valuations, waterfall scenarios, and more"
+  author: Carta
+  license: Apache-2.0
+  repository: https://carta.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.carta-cap-table.carta-compensation-benchmarks
+    file: skills/carta-compensation-benchmarks/SKILL.md
+    description: "Retrieves Carta Total Compensation market benchmarks (salary, equity, total cash) for\
+      \ a role. Output to chat or CSV. Market benchmarks are triggered by queries like: \"sales benchmarks\"\
+      , \"comp benchma\u2026"
+  - name: speckit.carta-cap-table.carta-compensation-rolematcher
+    file: skills/carta-compensation-rolematcher/SKILL.md
+    description: "Classify a job title or description into the CTC taxonomy (job area, focus, level, track).\
+      \ Use when the user wants to know how a role is categorized or mapped to the taxonomy structure\
+      \ \u2014 not to fetch\u2026"
+  - name: speckit.carta-cap-table.carta-conversion-calculator
+    file: skills/carta-conversion-calculator/SKILL.md
+    description: "Calculate SAFE and convertible note conversion into equity at a financing close. Use\
+      \ when asked about SAFE conversion, note conversion, conversion shares, conversion math, how instruments\
+      \ convert in\u2026"
+  - name: speckit.carta-cap-table.carta-discover-commands
+    file: skills/carta-discover-commands/SKILL.md
+    description: "META-DISCOVERY ONLY \u2014 answers the question \"what cap-table tools or commands exist?\"\
+      \ when the user is lost about what's available. NEVER use this skill for any request that names\
+      \ a cap-table topic (s\u2026"
+  - name: speckit.carta-cap-table.carta-grant-vesting
+    file: skills/carta-grant-vesting/SKILL.md
+    description: "Fetch the vesting schedule for ONE specific grant or holder \u2014 options (ISO/NSO),\
+      \ RSUs, SARs, or CBUs. Use for \"how much has [name] vested\", \"when does [name]'s cliff hit\"\
+      , \"vesting progress for [name\u2026"
+  - name: speckit.carta-cap-table.carta-interaction-reference
+    file: skills/carta-interaction-reference/SKILL.md
+    description: "Carta's behavioral rules for AI agents presenting cap table data \u2014 mandatory context\
+      \ for any Carta cap table response. Load ONCE per conversation, before the first such response (ownership,\
+      \ grants, S\u2026"
+  - name: speckit.carta-cap-table.carta-market-benchmarks
+    file: skills/carta-market-benchmarks/SKILL.md
+    description: "Computed statistics across portfolio companies \u2014 median, average, typical, range\
+      \ \u2014 used as market benchmarks. Returns aggregate numbers and percentiles, not raw per-company\
+      \ listings."
+  - name: speckit.carta-cap-table.carta-portfolio-alerts
+    file: skills/carta-portfolio-alerts/SKILL.md
+    description: "Time-bounded and threshold-bounded risk detection across portfolio companies \u2014\
+      \ finds items that are expiring soon, maturing soon, running low, or otherwise at risk. Surfaces\
+      \ what needs attention now,\u2026"
+  - name: speckit.carta-cap-table.carta-reporting
+    file: skills/carta-reporting/SKILL.md
+    description: "Default skill for all cap table data-display queries \u2014 use this whenever the user\
+      \ wants to see, list, or explore equity data for a single company. Covers grants, vesting schedules,\
+      \ stakeholders, secu\u2026"
+  - name: speckit.carta-cap-table.carta-reporting-excel
+    file: skills/carta-reporting-excel/SKILL.md
+    description: "Internal subskill for carta-reporting. Exports Carta report data to a branded Excel\
+      \ file. Invoked by carta-reporting or carta-reporting-markdown when the user requests Excel output.\
+      \ Also the entry po\u2026"
+  - name: speckit.carta-cap-table.carta-reporting-markdown
+    file: skills/carta-reporting-markdown/SKILL.md
+    description: "Internal subskill for carta-reporting. Drives the full Claude Code interaction: schema\
+      \ preview, customization checkpoint, transform config (filtering, sorting, formulas, aggregations),\
+      \ output preview\u2026"
+  - name: speckit.carta-cap-table.carta-round-history
+    file: skills/carta-round-history/SKILL.md
+    description: "Financing round history for a company \u2014 each priced round with its date, share\
+      \ class issued, price per share, total cash raised, and the investors who participated. Covers what\
+      \ was raised and from wh\u2026"
+  - name: speckit.carta-cap-table.carta-valuation-history
+    file: skills/carta-valuation-history/SKILL.md
+    description: "Fetch 409A valuation history and current fair market value (FMV) for a company. Use\
+      \ when asked about 409A valuations, FMV, exercise prices, common stock price, or valuation expiration\
+      \ dates. Do NOT u\u2026"
+  - name: speckit.carta-cap-table.carta-waterfall-scenarios
+    file: skills/carta-waterfall-scenarios/SKILL.md
+    description: "Exit, sale, acquisition, and liquidation payouts for a company \u2014 answers how much\
+      \ money each holder walks away with at a given sale price, return multiples on holdings, and how\
+      \ proceeds distribute ac\u2026"
+  - name: speckit.carta-cap-table.carta-witness-signatures
+    file: skills/carta-witness-signatures/SKILL.md
+    description: "Status of witness and spousal-consent signature requests on option grants, RSAs, PIUs\
+      \ \u2014 who still needs to sign, and what's awaiting signature, signed, or expired. Covers one\
+      \ award, one company, or a\u2026"
+tags:
+- cap_table
+- mcp
+- carta
+- equity
+- grants

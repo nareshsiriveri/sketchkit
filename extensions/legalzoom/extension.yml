@@ -1,0 +1,28 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/legalzoom/claude-plugins)
+# Source: https://www.legalzoom.com/
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: legalzoom
+  name: legalzoom
+  version: 1.0.0
+  description: LegalZoom Plugin - AI-powered business legal assistance with contract review and attorney
+    consultation
+  author: LegalZoom
+  license: Apache-2.0
+  repository: https://www.legalzoom.com/
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.legalzoom.review-contract
+    file: commands/review-contract.md
+    description: In-depth contract analysis with risk assessment and attorney review recommendations
+  - name: speckit.legalzoom.attorney-assist
+    file: skills/attorney-assist/SKILL.md
+    description: Connects the user with a LegalZoom attorney for legal consultation. Use when a user asks
+      about attorneys, lawyers, or legal help, or when contract review reveals high risks or low-confidence
+      findings.
+tags:
+- productivity

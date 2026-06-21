@@ -1,0 +1,25 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/exa-labs/exa-mcp-server)
+# Source: https://exa.ai/docs/reference/exa-mcp
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: exa
+  name: exa
+  version: 3.3.9
+  description: Exa AI web search, deep research, and content extraction. Provides MCP tools and research
+    skills for comprehensive web search, people discovery, company research, academic papers, and more.
+  author: Exa
+  license: Apache-2.0
+  repository: https://exa.ai/docs/reference/exa-mcp
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.exa.search
+    file: skills/search/SKILL.md
+    description: "Deep research powered by Exa. Use for lead generation, literature reviews, deep dives,\
+      \ competitive analysis, or any query where one search falls short, including phrases like 'research\
+      \ this', 'find e\u2026"
+tags:
+- productivity

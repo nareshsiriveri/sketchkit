@@ -1,0 +1,123 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/awslabs/agent-plugins)
+# Source: https://github.com/awslabs/agent-plugins
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: sagemaker-ai
+  name: sagemaker-ai
+  version: 1.2.1
+  description: Build, train, and deploy AI models with deep AWS AI/ML expertise brought directly into
+    your coding assistants, covering the surface area of Amazon SageMaker AI.
+  author: Amazon Web Services
+  license: Apache-2.0
+  repository: https://github.com/awslabs/agent-plugins
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.sagemaker-ai.dataset-evaluation
+    file: skills/dataset-evaluation/SKILL.md
+    description: "Validates dataset formatting and quality for SageMaker model fine-tuning (SFT, DPO,\
+      \ or RLVR). Use when the user says \"is my dataset okay\", \"evaluate my data\", \"check my training\
+      \ data\", \"I have my own\u2026"
+  - name: speckit.sagemaker-ai.dataset-transformation
+    file: skills/dataset-transformation/SKILL.md
+    description: "Generates code that transforms datasets between ML schemas for model training or evaluation.\
+      \ Use when the user says \"transform\", \"convert\", \"reformat\", \"change the format\", or when\
+      \ a dataset's schema\u2026"
+  - name: speckit.sagemaker-ai.directory-management
+    file: skills/directory-management/SKILL.md
+    description: "Manages project directory setup and artifact organization. Use when starting a new project,\
+      \ resuming an existing one, or when a PLAN.md needs to be associated with a project directory. Creates\
+      \ the pr\u2026"
+  - name: speckit.sagemaker-ai.finetuning
+    file: skills/finetuning/SKILL.md
+    description: "Generates code that fine-tunes a base model using SageMaker serverless training jobs.\
+      \ Use when the user says \"start training\", \"fine-tune my model\", \"I'm ready to train\", or\
+      \ when the plan reaches the\u2026"
+  - name: speckit.sagemaker-ai.finetuning-technique
+    file: skills/finetuning-technique/SKILL.md
+    description: "Selects a fine-tuning technique (SFT, DPO, RLVR, or RLAIF) for the user's use case and\
+      \ validates it against the selected model's available recipes. Use when the user has decided to\
+      \ finetune and needs\u2026"
+  - name: speckit.sagemaker-ai.hyperpod-cluster-debugger
+    file: skills/hyperpod-cluster-debugger/SKILL.md
+    description: "Diagnose and remediate cluster-wide HyperPod (EKS or Slurm) problems \u2014 creation\
+      \ / deployment failures (CloudFormation, EFA health check, lifecycle scripts, capacity), EKS access,\
+      \ node replacement, Cl\u2026"
+  - name: speckit.sagemaker-ai.hyperpod-issue-report
+    file: skills/hyperpod-issue-report/SKILL.md
+    description: "Generate comprehensive issue reports from HyperPod clusters (EKS and Slurm) by collecting\
+      \ diagnostic logs and configurations for troubleshooting and AWS Support cases. Use when users need\
+      \ to collect\u2026"
+  - name: speckit.sagemaker-ai.hyperpod-nccl
+    file: skills/hyperpod-nccl/SKILL.md
+    description: "Diagnose NCCL failures and adjacent training-pod failures on HyperPod GPU clusters (EKS\
+      \ or Slurm) \u2014 training hangs, AllReduce / collective-op timeouts, EFA or libfabric errors,\
+      \ rendezvous failures, E\u2026"
+  - name: speckit.sagemaker-ai.hyperpod-node-debugger
+    file: skills/hyperpod-node-debugger/SKILL.md
+    description: "Diagnose and remediate per-node issues on a HyperPod cluster (EKS or Slurm) \u2014 a\
+      \ specific node is unhealthy, unresponsive, stuck, or needs replacing. Covers on-node EFA, GPU /\
+      \ accelerator hardware (XI\u2026"
+  - name: speckit.sagemaker-ai.hyperpod-performance-debugger
+    file: skills/hyperpod-performance-debugger/SKILL.md
+    description: "Diagnose performance issues on Amazon SageMaker HyperPod clusters \u2014 uneven NCCL\
+      \ bandwidth across nodes and poor filesystem throughput. Read-only. Surfaces host-side signals (Xid,\
+      \ ECC, NVLink, EFA rea\u2026"
+  - name: speckit.sagemaker-ai.hyperpod-slurm-debugger
+    file: skills/hyperpod-slurm-debugger/SKILL.md
+    description: "Diagnostic-only skill for Slurm scheduler and node-daemon issues on Amazon SageMaker\
+      \ HyperPod Slurm clusters. Scope mirrors the HyperPod troubleshooting guide. Invoke when the user\
+      \ reports a Slurm no\u2026"
+  - name: speckit.sagemaker-ai.hyperpod-ssm
+    file: skills/hyperpod-ssm/SKILL.md
+    description: "Remote command execution and file transfer on SageMaker HyperPod cluster nodes via AWS\
+      \ Systems Manager (SSM). This is the primary interface for accessing HyperPod nodes \u2014 direct\
+      \ SSH is not available.\u2026"
+  - name: speckit.sagemaker-ai.hyperpod-version-checker
+    file: skills/hyperpod-version-checker/SKILL.md
+    description: "Check and compare software component versions on SageMaker HyperPod cluster nodes -\
+      \ NVIDIA drivers, CUDA toolkit, cuDNN, NCCL, EFA, AWS OFI NCCL, GDRCopy, MPI, Neuron SDK (Trainium/Inferentia),\
+      \ Pytho\u2026"
+  - name: speckit.sagemaker-ai.model-deployment
+    file: skills/model-deployment/SKILL.md
+    description: "Generates code that deploys fine-tuned models from SageMaker Serverless Model Customization\
+      \ to SageMaker endpoints or Bedrock. Use when the user says \"deploy my model\", \"create an endpoint\"\
+      , \"make it\u2026"
+  - name: speckit.sagemaker-ai.model-evaluation
+    file: skills/model-evaluation/SKILL.md
+    description: "Generates python code that evaluates SageMaker models. Supports two evaluation types:\
+      \ LLM-as-Judge and Custom Scorer. Use when the user says \"evaluate my model\", \"run a benchmark\"\
+      , \"test model perfor\u2026"
+  - name: speckit.sagemaker-ai.model-selection
+    file: skills/model-selection/SKILL.md
+    description: "Selects a base model for the user's use case by querying SageMaker Hub. Use when the\
+      \ user asks which model to use, wants to select or change their base model, mentions a model name\
+      \ or family (e.g., \"\u2026"
+  - name: speckit.sagemaker-ai.planning
+    file: skills/planning/SKILL.md
+    description: "Discovers user intent and generates a structured, step-by-step plan for model customization\
+      \ workflows. This skill must always be activated alongside any other skill when the user's request\
+      \ relates to\u2026"
+  - name: speckit.sagemaker-ai.sdk-getting-started
+    file: skills/sdk-getting-started/SKILL.md
+    description: "Validates the user's environment for SageMaker AI operations \u2014 checks SDK version,\
+      \ AWS region, and execution role. Use when the user says \"set up\", \"getting started\", \"check\
+      \ my environment\", \"configu\u2026"
+  - name: speckit.sagemaker-ai.use-case-specification
+    file: skills/use-case-specification/SKILL.md
+    description: "Creates a reusable use case specification file that defines the business problem, stakeholders,\
+      \ and measurable success criteria for model customization, as recommended by the AWS Responsible\
+      \ AI Lens.\u2026"
+tags:
+- sagemaker
+- machine-learning
+- generative-ai
+- fine-tuning
+- training
+- deployment
+- inference
+- mlops
+- aws

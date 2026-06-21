@@ -1,0 +1,152 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/endorlabs/ai-plugins)
+# Source: https://www.endorlabs.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: ai-plugins
+  name: ai-plugins
+  version: 0.1.0
+  description: Set up endorctl and use Endor Labs to scan, prioritize, and fix security risks across your
+    software supply chain
+  author: Unknown
+  license: Apache-2.0
+  repository: https://www.endorlabs.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.ai-plugins.ai-sast-triage
+    file: skills/ai-sast-triage/SKILL.md
+    description: Parse Endor AI SAST findings, use exploit reproduction and remediation guidance as patch
+      context, fetch source at the pinned commit, and open change requests when requested.
+  - name: speckit.ai-plugins.cicd-posture
+    file: skills/cicd-posture/SKILL.md
+    description: "Use this agent when the user wants a read-only CI/CD and supply chain posture assessment\
+      \ for an Endor namespace, GitHub organization, repository set, or current repository. The agent\
+      \ combines existin\u2026"
+  - name: speckit.ai-plugins.dependency-decision-helper
+    file: skills/dependency-decision-helper/SKILL.md
+    description: "Use this agent when the user asks whether to add, upgrade, or use a specific package\
+      \ version. Examples: \"Is lodash 4.17.20 safe?\", \"Should I use requests 2.28.0?\", \"Check log4j-core\
+      \ 2.14.1 before I a\u2026"
+  - name: speckit.ai-plugins.endor-agent-kit-setup
+    file: skills/endor-agent-kit-setup/SKILL.md
+    description: Use when setting up Endor Labs Agent Kit for Cursor, checking readiness, verifying Endor
+      auth, choosing namespaces, or diagnosing missing endorctl, gh, Endor MCP, or workflow prerequisites.
+  - name: speckit.ai-plugins.endor-troubleshooter
+    file: skills/endor-troubleshooter/SKILL.md
+    description: "Use this agent when the user needs help diagnosing and fixing Endor Labs errors, warnings,\
+      \ missing integrations, scan failures, slow scans, or unhealthy configuration. Endor Troubleshooter\
+      \ gathers th\u2026"
+  - name: speckit.ai-plugins.findings-browser
+    file: skills/findings-browser/SKILL.md
+    description: "Use this agent when the user wants to browse, filter, summarize, or inspect existing\
+      \ Endor Labs findings. Findings Browser uses read-only Endor evidence to list matching findings,\
+      \ explain applied fil\u2026"
+  - name: speckit.ai-plugins.malware-response
+    file: skills/malware-response/SKILL.md
+    description: "Use this agent when a customer needs rapid read-only response to a software supply-chain\
+      \ malware incident. It gathers or ingests current malware intelligence, normalizes affected package\
+      \ and version\u2026"
+  - name: speckit.ai-plugins.package-risk-summary
+    file: skills/package-risk-summary/SKILL.md
+    description: "Use this agent when the user wants a concise risk profile for a specific package version\
+      \ without asking for a yes/no dependency decision. Examples: \"Summarize npm lodash 4.17.20 risk\"\
+      , \"Give me the r\u2026"
+  - name: speckit.ai-plugins.probe-droid
+    file: skills/probe-droid/SKILL.md
+    description: "Use this agent when the user wants to assess GitHub repository onboarding gaps for Endor\
+      \ Labs monitored-branch coverage. Probe Droid compares github.com organization or repository inventory\
+      \ with Endo\u2026"
+  - name: speckit.ai-plugins.remediation-planner
+    file: skills/remediation-planner/SKILL.md
+    description: Preview safe remediation options without opening PRs.
+  - name: speckit.ai-plugins.repository-dependency-reviewer
+    file: skills/repository-dependency-reviewer/SKILL.md
+    description: "Use this agent inside a source repository when the user wants a read-only dependency\
+      \ risk review based on local manifests. It inspects dependency files, resolves exact package coordinates\
+      \ when possib\u2026"
+  - name: speckit.ai-plugins.sca-remediation
+    file: skills/sca-remediation/SKILL.md
+    description: "Plan and remediate dependency vulnerabilities with Endor SCA findings, VersionUpgrade/UIA\
+      \ evidence, separate low-risk PR lanes, deterministic risk decisions, local validation, and approved\
+      \ PR/MR crea\u2026"
+  - name: speckit.ai-plugins.upgrade-impact-analysis
+    file: skills/upgrade-impact-analysis/SKILL.md
+    description: "Use this agent when the user asks for Endor Labs Upgrade Impact Analysis: safe upgrade\
+      \ paths, upgrade risk, findings fixed or introduced, Code Impact Analysis, breaking changes, manifest\
+      \ targeting, o\u2026"
+  - name: speckit.ai-plugins.vulnerability-explainer
+    file: skills/vulnerability-explainer/SKILL.md
+    description: "Use this agent when the user asks what a specific vulnerability means and how to reason\
+      \ about it. Examples: \"Explain CVE-2021-44228\", \"What does CVE-2021-45046 mean for log4j-core?\"\
+      , \"Summarize this\u2026"
+  - name: speckit.ai-plugins.agent-endor-agent-kit-setup-agent
+    file: agents/endor-agent-kit-setup-agent.md
+    description: Use when setting up Endor Labs Agent Kit for Cursor, checking readiness, verifying Endor
+      auth, choosing namespaces, or diagnosing missing endorctl, gh, Endor MCP, or workflow prerequisites.
+  - name: speckit.ai-plugins.agent-endor-ai-sast-triage-agent
+    file: agents/endor-ai-sast-triage-agent.md
+    description: Parse Endor AI SAST findings, use exploit reproduction and remediation guidance as patch
+      context, fetch source at the pinned commit, and open change requests when requested.
+  - name: speckit.ai-plugins.agent-endor-cicd-posture-agent
+    file: agents/endor-cicd-posture-agent.md
+    description: "Use this agent when the user wants a read-only CI/CD and supply chain posture assessment\
+      \ for an Endor namespace, GitHub organization, repository set, or current repository. The agent\
+      \ combines existin\u2026"
+  - name: speckit.ai-plugins.agent-endor-dependency-decision-helper-agent
+    file: agents/endor-dependency-decision-helper-agent.md
+    description: "Use this agent when the user asks whether to add, upgrade, or use a specific package\
+      \ version. Examples: \"Is lodash 4.17.20 safe?\", \"Should I use requests 2.28.0?\", \"Check log4j-core\
+      \ 2.14.1 before I a\u2026"
+  - name: speckit.ai-plugins.agent-endor-findings-browser-agent
+    file: agents/endor-findings-browser-agent.md
+    description: "Use this agent when the user wants to browse, filter, summarize, or inspect existing\
+      \ Endor Labs findings. Findings Browser uses read-only Endor evidence to list matching findings,\
+      \ explain applied fil\u2026"
+  - name: speckit.ai-plugins.agent-endor-malware-response-agent
+    file: agents/endor-malware-response-agent.md
+    description: "Use this agent when a customer needs rapid read-only response to a software supply-chain\
+      \ malware incident. It gathers or ingests current malware intelligence, normalizes affected package\
+      \ and version\u2026"
+  - name: speckit.ai-plugins.agent-endor-package-risk-summary-agent
+    file: agents/endor-package-risk-summary-agent.md
+    description: "Use this agent when the user wants a concise risk profile for a specific package version\
+      \ without asking for a yes/no dependency decision. Examples: \"Summarize npm lodash 4.17.20 risk\"\
+      , \"Give me the r\u2026"
+  - name: speckit.ai-plugins.agent-endor-probe-droid-agent
+    file: agents/endor-probe-droid-agent.md
+    description: "Use this agent when the user wants to assess GitHub repository onboarding gaps for Endor\
+      \ Labs monitored-branch coverage. Probe Droid compares github.com organization or repository inventory\
+      \ with Endo\u2026"
+  - name: speckit.ai-plugins.agent-endor-remediation-planner-agent
+    file: agents/endor-remediation-planner-agent.md
+    description: Preview safe remediation options without opening PRs.
+  - name: speckit.ai-plugins.agent-endor-repository-dependency-reviewer-agent
+    file: agents/endor-repository-dependency-reviewer-agent.md
+    description: "Use this agent inside a source repository when the user wants a read-only dependency\
+      \ risk review based on local manifests. It inspects dependency files, resolves exact package coordinates\
+      \ when possib\u2026"
+  - name: speckit.ai-plugins.agent-endor-sca-remediation-agent
+    file: agents/endor-sca-remediation-agent.md
+    description: "Plan and remediate dependency vulnerabilities with Endor SCA findings, VersionUpgrade/UIA\
+      \ evidence, separate low-risk PR lanes, deterministic risk decisions, local validation, and approved\
+      \ PR/MR crea\u2026"
+  - name: speckit.ai-plugins.agent-endor-troubleshooter-agent
+    file: agents/endor-troubleshooter-agent.md
+    description: "Use this agent when the user needs help diagnosing and fixing Endor Labs errors, warnings,\
+      \ missing integrations, scan failures, slow scans, or unhealthy configuration. Endor Troubleshooter\
+      \ gathers th\u2026"
+  - name: speckit.ai-plugins.agent-endor-upgrade-impact-analysis-agent
+    file: agents/endor-upgrade-impact-analysis-agent.md
+    description: "Use this agent when the user asks for Endor Labs Upgrade Impact Analysis: safe upgrade\
+      \ paths, upgrade risk, findings fixed or introduced, Code Impact Analysis, breaking changes, manifest\
+      \ targeting, o\u2026"
+  - name: speckit.ai-plugins.agent-endor-vulnerability-explainer-agent
+    file: agents/endor-vulnerability-explainer-agent.md
+    description: "Use this agent when the user asks what a specific vulnerability means and how to reason\
+      \ about it. Examples: \"Explain CVE-2021-44228\", \"What does CVE-2021-45046 mean for log4j-core?\"\
+      , \"Summarize this\u2026"
+tags:
+- claude-code

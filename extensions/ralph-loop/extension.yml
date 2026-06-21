@@ -1,0 +1,29 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: ralph-loop
+  name: ralph-loop
+  version: 1.0.0
+  description: Continuous self-referential AI loops for interactive iterative development, implementing
+    the Ralph Wiggum technique. Run Claude in a while-true loop with the same prompt until task completion.
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.ralph-loop.cancel-ralph
+    file: commands/cancel-ralph.md
+    description: Cancel active Ralph Loop
+  - name: speckit.ralph-loop.help
+    file: commands/help.md
+    description: Explain Ralph Loop plugin and available commands
+  - name: speckit.ralph-loop.ralph-loop
+    file: commands/ralph-loop.md
+    description: Start Ralph Loop in current session
+tags:
+- claude-code

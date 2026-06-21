@@ -1,0 +1,227 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/auth0/agent-skills)
+# Source: https://auth0.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: auth0
+  name: auth0
+  version: 1.1.0
+  description: "Auth0 skills for quickstarts, migration, major version upgrades, MFA, branding, custom\
+    \ domains, Advanced Custom Universal Login (ACUL) screen generation, and framework-specific SDK integrations\
+    \ for React, Next.js, Vue, Nuxt, Angular, Express, Fastify, FastAPI, Flask, Go, Spring Boot, Java\
+    \ MVC, Swif\u2026"
+  author: Auth0
+  license: Apache-2.0
+  repository: https://auth0.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.auth0.acul-screen-generator
+    file: skills/acul-screen-generator/SKILL.md
+    description: "Generates complete, branded Auth0 Advanced Custom Universal Login (ACUL) screen implementations\
+      \ using the React or Vanilla JS SDK. Use when a developer asks to create, add, or modify ACUL login\
+      \ scree\u2026"
+  - name: speckit.auth0.auth0-android
+    file: skills/auth0-android/SKILL.md
+    description: Use when adding authentication to Android applications (Kotlin/Java) with Web Auth, biometric-protected
+      credentials, and MFA - integrates com.auth0.android:auth0 SDK for native Android apps
+  - name: speckit.auth0.auth0-android-major-migration
+    file: skills/auth0-android-major-migration/SKILL.md
+    description: "Use when upgrading the Auth0.Android SDK (com.auth0.android:auth0) to its next major\
+      \ version (v4) in a native Android app (Kotlin/Java). Optionally takes a target version as an argument;\
+      \ otherwise au\u2026"
+  - name: speckit.auth0.auth0-angular
+    file: skills/auth0-angular/SKILL.md
+    description: Use when adding authentication to Angular applications with route guards and HTTP interceptors
+      - integrates @auth0/auth0-angular SDK for SPAs
+  - name: speckit.auth0.auth0-aspnetcore-api
+    file: skills/auth0-aspnetcore-api/SKILL.md
+    description: "Use when securing ASP.NET Core Web API endpoints with JWT Bearer token validation, scope/permission\
+      \ checks, or stateless auth - integrates Auth0.AspNetCore.Authentication.Api for REST APIs receiving\u2026"
+  - name: speckit.auth0.auth0-aspnetcore-authentication
+    file: skills/auth0-aspnetcore-authentication/SKILL.md
+    description: "Use when adding login, logout, and user profile to an ASP.NET Core MVC, Razor Pages,\
+      \ or Blazor Server web application using cookie-based authentication - integrates Auth0.AspNetCore.Authentication\
+      \ fo\u2026"
+  - name: speckit.auth0.auth0-branding
+    file: skills/auth0-branding/SKILL.md
+    description: "Use when you want to (1) brand an Auth0 tenant's Universal Login to match a website\
+      \ or brand assets (colors, logo, fonts, page layout, text); (2) manually update one or more branding\
+      \ values (logos, c\u2026"
+  - name: speckit.auth0.auth0-cli
+    file: skills/auth0-cli/SKILL.md
+    description: "Reference for Auth0 CLI commands \u2014 apps, apis, users, roles, organizations, actions,\
+      \ logs, custom domains, universal-login, terraform, raw API mode, and --json output. Use this skill\
+      \ whenever you nee\u2026"
+  - name: speckit.auth0.auth0-custom-domains
+    file: skills/auth0-custom-domains/SKILL.md
+    description: "Use when setting up, troubleshooting, managing, removing, or checking the health of\
+      \ an Auth0 custom authentication domain (e.g. login.example.com), OR when diagnosing an error (400/403/404/409/429)\
+      \ f\u2026"
+  - name: speckit.auth0.auth0-expo
+    file: skills/auth0-expo/SKILL.md
+    description: "Use when adding authentication to Expo (React Native) mobile apps \u2014 login, logout,\
+      \ user sessions, protected routes, biometrics, or token management. Integrates react-native-auth0\
+      \ SDK with Expo Config\u2026"
+  - name: speckit.auth0.auth0-express
+    file: skills/auth0-express/SKILL.md
+    description: Use when adding authentication (login, logout, protected routes) to Express.js web applications
+      - integrates express-openid-connect for session-based auth.
+  - name: speckit.auth0.auth0-fastapi-api
+    file: skills/auth0-fastapi-api/SKILL.md
+    description: "Use when securing FastAPI API endpoints with JWT Bearer token validation, scope/permission\
+      \ checks, or stateless auth - integrates auth0-fastapi-api for REST APIs receiving access tokens\
+      \ from SPAs, mo\u2026"
+  - name: speckit.auth0.auth0-fastify
+    file: skills/auth0-fastify/SKILL.md
+    description: "Use when adding authentication (login, logout, protected routes) to Fastify web applications\
+      \ - integrates @auth0/auth0-fastify for session-based auth. For stateless Fastify APIs use auth0-fastify-api\u2026"
+  - name: speckit.auth0.auth0-fastify-api
+    file: skills/auth0-fastify-api/SKILL.md
+    description: "Use when securing Fastify API endpoints with JWT Bearer token validation, scope/permission\
+      \ checks, or stateless auth - integrates @auth0/auth0-fastify-api for REST APIs receiving access\
+      \ tokens from f\u2026"
+  - name: speckit.auth0.auth0-flask
+    file: skills/auth0-flask/SKILL.md
+    description: "Use when adding login, logout, and user profile to a Flask web application using session-based\
+      \ authentication - integrates auth0-server-python for server-rendered apps with login/callback/profile/log\u2026"
+  - name: speckit.auth0.auth0-flutter-native
+    file: skills/auth0-flutter-native/SKILL.md
+    description: "Use when adding Auth0 authentication to a Flutter mobile application (iOS/Android) \u2014\
+      \ integrates the auth0_flutter SDK (native platform) for Web Auth login/logout via the system browser,\
+      \ with secure c\u2026"
+  - name: speckit.auth0.auth0-flutter-web
+    file: skills/auth0-flutter-web/SKILL.md
+    description: "Use when adding Auth0 authentication to a Flutter web application \u2014 integrates\
+      \ the auth0_flutter SDK (web platform) for browser-based authentication using redirect login, popup\
+      \ login, and credential\u2026"
+  - name: speckit.auth0.auth0-ionic-angular
+    file: skills/auth0-ionic-angular/SKILL.md
+    description: "Use when adding Auth0 authentication to an Ionic Angular application with Capacitor\
+      \ \u2014 integrates @auth0/auth0-angular SDK with Capacitor Browser and App plugins for native iOS/Android\
+      \ deep linking, l\u2026"
+  - name: speckit.auth0.auth0-ionic-react
+    file: skills/auth0-ionic-react/SKILL.md
+    description: "Use when adding Auth0 authentication to an Ionic React application with Capacitor \u2014\
+      \ integrates @auth0/auth0-react SDK with Capacitor Browser and App plugins for native iOS/Android\
+      \ deep linking, login\u2026"
+  - name: speckit.auth0.auth0-ionic-vue
+    file: skills/auth0-ionic-vue/SKILL.md
+    description: "Use when adding Auth0 authentication to an Ionic Vue application with Capacitor \u2014\
+      \ integrates @auth0/auth0-vue SDK with Capacitor Browser and App plugins for native iOS/Android\
+      \ deep linking, login, lo\u2026"
+  - name: speckit.auth0.auth0-java-mvc-common
+    file: skills/auth0-java-mvc-common/SKILL.md
+    description: "Use when adding Auth0 login, logout, and callback handling to Java Servlet web applications\
+      \ - integrates com.auth0:mvc-auth-commons SDK for server-side Java apps using javax.servlet with\
+      \ session-base\u2026"
+  - name: speckit.auth0.auth0-laravel
+    file: skills/auth0-laravel/SKILL.md
+    description: "Use when adding login, logout, and user profile to a Laravel web application using session-based\
+      \ authentication - integrates auth0/login (laravel-auth0) for guard-based auth with auto-registered\
+      \ rout\u2026"
+  - name: speckit.auth0.auth0-laravel-api
+    file: skills/auth0-laravel-api/SKILL.md
+    description: "Use when securing Laravel API endpoints with JWT Bearer token validation, scope/permission\
+      \ checks, or stateless auth - integrates auth0/login (laravel-auth0) with the AuthorizationGuard\
+      \ for REST APIs\u2026"
+  - name: speckit.auth0.auth0-maui
+    file: skills/auth0-maui/SKILL.md
+    description: "Use when adding Auth0 authentication to .NET MAUI cross-platform applications (iOS,\
+      \ Android, macOS, Windows) - integrates Auth0.OidcClient.MAUI NuGet package for native login, logout,\
+      \ token refresh,\u2026"
+  - name: speckit.auth0.auth0-mfa
+    file: skills/auth0-mfa/SKILL.md
+    description: "Use when adding MFA, 2FA, TOTP, SMS codes, push notifications, passkeys, or when requiring\
+      \ step-up verification for sensitive operations or meeting compliance requirements (HIPAA, PCI-DSS)\
+      \ - covers a\u2026"
+  - name: speckit.auth0.auth0-migration
+    file: skills/auth0-migration/SKILL.md
+    description: "Use when migrating or switching from an existing auth provider (Firebase, Cognito, Supabase,\
+      \ Clerk, custom auth) to Auth0 - covers bulk user import, gradual migration strategies, code migration\
+      \ patte\u2026"
+  - name: speckit.auth0.auth0-net-android
+    file: skills/auth0-net-android/SKILL.md
+    description: "Use when adding Auth0 authentication to .NET Android applications - integrates Auth0.OidcClient.AndroidX\
+      \ NuGet package for native login, logout, token management, and user profile via system browser\u2026"
+  - name: speckit.auth0.auth0-net-ios
+    file: skills/auth0-net-ios/SKILL.md
+    description: "Use when adding Auth0 authentication to .NET iOS applications - integrates Auth0.OidcClient.iOS\
+      \ NuGet package for native login, logout, token management, and user profile via ASWebAuthenticationSessi\u2026"
+  - name: speckit.auth0.auth0-nextjs
+    file: skills/auth0-nextjs/SKILL.md
+    description: Use when adding authentication to Next.js applications (login, logout, protected pages,
+      middleware, server components) - supports App Router and Pages Router with @auth0/nextjs-auth0 SDK.
+  - name: speckit.auth0.auth0-nuxt
+    file: skills/auth0-nuxt/SKILL.md
+    description: "Use when implementing Auth0 authentication in Nuxt 3/4 applications, configuring session\
+      \ management, protecting routes with middleware, or integrating API access tokens - provides setup\
+      \ patterns, com\u2026"
+  - name: speckit.auth0.auth0-php
+    file: skills/auth0-php/SKILL.md
+    description: "Use when adding login, logout, and user profile to a PHP web application using session-based\
+      \ authentication - integrates auth0/auth0-php SDK for server-rendered apps with login/callback/profile/logou\u2026"
+  - name: speckit.auth0.auth0-php-api
+    file: skills/auth0-php-api/SKILL.md
+    description: "Use when securing PHP API endpoints with JWT Bearer token validation, scope/permission\
+      \ checks, or stateless auth - integrates auth0/auth0-php SDK in API mode (STRATEGY_API) for REST\
+      \ APIs receiving ac\u2026"
+  - name: speckit.auth0.auth0-quickstart
+    file: skills/auth0-quickstart/SKILL.md
+    description: "Use when adding authentication or login to any app - detects your stack (React, Next.js,\
+      \ Vue, Nuxt, Angular, Express, Fastify, FastAPI, ASP.NET Core, React Native, Expo, Android, Swift),\
+      \ sets up an A\u2026"
+  - name: speckit.auth0.auth0-react
+    file: skills/auth0-react/SKILL.md
+    description: Use when adding authentication to React applications (login, logout, user sessions, protected
+      routes) - integrates @auth0/auth0-react SDK for SPAs with Vite or Create React App
+  - name: speckit.auth0.auth0-react-native
+    file: skills/auth0-react-native/SKILL.md
+    description: Use when adding authentication to React Native or Expo mobile apps (iOS/Android) with
+      biometric support - integrates react-native-auth0 SDK with native deep linking
+  - name: speckit.auth0.auth0-spa-js
+    file: skills/auth0-spa-js/SKILL.md
+    description: Use when adding authentication to Vanilla JS, Svelte, or any framework-agnostic single-page
+      applications - integrates @auth0/auth0-spa-js SDK for SPAs without framework-specific wrappers
+  - name: speckit.auth0.auth0-springboot-api
+    file: skills/auth0-springboot-api/SKILL.md
+    description: "Use when securing Spring Boot API endpoints with JWT Bearer token validation, scope-based\
+      \ authorization, or DPoP proof-of-possession - integrates com.auth0:auth0-springboot-api SDK for\
+      \ REST APIs rece\u2026"
+  - name: speckit.auth0.auth0-swift
+    file: skills/auth0-swift/SKILL.md
+    description: "Use when adding Auth0 authentication to an iOS, macOS, tvOS, watchOS, or visionOS application\
+      \ \u2014 integrates the Auth0.swift SDK for native Apple platform authentication using Web Auth,\
+      \ CredentialsMana\u2026"
+  - name: speckit.auth0.auth0-swift-major-migration
+    file: skills/auth0-swift-major-migration/SKILL.md
+    description: "Migrates Auth0.swift v2.x integrations to v3.x. Pass a target v3 tag as an argument\
+      \ (e.g. auth0-swift-major-migration 3.0.0-beta.2) to pin a specific version, or omit it to auto-resolve\
+      \ the latest v3\u2026"
+  - name: speckit.auth0.auth0-vue
+    file: skills/auth0-vue/SKILL.md
+    description: Use when adding authentication to Vue.js 3 applications (login, logout, user sessions,
+      protected routes) - integrates @auth0/auth0-vue SDK for SPAs with Vite or Vue CLI
+  - name: speckit.auth0.auth0-winforms
+    file: skills/auth0-winforms/SKILL.md
+    description: "Use when adding Auth0 authentication to Windows Forms (WinForms) desktop applications\
+      \ - integrates Auth0.OidcClient.WinForms NuGet package for native login, logout, token refresh,\
+      \ and user profile. T\u2026"
+  - name: speckit.auth0.auth0-wpf
+    file: skills/auth0-wpf/SKILL.md
+    description: "Use when adding Auth0 authentication to WPF (Windows Presentation Foundation) desktop\
+      \ applications - integrates Auth0.OidcClient.WPF NuGet package for native login, logout, token refresh,\
+      \ and user pr\u2026"
+  - name: speckit.auth0.express-oauth2-jwt-bearer
+    file: skills/express-oauth2-jwt-bearer/SKILL.md
+    description: "Use when adding Auth0 token validation to Express or Node.js APIs - integrates express-oauth2-jwt-bearer\
+      \ SDK to protect Node.js API endpoints with JWT Bearer authentication, scope-based RBAC, claim v\u2026"
+  - name: speckit.auth0.go-jwt-middleware
+    file: skills/go-jwt-middleware/SKILL.md
+    description: "Use when securing Go HTTP API endpoints with JWT Bearer token validation, scope/permission\
+      \ checks, or stateless auth. Integrates github.com/auth0/go-jwt-middleware/v3 for REST APIs receiving\
+      \ access t\u2026"
+tags:
+- security

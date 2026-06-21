@@ -1,0 +1,32 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/wonderwhy-er/DesktopCommanderMCP)
+# Source: https://desktopcommander.app
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: desktop-commander
+  name: Desktop Commander
+  version: 0.1.0
+  description: MCP server for terminal commands, process management, and file operations across text,
+    code, PDF, DOCX, Excel, images, and structured data
+  author: Desktop Commander
+  license: Apache-2.0
+  repository: https://desktopcommander.app
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.desktop-commander.desktop-commander-overview
+    file: skills/desktop-commander-overview/SKILL.md
+    description: "Use for Desktop Commander MCP capabilities \u2014 persistent shells and REPLs, long-running\
+      \ processes, filesystem beyond the workspace, structured files (.xlsx, .docx, .pdf, images) and\
+      \ large local data f\u2026"
+tags:
+- shell
+- terminal
+- filesystem
+- process
+- documents
+- pdf
+- spreadsheet
+- desktop-commander

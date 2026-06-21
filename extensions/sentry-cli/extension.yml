@@ -1,0 +1,24 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/getsentry/cli)
+# Source: https://sentry.io
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: sentry-cli
+  name: sentry-cli
+  version: 0.38.0
+  description: Skills for using the Sentry CLI to interact with Sentry from the command line
+  author: Sentry
+  license: Apache-2.0
+  repository: https://sentry.io
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.sentry-cli.sentry-cli
+    file: skills/sentry-cli/SKILL.md
+    description: "Guide for using the Sentry CLI to interact with Sentry from the command line. Use when\
+      \ the user asks about viewing issues, events, projects, organizations, making API calls, or authenticating\
+      \ with Se\u2026"
+tags:
+- monitoring

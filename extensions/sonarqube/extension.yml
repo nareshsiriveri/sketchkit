@@ -1,0 +1,59 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/SonarSource/sonarqube-agent-plugins)
+# Source: https://www.sonarsource.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: sonarqube
+  name: sonarqube
+  version: 2.2.0
+  description: "Automatically enforce SonarQube code quality and security in the agent coding loop \u2014\
+    \ 7,000+ rules, secrets scanning, agentic analysis, and quality gates across 40+ languages."
+  author: Sonar
+  license: Apache-2.0
+  repository: https://www.sonarsource.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.sonarqube.sonar-analyze
+    file: skills/sonar-analyze/SKILL.md
+    description: Analyze a file or code snippet for quality and security issues using SonarQube
+  - name: speckit.sonarqube.sonar-coverage
+    file: skills/sonar-coverage/SKILL.md
+    description: Find files with low test coverage and inspect uncovered lines in a SonarQube project
+      (project key optional when MCP integration already defines the default project)
+  - name: speckit.sonarqube.sonar-dependency-risks
+    file: skills/sonar-dependency-risks/SKILL.md
+    description: Search for software composition analysis (SCA) dependency risks in a SonarQube project
+      (project key optional when MCP integration already defines the default project)
+  - name: speckit.sonarqube.sonar-duplication
+    file: skills/sonar-duplication/SKILL.md
+    description: Find files with code duplications in a SonarQube project and inspect duplication blocks
+      for a file (project key optional when MCP integration already defines the default project)
+  - name: speckit.sonarqube.sonar-fix-issue
+    file: skills/sonar-fix-issue/SKILL.md
+    description: Fix a specific SonarQube issue in code by rule key and location
+  - name: speckit.sonarqube.sonar-integrate
+    file: skills/sonar-integrate/SKILL.md
+    description: "Installs sonarqube-cli if not already installed, authenticates, and integrates SonarQube\
+      \ with the current agent (installs analysis hooks & SonarQube MCP Server). Use when the user wants\
+      \ to set up Son\u2026"
+  - name: speckit.sonarqube.sonar-list-issues
+    file: skills/sonar-list-issues/SKILL.md
+    description: Search and filter SonarQube issues for a project, branch, or pull request via sonarqube-cli
+      (`-p` is always required on the CLI; resolve the key from user arguments or sonar-project.properties)
+  - name: speckit.sonarqube.sonar-list-projects
+    file: skills/sonar-list-projects/SKILL.md
+    description: List SonarQube projects accessible to the current user
+  - name: speckit.sonarqube.sonar-quality-gate
+    file: skills/sonar-quality-gate/SKILL.md
+    description: "Show SonarQube quality gate status for a project \u2014 pass/fail and each condition\
+      \ (metric key, threshold, actual value). Project key optional when MCP integration already defines\
+      \ the default project."
+tags:
+- sonarqube
+- code-quality
+- static-analysis
+- security
+- secrets

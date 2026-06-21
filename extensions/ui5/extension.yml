@@ -1,0 +1,35 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/UI5/plugins-coding-agents)
+# Source: https://github.com/UI5/plugins-coding-agents
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: ui5
+  name: ui5
+  version: 0.1.0
+  description: SAPUI5 / OpenUI5 plugin for coding agents. Create and validate UI5 projects, access API
+    documentation, run UI5 linter, get development guidelines and best practices for UI5 development.
+  author: SAP SE
+  license: Apache-2.0
+  repository: https://github.com/UI5/plugins-coding-agents
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.ui5.ui5-best-practices
+    file: skills/ui5-best-practices/SKILL.md
+    description: "UI5 development best practices and coding standards derived exclusively from official\
+      \ SAP UI5 guidelines. Use when writing UI5 applications to ensure modern, maintainable code following\
+      \ SAP standards\u2026"
+  - name: speckit.ui5.ui5-best-practices-integration-cards
+    file: skills/ui5-best-practices-integration-cards/SKILL.md
+    description: "MUST be loaded before any UI Integration Cards (also called UI5 Integration Cards) task\
+      \ \u2014 creating, modifying, validating, previewing, or reviewing a card, its `manifest.json`,\
+      \ its Configuration Edit\u2026"
+  - name: speckit.ui5.ui5-best-practices-opa5
+    file: skills/ui5-best-practices-opa5/SKILL.md
+    description: "This skill should be used in any OPA5 task - creating, modifying, extending, debugging,\
+      \ fixing or reviewing an integration test. Use when the user asks to \"write an OPA5 test\", \"\
+      add an OPA5 journey\",\u2026"
+tags:
+- development

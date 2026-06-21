@@ -1,0 +1,30 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/workos/skills)
+# Source: https://workos.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: workos
+  name: workos
+  version: 0.6.1
+  description: WorkOS integration skills for AuthKit, SSO, Directory Sync, RBAC, Vault, Audit Logs, migrations,
+    and API references.
+  author: WorkOS
+  license: Apache-2.0
+  repository: https://workos.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.workos.workos
+    file: skills/workos/SKILL.md
+    description: "Use when the user asks for a WorkOS docs URL, term, or dashboard field (Sign-in endpoint,\
+      \ initiate_login_uri, Redirect URI, `WORKOS_*` env vars), or is implementing, debugging, or migrating\
+      \ WorkOS \u2014\u2026"
+  - name: speckit.workos.workos-widgets
+    file: skills/workos-widgets/SKILL.md
+    description: "Use when the user is implementing, embedding, or debugging a WorkOS Widget \u2014 specifically\
+      \ the User Management, User Profile, Admin Portal SSO Connection, or Admin Portal Domain Verification\
+      \ widgets.\u2026"
+tags:
+- security

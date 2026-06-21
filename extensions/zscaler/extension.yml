@@ -1,0 +1,300 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/zscaler/zscaler-mcp-server)
+# Source: https://github.com/zscaler/zscaler-mcp-server
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: zscaler
+  name: zscaler
+  version: 0.12.7
+  description: "Manage Zscaler cloud security platform including ZPA (private access), ZIA (internet access),\
+    \ ZDX (digital experience), ZCC (client connector), EASM (attack surface), and Z-Insights (analytics).\
+    \ Create and manage policies, troubleshoot connectivity, audit security configurations, and investigate\
+    \ in\u2026"
+  author: Zscaler
+  license: Apache-2.0
+  repository: https://github.com/zscaler/zscaler-mcp-server
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.zscaler.app-health
+    file: commands/app-health.md
+    description: Analyze application health across the organization using ZDX scores and metrics.
+  - name: speckit.zscaler.audit-software
+    file: commands/audit-software.md
+    description: Audit software inventory across devices using ZDX data for compliance and vulnerability
+      assessment.
+  - name: speckit.zscaler.audit-ssl
+    file: commands/audit-ssl.md
+    description: Audit ZIA SSL inspection rules -- list rules by action (INSPECT, DO_NOT_INSPECT, DO_NOT_DECRYPT,
+      BLOCK), identify bypasses, and assess risk.
+  - name: speckit.zscaler.check-access
+    file: commands/check-access.md
+    description: Check whether a user or group can access a specific URL via ZIA policies.
+  - name: speckit.zscaler.compare-locations
+    file: commands/compare-locations.md
+    description: Compare digital experience across locations, departments, or geolocations using ZDX.
+  - name: speckit.zscaler.create-access-rule
+    file: commands/create-access-rule.md
+    description: Create a ZPA access policy rule with v2 conditions for application access control.
+  - name: speckit.zscaler.create-forwarding-rule
+    file: commands/create-forwarding-rule.md
+    description: Create a ZPA client forwarding policy rule to bypass or intercept traffic.
+  - name: speckit.zscaler.create-server-group
+    file: commands/create-server-group.md
+    description: Create a ZPA server group with required app connector group dependency.
+  - name: speckit.zscaler.create-timeout-rule
+    file: commands/create-timeout-rule.md
+    description: Create a ZPA timeout policy rule for session re-authentication and idle timeout.
+  - name: speckit.zscaler.diagnose-deeptrace
+    file: commands/diagnose-deeptrace.md
+    description: "Run a ZDX deep trace diagnostics session \u2014 start, analyze, or clean up deep traces\
+      \ for a user's device."
+  - name: speckit.zscaler.investigate-alerts
+    file: commands/investigate-alerts.md
+    description: Investigate active and historical ZDX alerts to understand scope, root cause, and impact.
+  - name: speckit.zscaler.investigate-incident
+    file: commands/investigate-incident.md
+    description: Investigate security incidents using Z-Insights analytics -- threats, firewall actions,
+      shadow IT, and web traffic.
+  - name: speckit.zscaler.investigate-sandbox
+    file: commands/investigate-sandbox.md
+    description: Investigate ZIA Sandbox file analysis -- check sandbox reports, quota, SSL prerequisite,
+      and diagnose file block/quarantine issues.
+  - name: speckit.zscaler.investigate-url
+    file: commands/investigate-url.md
+    description: Investigate where a URL or URL category is referenced across ZIA policy rules.
+  - name: speckit.zscaler.onboard-app
+    file: commands/onboard-app.md
+    description: End-to-end onboarding of a new application in ZPA with full dependency chain.
+  - name: speckit.zscaler.onboard-location
+    file: commands/onboard-location.md
+    description: End-to-end onboarding of a new ZIA location with traffic forwarding dependencies.
+  - name: speckit.zscaler.review-attack-surface
+    file: commands/review-attack-surface.md
+    description: Review external attack surface using Zscaler EASM findings, exposed services, and lookalike
+      domains.
+  - name: speckit.zscaler.troubleshoot-connector
+    file: commands/troubleshoot-connector.md
+    description: Troubleshoot ZPA App Connector issues -- enrollment, connectivity, upgrades, and resource
+      utilization.
+  - name: speckit.zscaler.troubleshoot-experience
+    file: commands/troubleshoot-experience.md
+    description: Troubleshoot a user's digital experience using ZDX scores, metrics, and network path
+      data.
+  - name: speckit.zscaler.troubleshoot-user
+    file: commands/troubleshoot-user.md
+    description: Cross-product troubleshooting of user connectivity across ZCC, ZDX, ZPA, and ZIA.
+  - name: speckit.zscaler.troubleshoot-user-connectivity
+    file: skills/cross-product/troubleshoot-user-connectivity/SKILL.md
+    description: "Cross-product troubleshooting of user connectivity issues spanning ZPA, ZIA, ZDX, and\
+      \ ZCC. Investigates end-to-end: (1) ZCC client status and enrollment, (2) ZDX digital experience\
+      \ scores and metrics\u2026"
+  - name: speckit.zscaler.review-attack-surface-skill
+    file: skills/easm/review-attack-surface/SKILL.md
+    description: "Review the organization's external attack surface using Zscaler EASM. Lists organizations,\
+      \ retrieves findings (exposed services, vulnerabilities, misconfigurations), checks for lookalike\
+      \ domains, and\u2026"
+  - name: speckit.zscaler.generate-logout-otp
+    file: skills/zcc/generate-logout-otp/SKILL.md
+    description: "Generate a One-Time Logout Password (OTP) for a Zscaler Client Connector (ZCC) user.\
+      \ Walks the admin from a user identifier (email or device name) through device lookup \u2192 confirmation\
+      \ \u2192 OTP retrieval\u2026"
+  - name: speckit.zscaler.analyze-application-health
+    file: skills/zdx/analyze-application-health/SKILL.md
+    description: "Analyze the health of one or more monitored applications across the organization using\
+      \ ZDX scores, metrics, and affected-user breakdowns. Identifies which applications are degraded,\
+      \ which metrics are\u2026"
+  - name: speckit.zscaler.audit-software-inventory
+    file: skills/zdx/audit-software-inventory/SKILL.md
+    description: "Audit the software inventory across devices in the organization using ZDX data. Lists\
+      \ installed software, filters by location, department, or user, and drills into specific software\
+      \ version details.\u2026"
+  - name: speckit.zscaler.compare-location-experience
+    file: skills/zdx/compare-location-experience/SKILL.md
+    description: "Compare digital experience across locations, departments, and geolocations using ZDX\
+      \ data. Identifies which offices or regions have the best and worst experience for specific applications,\
+      \ detects lo\u2026"
+  - name: speckit.zscaler.diagnose-deeptrace-skill
+    file: skills/zdx/diagnose-deeptrace/SKILL.md
+    description: "Run a ZDX deep trace diagnostics session to investigate network and device issues. Start\
+      \ new sessions, analyze web probe metrics, cloud path topology, device health, top processes, and\
+      \ event timeline\u2026"
+  - name: speckit.zscaler.investigate-alerts-skill
+    file: skills/zdx/investigate-alerts/SKILL.md
+    description: "Investigate active and historical ZDX alerts to understand their scope, root cause,\
+      \ and impact. Drills into affected devices, correlates with application metrics, and identifies\
+      \ patterns across time.\u2026"
+  - name: speckit.zscaler.investigate-multi-app-outage
+    file: skills/zdx/investigate-multi-app-outage/SKILL.md
+    description: "Diagnose a multi-application outage scoped to one location by correlating ZDX alerts,\
+      \ affected devices, and shared cloud-path hops. Identifies the devices affected at a specific office,\
+      \ compares the\u2026"
+  - name: speckit.zscaler.troubleshoot-user-experience
+    file: skills/zdx/troubleshoot-user-experience/SKILL.md
+    description: "Troubleshoot a user's digital experience using ZDX data. Investigates device health,\
+      \ application scores, network path metrics, and active alerts to identify performance bottlenecks.\
+      \ Use when an admin\u2026"
+  - name: speckit.zscaler.audit-ssl-inspection-bypass
+    file: skills/zia/audit-ssl-inspection-bypass/SKILL.md
+    description: "Audit ZIA SSL inspection rules to identify which applications, URL categories, users,\
+      \ or groups are subject to INSPECT, DO_NOT_INSPECT, or DO_NOT_DECRYPT actions. This skill focuses\
+      \ exclusively on SS\u2026"
+  - name: speckit.zscaler.check-user-url-access
+    file: skills/zia/check-user-url-access/SKILL.md
+    description: "Determine whether a specific user or group is allowed to access a given URL by evaluating\
+      \ all applicable ZIA policies in order. Performs URL category lookup, then evaluates URL filtering\
+      \ rules, SSL i\u2026"
+  - name: speckit.zscaler.create-cloud-app-control-rule
+    file: skills/zia/create-cloud-app-control-rule/SKILL.md
+    description: "Create ZIA Cloud App Control rules that enforce granular, action-level decisions on\
+      \ cloud applications (Dropbox, OneDrive, Google Drive, ChatGPT, GitHub, YouTube, Slack, etc.). Cloud\
+      \ App Control is a\u2026"
+  - name: speckit.zscaler.create-firewall-filtering-rule
+    file: skills/zia/create-firewall-filtering-rule/SKILL.md
+    description: "Create a ZIA Cloud Firewall Filtering rule that controls network traffic by source/destination\
+      \ IP, country, network application, network service, device trust level, user/group/department,\
+      \ location,\u2026"
+  - name: speckit.zscaler.create-ssl-inspection-rule
+    file: skills/zia/create-ssl-inspection-rule/SKILL.md
+    description: "Create a ZIA SSL Inspection rule that controls how Zscaler handles SSL/TLS encrypted\
+      \ traffic \u2014 BLOCK (drop the SSL connection), DECRYPT (decrypt and inspect), or DO_NOT_DECRYPT\
+      \ (pass through without\u2026"
+  - name: speckit.zscaler.create-url-filtering-rule
+    file: skills/zia/create-url-filtering-rule/SKILL.md
+    description: "Create a ZIA URL Filtering rule that controls user access to web content by URL category,\
+      \ protocol, request method, user agent, user/group/department, location, device trust level, and\
+      \ optional time-\u2026"
+  - name: speckit.zscaler.investigate-sandbox-skill
+    file: skills/zia/investigate-sandbox/SKILL.md
+    description: "Investigate ZIA Sandbox file analysis results, quarantine issues, and security policy\
+      \ enforcement. Uses sandbox report, quota, behavioral analysis, and file hash tools combined with\
+      \ SSL inspection ch\u2026"
+  - name: speckit.zscaler.investigate-url-category
+    file: skills/zia/investigate-url-category/SKILL.md
+    description: "Investigate where a specific URL or URL category is referenced across all ZIA policy\
+      \ rules. Searches URL filtering rules, DLP web rules, SSL inspection rules, and cloud firewall rules\
+      \ to provide a co\u2026"
+  - name: speckit.zscaler.look-up-cloud-app-name
+    file: skills/zia/look-up-cloud-app-name/SKILL.md
+    description: "Look up the canonical ZIA cloud-application name (e.g. ONEDRIVE, GOOGLE_DRIVE, SHAREPOINT_ONLINE,\
+      \ DROPBOX) given whatever the admin typed \u2014 friendly names like 'OneDrive', 'Google Drive',\
+      \ 'share poin\u2026"
+  - name: speckit.zscaler.look-up-rule-targets
+    file: skills/zia/look-up-rule-targets/SKILL.md
+    description: "Look up the shared 'who/where/when/what-device' fields that every ZIA rule resource\
+      \ scopes by \u2014 users, groups, departments, locations, location_groups, url_categories, devices,\
+      \ device_groups, workloa\u2026"
+  - name: speckit.zscaler.manage-time-interval
+    file: skills/zia/manage-time-interval/SKILL.md
+    description: "Find an existing ZIA Time Interval by name, or create a new one when no match exists,\
+      \ then return the interval ID so the caller can attach it to a policy rule via its `time_windows`\
+      \ field. Time Inter\u2026"
+  - name: speckit.zscaler.onboard-location-skill
+    file: skills/zia/onboard-location/SKILL.md
+    description: "End-to-end onboarding of a new ZIA location with its traffic forwarding dependencies.\
+      \ Walks through the full dependency chain: (1) Create a static IP for the site's egress point, (2)\
+      \ Create VPN crede\u2026"
+  - name: speckit.zscaler.analyze-web-traffic
+    file: skills/zins/analyze-web-traffic/SKILL.md
+    description: "Analyze web traffic patterns using Zscaler Analytics (Z-Insights). Examines traffic\
+      \ distribution by location, protocol breakdown (HTTP vs HTTPS), threat categories, DLP violations,\
+      \ and volume trends\u2026"
+  - name: speckit.zscaler.assess-network-security
+    file: skills/zins/assess-network-security/SKILL.md
+    description: "Assess network security posture using Zscaler Analytics (Z-Insights). Analyzes Zero\
+      \ Trust Firewall effectiveness by action distribution (allow/block ratios), location-based firewall\
+      \ activity, network\u2026"
+  - name: speckit.zscaler.audit-shadow-it
+    file: skills/zins/audit-shadow-it/SKILL.md
+    description: "Audit shadow IT and SaaS application usage using Zscaler Analytics (Z-Insights). Discovers\
+      \ unsanctioned applications, assesses risk scores, monitors CASB-protected SaaS usage, tracks data\
+      \ transfers t\u2026"
+  - name: speckit.zscaler.investigate-security-incident
+    file: skills/zins/investigate-security-incident/SKILL.md
+    description: "Investigate security incidents using Zscaler Z-Insights analytics. Correlates threat\
+      \ categories, cyber incident trends, firewall actions, web traffic patterns, and shadow IT data\
+      \ to build a comprehen\u2026"
+  - name: speckit.zscaler.analyze-policy-rules
+    file: skills/zms/analyze-policy-rules/SKILL.md
+    description: "Analyze Zscaler Microsegmentation (ZMS) policy rules for optimization opportunities.\
+      \ Reviews custom and default policy rules, identifies stale or unused rules, detects overly permissive\
+      \ rules, maps c\u2026"
+  - name: speckit.zscaler.assess-workload-protection
+    file: skills/zms/assess-workload-protection/SKILL.md
+    description: "Assess Zscaler Microsegmentation (ZMS) workload protection coverage and identify protection\
+      \ gaps. Investigates resource protection status, resource group membership, unprotected workloads\
+      \ by cloud an\u2026"
+  - name: speckit.zscaler.audit-microsegmentation-posture
+    file: skills/zms/audit-microsegmentation-posture/SKILL.md
+    description: "Audit the overall Zscaler Microsegmentation (ZMS) deployment posture. Reviews agent\
+      \ fleet health, workload protection coverage, resource group structure, policy rules, app zones,\
+      \ application catalog,\u2026"
+  - name: speckit.zscaler.review-tag-classification
+    file: skills/zms/review-tag-classification/SKILL.md
+    description: "Review Zscaler Microsegmentation (ZMS) tag classification, application discovery, and\
+      \ tag-to-resource-group mapping. Investigates tag namespaces (CUSTOM, EXTERNAL, ML), tag keys and\
+      \ values, applicati\u2026"
+  - name: speckit.zscaler.troubleshoot-agent-deployment
+    file: skills/zms/troubleshoot-agent-deployment/SKILL.md
+    description: "Troubleshoot Zscaler Microsegmentation (ZMS) agent deployment and connectivity issues.\
+      \ Investigates agent fleet health, connection status, version compliance, agent group configuration,\
+      \ provisioning\u2026"
+  - name: speckit.zscaler.application-segment-ba-onboard
+    file: skills/zpa/application_segment-ba-onboard/SKILL.md
+    description: "End-to-end onboarding of a new Browser Access (BA) application in Zscaler Private Access.\
+      \ Walks through the full dependency chain \u2014 App connector group, server group, segment group,\
+      \ BA TLS certificat\u2026"
+  - name: speckit.zscaler.application-segment-onboard
+    file: skills/zpa/application_segment-onboard/SKILL.md
+    description: "End-to-end onboarding of a new application in Zscaler Private Access. Walks through\
+      \ the complete dependency chain: (1) App connector group, (2) Server group, (3) Segment group, (4)\
+      \ Application segmen\u2026"
+  - name: speckit.zscaler.application-segment-pra-onboard
+    file: skills/zpa/application_segment-pra-onboard/SKILL.md
+    description: "End-to-end onboarding of a new Privileged Remote Access (PRA) application in Zscaler\
+      \ Private Access. Walks through the full dependency chain \u2014 App connector group, server group,\
+      \ segment group, PRA cr\u2026"
+  - name: speckit.zscaler.audit-baseline-compliance
+    file: skills/zpa/audit-baseline-compliance/SKILL.md
+    description: "Read-only audit of a ZPA tenant against the Zscaler ZPA Baseline Recommendations v1.0\
+      \ document. Inventories app connector groups, server groups, application segments, access policy\
+      \ rules, forwarding\u2026"
+  - name: speckit.zscaler.create-access-policy-rule
+    file: skills/zpa/create-access-policy-rule/SKILL.md
+    description: "Create ZPA access policy rules with v2 conditions. Supports all condition object types:\
+      \ APP, APP_GROUP, SAML, SCIM, SCIM_GROUP, PLATFORM, COUNTRY_CODE, POSTURE, TRUSTED_NETWORK, RISK_FACTOR_TYPE,\
+      \ CLI\u2026"
+  - name: speckit.zscaler.create-conditional-access-rule
+    file: skills/zpa/create-conditional-access-rule/SKILL.md
+    description: "Create a ZPA Access Policy rule that gates access to a private application on multiple\
+      \ combined checks: identity (SCIM group / SAML), one or more named device posture profiles (associated\
+      \ by UDID; ZP\u2026"
+  - name: speckit.zscaler.create-forwarding-policy-rule
+    file: skills/zpa/create-forwarding-policy-rule/SKILL.md
+    description: "Create ZPA client forwarding policy rules that control how traffic is routed from the\
+      \ Zscaler Client Connector. Supports actions: BYPASS (direct internet), INTERCEPT (route through\
+      \ ZPA), INTERCEPT_AC\u2026"
+  - name: speckit.zscaler.create-server-group-skill
+    file: skills/zpa/create-server-group/SKILL.md
+    description: "Create a ZPA server group with all required dependencies. Server groups require app\
+      \ connector groups to exist first. This skill walks through the dependency chain: (1) Check for\
+      \ existing app connecto\u2026"
+  - name: speckit.zscaler.create-session-duration-rule
+    file: skills/zpa/create-session-duration-rule/SKILL.md
+    description: "Create a ZPA Timeout Policy rule that enforces session duration \u2014 i.e. forces re-authentication\
+      \ after N minutes/hours/days, optionally with an idle-timeout. Use this skill when an admin asks\
+      \ for 'ses\u2026"
+  - name: speckit.zscaler.create-timeout-policy-rule
+    file: skills/zpa/create-timeout-policy-rule/SKILL.md
+    description: "Create ZPA timeout policy rules that control session re-authentication and idle timeout\
+      \ behavior. Configures how long a user session remains active (reauth_timeout) and how long an idle\
+      \ session persi\u2026"
+  - name: speckit.zscaler.troubleshoot-app-connector
+    file: skills/zpa/troubleshoot-app-connector/SKILL.md
+    description: "Troubleshoot ZPA App Connector issues including enrollment failures, upgrade problems,\
+      \ Public Service Edge connectivity, and high CPU/memory/disk utilization. Uses MCP tools to inspect\
+      \ connector grou\u2026"
+tags:
+- security

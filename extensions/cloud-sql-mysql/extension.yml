@@ -1,0 +1,35 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gemini-cli-extensions/cloud-sql-mysql)
+# Source: https://github.com/gemini-cli-extensions/cloud-sql-mysql
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: cloud-sql-mysql
+  name: cloud-sql-mysql
+  version: 0.2.0
+  description: Connect and interact with a Cloud SQL for MySQL database and data.
+  author: Google LLC
+  license: Apache-2.0
+  repository: https://github.com/gemini-cli-extensions/cloud-sql-mysql
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.cloud-sql-mysql.cloud-sql-mysql-admin
+    file: skills/cloud-sql-mysql-admin/SKILL.md
+    description: Use these skills when you need to provision new Cloud SQL for MySQL instances, create
+      databases and users, clone existing environments, and monitor the progress of infrastructure operations.
+  - name: speckit.cloud-sql-mysql.cloud-sql-mysql-data
+    file: skills/cloud-sql-mysql-data/SKILL.md
+    description: Use these skills when you need to explore your database schema, execute SQL queries to
+      interact with your data, and inspect how MySQL plans to execute your statements.
+  - name: speckit.cloud-sql-mysql.cloud-sql-mysql-lifecycle
+    file: skills/cloud-sql-mysql-lifecycle/SKILL.md
+    description: Use these skills when you need to manage the durability and safety of your data by creating
+      backups, restoring from previous states, or cloning instances for recovery and testing.
+  - name: speckit.cloud-sql-mysql.cloud-sql-mysql-monitor
+    file: skills/cloud-sql-mysql-monitor/SKILL.md
+    description: Use these skills when you need to troubleshoot slow queries, analyze system-level PromQL
+      metrics, and identify structural performance issues like table fragmentation or missing unique indexes.
+tags:
+- database

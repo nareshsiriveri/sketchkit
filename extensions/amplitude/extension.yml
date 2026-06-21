@@ -1,0 +1,154 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/amplitude/mcp-marketplace)
+# Source: https://github.com/amplitude/mcp-marketplace
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: amplitude
+  name: amplitude
+  version: 0.1.0
+  description: Use Amplitude like an expert - instrument analytics, discover product opportunities, analyze
+    charts, create dashboards, manage experiments, and understand users and accounts
+  author: Amplitude
+  license: Apache-2.0
+  repository: https://github.com/amplitude/mcp-marketplace
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.amplitude.add-analytics-instrumentation
+    file: skills/add-analytics-instrumentation/SKILL.md
+    description: "End-to-end analytics instrumentation workflow for a PR, branch, file, directory, or\
+      \ feature. Reads the code, discovers what events should be tracked, and produces a concrete instrumentation\
+      \ plan \u2014 al\u2026"
+  - name: speckit.amplitude.analyze-account-health
+    file: skills/analyze-account-health/SKILL.md
+    description: "Summarizes B2B account health by analyzing usage patterns, engagement trends, risk signals,\
+      \ and expansion opportunities. Use for customer success reviews, renewal preparation, QBRs, or account\
+      \ priori\u2026"
+  - name: speckit.amplitude.analyze-ai-topics
+    file: skills/analyze-ai-topics/SKILL.md
+    description: "Analyzes what users ask AI agents about and how well each topic is served. Only use\
+      \ when the user has Amplitude Agent Analytics instrumented in their project. Use when the user asks\
+      \ \"what are people\u2026"
+  - name: speckit.amplitude.analyze-chart
+    file: skills/analyze-chart/SKILL.md
+    description: "Performs deep analysis of a specific Amplitude chart to explain trends, anomalies, and\
+      \ likely drivers. Use when a metric looks unusual, investigating a spike or drop, or understanding\
+      \ the \"why\" behin\u2026"
+  - name: speckit.amplitude.analyze-dashboard
+    file: skills/analyze-dashboard/SKILL.md
+    description: Deeply analyze Amplitude dashboards by analyzing key charts, surfacing top areas for
+      concern and takeaways, identify anomalies, then explain changes using customer feedback trends
+  - name: speckit.amplitude.analyze-experiment
+    file: skills/analyze-experiment/SKILL.md
+    description: "Designs A/B tests with proper metrics and variants, analyzes running or completed experiments,\
+      \ and interprets results with statistical rigor. Use when setting up experiments, checking experiment\
+      \ stat\u2026"
+  - name: speckit.amplitude.analyze-feedback
+    file: skills/analyze-feedback/SKILL.md
+    description: "Synthesizes customer feedback into actionable themes including feature requests, bugs,\
+      \ pain points, and praise. Use when planning product roadmap, understanding user sentiment, investigating\
+      \ specific\u2026"
+  - name: speckit.amplitude.compare-user-journeys
+    file: skills/compare-user-journeys/SKILL.md
+    description: "Compares how two user groups behave differently by analyzing Amplitude Session Replays\
+      \ and metrics side by side. Produces a behavioral diff showing what one group does that the other\
+      \ doesn't. Use whe\u2026"
+  - name: speckit.amplitude.create-chart
+    file: skills/create-chart/SKILL.md
+    description: "Creates Amplitude charts from natural language descriptions, handling event selection,\
+      \ filters, groupings, and visualization choices. Use when you know what you want to measure but\
+      \ prefer not to buil\u2026"
+  - name: speckit.amplitude.create-dashboard
+    file: skills/create-dashboard/SKILL.md
+    description: "Builds comprehensive Amplitude dashboards from requirements or goals, organizing charts\
+      \ into logical sections with appropriate layouts. Use when creating a complete dashboard from scratch\
+      \ or assembli\u2026"
+  - name: speckit.amplitude.daily-brief
+    file: skills/daily-brief/SKILL.md
+    description: "Delivers a daily briefing of the most important changes across your Amplitude instance.\
+      \ Use when the user asks for a \"daily download\", \"morning briefing\", \"what's happening\", \"\
+      anything I should know\"\u2026"
+  - name: speckit.amplitude.debug-replay
+    file: skills/debug-replay/SKILL.md
+    description: "Turns bug reports into reproducible steps by finding error sessions in Amplitude Session\
+      \ Replay, extracting interaction timelines, and identifying the common action sequence that precedes\
+      \ the failure\u2026"
+  - name: speckit.amplitude.diagnose-errors
+    file: skills/diagnose-errors/SKILL.md
+    description: "Investigates errors across network failures, JavaScript errors, and error clicks to\
+      \ identify what's broken, where, and why. Use when the user says \"what's broken\", \"errors are\
+      \ up\", \"why are users see\u2026"
+  - name: speckit.amplitude.diff-intake
+    file: skills/diff-intake/SKILL.md
+    description: "Reads a PR or branch diff and produces a structured YAML change brief for downstream\
+      \ analytics instrumentation skills. Use this as the first step whenever a user shares a PR link,\
+      \ branch comparison,\u2026"
+  - name: speckit.amplitude.discover-analytics-patterns
+    file: skills/discover-analytics-patterns/SKILL.md
+    description: "Discovers how analytics tracking calls are actually written in this codebase \u2014\
+      \ the concrete SDK calls, function signatures, and import patterns used to send events. Use this\
+      \ skill whenever you need t\u2026"
+  - name: speckit.amplitude.discover-event-surfaces
+    file: skills/discover-event-surfaces/SKILL.md
+    description: "Given a change_brief YAML (output from diff-intake), generates an exhaustive list of\
+      \ candidate analytics events to instrument. Takes the perspective of an engineer with a PM mindset\
+      \ \u2014 surfaces everyt\u2026"
+  - name: speckit.amplitude.discover-opportunities
+    file: skills/discover-opportunities/SKILL.md
+    description: "Discovers product opportunities by analyzing Amplitude analytics, experiments, session\
+      \ replays, and customer feedback. Synthesizes evidence into prioritized, actionable opportunities\
+      \ with RICE scorin\u2026"
+  - name: speckit.amplitude.instrument-events
+    file: skills/instrument-events/SKILL.md
+    description: "Given event_candidates YAML (output from discover-event-surfaces), generates a concrete\
+      \ instrumentation plan for priority-3 (critical) events. Acts as a Software Architect: discovers\
+      \ existing analyti\u2026"
+  - name: speckit.amplitude.investigate-ai-session
+    file: skills/investigate-ai-session/SKILL.md
+    description: "Deep-dives into specific AI agent sessions or failure patterns to explain why something\
+      \ went wrong. Only use when the user has Amplitude Agent Analytics instrumented in their project.\
+      \ Use when invest\u2026"
+  - name: speckit.amplitude.monitor-ai-quality
+    file: skills/monitor-ai-quality/SKILL.md
+    description: "Monitors AI agent health across quality, cost, performance, and errors. Only use when\
+      \ the user has Amplitude Agent Analytics instrumented in their project. Use when the user asks \"\
+      how are our AI agen\u2026"
+  - name: speckit.amplitude.monitor-experiments
+    file: skills/monitor-experiments/SKILL.md
+    description: "Monitors all active and recently completed experiments across Amplitude projects, triages\
+      \ them by importance, then runs deep analysis and reporting on the most impactful ones. Use when\
+      \ the user asks\u2026"
+  - name: speckit.amplitude.monitor-reliability
+    file: skills/monitor-reliability/SKILL.md
+    description: "Delivers a reliability health check using auto-captured network request, JS error, and\
+      \ error click data. Use when the user asks for a \"reliability check\", \"error rate\", \"quality\
+      \ metrics\", \"page healt\u2026"
+  - name: speckit.amplitude.replay-ux-audit
+    file: skills/replay-ux-audit/SKILL.md
+    description: "Finds and analyzes Amplitude Session Replays to surface UX friction patterns across\
+      \ multiple sessions. Produces a ranked friction map showing where users struggle, hesitate, or abandon.\
+      \ Use when a PM\u2026"
+  - name: speckit.amplitude.review-agent-insights
+    file: skills/review-agent-insights/SKILL.md
+    description: "Retrieves, synthesizes, and prioritizes all recent AI agent results from Amplitude.\
+      \ Queries every agent type available in get_agent_results, validates freshness, and produces a unified\
+      \ narrative rank\u2026"
+  - name: speckit.amplitude.taxonomy
+    file: skills/taxonomy/SKILL.md
+    description: "Source of truth for event taxonomy generation, data auditing, and governance best practices\
+      \ in Amplitude. Use when an agent needs to create, validate, audit, score, or recommend improvements\
+      \ to event\u2026"
+  - name: speckit.amplitude.weekly-brief
+    file: skills/weekly-brief/SKILL.md
+    description: "Delivers a weekly briefing summarizing the most important trends, wins, and risks across\
+      \ your Amplitude instance. Use when the user asks for a \"weekly review\", \"weekly summary\", \"\
+      week in review\", \"wh\u2026"
+  - name: speckit.amplitude.what-would-lenny-do
+    file: skills/what-would-lenny-do/SKILL.md
+    description: "Answers product strategy, growth, pricing, hiring, and leadership questions using Lenny\
+      \ Rachitsky's archive. ONLY use this skill if the `lennysdata` MCP server is connected and its tools\
+      \ (search_cont\u2026"
+tags:
+- monitoring

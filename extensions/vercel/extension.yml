@@ -1,0 +1,240 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/vercel/vercel-plugin)
+# Source: https://github.com/vercel/vercel-plugin
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: vercel
+  name: vercel
+  version: 0.44.0
+  description: Build and deploy web apps and agents
+  author: Vercel
+  license: Apache-2.0
+  repository: https://github.com/vercel/vercel-plugin
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.vercel.conventions
+    file: commands/_conventions.md
+    description: Build and deploy web apps and agents
+  - name: speckit.vercel.bootstrap
+    file: commands/bootstrap.md
+    description: Bootstrap a repository with Vercel-linked resources by running preflight checks, provisioning
+      integrations, verifying env keys, and then executing db/dev startup commands safely.
+  - name: speckit.vercel.deploy
+    file: commands/deploy.md
+    description: Deploy the current project to Vercel. Pass "prod" or "production" as argument to deploy
+      to production. Default is preview deployment.
+  - name: speckit.vercel.env
+    file: commands/env.md
+    description: Manage Vercel environment variables. Commands include list, pull, add, remove, and diff.
+      Use to sync environment variables between Vercel and your local development environment.
+  - name: speckit.vercel.marketplace
+    file: commands/marketplace.md
+    description: Discover and install Vercel Marketplace integrations. Use to find databases, CMS, auth
+      providers, and other services available on the Vercel Marketplace.
+  - name: speckit.vercel.status
+    file: commands/status.md
+    description: "Show the status of the current Vercel project \u2014 recent deployments, linked project\
+      \ info, and environment overview."
+  - name: speckit.vercel.ai-gateway
+    file: skills/ai-gateway/SKILL.md
+    description: Vercel AI Gateway expert guidance. Use when configuring model routing, provider failover,
+      cost tracking, or managing multiple AI providers through a unified API.
+  - name: speckit.vercel.ai-sdk
+    file: skills/ai-sdk/SKILL.md
+    description: "Vercel AI SDK expert guidance. Use when building AI-powered features \u2014 chat interfaces,\
+      \ text generation, structured output, tool calling, agents, MCP integration, streaming, embeddings,\
+      \ reranking, im\u2026"
+  - name: speckit.vercel.upstream
+    file: skills/ai-sdk/upstream/SKILL.md
+    description: "Answer questions about the AI SDK and help build AI-powered features. Use when developers:\
+      \ (1) Ask about AI SDK functions like generateText, streamText, ToolLoopAgent, embed, or tools,\
+      \ (2) Want to bu\u2026"
+  - name: speckit.vercel.auth
+    file: skills/auth/SKILL.md
+    description: "Authentication integration guidance \u2014 Clerk (native Vercel Marketplace), Descope,\
+      \ and Auth0 setup for Next.js applications. Covers middleware auth patterns, sign-in/sign-up flows,\
+      \ and Marketplace pro\u2026"
+  - name: speckit.vercel.bootstrap-skill
+    file: skills/bootstrap/SKILL.md
+    description: "Project bootstrapping orchestrator for repos that depend on Vercel-linked resources\
+      \ (databases, auth, and managed integrations). Use when setting up or repairing a repository so\
+      \ linking, environment\u2026"
+  - name: speckit.vercel.chat-sdk
+    file: skills/chat-sdk/SKILL.md
+    description: "Vercel Chat SDK expert guidance. Use when building multi-platform chat bots \u2014 Slack,\
+      \ Telegram, Microsoft Teams, Discord, Google Chat, GitHub, Linear \u2014 with a single codebase.\
+      \ Covers the Chat class, a\u2026"
+  - name: speckit.vercel.upstream-skill
+    file: skills/chat-sdk/upstream/SKILL.md
+    description: "Build multi-platform chat bots with Chat SDK (`chat` npm package). Use when developers\
+      \ want to (1) Build a Slack, Teams, Google Chat, Discord, Telegram, GitHub, Linear, or WhatsApp\
+      \ bot, (2) Use Chat\u2026"
+  - name: speckit.vercel.deployments-cicd
+    file: skills/deployments-cicd/SKILL.md
+    description: Vercel deployment and CI/CD expert guidance. Use when deploying, promoting, rolling back,
+      inspecting deployments, building with --prebuilt, or configuring CI workflow files for Vercel.
+  - name: speckit.vercel.env-vars
+    file: skills/env-vars/SKILL.md
+    description: Vercel environment variable expert guidance. Use when working with .env files, vercel
+      env commands, OIDC tokens, or managing environment-specific configuration.
+  - name: speckit.vercel.knowledge-update
+    file: skills/knowledge-update/SKILL.md
+    description: Corrects outdated LLM knowledge about the Vercel platform and introduces new products.
+      Injected at session start.
+  - name: speckit.vercel.marketplace-skill
+    file: skills/marketplace/SKILL.md
+    description: "Vercel Marketplace expert guidance \u2014 discovering, installing, and managing integrations\
+      \ via the `vercel integration` CLI, with auto-provisioned environment variables and unified billing.\
+      \ Use when con\u2026"
+  - name: speckit.vercel.microfrontends
+    file: skills/microfrontends/SKILL.md
+    description: "Guide for building, configuring, and deploying microfrontends on Vercel. Use this skill\
+      \ when the user mentions microfrontends, multi-zones, splitting an app across teams, independent\
+      \ deployments, cro\u2026"
+  - name: speckit.vercel.next-cache-components
+    file: skills/next-cache-components/SKILL.md
+    description: "Next.js 16 Cache Components guidance \u2014 PPR, use cache directive, cacheLife, cacheTag,\
+      \ updateTag, and migration from unstable_cache. Use when implementing partial prerendering, caching\
+      \ strategies, or\u2026"
+  - name: speckit.vercel.upstream-skill-2
+    file: skills/next-cache-components/upstream/SKILL.md
+    description: Next.js 16 Cache Components - PPR, use cache directive, cacheLife, cacheTag, updateTag
+  - name: speckit.vercel.next-forge
+    file: skills/next-forge/SKILL.md
+    description: "next-forge expert guidance \u2014 production-grade Turborepo monorepo SaaS starter by\
+      \ Vercel. Use when working in a next-forge project, scaffolding with `npx next-forge init`, or editing\
+      \ @repo/* workspace\u2026"
+  - name: speckit.vercel.upstream-skill-3
+    file: skills/next-forge/upstream/SKILL.md
+    description: "Expert assistance for next-forge \u2014 a production-grade Turborepo template for Next.js\
+      \ SaaS apps. Triggers on questions about next-forge installation, setup, architecture, packages,\
+      \ customization, depl\u2026"
+  - name: speckit.vercel.next-upgrade
+    file: skills/next-upgrade/SKILL.md
+    description: Upgrade Next.js to the latest version following official migration guides and codemods.
+      Use when upgrading Next.js versions, running codemods, or migrating between major releases.
+  - name: speckit.vercel.upstream-skill-4
+    file: skills/next-upgrade/upstream/SKILL.md
+    description: Upgrade Next.js to the latest version following official migration guides and codemods
+  - name: speckit.vercel.nextjs
+    file: skills/nextjs/SKILL.md
+    description: "Next.js App Router expert guidance. Use when building, debugging, or architecting Next.js\
+      \ applications \u2014 routing, Server Components, Server Actions, Cache Components, layouts, middleware/proxy,\
+      \ data\u2026"
+  - name: speckit.vercel.upstream-skill-5
+    file: skills/nextjs/upstream/SKILL.md
+    description: Next.js best practices - file conventions, RSC boundaries, data patterns, async APIs,
+      metadata, error handling, route handlers, image/font optimization, bundling
+  - name: speckit.vercel.react-best-practices
+    file: skills/react-best-practices/SKILL.md
+    description: "React best-practices reviewer for TSX files. Triggers after editing multiple TSX components\
+      \ to run a condensed quality checklist covering component structure, hooks usage, accessibility,\
+      \ performance,\u2026"
+  - name: speckit.vercel.upstream-skill-6
+    file: skills/react-best-practices/upstream/SKILL.md
+    description: "React and Next.js performance optimization guidelines from Vercel Engineering. This\
+      \ skill should be used when writing, reviewing, or refactoring React/Next.js code to ensure optimal\
+      \ performance patte\u2026"
+  - name: speckit.vercel.routing-middleware
+    file: skills/routing-middleware/SKILL.md
+    description: "Vercel Routing Middleware guidance \u2014 request interception before cache, rewrites,\
+      \ redirects, personalization. Works with any framework. Supports Edge, Node.js, and Bun runtimes.\
+      \ Use when intercepting\u2026"
+  - name: speckit.vercel.runtime-cache
+    file: skills/runtime-cache/SKILL.md
+    description: "Vercel Runtime Cache API guidance \u2014 ephemeral per-region key-value cache with tag-based\
+      \ invalidation. Shared across Functions, Routing Middleware, and Builds. Use when implementing caching\
+      \ strategies\u2026"
+  - name: speckit.vercel.shadcn
+    file: skills/shadcn/SKILL.md
+    description: "shadcn/ui expert guidance \u2014 CLI, component installation, composition patterns,\
+      \ custom registries, theming, Tailwind CSS integration, and high-quality interface design. Use when\
+      \ initializing shadcn, a\u2026"
+  - name: speckit.vercel.turbopack
+    file: skills/turbopack/SKILL.md
+    description: Turbopack expert guidance. Use when configuring the Next.js bundler, optimizing HMR,
+      debugging build issues, or understanding the Turbopack vs Webpack differences.
+  - name: speckit.vercel.vercel-agent
+    file: skills/vercel-agent/SKILL.md
+    description: "Vercel Agent guidance \u2014 AI-powered code review, incident investigation, and SDK\
+      \ installation. Automates PR analysis and anomaly debugging. Use when configuring or understanding\
+      \ Vercel's AI developmen\u2026"
+  - name: speckit.vercel.vercel-cli
+    file: skills/vercel-cli/SKILL.md
+    description: "Vercel CLI expert guidance. Use when deploying, managing environment variables, linking\
+      \ projects, viewing logs, querying metrics, managing domains, or interacting with the Vercel platform\
+      \ from the co\u2026"
+  - name: speckit.vercel.upstream-skill-7
+    file: skills/vercel-cli/upstream/SKILL.md
+    description: Deploy, manage, and develop projects on Vercel from the command line
+  - name: speckit.vercel.vercel-connect
+    file: skills/vercel-connect/SKILL.md
+    description: "Vercel Connect expert guidance \u2014 securely obtain scoped OAuth tokens for third-party\
+      \ services (Slack, GitHub, MCP servers, OAuth, Snowflake) on behalf of apps or users via Vercel\
+      \ OIDC. Use when wirin\u2026"
+  - name: speckit.vercel.vercel-firewall
+    file: skills/vercel-firewall/SKILL.md
+    description: "Vercel Firewall expert guidance \u2014 automatic DDoS mitigation, the Vercel WAF (custom\
+      \ rules, IP blocking, managed rulesets, rate limiting), Attack Mode, system bypass, bot management,\
+      \ and the `vercel f\u2026"
+  - name: speckit.vercel.vercel-functions
+    file: skills/vercel-functions/SKILL.md
+    description: "Vercel Functions expert guidance \u2014 Serverless Functions, Edge Functions, Fluid\
+      \ Compute, streaming, Cron Jobs, and runtime configuration. Use when configuring, debugging, or\
+      \ optimizing server-side cod\u2026"
+  - name: speckit.vercel.vercel-sandbox
+    file: skills/vercel-sandbox/SKILL.md
+    description: "Vercel Sandbox guidance \u2014 ephemeral Firecracker microVMs for running untrusted\
+      \ code safely. Supports AI agents, code generation, and experimentation. Use when executing user-generated\
+      \ or AI-generated\u2026"
+  - name: speckit.vercel.upstream-skill-8
+    file: skills/vercel-sandbox/upstream/SKILL.md
+    description: "Run agent-browser + Chrome inside Vercel Sandbox microVMs for browser automation from\
+      \ any Vercel-deployed app. Use when the user needs browser automation in a Vercel app (Next.js,\
+      \ SvelteKit, Nuxt, Re\u2026"
+  - name: speckit.vercel.vercel-storage
+    file: skills/vercel-storage/SKILL.md
+    description: "Vercel storage expert guidance \u2014 Blob, Edge Config, and Marketplace storage (Neon\
+      \ Postgres, Upstash Redis). Use when choosing, configuring, or using data storage with Vercel applications."
+  - name: speckit.vercel.verification
+    file: skills/verification/SKILL.md
+    description: "Full-story verification \u2014 infers what the user is building, then verifies the complete\
+      \ flow end-to-end: browser \u2192 API \u2192 data \u2192 response. Triggers on dev server start\
+      \ and 'why isn't this working' sign\u2026"
+  - name: speckit.vercel.workflow
+    file: skills/workflow/SKILL.md
+    description: "Vercel Workflow DevKit (WDK) expert guidance. Use when building durable workflows, long-running\
+      \ tasks, API routes or agents that need pause/resume, retries, step-based execution, or crash-safe\
+      \ orches\u2026"
+  - name: speckit.vercel.upstream-skill-9
+    file: skills/workflow/upstream/SKILL.md
+    description: "Creates durable, resumable workflows using Vercel's Workflow DevKit. Use when building\
+      \ workflows that need to survive restarts, pause for external events, retry on failure, or coordinate\
+      \ multi-step o\u2026"
+  - name: speckit.vercel.agent-ai-architect
+    file: agents/ai-architect.md
+    description: "Specializes in architecting AI-powered applications on Vercel \u2014 choosing between\
+      \ AI SDK patterns, configuring providers, building agents, setting up durable workflows, and integrating\
+      \ MCP servers. Us\u2026"
+  - name: speckit.vercel.agent-deployment-expert
+    file: agents/deployment-expert.md
+    description: "Specializes in Vercel deployment strategies, CI/CD pipelines, preview URLs, production\
+      \ promotions, rollbacks, environment variables, and domain configuration. Use when troubleshooting\
+      \ deployments, se\u2026"
+  - name: speckit.vercel.agent-performance-optimizer
+    file: agents/performance-optimizer.md
+    description: "Specializes in optimizing Vercel application performance \u2014 Core Web Vitals, rendering\
+      \ strategies, caching, image optimization, font loading, edge computing, and bundle size. Use when\
+      \ investigating sl\u2026"
+tags:
+- vercel
+- nextjs
+- ai-sdk
+- turborepo
+- turbopack
+- workflow
+- deployment
+- serverless

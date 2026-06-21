@@ -1,0 +1,36 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/Snowflake-Labs/snowflake-ai-kit)
+# Source: https://docs.snowflake.com/en/user-guide/cortex-code
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: snowflake-cortex-code
+  name: snowflake-cortex-code
+  version: 3.2.2
+  description: Automatically route Snowflake prompts from Claude Code to Cortex Code for execution.
+  author: Snowflake
+  license: Apache-2.0
+  repository: https://docs.snowflake.com/en/user-guide/cortex-code
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.snowflake-cortex-code.cortex-router
+    file: skills/cortex-router/SKILL.md
+    description: "Auto-routing skill loaded by the prompt filter hook. Routes Snowflake-related operations\
+      \ to Cortex Code CLI. Not for direct invocation \u2014 use $cortex-run instead."
+  - name: speckit.snowflake-cortex-code.cortex-run
+    file: skills/cortex-run/SKILL.md
+    description: "ONLY load this skill when the user explicitly types $cortex-run or /cortex-run. NEVER\
+      \ load this skill from auto-routing hooks or keyword matching. For auto-routed prompts, use snowflake-cortex-code:c\u2026"
+  - name: speckit.snowflake-cortex-code.cortex-setup
+    file: skills/cortex-setup/SKILL.md
+    description: "Install Snowflake CLI and Cortex Code CLI. Use when cortex is not installed, when the\
+      \ user asks to set up Cortex Code, or when routing fails because the CLI is missing. Triggers: setup\
+      \ cortex, instal\u2026"
+tags:
+- snowflake
+- cortex-code
+- auto-routing
+- sql
+- data

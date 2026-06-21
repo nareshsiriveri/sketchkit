@@ -1,0 +1,27 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: project-artifact
+  name: project-artifact
+  version: 0.1.0
+  description: "Generate and publish a project status artifact \u2014 an opinionated, tabbed status page\
+    \ (overview & success criteria, the workstream sequence, next steps, plus background / plan / risks\
+    \ & open questions / decisions-FAQ when they earn a tab) published via the built-in Artifact tool\
+    \ to a default-private\u2026"
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.project-artifact.project-artifact
+    file: skills/project-artifact/SKILL.md
+    description: "Generate and publish a project status artifact \u2014 an opinionated, tabbed status\
+      \ page for a project too big for one update (overview & success criteria, the workstream sequence,\
+      \ next steps, plus backgr\u2026"
+tags:
+- claude-code

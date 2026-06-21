@@ -1,0 +1,37 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gitroomhq/postiz-agent)
+# Source: https://postiz.com/agent
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: postiz
+  name: postiz
+  version: 2.0.12
+  description: Social media automation CLI for scheduling posts, managing integrations, uploading media,
+    and tracking analytics across 28+ platforms including X, LinkedIn, Reddit, YouTube, TikTok, Instagram,
+    and more
+  author: Nevo David
+  license: Apache-2.0
+  repository: https://postiz.com/agent
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.postiz.postiz
+    file: skills/postiz/SKILL.md
+    description: "Social media automation CLI for scheduling posts, managing integrations, uploading media,\
+      \ and tracking analytics across 28+ platforms including X, LinkedIn, Reddit, YouTube, TikTok, Instagram,\
+      \ and mo\u2026"
+tags:
+- postiz
+- social-media
+- scheduling
+- automation
+- ai-agent
+- twitter
+- linkedin
+- facebook
+- instagram
+- tiktok
+- youtube
+- reddit

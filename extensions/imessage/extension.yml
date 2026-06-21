@@ -1,0 +1,33 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: imessage
+  name: imessage
+  version: 0.1.0
+  description: "iMessage channel for Claude Code \u2014 reads chat.db directly, sends via AppleScript.\
+    \ Built-in access control; manage pairing, allowlists, and policy via /imessage:access."
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.imessage.access
+    file: skills/access/SKILL.md
+    description: "Manage iMessage channel access \u2014 approve pairings, edit allowlists, set DM/group\
+      \ policy. Use when the user asks to pair, approve someone, check who's allowed, or change policy\
+      \ for the iMessage channe\u2026"
+  - name: speckit.imessage.configure
+    file: skills/configure/SKILL.md
+    description: "Check iMessage channel setup and review access policy. Use when the user asks to configure\
+      \ iMessage, asks \"how do I set this up\" or \"who can reach me,\" or wants to know why texts aren't\
+      \ reaching the\u2026"
+tags:
+- imessage
+- messaging
+- channel
+- mcp

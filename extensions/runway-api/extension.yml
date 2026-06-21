@@ -1,0 +1,92 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/runwayml/skills)
+# Source: https://runwayml.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: runway-api
+  name: runway-api
+  version: 2.1.0
+  description: "Video generation at scale. Generate videos, images, and audio with Runway's API \u2014\
+    \ batch ad campaigns, product videos, multishot stories, and creative iteration. Supports seedance2,\
+    \ gen4.5, veo3, Nano, Banana Pro, and more."
+  author: Runway
+  license: Apache-2.0
+  repository: https://runwayml.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.runway-api.rw-api-reference
+    file: skills/rw-api-reference/SKILL.md
+    description: 'Complete reference for Runway''s public API: models, endpoints, costs, limits, and types'
+  - name: speckit.runway-api.rw-check-compatibility
+    file: skills/rw-check-compatibility/SKILL.md
+    description: Analyze a user's codebase to verify it can use Runway's public API (server-side requirement)
+  - name: speckit.runway-api.rw-check-org-details
+    file: skills/rw-check-org-details/SKILL.md
+    description: 'Query the Runway API for organization details: rate limits, credit balance, usage tier,
+      and daily generation counts'
+  - name: speckit.runway-api.rw-fetch-api-reference
+    file: skills/rw-fetch-api-reference/SKILL.md
+    description: Retrieve the latest Runway API reference from docs.dev.runwayml.com and use it as the
+      authoritative source before any integration work
+  - name: speckit.runway-api.rw-generate-audio
+    file: skills/rw-generate-audio/SKILL.md
+    description: Generate audio using the Runway API via runnable scripts. Supports TTS, sound effects,
+      voice isolation, dubbing, and voice conversion.
+  - name: speckit.runway-api.rw-generate-image
+    file: skills/rw-generate-image/SKILL.md
+    description: Generate images directly using the Runway API via runnable scripts. Supports text-to-image
+      with optional reference images.
+  - name: speckit.runway-api.rw-generate-video
+    file: skills/rw-generate-video/SKILL.md
+    description: Generate videos directly using the Runway API via runnable scripts. Supports text-to-video,
+      image-to-video, and video-to-video with seedance2, gen4.5, veo3, and more.
+  - name: speckit.runway-api.rw-integrate-audio
+    file: skills/rw-integrate-audio/SKILL.md
+    description: Help users integrate Runway audio APIs (TTS, sound effects, voice isolation, dubbing)
+  - name: speckit.runway-api.rw-integrate-character-embed
+    file: skills/rw-integrate-character-embed/SKILL.md
+    description: Help users embed Runway Character avatar calls in React apps using the @runwayml/avatars-react
+      SDK
+  - name: speckit.runway-api.rw-integrate-characters
+    file: skills/rw-integrate-characters/SKILL.md
+    description: Help users create Runway Characters (GWM-1 avatars) and integrate real-time conversational
+      sessions into their apps
+  - name: speckit.runway-api.rw-integrate-documents
+    file: skills/rw-integrate-documents/SKILL.md
+    description: Help users add knowledge base documents to Runway Characters for domain-specific conversations
+  - name: speckit.runway-api.rw-integrate-image
+    file: skills/rw-integrate-image/SKILL.md
+    description: Help users integrate Runway image generation APIs (text-to-image with reference images)
+  - name: speckit.runway-api.rw-integrate-uploads
+    file: skills/rw-integrate-uploads/SKILL.md
+    description: Help users upload local files to Runway for use as inputs to generation models
+  - name: speckit.runway-api.rw-integrate-video
+    file: skills/rw-integrate-video/SKILL.md
+    description: Help users integrate Runway video generation APIs (text-to-video, image-to-video, video-to-video)
+  - name: speckit.runway-api.rw-recipe-full-setup
+    file: skills/rw-recipe-full-setup/SKILL.md
+    description: 'Complete Runway API setup: check compatibility, configure API key, and integrate generation
+      endpoints'
+  - name: speckit.runway-api.rw-setup-api-key
+    file: skills/rw-setup-api-key/SKILL.md
+    description: Guide users through obtaining and configuring a Runway API key
+  - name: speckit.runway-api.use-runway-api
+    file: skills/use-runway-api/SKILL.md
+    description: Directly use the Runway API from the agent to generate media, manage resources, and inspect
+      account state
+tags:
+- runway
+- runwayml
+- video-generation
+- image-generation
+- audio-generation
+- ai-api
+- seedance2
+- gen4
+- veo3
+- media-generation
+- batch
+- runway-api

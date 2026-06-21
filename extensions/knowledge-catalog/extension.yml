@@ -1,0 +1,25 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gemini-cli-extensions/knowledge-catalog)
+# Source: https://github.com/gemini-cli-extensions/knowledge-catalog
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: knowledge-catalog
+  name: knowledge-catalog
+  version: 0.5.2
+  description: Connect to Knowledge Catalog to discover, manage, monitor, and govern data and AI artifacts
+    across your data platform
+  author: Google LLC
+  license: Apache-2.0
+  repository: https://github.com/gemini-cli-extensions/knowledge-catalog
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.knowledge-catalog.knowledge-catalog-discovery
+    file: skills/knowledge-catalog-discovery/SKILL.md
+    description: "Use these skills when you need to discover and explore data assets in the Knowledge\
+      \ Catalog. It allows you to search for entries, lookup specific metadata, and explore aspect types\
+      \ to understand your\u2026"
+tags:
+- database

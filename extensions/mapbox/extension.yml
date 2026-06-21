@@ -1,0 +1,113 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/mapbox/mapbox-agent-skills)
+# Source: https://www.mapbox.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: mapbox
+  name: mapbox
+  version: 1.0.0
+  description: Mapbox skills and MCP servers for building location-aware applications with AI. Includes
+    geospatial tools, style management, and patterns for web, iOS, Android, and AI agent frameworks.
+  author: Mapbox
+  license: Apache-2.0
+  repository: https://www.mapbox.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.mapbox.mapbox-android-patterns
+    file: skills/mapbox-android-patterns/SKILL.md
+    description: "Official integration patterns for Mapbox Maps SDK on Android. Covers installation, adding\
+      \ markers, user location, custom data, styles, camera control, and featureset interactions. Based\
+      \ on official M\u2026"
+  - name: speckit.mapbox.mapbox-cartography
+    file: skills/mapbox-cartography/SKILL.md
+    description: "Expert guidance on map design principles, color theory, visual hierarchy, typography,\
+      \ and cartographic best practices for creating effective and beautiful maps with Mapbox. Use when\
+      \ designing map sty\u2026"
+  - name: speckit.mapbox.mapbox-data-visualization-patterns
+    file: skills/mapbox-data-visualization-patterns/SKILL.md
+    description: Patterns for visualizing data on maps including choropleth maps, heat maps, 3D visualizations,
+      data-driven styling, and animated data. Covers layer types, color scales, and performance optimization.
+  - name: speckit.mapbox.mapbox-flutter-patterns
+    file: skills/mapbox-flutter-patterns/SKILL.md
+    description: "Official integration patterns for the Mapbox Maps Flutter SDK. Covers installation,\
+      \ iOS/Android platform setup, access token configuration, MapWidget initialization, camera control,\
+      \ annotations with\u2026"
+  - name: speckit.mapbox.mapbox-geospatial-operations
+    file: skills/mapbox-geospatial-operations/SKILL.md
+    description: Expert guidance on choosing the right geospatial tool based on problem type, accuracy
+      requirements, and performance needs
+  - name: speckit.mapbox.mapbox-google-maps-migration
+    file: skills/mapbox-google-maps-migration/SKILL.md
+    description: Migration guide for developers moving from Google Maps Platform to Mapbox GL JS, covering
+      API equivalents, pattern translations, and key differences
+  - name: speckit.mapbox.mapbox-ios-patterns
+    file: skills/mapbox-ios-patterns/SKILL.md
+    description: "Official integration patterns for Mapbox Maps SDK on iOS. Covers installation, adding\
+      \ markers, user location, custom data, styles, camera control, and featureset interactions. Based\
+      \ on official Mapbo\u2026"
+  - name: speckit.mapbox.mapbox-location-grounding
+    file: skills/mapbox-location-grounding/SKILL.md
+    description: Compose Mapbox MCP tools to produce grounded, cited location-aware responses from live
+      data instead of training data
+  - name: speckit.mapbox.mapbox-maplibre-migration
+    file: skills/mapbox-maplibre-migration/SKILL.md
+    description: Guide for migrating from MapLibre GL JS to Mapbox GL JS, covering API compatibility,
+      token setup, style configuration, and the benefits of Mapbox's official support and ecosystem
+  - name: speckit.mapbox.mapbox-mcp-devkit-patterns
+    file: skills/mapbox-mcp-devkit-patterns/SKILL.md
+    description: "Integration patterns for Mapbox MCP DevKit Server in AI coding assistants. Covers setup,\
+      \ style management, token management, validation workflows, and documentation access through MCP.\
+      \ Use when build\u2026"
+  - name: speckit.mapbox.mapbox-mcp-runtime-patterns
+    file: skills/mapbox-mcp-runtime-patterns/SKILL.md
+    description: "Integration patterns for Mapbox MCP Server in AI applications and agent frameworks.\
+      \ Covers runtime integration with pydantic-ai, mastra, LangChain, and custom agents. Use when building\
+      \ AI-powered app\u2026"
+  - name: speckit.mapbox.mapbox-search-integration
+    file: skills/mapbox-search-integration/SKILL.md
+    description: Complete workflow for implementing Mapbox search in applications - from discovery questions
+      to production-ready integration with best practices
+  - name: speckit.mapbox.mapbox-search-patterns
+    file: skills/mapbox-search-patterns/SKILL.md
+    description: Expert guidance on choosing the right Mapbox search tool and parameters for geocoding,
+      POI search, and location discovery
+  - name: speckit.mapbox.mapbox-store-locator-patterns
+    file: skills/mapbox-store-locator-patterns/SKILL.md
+    description: Common patterns for building store locators, restaurant finders, and location-based search
+      applications with Mapbox. Covers marker display, filtering, distance calculation, and interactive
+      lists.
+  - name: speckit.mapbox.mapbox-style-patterns
+    file: skills/mapbox-style-patterns/SKILL.md
+    description: "Common style patterns, layer configurations, and recipes for typical mapping scenarios\
+      \ including restaurant finders, real estate, data visualization, navigation, delivery/logistics,\
+      \ and more. Use whe\u2026"
+  - name: speckit.mapbox.mapbox-style-quality
+    file: skills/mapbox-style-quality/SKILL.md
+    description: "Expert guidance on validating, optimizing, and ensuring quality of Mapbox styles through\
+      \ validation, accessibility checks, and optimization. Use when preparing styles for production,\
+      \ debugging issues\u2026"
+  - name: speckit.mapbox.mapbox-token-security
+    file: skills/mapbox-token-security/SKILL.md
+    description: "Security best practices for Mapbox access tokens, including scope management, URL restrictions,\
+      \ rotation strategies, and protecting sensitive data. Use when creating, managing, or advising on\
+      \ Mapbox\u2026"
+  - name: speckit.mapbox.mapbox-web-integration-patterns
+    file: skills/mapbox-web-integration-patterns/SKILL.md
+    description: "Official integration patterns for Mapbox GL JS across popular web frameworks (React,\
+      \ Vue, Svelte, Angular). Covers setup, lifecycle management, token handling, search integration,\
+      \ and common pitfalls\u2026"
+  - name: speckit.mapbox.mapbox-web-performance-patterns
+    file: skills/mapbox-web-performance-patterns/SKILL.md
+    description: "Performance optimization patterns for Mapbox GL JS web applications. Covers initialization\
+      \ waterfalls, bundle size, rendering performance, memory management, and web optimization. Prioritized\
+      \ by impa\u2026"
+tags:
+- mapbox
+- maps
+- geospatial
+- location
+- mcp
+- gis

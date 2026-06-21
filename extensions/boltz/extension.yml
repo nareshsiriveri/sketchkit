@@ -1,0 +1,66 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/boltz-bio/boltz-api-skills)
+# Source: https://boltz.bio
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: boltz
+  name: boltz
+  version: 0.1.0
+  description: Predict structures, screen molecules and proteins, and design binders with Boltz from Claude
+    Code.
+  author: Boltz
+  license: Apache-2.0
+  repository: https://boltz.bio
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.boltz.boltz-check-status
+    file: skills/boltz-check-status/SKILL.md
+    description: Boltz job status and result recovery. Use when listing jobs, checking progress, resuming
+      downloads, recovering results, or downloading an existing job ID. Not for starting new jobs.
+  - name: speckit.boltz.boltz-cli-setup
+    file: skills/boltz-cli-setup/SKILL.md
+    description: Boltz CLI setup and auth. Use when installing, updating, verifying, or authenticating
+      `boltz-api`, or fixing missing CLI, PATH, sandbox, browser login, or auth errors.
+  - name: speckit.boltz.boltz-protein-design
+    file: skills/boltz-protein-design/SKILL.md
+    description: Design new protein binders with Boltz. Use when generating protein, peptide, antibody,
+      nanobody, or custom binder candidates for a target. Not for screening existing proteins or small
+      molecules.
+  - name: speckit.boltz.boltz-protein-screen
+    file: skills/boltz-protein-screen/SKILL.md
+    description: "Screen existing protein binders with Boltz. Use when ranking a supplied protein, peptide,\
+      \ antibody, nanobody, or binder library against a target. Not for designing new proteins or screening\
+      \ small mol\u2026"
+  - name: speckit.boltz.boltz-small-molecule-adme
+    file: skills/boltz-small-molecule-adme/SKILL.md
+    description: "Predict Tier-1 ADME/ADMET for small molecules with Boltz from bare SMILES \u2014 no\
+      \ target, no docking. Use when the user wants solubility, permeability, or lipophilicity/logD for\
+      \ a molecule or list of mo\u2026"
+  - name: speckit.boltz.boltz-small-molecule-design
+    file: skills/boltz-small-molecule-design/SKILL.md
+    description: Design new small-molecule binders with Boltz. Use when generating novel ligands or hits
+      for a target without a fixed compound library. Not for screening existing molecules or one-off docking.
+  - name: speckit.boltz.boltz-small-molecule-screen
+    file: skills/boltz-small-molecule-screen/SKILL.md
+    description: "Screen existing small-molecule libraries with Boltz. Use when docking, scoring, or ranking\
+      \ a supplied SMILES or compound library against a target; also returns free Tier-1 ADME/ADMET (solubility,\
+      \ per\u2026"
+  - name: speckit.boltz.boltz-structure-and-binding
+    file: skills/boltz-structure-and-binding/SKILL.md
+    description: "Predict structures and binding for one defined complex with Boltz. Use when folding\
+      \ a protein, RNA, DNA, or ligand complex, docking one ligand, predicting an interface, or scoring\
+      \ binding. Not for sc\u2026"
+tags:
+- boltz
+- boltz-compute
+- computational-biology
+- protein-design
+- protein-screening
+- small-molecule-design
+- virtual-screening
+- structure-prediction
+- molecular-modeling
+- drug-discovery

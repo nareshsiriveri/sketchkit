@@ -1,0 +1,157 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/Bigdata-com/bigdata-plugins-marketplace)
+# Source: https://docs.bigdata.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: bigdata-com
+  name: bigdata-com
+  version: 1.1.0
+  description: "Financial research and market intelligence on stocks, companies, sectors, and economies.\
+    \ Run valuation snapshots, peer comparables, and investment memos; preview, digest, and analyze earnings\
+    \ (quality, reactions, surprises); assess risk, monitor catalysts, and review competitive moats and\
+    \ governanc\u2026"
+  author: RavenPack
+  license: Apache-2.0
+  repository: https://docs.bigdata.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.bigdata-com.catalyst-monitor
+    file: commands/catalyst-monitor.md
+    description: Map upcoming catalysts, likely market implications, and watch points for a company over
+      the next quarters.
+  - name: speckit.bigdata-com.company-brief
+    file: commands/company-brief.md
+    description: Generate a comprehensive 30-day summary of recent developments for a specified company.
+  - name: speckit.bigdata-com.country-analysis
+    file: commands/country-analysis.md
+    description: Generate a comprehensive economic analysis for a country covering GDP, inflation, monetary
+      policy, labor markets, and investment implications.
+  - name: speckit.bigdata-com.country-sector-analysis
+    file: commands/country-sector-analysis.md
+    description: Macro analysis combining a specific sector with a specific country or region, covering
+      economic backdrop, sector trends, and company fundamentals.
+  - name: speckit.bigdata-com.cross-sector
+    file: commands/cross-sector.md
+    description: Compare sectors on valuations, earnings growth, and cycle positioning with rotation recommendations.
+  - name: speckit.bigdata-com.earnings-digest
+    file: commands/earnings-digest.md
+    description: Analyze the latest earnings results with detailed breakdown of revenue, margins, segment
+      performance, management guidance, and surprises.
+  - name: speckit.bigdata-com.earnings-preview
+    file: commands/earnings-preview.md
+    description: Create a forward-looking pre-earnings analysis with recent developments, industry trends,
+      bull/bear cases, and key metrics to watch.
+  - name: speckit.bigdata-com.earnings-quality-screen
+    file: commands/earnings-quality-screen.md
+    description: Run an earnings quality screen covering cash conversion, accruals, and accounting red
+      flags.
+  - name: speckit.bigdata-com.earnings-reaction
+    file: commands/earnings-reaction.md
+    description: Generate a post-earnings reaction note covering results vs expectations, guidance changes,
+      sentiment, and revised view.
+  - name: speckit.bigdata-com.g7-comparison
+    file: commands/g7-comparison.md
+    description: Compare G7 economies across growth, inflation, policy, market positioning, and investment
+      implications.
+  - name: speckit.bigdata-com.investment-memo
+    file: commands/investment-memo.md
+    description: Produce a full investment memo with thesis, variant perception, valuation, risks, catalysts,
+      and recommendation.
+  - name: speckit.bigdata-com.moat-governance-review
+    file: commands/moat-governance-review.md
+    description: Assess competitive moat durability and management quality, including capital allocation
+      and governance risks.
+  - name: speckit.bigdata-com.peer-comparables
+    file: commands/peer-comparables.md
+    description: Compare a company against peers on valuation, growth, profitability, and sentiment to
+      assess relative attractiveness.
+  - name: speckit.bigdata-com.post-ipo-day1
+    file: commands/post-ipo-day1.md
+    description: "First-trading-day post-IPO reaction note \u2014 price discovery vs the offer, demand\
+      \ and stabilization signals, valuation reset, and the post-IPO timeline. Balanced, no buy/avoid\
+      \ call."
+  - name: speckit.bigdata-com.post-ipo-day14
+    file: commands/post-ipo-day14.md
+    description: "Day-14 post-IPO note on potential NASDAQ-100 fast-track inclusion \u2014 stock status,\
+      \ eligibility, estimated passive-flow demand, and the index effect. Balanced, no buy/avoid call."
+  - name: speckit.bigdata-com.post-ipo-day179
+    file: commands/post-ipo-day179.md
+    description: "Day-179 post-IPO note on the 180-day lock-up expiry \u2014 shares unlocking, float expansion,\
+      \ days-to-trade overhang, insider selling signals, and the historical lock-up effect. Balanced,\
+      \ no buy/avoid cal\u2026"
+  - name: speckit.bigdata-com.post-ipo-day365
+    file: commands/post-ipo-day365.md
+    description: "Day-365 post-IPO note on the 366-day founder/significant-investor lock-up expiry and\
+      \ float expansion toward 15-20% \u2014 new supply vs float-adjusted index reweight demand, governance,\
+      \ and the setup. Bal\u2026"
+  - name: speckit.bigdata-com.pre-ipo-analysis
+    file: commands/pre-ipo-analysis.md
+    description: "Produce a balanced pre-IPO research note on an upcoming listing \u2014 deal structure,\
+      \ financials, valuation framing, and bull/bear debates, with no buy/avoid call."
+  - name: speckit.bigdata-com.quick-take
+    file: commands/quick-take.md
+    description: Create a concise PM-style quick take with current view, key drivers, risks, and near-term
+      setup.
+  - name: speckit.bigdata-com.regional-comparison
+    file: commands/regional-comparison.md
+    description: Compare regions on economic indicators, market performance, and allocation recommendations.
+  - name: speckit.bigdata-com.risk-assessment
+    file: commands/risk-assessment.md
+    description: Comprehensive risk analysis covering regulatory, competitive, operational, financial,
+      and macro risks with likelihood and impact ratings.
+  - name: speckit.bigdata-com.scenario-analysis
+    file: commands/scenario-analysis.md
+    description: Build bull, base, and bear cases with assumptions, probabilities, and expected value
+      implications.
+  - name: speckit.bigdata-com.sector-analysis
+    file: commands/sector-analysis.md
+    description: Analyze a sector's performance, valuations, themes, sub-industries, and upcoming catalysts.
+  - name: speckit.bigdata-com.sector-playbook
+    file: commands/sector-playbook.md
+    description: Create a sector investment playbook with key KPIs, debates, valuation context, and actionable
+      setup.
+  - name: speckit.bigdata-com.thematic-research
+    file: commands/thematic-research.md
+    description: Research a macro investment theme with sector impact, beneficiaries, and implementation
+      ideas.
+  - name: speckit.bigdata-com.valuation-snapshot
+    file: commands/valuation-snapshot.md
+    description: Build a valuation snapshot with key assumptions, bull/base/bear scenarios, and probability-weighted
+      value.
+  - name: speckit.bigdata-com.variant-perception
+    file: commands/variant-perception.md
+    description: Define explicit variant perception versus consensus using fundamentals, valuation, and
+      sentiment framing.
+  - name: speckit.bigdata-com.financial-research-analyst
+    file: skills/financial-research-analyst/SKILL.md
+    description: "Bigdata.com MCP workflows plus institutional analysis layers: pre-synthesis EPIC-style\
+      \ filtering, valuation snapshots, earnings quality screens, moat/governance risk, sector KPI lenses.\
+      \ Use for: comp\u2026"
+tags:
+- Bigdata
+- finance
+- RavenPack
+- stocks
+- companies
+- sectors
+- economies
+- valuation
+- peers
+- investment memos
+- earnings
+- risk
+- catalysts
+- moats
+- governance
+- thematic research
+- sector research
+- cross-sector comparisons
+- regional comparisons
+- country analysis
+- macro analysis
+- G7 benchmarking
+- scenario analysis
+- company briefs

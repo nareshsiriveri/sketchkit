@@ -1,0 +1,105 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/heygen-com/hyperframes)
+# Source: https://hyperframes.heygen.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: hyperframes
+  name: hyperframes
+  version: 0.6.120
+  description: HyperFrames by HeyGen. Write HTML, render video. Compositions, GSAP and runtime adapter
+    animations, captions, voiceovers, audio-reactive visuals, and website-to-video capture for HyperFrames.
+  author: HeyGen
+  license: Apache-2.0
+  repository: https://hyperframes.heygen.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.hyperframes.embedded-captions
+    file: skills/embedded-captions/SKILL.md
+    description: "Add captions to a talking-head video. ONE catalog (CATALOG.md) of 32 visual identities\
+      \ behind two engines: column-flow (captions composited INTO the scene \u2014 matte occlusion + mix-blend;\
+      \ cream/ink/edi\u2026"
+  - name: speckit.hyperframes.faceless-explainer
+    file: skills/faceless-explainer/SKILL.md
+    description: "faceless-explainer video workflow - arbitrary text (article / notes / topic / brief)\
+      \ -> narrator_scripts.json + audio (voice + BGM) + section_plan.md -> typography / abstract-graphics\
+      \ / diagram / dat\u2026"
+  - name: speckit.hyperframes.general-video
+    file: skills/general-video/SKILL.md
+    description: "Use as the fallback for custom HyperFrames HTML video composition authoring when no\
+      \ specialized workflow fits. Covers longer or multi-scene pieces, brand/sizzle reels, montages,\
+      \ title cards, motion p\u2026"
+  - name: speckit.hyperframes.graphic-overlays
+    file: skills/graphic-overlays/SKILL.md
+    description: "Package an existing talking-head / interview / podcast video by layering timed, designed\
+      \ GRAPHIC OVERLAY cards onto the playing video \u2014 titles, lower-thirds, data callouts, quotes,\
+      \ side panels, pictu\u2026"
+  - name: speckit.hyperframes.hyperframes
+    file: skills/hyperframes/SKILL.md
+    description: "READ THIS FIRST \u2014 the HyperFrames entry skill. START HERE for any request to make,\
+      \ create, generate, edit, animate, or render a video, animation, motion graphic, explainer, title\
+      \ card, overlay, capti\u2026"
+  - name: speckit.hyperframes.hyperframes-animation
+    file: skills/hyperframes-animation/SKILL.md
+    description: "All animation knowledge for HyperFrames \u2014 atomic motion rules, multi-phase scene\
+      \ blueprints, scene transitions, broader motion-design techniques, AND the seven runtime adapters\
+      \ (GSAP default, plus Lo\u2026"
+  - name: speckit.hyperframes.hyperframes-cli
+    file: skills/hyperframes-cli/SKILL.md
+    description: "HyperFrames CLI dev loop. Use when running npx hyperframes init, add, catalog, capture,\
+      \ lint, validate, inspect, layout, snapshot, preview, play, render, publish, lambda, doctor, browser,\
+      \ info, upgra\u2026"
+  - name: speckit.hyperframes.hyperframes-core
+    file: skills/hyperframes-core/SKILL.md
+    description: "HyperFrames HTML composition contract. Use for composition structure, data attributes,\
+      \ clips, tracks, sub-compositions, variables, media playback, deterministic render rules, and validation\
+      \ of minima\u2026"
+  - name: speckit.hyperframes.hyperframes-creative
+    file: skills/hyperframes-creative/SKILL.md
+    description: "Non-animation creative direction for HyperFrames videos. Use for design spec (frame.md\
+      \ / design.md) handling, palettes, typography, narration, beat planning, audio-reactive visuals,\
+      \ composition patte\u2026"
+  - name: speckit.hyperframes.hyperframes-media
+    file: skills/hyperframes-media/SKILL.md
+    description: "Asset preprocessing for HyperFrames compositions \u2014 multi-provider TTS (HeyGen /\
+      \ ElevenLabs / Kokoro local), multi-provider BGM (Google Lyria / local MusicGen), Whisper transcription,\
+      \ background remov\u2026"
+  - name: speckit.hyperframes.hyperframes-registry
+    file: skills/hyperframes-registry/SKILL.md
+    description: "Install and wire registry blocks and components into HyperFrames compositions. Use when\
+      \ running hyperframes add, installing a block or component, wiring an installed item into index.html,\
+      \ or working\u2026"
+  - name: speckit.hyperframes.motion-graphics
+    file: skills/motion-graphics/SKILL.md
+    description: "Use when the user wants a short, design-led motion graphic where motion is the message:\
+      \ kinetic typography, stat or number count-up, chart/data-viz hit, logo sting, brand lockup, lower-third,\
+      \ callout\u2026"
+  - name: speckit.hyperframes.pr-to-video
+    file: skills/pr-to-video/SKILL.md
+    description: "pr-to-video workflow - a GitHub pull request (URL like github.com/<owner>/<repo>/pull/<N>,\
+      \ or <owner>/<repo>#<N>, or \"this PR\" in a checked-out repo) -> ingested PR facts (title, body,\
+      \ diff, commits,\u2026"
+  - name: speckit.hyperframes.product-launch-video
+    file: skills/product-launch-video/SKILL.md
+    description: "Use when the user wants a product launch, SaaS promo, feature reveal, app/company/site\
+      \ marketing video, or a script/brief turned into a product-focused video. Triggers include launch\
+      \ video for X, pro\u2026"
+  - name: speckit.hyperframes.remotion-to-hyperframes
+    file: skills/remotion-to-hyperframes/SKILL.md
+    description: "Port an existing Remotion (React) composition to HyperFrames HTML. Use ONLY when the\
+      \ user explicitly asks to port/convert/migrate/translate a Remotion source. Do NOT use: (a) authoring\
+      \ a new HyperFra\u2026"
+  - name: speckit.hyperframes.slideshow
+    file: skills/slideshow/SKILL.md
+    description: "Author a HyperFrames slideshow composition \u2014 a presentation, pitch deck, or interactive\
+      \ deck with discrete slides, fragment reveals, branching sequences, and hotspot navigation. Use\
+      \ as an intent chec\u2026"
+  - name: speckit.hyperframes.website-to-video
+    file: skills/website-to-video/SKILL.md
+    description: "Capture a general website/URL and turn it into a HyperFrames video (site tour, showcase,\
+      \ or social clip from the site's own visuals). Uses headless Chrome screenshots + brand assets.\
+      \ Use when intent\u2026"
+tags:
+- design

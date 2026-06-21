@@ -1,0 +1,30 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/spotify/save-to-spotify)
+# Source: https://github.com/spotify/save-to-spotify
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: save-to-spotify
+  name: save-to-spotify
+  version: 0.1.1
+  description: Create polished audio episodes with TTS narration, rich timelines, cover images, and save
+    them to Spotify via the save-to-spotify CLI.
+  author: Spotify
+  license: Apache-2.0
+  repository: https://github.com/spotify/save-to-spotify
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.save-to-spotify.save-to-spotify
+    file: skills/save-to-spotify/SKILL.md
+    description: "Create polished audio content and save to Spotify. Produces episodes with TTS narration,\
+      \ a rich timeline (chapters plus in-player images, external links, and Spotify entity cards), and\
+      \ a cover image.\u2026"
+tags:
+- spotify
+- audio
+- podcast
+- tts
+- timeline
+- save-to-spotify

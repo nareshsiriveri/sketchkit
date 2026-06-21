@@ -1,0 +1,256 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/aws-samples/sample-claude-code-plugins-for-startups)
+# Source: https://github.com/aws-samples/sample-claude-code-plugins-for-startups
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: aws-dev-toolkit
+  name: aws-dev-toolkit
+  version: 0.3.0
+  description: "AWS development toolkit \u2014 34 skills, 11 agents, and 3 MCP servers for building, migrating,\
+    \ and performing architecture reviews on AWS."
+  author: aws-samples
+  license: Apache-2.0
+  repository: https://github.com/aws-samples/sample-claude-code-plugins-for-startups
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.aws-dev-toolkit.agentcore
+    file: skills/agentcore/SKILL.md
+    description: "Deep-dive into Amazon Bedrock AgentCore platform design, service selection, deployment,\
+      \ and production operations. This skill should be used when the user asks to \"design an AgentCore\
+      \ architecture\",\u2026"
+  - name: speckit.aws-dev-toolkit.api-gateway
+    file: skills/api-gateway/SKILL.md
+    description: "Design and configure Amazon API Gateway APIs. Use when choosing between REST and HTTP\
+      \ APIs, setting up authorizers, configuring throttling, managing custom domains, implementing WebSocket\
+      \ APIs, or tr\u2026"
+  - name: speckit.aws-dev-toolkit.aws-architect
+    file: skills/aws-architect/SKILL.md
+    description: "Design and review AWS architectures following Well-Architected Framework principles.\
+      \ Use when planning new infrastructure, reviewing existing architectures, evaluating trade-offs\
+      \ between AWS services\u2026"
+  - name: speckit.aws-dev-toolkit.aws-compare
+    file: skills/aws-compare/SKILL.md
+    description: "Compare 2-3 AWS architecture options side-by-side across cost, complexity, performance,\
+      \ security, and operational burden. Use when evaluating trade-offs between approaches or when the\
+      \ user is decidin\u2026"
+  - name: speckit.aws-dev-toolkit.aws-debug
+    file: skills/aws-debug/SKILL.md
+    description: "Debug AWS infrastructure issues, deployment failures, and runtime errors. Use when troubleshooting\
+      \ CloudFormation stack failures, Lambda errors, ECS task failures, permission issues, networking\
+      \ probl\u2026"
+  - name: speckit.aws-dev-toolkit.aws-diagram
+    file: skills/aws-diagram/SKILL.md
+    description: Generate AWS architecture diagrams in Mermaid or ASCII from a description, existing IaC,
+      or conversation context. Use when the user wants to visualize an architecture.
+  - name: speckit.aws-dev-toolkit.aws-health-check
+    file: skills/aws-health-check/SKILL.md
+    description: "Quick health check on the current AWS account \u2014 security posture, cost waste, reliability\
+      \ gaps, and operational readiness. Lighter than a full Well-Architected review."
+  - name: speckit.aws-dev-toolkit.aws-plan
+    file: skills/aws-plan/SKILL.md
+    description: "End-to-end AWS architecture planning \u2014 discovery, design, security review, cost\
+      \ estimate, and SCP recommendations. Use when someone wants to build something on AWS, plan infrastructure,\
+      \ or design a n\u2026"
+  - name: speckit.aws-dev-toolkit.bedrock
+    file: skills/bedrock/SKILL.md
+    description: "Deep-dive into Amazon Bedrock \u2014 model selection, agents, knowledge bases, guardrails,\
+      \ prompt engineering, and cost modeling. This skill should be used when the user asks to \"build\
+      \ with Bedrock\", \"sel\u2026"
+  - name: speckit.aws-dev-toolkit.challenger
+    file: skills/challenger/SKILL.md
+    description: "Adversarial reviewer that stress-tests other agents' outputs for reasoning gaps, unsupported\
+      \ assumptions, over-engineering, and missed alternatives. Use when validating an architecture recommendation\u2026"
+  - name: speckit.aws-dev-toolkit.cloudfront
+    file: skills/cloudfront/SKILL.md
+    description: "Design and configure Amazon CloudFront distributions. Use when setting up CDN for web\
+      \ applications, configuring cache behaviors, origins, Lambda@Edge, CloudFront Functions, signed\
+      \ URLs, WAF integrati\u2026"
+  - name: speckit.aws-dev-toolkit.cost-check
+    file: skills/cost-check/SKILL.md
+    description: "Analyze and optimize AWS costs. Use when reviewing infrastructure for cost savings,\
+      \ estimating costs for new architectures, investigating unexpected charges, or comparing pricing\
+      \ between service opti\u2026"
+  - name: speckit.aws-dev-toolkit.customer-ideation
+    file: skills/customer-ideation/SKILL.md
+    description: "Guide customers from idea to AWS architecture with structured discovery, service selection,\
+      \ and Well-Architected review. Use when brainstorming new projects on AWS, helping customers choose\
+      \ AWS servi\u2026"
+  - name: speckit.aws-dev-toolkit.dynamodb
+    file: skills/dynamodb/SKILL.md
+    description: "Deep-dive into Amazon DynamoDB table design, access patterns, and operations. Use when\
+      \ designing DynamoDB schemas, choosing partition keys, planning GSI/LSI strategies, implementing\
+      \ single-table desi\u2026"
+  - name: speckit.aws-dev-toolkit.ec2
+    file: skills/ec2/SKILL.md
+    description: "Design, configure, and optimize Amazon EC2 workloads. Use when selecting instance types,\
+      \ configuring auto-scaling groups, working with launch templates, managing Spot instances, choosing\
+      \ storage (EBS\u2026"
+  - name: speckit.aws-dev-toolkit.ecs
+    file: skills/ecs/SKILL.md
+    description: "This skill should be used when the user asks to \"deploy containers on ECS\", \"set\
+      \ up an ECS service\", \"choose between Fargate and EC2\", \"configure ECS task definitions\", \"\
+      set up ECS auto-scaling\", \"us\u2026"
+  - name: speckit.aws-dev-toolkit.ecs-soci
+    file: skills/ecs-soci/SKILL.md
+    description: "Generate a complete ECS Fargate SOCI (Seekable OCI) example with Terraform. Demonstrates\
+      \ lazy-loading container images for faster task startup using SOCI index v2 manifests. Includes\
+      \ a heavy ML infer\u2026"
+  - name: speckit.aws-dev-toolkit.eks
+    file: skills/eks/SKILL.md
+    description: "Design, deploy, and troubleshoot Amazon EKS clusters. Use when working with Kubernetes\
+      \ on AWS, configuring managed node groups or Fargate profiles, setting up IRSA or Pod Identity,\
+      \ managing EKS add-o\u2026"
+  - name: speckit.aws-dev-toolkit.iac-scaffold
+    file: skills/iac-scaffold/SKILL.md
+    description: "Scaffold new AWS infrastructure-as-code projects using CDK, Terraform, SAM, or CloudFormation.\
+      \ Use when creating new IaC projects, adding new stacks/modules, or setting up deployment pipelines\
+      \ for AW\u2026"
+  - name: speckit.aws-dev-toolkit.iam
+    file: skills/iam/SKILL.md
+    description: "Design and review AWS IAM configurations. Use when creating IAM policies, roles, permission\
+      \ boundaries, SCPs, configuring Identity Center (SSO), analyzing access with Access Analyzer, implementing\
+      \ le\u2026"
+  - name: speckit.aws-dev-toolkit.iot
+    file: skills/iot/SKILL.md
+    description: "Deep-dive into AWS IoT architecture, device connectivity, edge computing, and fleet\
+      \ management. This skill should be used when the user asks to \"design an IoT solution\", \"connect\
+      \ devices to AWS\", \"se\u2026"
+  - name: speckit.aws-dev-toolkit.lambda
+    file: skills/lambda/SKILL.md
+    description: "Design, build, and optimize AWS Lambda functions. Use when creating new Lambda functions,\
+      \ troubleshooting cold starts, configuring event sources, optimizing performance, managing layers\
+      \ and concurren\u2026"
+  - name: speckit.aws-dev-toolkit.messaging
+    file: skills/messaging/SKILL.md
+    description: "Deep-dive into AWS messaging services including SQS, SNS, and EventBridge. Use when\
+      \ designing event-driven architectures, choosing between messaging services, configuring queues\
+      \ and topics, implement\u2026"
+  - name: speckit.aws-dev-toolkit.migration-apprunner-to-ecs-express
+    file: skills/migration-apprunner-to-ecs-express/SKILL.md
+    description: "Guided migration from AWS App Runner to Amazon ECS Express Mode. Covers IAM setup, deployment,\
+      \ custom domains, DNS cutover, cost comparison, and troubleshooting. Use when the user asks to \"\
+      migrate fr\u2026"
+  - name: speckit.aws-dev-toolkit.migration-azure-to-aws
+    file: skills/migration-azure-to-aws/SKILL.md
+    description: "Azure to AWS migration guidance with service mappings, gotchas, and assessment. Use\
+      \ when migrating from Microsoft Azure, mapping Azure services to AWS equivalents, assessing Azure\
+      \ environments, or pl\u2026"
+  - name: speckit.aws-dev-toolkit.migration-gcp-to-aws
+    file: skills/migration-gcp-to-aws/SKILL.md
+    description: "GCP to AWS migration guidance with service mappings, gotchas, and assessment. Use when\
+      \ migrating from Google Cloud Platform, mapping GCP services to AWS equivalents, assessing GCP environments,\
+      \ or pl\u2026"
+  - name: speckit.aws-dev-toolkit.mlops
+    file: skills/mlops/SKILL.md
+    description: "End-to-end MLOps guidance on AWS \u2014 platform selection, training, inference, pipelines,\
+      \ monitoring, and cost optimization. This skill should be used when the user asks to \"build an\
+      \ ML pipeline\", \"depl\u2026"
+  - name: speckit.aws-dev-toolkit.networking
+    file: skills/networking/SKILL.md
+    description: "Design and troubleshoot AWS networking. Use when planning VPC architectures, configuring\
+      \ subnets, security groups, NACLs, VPC endpoints, Transit Gateway, VPC peering, Route53, NAT Gateways,\
+      \ or debugg\u2026"
+  - name: speckit.aws-dev-toolkit.observability
+    file: skills/observability/SKILL.md
+    description: "Design and implement AWS observability solutions. Use when configuring CloudWatch metrics,\
+      \ logs, alarms, dashboards, Logs Insights queries, X-Ray tracing, anomaly detection, or debugging\
+      \ monitoring g\u2026"
+  - name: speckit.aws-dev-toolkit.rds-aurora
+    file: skills/rds-aurora/SKILL.md
+    description: "Deep-dive into Amazon RDS and Aurora database design, engine selection, high availability,\
+      \ and operations. This skill should be used when the user asks to \"design an RDS database\", \"\
+      choose between RD\u2026"
+  - name: speckit.aws-dev-toolkit.s3
+    file: skills/s3/SKILL.md
+    description: "Deep-dive into Amazon S3 bucket configuration, storage optimization, and access control.\
+      \ Use when designing S3 storage strategies, configuring bucket policies and access controls, optimizing\
+      \ performa\u2026"
+  - name: speckit.aws-dev-toolkit.security-review
+    file: skills/security-review/SKILL.md
+    description: "Review AWS infrastructure code and configurations for security issues. Use when auditing\
+      \ IAM policies, reviewing IaC templates for security misconfigurations, checking for exposed resources,\
+      \ or harde\u2026"
+  - name: speckit.aws-dev-toolkit.step-functions
+    file: skills/step-functions/SKILL.md
+    description: "Design and build AWS Step Functions workflows. Use when orchestrating multi-step processes,\
+      \ implementing saga patterns, coordinating parallel tasks, handling retries and error recovery,\
+      \ or choosing b\u2026"
+  - name: speckit.aws-dev-toolkit.strands-agent
+    file: skills/strands-agent/SKILL.md
+    description: "Scaffold and build AI agents using the Strands Agents SDK with Bedrock AgentCore. Use\
+      \ when creating new agent projects, building greenfield AgentCore applications, prototyping agents\
+      \ with Strands, or\u2026"
+  - name: speckit.aws-dev-toolkit.well-architected
+    file: skills/well-architected/SKILL.md
+    description: "Run formal AWS Well-Architected Framework reviews against workloads. Use when conducting\
+      \ a Well-Architected review, evaluating architecture against the six pillars, identifying high-risk\
+      \ issues, crea\u2026"
+  - name: speckit.aws-dev-toolkit.agent-agentcore-sme
+    file: agents/agentcore-sme.md
+    description: "Amazon Bedrock AgentCore subject matter expert for building production-ready AI agents.\
+      \ Use when prototyping new agents, hardening PoC agents for production, setting up agent observability\
+      \ and evalua\u2026"
+  - name: speckit.aws-dev-toolkit.agent-aws-explorer
+    file: agents/aws-explorer.md
+    description: "Read-only AWS environment explorer. Use proactively when you need to understand the\
+      \ current state of AWS resources, investigate infrastructure, or gather context about deployed services\
+      \ before making\u2026"
+  - name: speckit.aws-dev-toolkit.agent-bedrock-sme
+    file: agents/bedrock-sme.md
+    description: "Amazon Bedrock subject matter expert emphasizing cost-efficient usage patterns. Use\
+      \ when designing Bedrock-based solutions, selecting models, architecting agent workflows, configuring\
+      \ knowledge bases\u2026"
+  - name: speckit.aws-dev-toolkit.agent-container-sme
+    file: agents/container-sme.md
+    description: "Container expert for ECS, EKS, and Fargate. Use when choosing between container orchestrators,\
+      \ designing deployment strategies, configuring networking and auto-scaling, or setting up CI/CD\
+      \ for contai\u2026"
+  - name: speckit.aws-dev-toolkit.agent-cost-optimizer
+    file: agents/cost-optimizer.md
+    description: "Deep AWS cost optimization expert. Use when analyzing AWS spend, rightsizing resources,\
+      \ evaluating Reserved Instances or Savings Plans, optimizing data transfer costs, or building a\
+      \ cost governance s\u2026"
+  - name: speckit.aws-dev-toolkit.agent-iac-reviewer
+    file: agents/iac-reviewer.md
+    description: Reviews infrastructure-as-code changes for correctness, security, and best practices.
+      Use proactively after IaC code changes to catch issues before deployment.
+  - name: speckit.aws-dev-toolkit.agent-migration-advisor
+    file: agents/migration-advisor.md
+    description: "Cloud migration expert. Use when assessing workloads for migration to AWS, planning\
+      \ migration waves, identifying dependencies, estimating effort, or selecting the right migration\
+      \ strategy and AWS too\u2026"
+  - name: speckit.aws-dev-toolkit.agent-networking-sme
+    file: agents/networking-sme.md
+    description: "AWS networking expert covering VPC design, hybrid connectivity, DNS, CDN, load balancing,\
+      \ and service connectivity. Use when designing network architectures, troubleshooting connectivity,\
+      \ planning hy\u2026"
+  - name: speckit.aws-dev-toolkit.agent-observability-sme
+    file: agents/observability-sme.md
+    description: "AWS observability expert covering CloudWatch, X-Ray, and OpenTelemetry. Use when designing\
+      \ monitoring strategies, building dashboards, setting up alarms, troubleshooting with distributed\
+      \ tracing, or\u2026"
+  - name: speckit.aws-dev-toolkit.agent-serverless-sme
+    file: agents/serverless-sme.md
+    description: "Serverless architecture expert for Lambda, API Gateway, Step Functions, EventBridge,\
+      \ and DynamoDB. Use when designing event-driven architectures, optimizing Lambda performance, modeling\
+      \ serverless co\u2026"
+  - name: speckit.aws-dev-toolkit.agent-well-architected-reviewer
+    file: agents/well-architected-reviewer.md
+    description: "Conducts deep AWS Well-Architected Framework reviews of workloads. Use when performing\
+      \ a formal Well-Architected review, auditing architecture against the six pillars, identifying high-risk\
+      \ issues in\u2026"
+tags:
+- aws
+- cdk
+- cloudformation
+- terraform
+- serverless
+- well-architected
+- iac
+- migration
+- gcp
+- azure
+- bedrock

@@ -1,0 +1,149 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/DuendeSoftware/duende-skills)
+# Source: https://duendesoftware.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: duende-skills
+  name: duende-skills
+  version: 0.1.0
+  description: "Duende development skills and agents for Claude Code \u2014 covering OAuth/OIDC protocols,\
+    \ IdentityServer, token management, ASP.NET Core authentication/authorization, BFF patterns, and secure\
+    \ identity architecture"
+  author: Duende Software
+  license: Apache-2.0
+  repository: https://duendesoftware.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.duende-skills.aspnetcore-authentication
+    file: skills/aspnetcore-authentication/SKILL.md
+    description: "ASP.NET Core authentication middleware configuration including OpenID Connect, JWT Bearer,\
+      \ cookie authentication, authentication schemes, challenge/forbid flows, and external identity provider\
+      \ integr\u2026"
+  - name: speckit.duende-skills.aspnetcore-authorization
+    file: skills/aspnetcore-authorization/SKILL.md
+    description: "ASP.NET Core authorization patterns including policy-based authorization, IAuthorizationHandler\
+      \ implementations, scope-based authorization for APIs, authorization middleware configuration, and\
+      \ minima\u2026"
+  - name: speckit.duende-skills.claims-authorization
+    file: skills/claims-authorization/SKILL.md
+    description: "Claims transformation and profile service patterns for Duende IdentityServer \u2014\
+      \ IProfileService, IClaimsTransformation, claim type mapping, token claim filtering, extension grant\
+      \ validators, and dynam\u2026"
+  - name: speckit.duende-skills.duende-bff
+    file: skills/duende-bff/SKILL.md
+    description: "Duende BFF (Backend for Frontend) security framework for securing SPAs. Covers session\
+      \ management, API endpoint proxying, token management, anti-forgery protection, and integration\
+      \ with React/Angular\u2026"
+  - name: speckit.duende-skills.identity-security-hardening
+    file: skills/identity-security-hardening/SKILL.md
+    description: "Security hardening for Duende IdentityServer deployments including signing key rotation,\
+      \ HTTPS enforcement, CORS configuration, CSP headers, rate limiting, token lifetime tuning, and\
+      \ security audit p\u2026"
+  - name: speckit.duende-skills.identity-testing-patterns
+    file: skills/identity-testing-patterns/SKILL.md
+    description: "Testing patterns for IdentityServer-based systems including integration testing with\
+      \ WebApplicationFactory, mock token issuance, test authority configuration, protocol response validation,\
+      \ and end-to\u2026"
+  - name: speckit.duende-skills.identityserver-api-protection
+    file: skills/identityserver-api-protection/SKILL.md
+    description: "Protecting APIs with Duende IdentityServer: JWT bearer authentication, reference token\
+      \ introspection, scope-based authorization, DPoP/mTLS proof-of-possession validation, local API\
+      \ authentication, an\u2026"
+  - name: speckit.duende-skills.identityserver-aspire
+    file: skills/identityserver-aspire/SKILL.md
+    description: "Orchestrate Duende IdentityServer in .NET Aspire AppHost \u2014 dependency graphs, authority\
+      \ URL wiring, health checks, and multi-instance."
+  - name: speckit.duende-skills.identityserver-configuration
+    file: skills/identityserver-configuration/SKILL.md
+    description: "Configure Duende IdentityServer including client definitions, API resources, identity\
+      \ resources, scopes, signing credentials, and server-side sessions. Covers client types (M2M, interactive,\
+      \ SPA), gr\u2026"
+  - name: speckit.duende-skills.identityserver-dcr
+    file: skills/identityserver-dcr/SKILL.md
+    description: "Configuring Dynamic Client Registration (DCR) in Duende IdentityServer: endpoint setup,\
+      \ authorization policies, custom validation with DynamicClientRegistrationValidator, software statement\
+      \ validatio\u2026"
+  - name: speckit.duende-skills.identityserver-deployment
+    file: skills/identityserver-deployment/SKILL.md
+    description: "Guide for deploying Duende IdentityServer to production, covering reverse proxy configuration,\
+      \ data protection, health checks, distributed caching, multi-instance deployment, OpenTelemetry\
+      \ integratio\u2026"
+  - name: speckit.duende-skills.identityserver-hosting-setup
+    file: skills/identityserver-hosting-setup/SKILL.md
+    description: "Setting up and hosting Duende IdentityServer in ASP.NET Core applications, including\
+      \ DI registration, middleware pipeline, hosting patterns, essential options, license configuration,\
+      \ and ASP.NET Iden\u2026"
+  - name: speckit.duende-skills.identityserver-key-management
+    file: skills/identityserver-key-management/SKILL.md
+    description: "Managing cryptographic signing keys in Duende IdentityServer, including automatic key\
+      \ management, KeyManagementOptions, data protection at rest, static key configuration, migration\
+      \ from static to aut\u2026"
+  - name: speckit.duende-skills.identityserver-saml
+    file: skills/identityserver-saml/SKILL.md
+    description: 'Configuring Duende IdentityServer as a SAML 2.0 Identity Provider (IdP): service provider
+      registration, SSO and SLO flows, claim mappings, extensibility interfaces, and production deployment
+      patterns.'
+  - name: speckit.duende-skills.identityserver-sessions-providers
+    file: skills/identityserver-sessions-providers/SKILL.md
+    description: "Guide for configuring server-side sessions, session management and querying, inactivity\
+      \ timeout, dynamic identity providers, and CIBA (Client Initiated Backchannel Authentication) in\
+      \ Duende IdentityS\u2026"
+  - name: speckit.duende-skills.identityserver-stores
+    file: skills/identityserver-stores/SKILL.md
+    description: "Implement and customize Duende IdentityServer stores including configuration store,\
+      \ operational store, and Entity Framework Core integration. Covers migrations, custom store implementations,\
+      \ caching\u2026"
+  - name: speckit.duende-skills.identityserver-token-lifecycle
+    file: skills/identityserver-token-lifecycle/SKILL.md
+    description: "Guide for implementing token types, refresh token management, token exchange (RFC 8693),\
+      \ extension grants, IProfileService claims customization, and token lifetime best practices in Duende\
+      \ IdentitySe\u2026"
+  - name: speckit.duende-skills.identityserver-token-security
+    file: skills/identityserver-token-security/SKILL.md
+    description: "Advanced token security features in Duende IdentityServer including DPoP, mTLS certificate\
+      \ binding, Pushed Authorization Requests (PAR), JWT Secured Authorization Requests (JAR), and FAPI\
+      \ 2.0 complia\u2026"
+  - name: speckit.duende-skills.identityserver-ui-flows
+    file: skills/identityserver-ui-flows/SKILL.md
+    description: "Guide for building login, logout, consent, error, and federation gateway UI pages in\
+      \ Duende IdentityServer, including IIdentityServerInteractionService usage, external provider integration,\
+      \ and Home\u2026"
+  - name: speckit.duende-skills.identityserver-upgrade-v7-to-v8
+    file: skills/identityserver-upgrade-v7-to-v8/SKILL.md
+    description: "Migrating Duende IdentityServer from v7.4 to v8.0: breaking changes, API replacements\
+      \ (ICache\u2192HybridCache, IClock\u2192TimeProvider), CancellationToken additions, EF migrations,\
+      \ and step-by-step upgrade g\u2026"
+  - name: speckit.duende-skills.identityserver-usermanagement
+    file: skills/identityserver-usermanagement/SKILL.md
+    description: 'Setting up Duende User Management with IdentityServer: passwordless authentication (OTP,
+      TOTP, passkeys), storage configuration, user lifecycle, and migration from ASP.NET Identity.'
+  - name: speckit.duende-skills.identityserver4-migration
+    file: skills/identityserver4-migration/SKILL.md
+    description: "Migrating from IdentityServer4 to Duende IdentityServer v8. Covers NuGet package replacement,\
+      \ namespace changes, API surface changes, EF Core database schema migrations, .NET target framework\
+      \ upgrade\u2026"
+  - name: speckit.duende-skills.oauth-oidc-protocols
+    file: skills/oauth-oidc-protocols/SKILL.md
+    description: "OAuth 2.0 and OpenID Connect protocol fundamentals including authorization code flow\
+      \ with PKCE, client credentials, refresh tokens, discovery documents, JWKS, and token introspection.\
+      \ Protocol-level\u2026"
+  - name: speckit.duende-skills.token-management
+    file: skills/token-management/SKILL.md
+    description: "Token management patterns using Duende.AccessTokenManagement. Covers client credential\
+      \ token caching, user token refresh, token storage, HttpClientFactory integration, DPoP support,\
+      \ and common config\u2026"
+  - name: speckit.duende-skills.agent-identity-server-specialist
+    file: agents/identity-server-specialist.md
+    description: "Expert in Duende IdentityServer configuration, deployment, and troubleshooting. Specializes\
+      \ in client configuration, token issuance flows, store customization, signing key management, and\
+      \ protocol co\u2026"
+  - name: speckit.duende-skills.agent-oauth-oidc-specialist
+    file: agents/oauth-oidc-specialist.md
+    description: "Expert in OAuth 2.0 and OpenID Connect protocol specifications, security best practices,\
+      \ and compliance. Specializes in flow selection, token security, protocol-level debugging, and standards\
+      \ complia\u2026"
+tags:
+- security

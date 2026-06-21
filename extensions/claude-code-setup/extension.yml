@@ -1,0 +1,25 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: claude-code-setup
+  name: claude-code-setup
+  version: 1.0.0
+  description: Analyze codebases and recommend tailored Claude Code automations such as hooks, skills,
+    MCP servers, and subagents.
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.claude-code-setup.claude-automation-recommender
+    file: skills/claude-automation-recommender/SKILL.md
+    description: "Analyze a codebase and recommend Claude Code automations (hooks, subagents, skills,\
+      \ plugins, MCP servers). Use when user asks for automation recommendations, wants to optimize their\
+      \ Claude Code setup\u2026"
+tags:
+- claude-code

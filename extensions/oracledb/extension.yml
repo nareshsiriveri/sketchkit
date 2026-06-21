@@ -1,0 +1,24 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gemini-cli-extensions/oracledb)
+# Source: https://github.com/gemini-cli-extensions/oracledb
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: oracledb
+  name: oracledb
+  version: 0.2.3
+  description: Connect, query, and interact with Oracle Databases and their data.
+  author: Google LLC
+  license: Apache-2.0
+  repository: https://github.com/gemini-cli-extensions/oracledb
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.oracledb.oracledb
+    file: skills/oracledb/SKILL.md
+    description: "Use these skills to manage and monitor Oracle databases by executing SQL statements,\
+      \ exploring schema metadata, analyzing query performance, monitoring active sessions and resource\
+      \ consumption, and m\u2026"
+tags:
+- database

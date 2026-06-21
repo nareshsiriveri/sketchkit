@@ -1,0 +1,116 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack)
+# Source: https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: data-agent-kit-starter-pack
+  name: data-agent-kit-starter-pack
+  version: 0.4.0
+  description: "This plugin provides a specialized suite of skills for data engineers and database practitioners\
+    \ working on Google Cloud. It acts as an expert assistant, allowing you to use natural language prompts\
+    \ in your preferred coding agent to architect complex data pipelines, transform data with dbt, write\
+    \ S\u2026"
+  author: Google LLC
+  license: Apache-2.0
+  repository: https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.data-agent-kit-starter-pack.accidental-data-loss-prevention
+    file: skills/accidental-data-loss-prevention/SKILL.md
+    description: "**STOP AND VERIFY**: Before running any command or tool that results in irreversible\
+      \ data loss, you MUST obtain explicit user consent. When in doubt, ask. It is better to wait for\
+      \ confirmation than t\u2026"
+  - name: speckit.data-agent-kit-starter-pack.bigquery-data-transfer-service
+    file: skills/bigquery-data-transfer-service/SKILL.md
+    description: "Discovers and inspects BigQuery Data Transfer Service (DTS) configurations. Use this\
+      \ to identify existing ingestion pipelines and extract datasource or transfer config metadata for\
+      \ data pipelines. Us\u2026"
+  - name: speckit.data-agent-kit-starter-pack.building-data-apps
+    file: skills/building-data-apps/SKILL.md
+    description: "Build modern data apps, dashboards, and interactive reports using either React + Vite\
+      \ or Streamlit. Includes optional Gemini Data Analytics chat integration for an AI powered \"chat\
+      \ with your data\" ex\u2026"
+  - name: speckit.data-agent-kit-starter-pack.data-autocleaning
+    file: skills/data-autocleaning/SKILL.md
+    description: "Automated data quality and transformation capabilities for Dataform/dbt/BigQuery pipelines.\
+      \ Processes data sourced from BigQuery or Cloud Storage (GCS), applying best practices for data\
+      \ ingestion, mo\u2026"
+  - name: speckit.data-agent-kit-starter-pack.dataform-bigquery
+    file: skills/dataform-bigquery/SKILL.md
+    description: "Expertise in generating clean, correct, and efficient Dataform pipeline code for BigQuery\
+      \ ELT. Use this when creating or modifying Dataform pipelines, actions, or source declarations,\
+      \ when Dataform,\u2026"
+  - name: speckit.data-agent-kit-starter-pack.dbt-bigquery
+    file: skills/dbt-bigquery/SKILL.md
+    description: "Expert guidance for creating, modifying, and optimizing dbt pipelines for BigQuery.\
+      \ Use this skill whenever user asks for generating or modifying a dbt model or project. Activate\
+      \ this skill when the\u2026"
+  - name: speckit.data-agent-kit-starter-pack.developing-with-bigquery
+    file: skills/developing-with-bigquery/SKILL.md
+    description: "Provides BigQuery-specific logic, knowledge, and specialized standards. Use this skill\
+      \ whenever you are doing anything with BigQuery, including: 1. BigQuery query optimization (SQL)\
+      \ 2. BigFrames Pyth\u2026"
+  - name: speckit.data-agent-kit-starter-pack.discovering-gcp-data-assets
+    file: skills/discovering-gcp-data-assets/SKILL.md
+    description: "Finds and inspects data assets within Google Cloud. Relevant when any of the following\
+      \ conditions are true: 1. The user request involves finding, exploring, or inspecting data assets\
+      \ in Google Cloud,\u2026"
+  - name: speckit.data-agent-kit-starter-pack.federate-lakehouse-catalog
+    file: skills/federate-lakehouse-catalog/SKILL.md
+    description: "Sets up Google Cloud Lakehouse federated catalogs to remote Iceberg REST Catalogs. Currently\
+      \ supported catalogs: Databricks Unity, AWS Glue. Supported clouds hosting those catalogs: GCP,\
+      \ AWS. The pri\u2026"
+  - name: speckit.data-agent-kit-starter-pack.gcloud-auth-verification
+    file: skills/gcloud-auth-verification/SKILL.md
+    description: "Guidelines for identifying and resolving missing Google Cloud authentication and Application\
+      \ Default Credentials (ADC). Use this skill if `gcloud`, `bq`, `dataform`, or Python libraries return\
+      \ authen\u2026"
+  - name: speckit.data-agent-kit-starter-pack.gcp-composer-troubleshooting
+    file: skills/gcp-composer-troubleshooting/SKILL.md
+    description: "Provides expert guidance for troubleshooting Cloud Composer (Apache Airflow) and Orchestration\
+      \ pipelines. Use this skill when the user asks to generate Root Cause Analysis (RCA), troubleshoot\
+      \ or fix\u2026"
+  - name: speckit.data-agent-kit-starter-pack.gcp-data-pipelines
+    file: skills/gcp-data-pipelines/SKILL.md
+    description: "Primary entry point for building, managing, and orchestrating data pipelines on Google\
+      \ Cloud. Guides users to the appropriate skill for dbt, Dataflow (Apache Beam), Dataform, Spark\
+      \ (Dataproc Serverle\u2026"
+  - name: speckit.data-agent-kit-starter-pack.gcp-dataflow
+    file: skills/gcp-dataflow/SKILL.md
+    description: "Guides writing, packaging, executing, and troubleshooting Apache Beam pipelines on Dataflow.\
+      \ Use when creating new pipelines, configuring Flex Templates, or analyzing performance of Dataflow\
+      \ jobs. Ca\u2026"
+  - name: speckit.data-agent-kit-starter-pack.gcp-pipeline-orchestration
+    file: skills/gcp-pipeline-orchestration/SKILL.md
+    description: "This skill helps the agent generate or update orchestration pipeline definitions for\
+      \ Google Cloud Composer to initialize orchestration pipeline or update the orchestration definition\
+      \ for orchestratio\u2026"
+  - name: speckit.data-agent-kit-starter-pack.gcp-pipeline-resource-provisioning
+    file: skills/gcp-pipeline-resource-provisioning/SKILL.md
+    description: "Automates declarative resource creation and provisioning for data pipelines, supporting\
+      \ BigQuery, Dataform, Dataproc, BigQuery Data Transfer Service (DTS), and other resources. It manages\
+      \ environment\u2026"
+  - name: speckit.data-agent-kit-starter-pack.gcp-spark
+    file: skills/gcp-spark/SKILL.md
+    description: "Develops and executes Spark code on Dataproc Clusters and Serverless. Reads and writes\
+      \ data using BigLake Iceberg catalogs, BigQuery and Spanner. Debugs execution failures. Use when:\
+      \ - Writing Spark\u2026"
+  - name: speckit.data-agent-kit-starter-pack.managing-python-dependencies
+    file: skills/managing-python-dependencies/SKILL.md
+    description: "Ensures proper Python dependency management, avoiding global `pip install` and adhering\
+      \ to project-specific tooling. Use this skill if any of the following are true: 1. Attempting to\
+      \ run `pip install\u2026"
+  - name: speckit.data-agent-kit-starter-pack.ml-best-practices
+    file: skills/ml-best-practices/SKILL.md
+    description: "CRITICAL RULE: You MUST use this skill whenever the task involves any machine learning\
+      \ tasks or data analysis. Use this skill if the user's prompt or requirements mention any of the\
+      \ following: * Clus\u2026"
+  - name: speckit.data-agent-kit-starter-pack.notebook-guidance
+    file: skills/notebook-guidance/SKILL.md
+    description: "This skill guides the use of Jupyter notebooks for data analysis, exploration, and visualization,\
+      \ particularly with BigQuery. It outlines best practices for notebook execution and validation (support\u2026"
+tags:
+- development

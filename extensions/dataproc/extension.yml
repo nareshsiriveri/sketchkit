@@ -1,0 +1,22 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gemini-cli-extensions/dataproc)
+# Source: https://github.com/gemini-cli-extensions/dataproc
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: dataproc
+  name: dataproc
+  version: 0.1.0
+  description: Manage Dataproc clusters and jobs.
+  author: Google LLC
+  license: Apache-2.0
+  repository: https://github.com/gemini-cli-extensions/dataproc
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.dataproc.dataproc-skills
+    file: skills/dataproc-skills/SKILL.md
+    description: Skills to interact with your Dataproc clusters and jobs.
+tags:
+- database

@@ -1,0 +1,117 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/huggingface/skills)
+# Source: https://github.com/huggingface/skills.git
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: huggingface-skills
+  name: huggingface-skills
+  version: 1.0.8
+  description: Agent Skills for AI/ML tasks including dataset creation, model training, evaluation, and
+    research paper publishing on Hugging Face Hub
+  author: Hugging Face
+  license: Apache-2.0
+  repository: https://github.com/huggingface/skills.git
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.huggingface-skills.hf-cli
+    file: skills/hf-cli/SKILL.md
+    description: "Hugging Face Hub CLI (`hf`) for downloading, uploading, and managing models, datasets,\
+      \ spaces, buckets, repos, papers, jobs, and more on the Hugging Face Hub. Use when: handling authentication;\
+      \ manag\u2026"
+  - name: speckit.huggingface-skills.hf-mem
+    file: skills/hf-mem/SKILL.md
+    description: Hugging Face CLI to estimate the required memory to load Safetensors or GGUF model weights
+      for inference from the Hugging Face Hub
+  - name: speckit.huggingface-skills.huggingface-best
+    file: skills/huggingface-best/SKILL.md
+    description: "Use when the user asks about finding the best, top, or recommended model for a task,\
+      \ wants to know what AI model to use, or wants to compare models by benchmark scores. Triggers on:\
+      \ \"best model for X\u2026"
+  - name: speckit.huggingface-skills.huggingface-community-evals
+    file: skills/huggingface-community-evals/SKILL.md
+    description: "Run evaluations for Hugging Face Hub models using inspect-ai and lighteval on local\
+      \ hardware. Use for backend selection, local GPU evals, and choosing between vLLM / Transformers\
+      \ / accelerate. Not fo\u2026"
+  - name: speckit.huggingface-skills.huggingface-datasets
+    file: skills/huggingface-datasets/SKILL.md
+    description: Use this skill for Hugging Face Dataset Viewer API workflows that fetch subset/split
+      metadata, paginate rows, search text, apply filters, download parquet URLs, and read size or statistics.
+  - name: speckit.huggingface-skills.huggingface-gradio
+    file: skills/huggingface-gradio/SKILL.md
+    description: Build Gradio web UIs and demos in Python. Use when creating or editing Gradio apps, components,
+      event listeners, layouts, or chatbots.
+  - name: speckit.huggingface-skills.huggingface-llm-trainer
+    file: skills/huggingface-llm-trainer/SKILL.md
+    description: "Train or fine-tune language and vision models using TRL (Transformer Reinforcement Learning)\
+      \ or Unsloth with Hugging Face Jobs infrastructure. Covers SFT, DPO, GRPO and reward modeling training\
+      \ metho\u2026"
+  - name: speckit.huggingface-skills.huggingface-local-models
+    file: skills/huggingface-local-models/SKILL.md
+    description: "Use to select models to run locally with llama.cpp and GGUF on CPU, Mac Metal, CUDA,\
+      \ or ROCm. Covers finding GGUFs, quant selection, running servers, exact GGUF file lookup, conversion,\
+      \ and OpenAI-co\u2026"
+  - name: speckit.huggingface-skills.huggingface-lora-space-builder
+    file: skills/huggingface-lora-space-builder/SKILL.md
+    description: "Build and publish a Gradio demo on Hugging Face Spaces for a user-provided LoRA. Use\
+      \ when someone asks to create, generate, ship, or publish a Space, demo, Gradio app, or playground\
+      \ for a LoRA \u2014 incl\u2026"
+  - name: speckit.huggingface-skills.huggingface-paper-publisher
+    file: skills/huggingface-paper-publisher/SKILL.md
+    description: "Publish and manage research papers on Hugging Face Hub. Supports creating paper pages,\
+      \ linking papers to models/datasets, claiming authorship, and generating professional markdown-based\
+      \ research arti\u2026"
+  - name: speckit.huggingface-skills.huggingface-papers
+    file: skills/huggingface-papers/SKILL.md
+    description: "Look up and read Hugging Face paper pages in markdown, and use the papers API for structured\
+      \ metadata such as authors, linked models/datasets/spaces, Github repo and project page. Use when\
+      \ the user s\u2026"
+  - name: speckit.huggingface-skills.huggingface-spaces
+    file: skills/huggingface-spaces/SKILL.md
+    description: "Build, deploy, and maintain applications on Hugging Face Spaces \u2014 Gradio / Docker\
+      \ / Static SDKs, ZeroGPU and dedicated hardware, model loading, debugging, buckets, inference providers,\
+      \ community gran\u2026"
+  - name: speckit.huggingface-skills.huggingface-tool-builder
+    file: skills/huggingface-tool-builder/SKILL.md
+    description: "Use this skill when the user wants to build tool/scripts or achieve a task where using\
+      \ data from the Hugging Face API would help. This is especially useful when chaining or combining\
+      \ API calls or the\u2026"
+  - name: speckit.huggingface-skills.huggingface-trackio
+    file: skills/huggingface-trackio/SKILL.md
+    description: "Track and visualize ML training experiments with Trackio. Use when logging metrics during\
+      \ training (Python API), firing alerts for training diagnostics, or retrieving/analyzing logged\
+      \ metrics (CLI).\u2026"
+  - name: speckit.huggingface-skills.huggingface-vision-trainer
+    file: skills/huggingface-vision-trainer/SKILL.md
+    description: "Trains and fine-tunes vision models for object detection (D-FINE, RT-DETR v2, DETR,\
+      \ YOLOS), image classification (timm models \u2014 MobileNetV3, MobileViT, ResNet, ViT/DINOv3 \u2014\
+      \ plus any Transformers clas\u2026"
+  - name: speckit.huggingface-skills.huggingface-zerogpu
+    file: skills/huggingface-zerogpu/SKILL.md
+    description: "AI demos and GPU compute with Gradio Spaces and Hugging Face Spaces ZeroGPU. Use when\
+      \ writing or reviewing code that uses `@spaces.GPU`, configuring `python_version` or `requirements.txt`\
+      \ for a ZeroG\u2026"
+  - name: speckit.huggingface-skills.train-sentence-transformers
+    file: skills/train-sentence-transformers/SKILL.md
+    description: "Train or fine-tune sentence-transformers models across `SentenceTransformer` (bi-encoder;\
+      \ dense or static embedding model; for retrieval, similarity, clustering, classification, paraphrase\
+      \ mining, de\u2026"
+  - name: speckit.huggingface-skills.transformers-js
+    file: skills/transformers-js/SKILL.md
+    description: "Use Transformers.js to run state-of-the-art machine learning models directly in JavaScript/TypeScript.\
+      \ Supports NLP (text classification, translation, summarization), computer vision (image classific\u2026"
+  - name: speckit.huggingface-skills.trl-training
+    file: skills/trl-training/SKILL.md
+    description: Train and fine-tune transformer language models using TRL (Transformers Reinforcement
+      Learning). Supports SFT, DPO, GRPO, KTO, RLOO and Reward Model training via CLI commands.
+tags:
+- huggingface
+- machine-learning
+- datasets
+- training
+- evaluation
+- papers
+- fine-tuning
+- llm

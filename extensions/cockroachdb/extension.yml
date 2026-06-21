@@ -1,0 +1,208 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/cockroachdb/claude-plugin)
+# Source: https://github.com/cockroachdb/claude-plugin
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: cockroachdb
+  name: cockroachdb
+  version: 0.1.9
+  description: "Connect Claude Code directly to your CockroachDB clusters for hands-on database work \u2014\
+    \ explore schemas, write optimized SQL, debug queries, and manage distributed database clusters. This\
+    \ plugin provides tools across two active MCP backends (self-hosted MCP Toolbox and managed CockroachDB\
+    \ Cloud MCP\u2026"
+  author: Cockroach Labs
+  license: Apache-2.0
+  repository: https://github.com/cockroachdb/claude-plugin
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.cockroachdb.benchmarking-transaction-patterns
+    file: skills/cockroachdb-application-development/benchmarking-transaction-patterns/SKILL.md
+    description: "Guides benchmarking and comparing explicit multi-statement transactions versus single-statement\
+      \ CTE transactions in CockroachDB, with fair test methodology, contention analysis, and performance\
+      \ inter\u2026"
+  - name: speckit.cockroachdb.designing-application-transactions
+    file: skills/cockroachdb-application-development/designing-application-transactions/SKILL.md
+    description: "Guides application developers in designing correct and performant transaction patterns\
+      \ for CockroachDB, covering transaction lifetime, implicit vs explicit transactions, retry handling\
+      \ with exponenti\u2026"
+  - name: speckit.cockroachdb.designing-multi-region-applications
+    file: skills/cockroachdb-application-development/designing-multi-region-applications/SKILL.md
+    description: "Guides developers in selecting and implementing multi-region patterns for CockroachDB\
+      \ applications, covering active-passive vs active-active architectures, REGIONAL BY ROW, GLOBAL\
+      \ tables, manual geo-\u2026"
+  - name: speckit.cockroachdb.analyzing-range-distribution
+    file: skills/cockroachdb-observability-and-diagnostics/analyzing-range-distribution/SKILL.md
+    description: "Analyzes CockroachDB range distribution across tables and indexes using SHOW RANGES\
+      \ to identify range count, size patterns, leaseholder placement, and replication health. Use when\
+      \ investigating hotsp\u2026"
+  - name: speckit.cockroachdb.analyzing-schema-change-storage-risk
+    file: skills/cockroachdb-observability-and-diagnostics/analyzing-schema-change-storage-risk/SKILL.md
+    description: "Estimates storage requirements for CockroachDB online schema change backfills using\
+      \ SHOW RANGES WITH DETAILS, KEYS, INDEXES. Use before CREATE INDEX, ADD COLUMN with INDEX/UNIQUE,\
+      \ ALTER PRIMARY KEY,\u2026"
+  - name: speckit.cockroachdb.auditing-table-statistics
+    file: skills/cockroachdb-observability-and-diagnostics/auditing-table-statistics/SKILL.md
+    description: "Audits optimizer table statistics for staleness, missing coverage, and data quality\
+      \ issues using SHOW STATISTICS. Use when diagnosing poor query performance, unexpected plan changes,\
+      \ or after bulk da\u2026"
+  - name: speckit.cockroachdb.monitoring-background-jobs
+    file: skills/cockroachdb-observability-and-diagnostics/monitoring-background-jobs/SKILL.md
+    description: "Monitors CockroachDB background job health by identifying failed, paused, and long-running\
+      \ jobs using SHOW JOBS and SHOW AUTOMATIC JOBS. Surfaces schema changes, backups/restores, automatic\
+      \ statistic\u2026"
+  - name: speckit.cockroachdb.profiling-statement-fingerprints
+    file: skills/cockroachdb-observability-and-diagnostics/profiling-statement-fingerprints/SKILL.md
+    description: "Ranks and analyzes statement fingerprints using aggregated SQL statistics from crdb_internal.statement_statistics\
+      \ to identify slow, resource-intensive, or error-prone query patterns. Use when investi\u2026"
+  - name: speckit.cockroachdb.profiling-transaction-fingerprints
+    file: skills/cockroachdb-observability-and-diagnostics/profiling-transaction-fingerprints/SKILL.md
+    description: "Analyzes transaction fingerprints using aggregated statistics from crdb_internal.transaction_statistics\
+      \ to identify high-retry transactions, contention patterns, and commit latency issues. Provides\
+      \ h\u2026"
+  - name: speckit.cockroachdb.triaging-live-sql-activity
+    file: skills/cockroachdb-observability-and-diagnostics/triaging-live-sql-activity/SKILL.md
+    description: "Diagnoses live CockroachDB cluster performance issues by identifying long-running queries,\
+      \ busy sessions, and active transactions using SQL-only interfaces. Use when users report cluster\
+      \ slowness, hi\u2026"
+  - name: speckit.cockroachdb.molt-fetch
+    file: skills/cockroachdb-onboarding-and-migrations/molt-fetch/SKILL.md
+    description: "Guide for using molt fetch to migrate data from PostgreSQL, MySQL, Oracle, or MSSQL\
+      \ to CockroachDB. Use when running molt fetch commands, configuring storage backends, handling fetch\
+      \ failures/resumpt\u2026"
+  - name: speckit.cockroachdb.molt-replicator
+    file: skills/cockroachdb-onboarding-and-migrations/molt-replicator/SKILL.md
+    description: "Guide for using the CockroachDB replicator to continuously replicate changes from PostgreSQL,\
+      \ MySQL, or Oracle to CockroachDB after an initial molt fetch data load. Use when setting up CDC\
+      \ replicatio\u2026"
+  - name: speckit.cockroachdb.molt-verify
+    file: skills/cockroachdb-onboarding-and-migrations/molt-verify/SKILL.md
+    description: "Guide for using molt verify to compare source and target databases for schema and row-level\
+      \ consistency after a migration. Use when running verify commands, tuning concurrency/sharding,\
+      \ handling sche\u2026"
+  - name: speckit.cockroachdb.setting-up-local-cluster
+    file: skills/cockroachdb-onboarding-and-migrations/setting-up-local-cluster/SKILL.md
+    description: "Downloads and starts a local CockroachDB cluster for development using the official\
+      \ binary. Use when a developer needs a local CockroachDB instance, when no cluster is available,\
+      \ or when setting up a\u2026"
+  - name: speckit.cockroachdb.managing-certificates-and-encryption
+    file: skills/cockroachdb-operations-and-lifecycle/managing-certificates-and-encryption/SKILL.md
+    description: "Manages TLS certificate and encryption key lifecycle across all tiers. Self-Hosted covers\
+      \ certificate expiry monitoring, node/CA/client cert rotation, and Kubernetes cert management. Advanced/BYOC\
+      \ co\u2026"
+  - name: speckit.cockroachdb.managing-cluster-capacity
+    file: skills/cockroachdb-operations-and-lifecycle/managing-cluster-capacity/SKILL.md
+    description: "Manages CockroachDB cluster capacity across all tiers. Self-Hosted covers node decommissioning\
+      \ for permanent removal and adding nodes for expansion. Advanced/BYOC covers scaling node count\
+      \ and machin\u2026"
+  - name: speckit.cockroachdb.managing-cluster-settings
+    file: skills/cockroachdb-operations-and-lifecycle/managing-cluster-settings/SKILL.md
+    description: "Reviews, audits, and modifies CockroachDB cluster settings. Self-Hosted has full control\
+      \ over all settings and start flags. Advanced/BYOC can modify most SQL-level settings but infrastructure\
+      \ setting\u2026"
+  - name: speckit.cockroachdb.performing-cluster-maintenance
+    file: skills/cockroachdb-operations-and-lifecycle/performing-cluster-maintenance/SKILL.md
+    description: "Manages planned cluster maintenance across all tiers. Self-Hosted covers node drain\
+      \ procedures for OS patching, hardware changes, and configuration updates. Advanced/BYOC covers\
+      \ maintenance window co\u2026"
+  - name: speckit.cockroachdb.provisioning-cluster-for-production
+    file: skills/cockroachdb-operations-and-lifecycle/provisioning-cluster-for-production/SKILL.md
+    description: "Guides initial CockroachDB cluster provisioning and production deployment. Self-Hosted\
+      \ covers cockroach start/init, Kubernetes deployment (Operator, Helm), hardware sizing, and production\
+      \ configurati\u2026"
+  - name: speckit.cockroachdb.reviewing-cluster-health
+    file: skills/cockroachdb-operations-and-lifecycle/reviewing-cluster-health/SKILL.md
+    description: "Performs a comprehensive health check of a CockroachDB cluster. Gathers deployment context\
+      \ first, then provides tier-appropriate diagnostics. Self-Hosted uses SQL against node-level system\
+      \ tables and\u2026"
+  - name: speckit.cockroachdb.upgrading-cluster-version
+    file: skills/cockroachdb-operations-and-lifecycle/upgrading-cluster-version/SKILL.md
+    description: "Guides CockroachDB version upgrades with tier-appropriate procedures. Self-Hosted covers\
+      \ manual rolling binary replacement with finalization control. Advanced/BYOC covers Console-initiated\
+      \ major upgr\u2026"
+  - name: speckit.cockroachdb.cockroachdb-sql
+    file: skills/cockroachdb-query-and-schema-design/cockroachdb-sql/SKILL.md
+    description: "Use when writing, generating, or optimizing SQL for CockroachDB, designing CockroachDB\
+      \ schemas, or when the user asks about CockroachDB-specific SQL patterns, type mappings, and distributed\
+      \ database\u2026"
+  - name: speckit.cockroachdb.auditing-cloud-cluster-security
+    file: skills/cockroachdb-security-and-governance/auditing-cloud-cluster-security/SKILL.md
+    description: "Audits the security posture of a CockroachDB cluster (Cloud or self-hosted) across network,\
+      \ authentication, authorization, encryption, audit logging, and backup dimensions. Use when assessing\
+      \ cluster\u2026"
+  - name: speckit.cockroachdb.configuring-audit-logging
+    file: skills/cockroachdb-security-and-governance/configuring-audit-logging/SKILL.md
+    description: "Configures SQL audit logging on CockroachDB clusters to capture security-relevant events\
+      \ including authentication, privilege changes, and sensitive data access. Use when enabling audit\
+      \ logging for co\u2026"
+  - name: speckit.cockroachdb.configuring-ip-allowlists
+    file: skills/cockroachdb-security-and-governance/configuring-ip-allowlists/SKILL.md
+    description: "Configures and hardens IP allowlists for CockroachDB Cloud clusters to restrict network\
+      \ access to authorized CIDR ranges. Use when tightening network security, removing overly permissive\
+      \ allowlist en\u2026"
+  - name: speckit.cockroachdb.configuring-log-export
+    file: skills/cockroachdb-security-and-governance/configuring-log-export/SKILL.md
+    description: "Configures log and metric export for CockroachDB Cloud clusters to external monitoring\
+      \ services including AWS CloudWatch, GCP Cloud Logging, and Datadog. Use when setting up log export\
+      \ for audit comp\u2026"
+  - name: speckit.cockroachdb.configuring-private-connectivity
+    file: skills/cockroachdb-security-and-governance/configuring-private-connectivity/SKILL.md
+    description: "Configures private network connectivity for CockroachDB Cloud clusters including AWS\
+      \ PrivateLink, GCP Private Service Connect, Azure Private Link, egress private endpoints, and VPC\
+      \ peering. Use when\u2026"
+  - name: speckit.cockroachdb.configuring-sso-and-scim
+    file: skills/cockroachdb-security-and-governance/configuring-sso-and-scim/SKILL.md
+    description: "Configures SSO authentication and SCIM 2.0 provisioning for CockroachDB across four\
+      \ distinct layers \u2014 Cloud Console SSO (SAML/OIDC), DB Console SSO (OIDC), SQL/Cluster SSO (JWT\
+      \ or LDAP/AD), and SCIM\u2026"
+  - name: speckit.cockroachdb.enabling-cmek-encryption
+    file: skills/cockroachdb-security-and-governance/enabling-cmek-encryption/SKILL.md
+    description: "Enables Customer-Managed Encryption Keys (CMEK) on CockroachDB Cloud clusters with the\
+      \ Advanced plan and Advanced Security Add-on to give organizations control over data-at-rest encryption\
+      \ keys via t\u2026"
+  - name: speckit.cockroachdb.enforcing-password-policies
+    file: skills/cockroachdb-security-and-governance/enforcing-password-policies/SKILL.md
+    description: "Configures and enforces password policies on CockroachDB clusters including minimum\
+      \ length, complexity requirements, and hash cost settings. Use when strengthening authentication\
+      \ requirements, settin\u2026"
+  - name: speckit.cockroachdb.hardening-user-privileges
+    file: skills/cockroachdb-security-and-governance/hardening-user-privileges/SKILL.md
+    description: "Hardens CockroachDB user privileges by auditing and tightening role-based access control,\
+      \ reducing admin grants, restricting PUBLIC role permissions, and applying least-privilege principles.\
+      \ Use when\u2026"
+  - name: speckit.cockroachdb.managing-tls-certificates
+    file: skills/cockroachdb-security-and-governance/managing-tls-certificates/SKILL.md
+    description: "Manages TLS certificates for CockroachDB clusters including CA certificate configuration,\
+      \ client certificate authentication, certificate rotation, and troubleshooting SSL/TLS connection\
+      \ errors. Use w\u2026"
+  - name: speckit.cockroachdb.preparing-compliance-documentation
+    file: skills/cockroachdb-security-and-governance/preparing-compliance-documentation/SKILL.md
+    description: "Guides preparation of compliance documentation for CockroachDB Cloud deployments, covering\
+      \ SOC 2, PCI DSS, ISO 27001, HIPAA, and GDPR certifications. Use when responding to compliance questionnaires,\u2026"
+  - name: speckit.cockroachdb.agent-cockroachdb-dba
+    file: agents/cockroachdb-dba.md
+    description: "CockroachDB database administration agent. Use when diagnosing performance issues, reviewing\
+      \ schema designs, analyzing query plans, troubleshooting cluster problems, or planning multi-region\
+      \ deployme\u2026"
+  - name: speckit.cockroachdb.agent-cockroachdb-developer
+    file: agents/cockroachdb-developer.md
+    description: "CockroachDB application developer agent. Use when building applications on CockroachDB,\
+      \ configuring ORMs/drivers, implementing transaction retry logic, optimizing queries, designing\
+      \ schemas for distr\u2026"
+  - name: speckit.cockroachdb.agent-cockroachdb-operator
+    file: agents/cockroachdb-operator.md
+    description: "CockroachDB operator and SRE agent. Use when managing cluster operations, monitoring,\
+      \ alerting, incident response, backup/restore, scaling, version upgrades, node maintenance, changefeed\
+      \ management,\u2026"
+tags:
+- cockroachdb
+- database
+- sql
+- distributed-sql
+- postgres-compatible
+- mcp
+- schema
+- migration
+- multi-region

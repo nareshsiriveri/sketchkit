@@ -1,0 +1,134 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/carta/plugins)
+# Source: https://carta.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: carta-crm
+  name: carta-crm
+  version: 0.8.1
+  description: "Manage the Carta CRM conversationally \u2014 search, add, update, and enrich investors,\
+    \ companies, contacts, deals, notes, and fundraisings via the Carta CRM MCP Server"
+  author: Carta
+  license: Apache-2.0
+  repository: https://carta.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.carta-crm.add-company
+    file: skills/add-company/SKILL.md
+    description: "Adds one or more company records to the Carta CRM via the Carta CRM MCP Server. Use\
+      \ this skill when the user says things like \"add a company\", \"create company record\", \"add\
+      \ company to CRM\", \"add comp\u2026"
+  - name: speckit.carta-crm.add-contact
+    file: skills/add-contact/SKILL.md
+    description: "Adds one or more contact records to the Carta CRM via the Carta CRM MCP Server. Use\
+      \ this skill when the user says things like \"add a contact\", \"create a contact record\", \"add\
+      \ contact to CRM\", \"save a\u2026"
+  - name: speckit.carta-crm.add-deal
+    file: skills/add-deal/SKILL.md
+    description: "Creates one or more deal records in the Carta CRM via the Carta CRM MCP Server. Use\
+      \ this skill when the user says things like \"add a deal\", \"create a deal\", \"log a deal\", \"\
+      add deal to CRM\", \"add deal\u2026"
+  - name: speckit.carta-crm.add-fundraising
+    file: skills/add-fundraising/SKILL.md
+    description: "Adds one or more fundraising records to the Carta CRM via the Carta CRM MCP Server.\
+      \ Use this skill when the user says things like \"add a fundraising\", \"create a fundraising\"\
+      , \"log a fundraising round\u2026"
+  - name: speckit.carta-crm.add-investor
+    file: skills/add-investor/SKILL.md
+    description: "Adds one or more investor records to the Carta CRM via the Carta CRM MCP Server. Use\
+      \ this skill when the user says things like \"add an investor\", \"/add-investor\", \"add investor\
+      \ to Carta CRM\", \"create\u2026"
+  - name: speckit.carta-crm.add-note
+    file: skills/add-note/SKILL.md
+    description: "Adds a comment/note to a deal record in the Carta CRM via the Carta CRM MCP Server.\
+      \ Use this skill when the user says things like \"add a note\", \"create a note\", \"log a note\"\
+      , \"add note to a deal\", \"a\u2026"
+  - name: speckit.carta-crm.enrich-company
+    file: skills/enrich-company/SKILL.md
+    description: "Researches a company by fetching its website and returning structured profile data.\
+      \ Use this skill when the user says things like \"enrich this company\", \"look up company info\"\
+      , \"research this company\u2026"
+  - name: speckit.carta-crm.lookup-fund-portfolio
+    file: skills/lookup-fund-portfolio/SKILL.md
+    description: "Finds and returns the portfolio companies listed on a VC or investment fund's website.\
+      \ Use this skill when the user says things like \"look up portfolio of [fund]\", \"get portfolio\
+      \ companies for [fund\u2026"
+  - name: speckit.carta-crm.search-companies
+    file: skills/search-companies/SKILL.md
+    description: "Searches for and retrieves company records from the Carta CRM. Use this skill when the\
+      \ user says things like \"find a company\", \"search companies\", \"look up a company\", \"show\
+      \ me company details for [n\u2026"
+  - name: speckit.carta-crm.search-contacts
+    file: skills/search-contacts/SKILL.md
+    description: "Searches for and retrieves contact (people) records from the Carta CRM. Use this skill\
+      \ when the user says things like \"find a contact\", \"search contacts\", \"look up a person\",\
+      \ \"show me contact details\u2026"
+  - name: speckit.carta-crm.search-deals
+    file: skills/search-deals/SKILL.md
+    description: "Searches for and retrieves deal records from the Carta CRM. Use this skill when the\
+      \ user says things like \"find a deal\", \"search deals\", \"look up a deal\", \"show me deals for\
+      \ [company]\", \"get deal by\u2026"
+  - name: speckit.carta-crm.search-fundraisings
+    file: skills/search-fundraisings/SKILL.md
+    description: "Searches for and retrieves fundraising records from the Carta CRM. Use this skill when\
+      \ the user says things like \"find a fundraising\", \"search fundraisings\", \"look up a fundraising\
+      \ round\", \"show fund\u2026"
+  - name: speckit.carta-crm.search-investors
+    file: skills/search-investors/SKILL.md
+    description: "Searches for and retrieves investor records from the Carta CRM. Use this skill when\
+      \ the user says things like \"find an investor\", \"search investors\", \"look up an investor\"\
+      , \"show me investor details\u2026"
+  - name: speckit.carta-crm.search-notes
+    file: skills/search-notes/SKILL.md
+    description: "Searches for and retrieves note records from the Carta CRM. Use this skill when the\
+      \ user says things like \"find a note\", \"search notes\", \"look up a note\", \"show me notes about\
+      \ [topic]\", \"list notes\",\u2026"
+  - name: speckit.carta-crm.tutorial
+    file: skills/tutorial/SKILL.md
+    description: "Interactive ~5-minute walkthrough of the Carta CRM plugin. Covers plugin overview, setup\
+      \ verification, how to kick off each skill, and a demo walkthrough of 4 realistic CRM scenarios.\
+      \ Trigger phrases\u2026"
+  - name: speckit.carta-crm.update-company
+    file: skills/update-company/SKILL.md
+    description: "Updates an existing company record in the Carta CRM. Use this skill when the user says\
+      \ things like \"update a company\", \"edit company\", \"update company details\", \"change company\
+      \ name\", \"update company\u2026"
+  - name: speckit.carta-crm.update-contact
+    file: skills/update-contact/SKILL.md
+    description: "Updates an existing contact (person) record in the Carta CRM. Use this skill when the\
+      \ user says things like \"update a contact\", \"edit contact\", \"update contact details\", \"change\
+      \ contact email\", \"upda\u2026"
+  - name: speckit.carta-crm.update-deal
+    file: skills/update-deal/SKILL.md
+    description: "Updates an existing deal record in the Carta CRM. Use this skill when the user says\
+      \ things like \"update a deal\", \"move deal to [stage]\", \"change deal stage\", \"edit deal\"\
+      , \"update deal fields\", \"add a\u2026"
+  - name: speckit.carta-crm.update-fundraising
+    file: skills/update-fundraising/SKILL.md
+    description: "Updates an existing fundraising record in the Carta CRM. Use this skill when the user\
+      \ says things like \"update a fundraising\", \"edit fundraising\", \"update fundraising details\"\
+      , \"change fundraising st\u2026"
+  - name: speckit.carta-crm.update-investor
+    file: skills/update-investor/SKILL.md
+    description: "Updates an existing investor record in the Carta CRM. Use this skill when the user says\
+      \ things like \"update an investor\", \"edit investor\", \"update investor details\", \"change investor\
+      \ name\", \"update i\u2026"
+  - name: speckit.carta-crm.update-note
+    file: skills/update-note/SKILL.md
+    description: "Searches for notes in the Carta CRM and helps the user update deal comments. Use this\
+      \ skill when the user says things like \"update a note\", \"edit note\", \"update note content\"\
+      , \"change a note\", or \"/u\u2026"
+tags:
+- carta
+- crm
+- investors
+- companies
+- contacts
+- deals
+- notes
+- fundraisings
+- search
+- enrich

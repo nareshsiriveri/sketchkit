@@ -1,0 +1,49 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/zapier/zapier-mcp)
+# Source: https://github.com/zapier/zapier-mcp/tree/main/plugins/zapier
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: zapier
+  name: zapier
+  version: 1.0.0
+  description: Connect 9,000+ apps to your AI workflow. Discover, enable, and execute Zapier actions directly
+    from your client.
+  author: Zapier
+  license: Apache-2.0
+  repository: https://github.com/zapier/zapier-mcp/tree/main/plugins/zapier
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.zapier.create-my-tools-profile
+    file: skills/create-my-tools-profile/SKILL.md
+    description: "Generate a personalized AI skill based on your configured Zapier MCP tools. Scans your\
+      \ enabled actions and creates instructions that help your AI assistant know when and how to use\
+      \ each tool. Use aft\u2026"
+  - name: speckit.zapier.zapier-setup
+    file: skills/zapier-setup/SKILL.md
+    description: "Set up Zapier MCP and add tools to your AI assistant. Introduces what Zapier can do,\
+      \ walks through authentication, detects your server mode, then branches into the right flow \u2014\
+      \ summary for healthy se\u2026"
+  - name: speckit.zapier.zapier-status
+    file: skills/zapier-status/SKILL.md
+    description: "Check the health of your Zapier MCP setup. Three modes \u2014 health check (dashboard\
+      \ view), audit (find waste and duplicates), diagnose (systematic troubleshooting). Use when asking\
+      \ \"is my MCP working?\",\u2026"
+  - name: speckit.zapier.agent-zapier-mcp-agent
+    file: agents/zapier-mcp.agent.md
+    description: Uses Zapier MCP to discover, enable, audit, and execute app actions safely and efficiently
+      while following Zapier's read/write confirmation lifecycle.
+tags:
+- zapier
+- mcp
+- model-context-protocol
+- automation
+- integrations
+- workflow
+- ai-actions
+- api
+- no-code
+- ai-tools
+- productivity

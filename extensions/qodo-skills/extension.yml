@@ -1,0 +1,37 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/qodo-ai/qodo-skills)
+# Source: https://github.com/qodo-ai/qodo-skills.git
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: qodo-skills
+  name: qodo-skills
+  version: 0.6.1
+  description: Shift-left code review skills that bring Qodo's quality standards and code review capabilities
+    into your local development workflow. Catch issues before commit, enforce organizational standards,
+    and resolve PR feedback directly in your agent.
+  author: Qodo.ai
+  license: Apache-2.0
+  repository: https://github.com/qodo-ai/qodo-skills.git
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.qodo-skills.qodo-get-rules
+    file: skills/qodo-get-rules/SKILL.md
+    description: "Loads coding rules from Qodo most relevant to the current coding task by generating\
+      \ a semantic search query from the assignment. Use when Qodo is configured and the user asks to\
+      \ write, edit, refactor\u2026"
+  - name: speckit.qodo-skills.qodo-pr-resolver
+    file: skills/qodo-pr-resolver/SKILL.md
+    description: "Use when the user wants to review Qodo PR feedback or fix code review comments. Capabilities:\
+      \ view issues by severity, apply fixes interactively or in batch, reply to inline comments, post\
+      \ fix summar\u2026"
+tags:
+- qodo
+- code-review
+- shift-left
+- rules
+- quality
+- standards
+- pr-review

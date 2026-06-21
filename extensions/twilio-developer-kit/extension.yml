@@ -1,0 +1,295 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/twilio/ai)
+# Source: https://www.twilio.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: twilio-developer-kit
+  name: twilio-developer-kit
+  version: 0.3.1
+  description: Complete set of Twilio skills. Covers Setup, Planner, Product, and Guardrail skills across
+    SMS, Voice, WhatsApp, AI agents, Conversation Orchestrator, and 30+ products.
+  author: Twilio
+  license: Apache-2.0
+  repository: https://www.twilio.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.twilio-developer-kit.twilio-sendgrid-account-setup
+    file: skills/sendgrid/twilio-sendgrid-account-setup/SKILL.md
+    description: "Set up a SendGrid account for email delivery. Covers API key creation (SG.-prefix),\
+      \ domain authentication (DKIM/SPF via CNAME records), Single Sender Verification for testing, SDK\
+      \ installation, and t\u2026"
+  - name: speckit.twilio-developer-kit.twilio-sendgrid-deliverability-advisor
+    file: skills/sendgrid/twilio-sendgrid-deliverability-advisor/SKILL.md
+    description: "Diagnostic and advisory skill for email deliverability problems. Use when a developer\
+      \ asks why emails are going to spam, not reaching the inbox, getting blocked, bouncing, or how to\
+      \ improve sender re\u2026"
+  - name: speckit.twilio-developer-kit.twilio-sendgrid-email-send
+    file: skills/sendgrid/twilio-sendgrid-email-send/SKILL.md
+    description: "Send transactional and bulk email via the SendGrid v3 Mail Send API. Covers single sends,\
+      \ personalized batch sends with dynamic templates, scheduled sends with cancellation, attachments,\
+      \ and sandbox\u2026"
+  - name: speckit.twilio-developer-kit.twilio-sendgrid-email-settings
+    file: skills/sendgrid/twilio-sendgrid-email-settings/SKILL.md
+    description: "Configure SendGrid dynamic templates (Handlebars), tracking settings (opens, clicks,\
+      \ subscriptions), link branding for custom tracking domains, and content types (HTML, plain text,\
+      \ AMP). Use when cus\u2026"
+  - name: speckit.twilio-developer-kit.twilio-sendgrid-engagement-quality
+    file: skills/sendgrid/twilio-sendgrid-engagement-quality/SKILL.md
+    description: "Monitor email program health with SendGrid Engagement Quality (SEQ) scores. Covers the\
+      \ SEQ API endpoints, the 5 scoring metrics (engagement recency, open rate, bounce classification,\
+      \ bounce rate, spa\u2026"
+  - name: speckit.twilio-developer-kit.twilio-sendgrid-inbound-parse
+    file: skills/sendgrid/twilio-sendgrid-inbound-parse/SKILL.md
+    description: "Receive inbound email via SendGrid Inbound Parse webhook. Covers MX record setup, parsed\
+      \ vs raw mode, handling attachments, and common pitfalls. Use when building email-to-app workflows\
+      \ like support\u2026"
+  - name: speckit.twilio-developer-kit.twilio-sendgrid-suppressions
+    file: skills/sendgrid/twilio-sendgrid-suppressions/SKILL.md
+    description: "Manage SendGrid email suppressions: bounces, blocks, spam reports, invalid emails, global\
+      \ unsubscribes, and ASM suppression groups. Covers when and how to remove suppressions, reputation\
+      \ impact, and\u2026"
+  - name: speckit.twilio-developer-kit.twilio-sendgrid-webhooks
+    file: skills/sendgrid/twilio-sendgrid-webhooks/SKILL.md
+    description: "Track email delivery and engagement via SendGrid Event Webhooks. Covers all 11 event\
+      \ types (delivery + engagement), webhook handler implementation, ECDSA signature verification, batched\
+      \ event process\u2026"
+  - name: speckit.twilio-developer-kit.twilio-account-setup
+    file: skills/twilio/twilio-account-setup/SKILL.md
+    description: "Create and configure a Twilio account from scratch. Covers free trial signup, trial\
+      \ limitations, getting credentials (Account SID and Auth Token), buying a phone number, verifying\
+      \ recipient numbers f\u2026"
+  - name: speckit.twilio-developer-kit.twilio-agent-augmentation-architect
+    file: skills/twilio/twilio-agent-augmentation-architect/SKILL.md
+    description: "Planning skill for augmenting human agents with real-time AI intelligence. Qualifies\
+      \ the developer's use case across coaching, compliance, QA, and routing to recommend the right Conversation\
+      \ Intellig\u2026"
+  - name: speckit.twilio-developer-kit.twilio-agent-connect
+    file: skills/twilio/twilio-agent-connect/SKILL.md
+    description: "Connect third-party AI agents (OpenAI, Bedrock, LangChain, Microsoft Foundry) to Twilio's\
+      \ communication channels using the Twilio Agent Connect SDK. Covers identity resolution, memory\
+      \ and context man\u2026"
+  - name: speckit.twilio-developer-kit.twilio-ai-agent-architect
+    file: skills/twilio/twilio-ai-agent-architect/SKILL.md
+    description: "Planning skill for AI-powered conversational agents. Qualifies the developer's use case\
+      \ across outcome sophistication, entry point, and customer profile to recommend the right Twilio\
+      \ Conversations ar\u2026"
+  - name: speckit.twilio-developer-kit.twilio-call-recordings
+    file: skills/twilio/twilio-call-recordings/SKILL.md
+    description: "Record Twilio voice calls correctly. Covers the critical distinction between Record\
+      \ verb (voicemail) and Dial record (call recording), dual-channel for QA, mid-call pause for PCI,\
+      \ Conference recordin\u2026"
+  - name: speckit.twilio-developer-kit.twilio-cli-reference
+    file: skills/twilio/twilio-cli-reference/SKILL.md
+    description: "Twilio CLI reference for managing Twilio resources from the terminal. Covers installation,\
+      \ credential profiles, phone number provisioning, sending SMS and email, webhook configuration,\
+      \ local developm\u2026"
+  - name: speckit.twilio-developer-kit.twilio-compliance-onboarding
+    file: skills/twilio/twilio-compliance-onboarding/SKILL.md
+    description: "Registrations required BEFORE Twilio traffic works. Covers messaging programs (A2P 10DLC,\
+      \ toll-free verification, WhatsApp WABA, RCS, short code, alphanumeric sender) and voice trust programs\
+      \ (STIR/S\u2026"
+  - name: speckit.twilio-developer-kit.twilio-compliance-traffic
+    file: skills/twilio/twilio-compliance-traffic/SKILL.md
+    description: "Rules you must follow for Twilio messaging and voice traffic. Covers TCPA (consent tiers,\
+      \ quiet hours, DNC), GDPR (EU consent, right to deletion), PCI DSS (payment recording, Pay verb),\
+      \ HIPAA (BAA, P\u2026"
+  - name: speckit.twilio-developer-kit.twilio-conference-calls
+    file: skills/twilio/twilio-conference-calls/SKILL.md
+    description: "Build multi-party calls using Twilio Conference. Covers warm transfer, cold transfer,\
+      \ coaching (whisper), hold vs mute, participant modes, and supervisor barge. Use this skill for\
+      \ any contact center,\u2026"
+  - name: speckit.twilio-developer-kit.twilio-content-template-builder
+    file: skills/twilio/twilio-content-template-builder/SKILL.md
+    description: "Create, manage, and send message templates using Twilio's Content API. Covers template\
+      \ creation for WhatsApp, SMS, RCS, and MMS; variable usage; WhatsApp Meta approval; and sending\
+      \ templates via Cont\u2026"
+  - name: speckit.twilio-developer-kit.twilio-conversation-intelligence
+    file: skills/twilio/twilio-conversation-intelligence/SKILL.md
+    description: "Twilio Conversation Intelligence development guide. Use when building real-time or post-call\
+      \ conversation analysis, language operator pipelines, sentiment analysis, agent assist, cross-channel\
+      \ analyt\u2026"
+  - name: speckit.twilio-developer-kit.twilio-conversation-orchestrator
+    file: skills/twilio/twilio-conversation-orchestrator/SKILL.md
+    description: "Configure automatic conversation capture and routing with Twilio Conversation Orchestrator.\
+      \ Covers Configuration creation, channel capture rules, grouping types, status timeouts, Memory\
+      \ Store linkage\u2026"
+  - name: speckit.twilio-developer-kit.twilio-conversations-classic-api
+    file: skills/twilio/twilio-conversations-classic-api/SKILL.md
+    description: "Build multi-channel messaging experiences using Twilio Conversations (classic) API.\
+      \ Covers creating conversations, adding participants (SMS, WhatsApp, chat), sending messages, and\
+      \ handling webhooks.\u2026"
+  - name: speckit.twilio-developer-kit.twilio-customer-memory
+    file: skills/twilio/twilio-customer-memory/SKILL.md
+    description: "Store and retrieve customer context using Twilio Conversation Memory. Covers Memory\
+      \ Store provisioning, profile management, traits, observations, conversation summaries, and semantic\
+      \ Recall. Use this\u2026"
+  - name: speckit.twilio-developer-kit.twilio-customer-support-architect
+    file: skills/twilio/twilio-customer-support-architect/SKILL.md
+    description: "Planning skill for building customer service and support systems. Qualifies the developer's\
+      \ needs across the support ladder (self-service \u2192 AI agents \u2192 contact center), channel\
+      \ mix, and scale to reco\u2026"
+  - name: speckit.twilio-developer-kit.twilio-debugging-observability
+    file: skills/twilio/twilio-debugging-observability/SKILL.md
+    description: "Debug Twilio integrations and set up production observability. Covers the Console Debugger,\
+      \ Monitor Alerts API, Event Streams for error log streaming, status callback tracking, common error\
+      \ codes, an\u2026"
+  - name: speckit.twilio-developer-kit.twilio-email-deliverability-advisor
+    file: skills/twilio/twilio-email-deliverability-advisor/SKILL.md
+    description: "Deliverability advisor for the Twilio Email API specifically. Use ONLY when the developer\
+      \ explicitly mentions Twilio Email, comms.twilio.com, or a Twilio (non-SendGrid) email program.\
+      \ For all other d\u2026"
+  - name: speckit.twilio-developer-kit.twilio-email-send
+    file: skills/twilio/twilio-email-send/SKILL.md
+    description: "Use when the caller has Twilio credentials (Account SID + Auth Token or API Key SID\
+      \ + Secret) and needs to send email via comms.twilio.com/v1/Emails. This is Twilio-native email\
+      \ \u2014 NOT SendGrid. Do NO\u2026"
+  - name: speckit.twilio-developer-kit.twilio-enterprise-knowledge
+    file: skills/twilio/twilio-enterprise-knowledge/SKILL.md
+    description: "Add knowledge retrieval to AI agents using Twilio's Enterprise Knowledge product. Enterprise\
+      \ Knowledge is a centralized, searchable repository of your organization's documents, websites,\
+      \ and content\u2026"
+  - name: speckit.twilio-developer-kit.twilio-iam-auth-setup
+    file: skills/twilio/twilio-iam-auth-setup/SKILL.md
+    description: "Set up and manage Twilio authentication credentials: Auth Tokens, API keys (Standard,\
+      \ Main, Restricted), Access Tokens for client-side SDKs, and credential rotation. Use this skill\
+      \ as a prerequisite\u2026"
+  - name: speckit.twilio-developer-kit.twilio-identity-verification-advisor
+    file: skills/twilio/twilio-identity-verification-advisor/SKILL.md
+    description: "Planning skill for identity verification and fraud prevention. Qualifies the developer's\
+      \ needs across authentication method, channel selection, fraud risk level, and user experience to\
+      \ recommend the\u2026"
+  - name: speckit.twilio-developer-kit.twilio-lookup-phone-intelligence
+    file: skills/twilio/twilio-lookup-phone-intelligence/SKILL.md
+    description: "Look up phone number intelligence via Twilio Lookup v2 API. Covers number validation,\
+      \ line type detection (mobile/landline/VoIP), SIM swap detection, caller name, identity match, and\
+      \ SMS pumping risk\u2026"
+  - name: speckit.twilio-developer-kit.twilio-marketing-promotions-advisor
+    file: skills/twilio/twilio-marketing-promotions-advisor/SKILL.md
+    description: "Planning skill for marketing and promotional messaging. Use when a developer is figuring\
+      \ out how to set up or architect a marketing campaign on Twilio \u2014 channel selection, compliance\
+      \ readiness, audie\u2026"
+  - name: speckit.twilio-developer-kit.twilio-messaging-channel-advisor
+    file: skills/twilio/twilio-messaging-channel-advisor/SKILL.md
+    description: "Planning skill that helps the developer pick the right Twilio messaging channel \u2014\
+      \ SMS, MMS, RCS, or WhatsApp \u2014 for a given use case. Qualifies intent across content type,\
+      \ geography, use case (marketi\u2026"
+  - name: speckit.twilio-developer-kit.twilio-messaging-overview
+    file: skills/twilio/twilio-messaging-overview/SKILL.md
+    description: "Twilio Messaging channel overview and onboarding guide. Covers all channels (SMS, WhatsApp,\
+      \ RCS, Facebook Messenger), the unified Messages API, channel selection guidance, and the recommended\
+      \ setup s\u2026"
+  - name: speckit.twilio-developer-kit.twilio-messaging-services
+    file: skills/twilio/twilio-messaging-services/SKILL.md
+    description: "Create and configure Twilio Messaging Services for production messaging. Covers sender\
+      \ pools, geo-match, sticky sender, message scheduling, compliance toolkit, SMS pumping protection,\
+      \ link shortening\u2026"
+  - name: speckit.twilio-developer-kit.twilio-messaging-webhooks
+    file: skills/twilio/twilio-messaging-webhooks/SKILL.md
+    description: "Receive and respond to inbound messages and track outbound delivery status via Twilio\
+      \ webhooks \u2014 across SMS, MMS, WhatsApp, and RCS. Covers webhook request parameters, replying\
+      \ with TwiML, validating\u2026"
+  - name: speckit.twilio-developer-kit.twilio-notifications-alerts-advisor
+    file: skills/twilio/twilio-notifications-alerts-advisor/SKILL.md
+    description: "Planning skill for transactional notifications, alerts, and reminders. Qualifies the\
+      \ developer's needs across urgency, channel selection, delivery confirmation, and fallback patterns\
+      \ to recommend the\u2026"
+  - name: speckit.twilio-developer-kit.twilio-numbers-senders
+    file: skills/twilio/twilio-numbers-senders/SKILL.md
+    description: "Choose the right Twilio number type and sender BEFORE building. Covers phone numbers\
+      \ (local, toll-free, short code, mobile), alphanumeric sender IDs, WhatsApp senders, RCS agents,\
+      \ international avail\u2026"
+  - name: speckit.twilio-developer-kit.twilio-organizations-setup
+    file: skills/twilio/twilio-organizations-setup/SKILL.md
+    description: "Set up and manage Twilio Organizations for centralized account and user governance.\
+      \ Covers the Organization > Account > Subaccount hierarchy, roles (Owner/Admin/Standard), managed\
+      \ vs independent acco\u2026"
+  - name: speckit.twilio-developer-kit.twilio-rcs-messaging
+    file: skills/twilio/twilio-rcs-messaging/SKILL.md
+    description: "Send RCS Business Messages via Twilio. Covers compliance onboarding (7-part US process),\
+      \ sender profile setup, sending rich cards and carousels, SMS fallback, device support (Android\
+      \ + iOS 18 caveats\u2026"
+  - name: speckit.twilio-developer-kit.twilio-regulatory-compliance-bundles
+    file: skills/twilio/twilio-regulatory-compliance-bundles/SKILL.md
+    description: "Manage regulatory compliance for international phone numbers. Covers what bundles are,\
+      \ which countries require them, how to create End-Users and Supporting Documents, evaluate and submit\
+      \ bundles, fix\u2026"
+  - name: speckit.twilio-developer-kit.twilio-reliability-patterns
+    file: skills/twilio/twilio-reliability-patterns/SKILL.md
+    description: "Handle rate limits, retries, and failures when building on Twilio at scale. Covers 429\
+      \ exponential backoff with jitter, per-number throughput limits, StatusCallback resilience, thin-receiver\
+      \ pattern,\u2026"
+  - name: speckit.twilio-developer-kit.twilio-security-api-auth
+    file: skills/twilio/twilio-security-api-auth/SKILL.md
+    description: "Choose the right Twilio authentication method and implement it correctly. Covers Auth\
+      \ Token (testing only), API Keys (production standard), OAuth2 client_credentials (time-limited\
+      \ bearer tokens), Acc\u2026"
+  - name: speckit.twilio-developer-kit.twilio-security-compliance-hipaa
+    file: skills/twilio/twilio-security-compliance-hipaa/SKILL.md
+    description: "Configure Twilio accounts for HIPAA compliance. Covers BAA requirements, HIPAA Project\
+      \ designation (self-service and support), eligible services list, per-product requirements (Voice,\
+      \ SMS, Conversati\u2026"
+  - name: speckit.twilio-developer-kit.twilio-security-hardening
+    file: skills/twilio/twilio-security-hardening/SKILL.md
+    description: "Secure Twilio applications against common attacks. Covers credential management (API\
+      \ keys vs auth tokens), request validation (webhook signature verification), PCI DSS compliance,\
+      \ HIPAA account requi\u2026"
+  - name: speckit.twilio-developer-kit.twilio-send-message
+    file: skills/twilio/twilio-send-message/SKILL.md
+    description: "Send messages via Twilio's Programmable Messaging API across all channels \u2014 SMS,\
+      \ MMS, RCS, and WhatsApp. Covers text messages, media, rich content (cards, carousels, buttons),\
+      \ template-based sends, M\u2026"
+  - name: speckit.twilio-developer-kit.twilio-sms-isv-setup
+    file: skills/twilio/twilio-sms-isv-setup/SKILL.md
+    description: "Best practices for ISVs (Independent Software Vendors) building SMS features into multi-tenant\
+      \ SaaS platforms using Twilio. Covers customer onboarding for A2P and toll-free compliance, subaccount\
+      \ arc\u2026"
+  - name: speckit.twilio-developer-kit.twilio-sms-send-message
+    file: skills/twilio/twilio-sms-send-message/SKILL.md
+    description: "SMS and MMS deep-dive reference. Covers SMS-specific error codes, message filtering\
+      \ troubleshooting (\"Messages Being Filtered or Blocked?\" diagnostic checklist), MMS media support\
+      \ (US/CA/AU only), an\u2026"
+  - name: speckit.twilio-developer-kit.twilio-taskrouter-routing
+    file: skills/twilio/twilio-taskrouter-routing/SKILL.md
+    description: "Route tasks to agents using Twilio TaskRouter. Covers Workers, Task Queues, Workflows,\
+      \ Reservations, skills-based routing, and common gotchas (hyphen attributes, HAS operator, reservation\
+      \ cascade). U\u2026"
+  - name: speckit.twilio-developer-kit.twilio-verify-send-otp
+    file: skills/twilio/twilio-verify-send-otp/SKILL.md
+    description: "Send and verify one-time passcodes (OTPs) via Twilio Verify over SMS, RCS, voice, email,\
+      \ or WhatsApp. Covers creating a Verify Service, sending tokens, checking submitted codes, automatic\
+      \ WhatsApp-to\u2026"
+  - name: speckit.twilio-developer-kit.twilio-voice-conversation-relay
+    file: skills/twilio/twilio-voice-conversation-relay/SKILL.md
+    description: "Build AI-powered voice agents using Twilio ConversationRelay. Handles real-time speech\
+      \ recognition (ASR), text-to-speech (TTS), and bidirectional audio streaming via WebSocket. Covers\
+      \ TwiML setup, We\u2026"
+  - name: speckit.twilio-developer-kit.twilio-voice-outbound-calls
+    file: skills/twilio/twilio-voice-outbound-calls/SKILL.md
+    description: "Make outbound phone calls via Twilio's Programmable Voice REST API. Covers the full\
+      \ voice platform: calls.create(), answering machine detection (AMD), conference-based agent bridging,\
+      \ call recording,\u2026"
+  - name: speckit.twilio-developer-kit.twilio-voice-twiml
+    file: skills/twilio/twilio-voice-twiml/SKILL.md
+    description: "Build voice call logic using TwiML (Twilio Markup Language). Covers the core verbs (Say,\
+      \ Play, Gather, Dial, Record, Conference), generating TwiML with Python and Node.js SDKs, and a\
+      \ complete inbound\u2026"
+  - name: speckit.twilio-developer-kit.twilio-webhook-architecture
+    file: skills/twilio/twilio-webhook-architecture/SKILL.md
+    description: "Design, secure, and operate Twilio webhook endpoints. Covers inbound event handling,\
+      \ status callbacks, signature validation, connection overrides for retry and timeout tuning, local\
+      \ development tunne\u2026"
+  - name: speckit.twilio-developer-kit.twilio-whatsapp-manage-senders
+    file: skills/twilio/twilio-whatsapp-manage-senders/SKILL.md
+    description: "Create, configure, and manage WhatsApp Business senders via Twilio's Channels Senders\
+      \ API. Covers programmatic sender registration, profile setup, webhook configuration, sender lifecycle\
+      \ statuses, an\u2026"
+  - name: speckit.twilio-developer-kit.twilio-whatsapp-send-message
+    file: skills/twilio/twilio-whatsapp-send-message/SKILL.md
+    description: "WhatsApp messaging deep-dive reference. Covers the 24-hour service window rules (free-form\
+      \ vs template mode), sandbox setup for testing, template approval workflow, production sender requirements,\
+      \ an\u2026"
+tags:
+- development

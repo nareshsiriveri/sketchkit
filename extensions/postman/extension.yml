@@ -1,0 +1,99 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/Postman-Devrel/postman-claude-code-plugin)
+# Source: https://learning.postman.com/docs/developer/postman-mcp-server/
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: postman
+  name: postman
+  version: 1.2.0
+  description: Full API lifecycle management for Claude Code. Sync collections, generate client code,
+    discover APIs, run tests, create mocks, publish docs, and audit security. Powered by the Postman MCP
+    Server.
+  author: Postman
+  license: Apache-2.0
+  repository: https://learning.postman.com/docs/developer/postman-mcp-server/
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.postman.docs
+    file: commands/docs.md
+    description: Generate, improve, and publish API documentation from Postman collections.
+  - name: speckit.postman.generate-spec
+    file: commands/generate-spec.md
+    description: Generate or update an OpenAPI spec from your codebase
+  - name: speckit.postman.mock
+    file: commands/mock.md
+    description: Create Postman mock servers for frontend development. Generates missing examples, provides
+      integration config.
+  - name: speckit.postman.run-collection
+    file: commands/run-collection.md
+    description: Run Postman collection tests using the CLI
+  - name: speckit.postman.search
+    file: commands/search.md
+    description: Discover APIs across your Postman workspaces. Ask natural language questions about available
+      endpoints and capabilities.
+  - name: speckit.postman.security
+    file: commands/security.md
+    description: Security audit your APIs against OWASP API Top 10. Finds vulnerabilities and provides
+      remediation guidance.
+  - name: speckit.postman.send-request
+    file: commands/send-request.md
+    description: Send HTTP requests using Postman CLI
+  - name: speckit.postman.setup
+    file: commands/setup.md
+    description: Set up Postman MCP Server. Authenticate via OAuth or API key, verify connection, select
+      workspace.
+  - name: speckit.postman.sync
+    file: commands/sync.md
+    description: Sync Postman collections with your API code. Create collections from specs, push updates,
+      keep everything in sync.
+  - name: speckit.postman.test
+    file: commands/test.md
+    description: Run Postman collection tests, analyze results, diagnose failures, and suggest fixes.
+  - name: speckit.postman.agent-ready-apis
+    file: skills/agent-ready-apis/SKILL.md
+    description: Knowledge about AI agent API compatibility. Use when user asks about API readiness, agent
+      compatibility, or wants to improve their API for AI consumption.
+  - name: speckit.postman.generate-spec-skill
+    file: skills/generate-spec/SKILL.md
+    description: Generate or update an OpenAPI 3.0 spec from code. Use when the user wants to create,
+      update, or write an OpenAPI/Swagger spec, API definition, or API documentation from their codebase.
+  - name: speckit.postman.postman-cli
+    file: skills/postman-cli/SKILL.md
+    description: Postman CLI reference and git sync file structure knowledge - provides context for CLI-based
+      commands (send-request, generate-spec, run-collection, context)
+  - name: speckit.postman.postman-context
+    file: skills/postman-context/SKILL.md
+    description: "Discover, explore, install, and generate client code from APIs in Postman. Use when\
+      \ the user wants to find or integrate an API, explore a collection, or generate or maintain API\
+      \ client code \u2014 require\u2026"
+  - name: speckit.postman.postman-knowledge
+    file: skills/postman-knowledge/SKILL.md
+    description: Postman concepts and MCP tool guidance. Loaded when working with Postman MCP tools to
+      make better decisions about tool selection and workarounds.
+  - name: speckit.postman.run-collection-skill
+    file: skills/run-collection/SKILL.md
+    description: Run Postman collection tests using the Postman CLI. Use when the user wants to run collection
+      tests, execute API test suites, or verify changes after editing code.
+  - name: speckit.postman.send-request-skill
+    file: skills/send-request/SKILL.md
+    description: Send HTTP requests using the Postman CLI. Use when the user wants to send a request,
+      call or test an HTTP endpoint, or quickly try an API.
+  - name: speckit.postman.agent-readiness-analyzer
+    file: agents/readiness-analyzer.md
+    description: "Analyze any API or OpenAPI spec for AI agent compatibility \u2014 48 checks across 8\
+      \ pillars, with scoring and fix recommendations. Use when the user asks whether an API is agent-ready\
+      \ or wants it scanned\u2026"
+tags:
+- postman
+- api
+- collections
+- testing
+- mcp
+- mocks
+- documentation
+- security
+- openapi
+- agent-ready

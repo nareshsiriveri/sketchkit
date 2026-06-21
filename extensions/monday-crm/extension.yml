@@ -1,0 +1,56 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/mondaycom/mcp)
+# Source: https://monday.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: monday-crm
+  name: monday CRM
+  version: 0.3.0
+  description: "Run your sales pipeline in monday CRM from plain language. Start the day with a ranked\
+    \ deal briefing, build a forecast, turn meeting notes into deal updates, set up a CRM workspace from\
+    \ scratch, and keep your data clean \u2014 every result written straight back into monday as a real\
+    \ board, dashboard, or\u2026"
+  author: monday.com
+  license: Apache-2.0
+  repository: https://monday.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.monday-crm.daily-briefing
+    file: skills/daily-briefing/SKILL.md
+    description: "Start your day with a prioritized CRM briefing \u2014 works for any monday CRM setup:\
+      \ pipeline, contacts, accounts, leads, or no board at all. Use when someone says 'morning briefing',\
+      \ 'daily brief', 'wha\u2026"
+  - name: speckit.monday-crm.data-cleanup
+    file: skills/data-cleanup/SKILL.md
+    description: "Check your CRM board's health and clean up messy data \u2014 run a scored health check\
+      \ (missing fields, stalled deals, abandoned columns, automation gaps) as a report, or fix data in\
+      \ bulk (phone formats,\u2026"
+  - name: speckit.monday-crm.forecast
+    file: skills/forecast/SKILL.md
+    description: "Build a forecast dashboard in monday \u2014 committed, best-case, and pipeline views\
+      \ by close month, rendered as real dashboard widgets. Use when someone says \"build me a forecast\"\
+      , \"show me Q2 pipeline\",\u2026"
+  - name: speckit.monday-crm.meeting-to-deal
+    file: skills/meeting-to-deal/SKILL.md
+    description: "Turn meeting transcripts into deal updates \u2014 key points, commitments, and next\
+      \ steps posted to matching CRM deals automatically. Auto-creates contacts for new attendees. Use\
+      \ when someone says \"log my\u2026"
+  - name: speckit.monday-crm.workspace-builder
+    file: skills/workspace-builder/SKILL.md
+    description: "Build a CRM workspace from scratch \u2014 describe your business and get boards, columns,\
+      \ and pipeline stages created in monday. Use when someone says \"set up my CRM\", \"build me a CRM\"\
+      , \"create CRM boards\u2026"
+tags:
+- monday
+- monday-crm
+- crm
+- sales
+- pipeline
+- forecast
+- daily-briefing
+- meeting-to-deal
+- data-cleanup
+- workspace-builder

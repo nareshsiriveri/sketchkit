@@ -1,0 +1,26 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: math-olympiad
+  name: math-olympiad
+  version: 0.1.0
+  description: Solve competition math (IMO, Putnam, USAMO) with adversarial verification that catches
+    what self-verification misses. Fresh-context verifiers attack proofs with specific failure patterns.
+    Calibrated abstention over bluffing.
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.math-olympiad.math-olympiad
+    file: skills/math-olympiad/SKILL.md
+    description: "Solve competition math problems (IMO, Putnam, USAMO, AIME) with adversarial verification\
+      \ that catches the errors self-verification misses. Activates when asked to 'solve this IMO problem',\
+      \ 'prove thi\u2026"
+tags:
+- claude-code

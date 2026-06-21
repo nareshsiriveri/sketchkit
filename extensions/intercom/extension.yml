@@ -1,0 +1,47 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/intercom/claude-plugin-external)
+# Source: https://github.com/intercom/claude-plugin-external
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: intercom
+  name: intercom
+  version: 0.1.0
+  description: Intercom integration for Claude Code. Search conversations, analyze customer support patterns,
+    look up contacts and companies, and install the Intercom Messenger. Connect your Intercom workspace
+    to get real-time insights from customer data.
+  author: Intercom
+  license: Apache-2.0
+  repository: https://github.com/intercom/claude-plugin-external
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.intercom.customer-360
+    file: skills/customer-360/SKILL.md
+    description: "Build a comprehensive customer profile from Intercom data, including conversation history,\
+      \ account context, and interaction timeline. Use when the user asks to \"look up a customer\", \"\
+      customer profile\u2026"
+  - name: speckit.intercom.install-cli
+    file: skills/install-cli/SKILL.md
+    description: "Install and authenticate the Intercom CLI (`@intercom/cli`) \u2014 a command-line tool\
+      \ for managing Intercom workspaces, designed for both human operators and AI agents. Use when the\
+      \ user asks to \"install\u2026"
+  - name: speckit.intercom.install-messenger
+    file: skills/install-messenger/SKILL.md
+    description: "Install the Intercom Messenger on a website or web application with secure JWT-based\
+      \ identity verification. Generates backend and frontend code for React, Next.js, Vue.js, Angular,\
+      \ Ember, and plain J\u2026"
+  - name: speckit.intercom.intercom-analysis
+    file: skills/intercom-analysis/SKILL.md
+    description: "Analyze Intercom conversations to identify support patterns, investigate customer issues,\
+      \ and look up contacts and companies. Use when the user asks to \"analyze conversations\", \"find\
+      \ support patterns\u2026"
+tags:
+- intercom
+- customer-support
+- conversations
+- contacts
+- messenger
+- crm
+- api

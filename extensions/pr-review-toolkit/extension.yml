@@ -1,0 +1,52 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: pr-review-toolkit
+  name: pr-review-toolkit
+  version: 0.1.0
+  description: Comprehensive PR review agents specializing in comments, tests, error handling, type design,
+    code quality, and code simplification
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.pr-review-toolkit.review-pr
+    file: commands/review-pr.md
+    description: Comprehensive PR review using specialized agents
+  - name: speckit.pr-review-toolkit.agent-code-reviewer
+    file: agents/code-reviewer.md
+    description: "Use this agent when you need to review code for adherence to project guidelines, style\
+      \ guides, and best practices. This agent should be used proactively after writing or modifying code,\
+      \ especially be\u2026"
+  - name: speckit.pr-review-toolkit.agent-code-simplifier
+    file: agents/code-simplifier.md
+    description: "Use this agent when code has been written or modified and needs to be simplified for\
+      \ clarity, consistency, and maintainability while preserving all functionality. This agent should\
+      \ be triggered autom\u2026"
+  - name: speckit.pr-review-toolkit.agent-comment-analyzer
+    file: agents/comment-analyzer.md
+    description: "Use this agent when you need to analyze code comments for accuracy, completeness, and\
+      \ long-term maintainability. This includes (1) after generating large documentation comments or\
+      \ docstrings, (2) bef\u2026"
+  - name: speckit.pr-review-toolkit.agent-pr-test-analyzer
+    file: agents/pr-test-analyzer.md
+    description: "Use this agent when you need to review a pull request for test coverage quality and\
+      \ completeness. This agent should be invoked after a PR is created or updated to ensure tests adequately\
+      \ cover new fu\u2026"
+  - name: speckit.pr-review-toolkit.agent-silent-failure-hunter
+    file: agents/silent-failure-hunter.md
+    description: Comprehensive PR review agents specializing in comments, tests, error handling, type
+      design, code quality, and code simplification
+  - name: speckit.pr-review-toolkit.agent-type-design-analyzer
+    file: agents/type-design-analyzer.md
+    description: "Use this agent when you need expert analysis of type design in your codebase. Specifically\
+      \ use it (1) when introducing a new type to ensure it follows best practices for encapsulation and\
+      \ invariant e\u2026"
+tags:
+- claude-code

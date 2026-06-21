@@ -1,0 +1,32 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: example-plugin
+  name: example-plugin
+  version: 0.1.0
+  description: A comprehensive example plugin demonstrating all Claude Code extension options including
+    commands, agents, skills, hooks, and MCP servers
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.example-plugin.example-command
+    file: commands/example-command.md
+    description: An example slash command that demonstrates command frontmatter options (legacy format)
+  - name: speckit.example-plugin.example-command-skill
+    file: skills/example-command/SKILL.md
+    description: An example user-invoked skill that demonstrates frontmatter options and the skills/<name>/SKILL.md
+      layout
+  - name: speckit.example-plugin.example-skill
+    file: skills/example-skill/SKILL.md
+    description: "This skill should be used when the user asks to \"demonstrate skills\", \"show skill\
+      \ format\", \"create a skill template\", or discusses skill development patterns. Provides a reference\
+      \ template for creati\u2026"
+tags:
+- claude-code

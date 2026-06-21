@@ -1,0 +1,35 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/VantaInc/vanta-mcp-plugin)
+# Source: https://help.vanta.com/en/articles/14094979-connecting-to-vanta-mcp#h_887ce3f337
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: vanta
+  name: vanta
+  version: 1.0.0
+  description: Vanta MCP server integration for Claude Code
+  author: Vanta
+  license: Apache-2.0
+  repository: https://help.vanta.com/en/articles/14094979-connecting-to-vanta-mcp#h_887ce3f337
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.vanta.fix-test
+    file: skills/fix-test/SKILL.md
+    description: Fix a failing Vanta compliance test by generating code changes and opening a pull request
+  - name: speckit.vanta.list-tests
+    file: skills/list-tests/SKILL.md
+    description: Show failing Vanta compliance tests, prioritized by what can be fixed from this repository
+  - name: speckit.vanta.test-remediation
+    file: skills/test-remediation/SKILL.md
+    description: "Fix failing Vanta compliance tests using code. Apply when the user mentions Vanta tests,\
+      \ compliance test failures, remediation, test IDs (e.g., \"cloudtrail-log-file-validation\"), Vanta\
+      \ URLs (app.vant\u2026"
+tags:
+- vanta
+- security
+- compliance
+- mcp
+- grc
+- risk

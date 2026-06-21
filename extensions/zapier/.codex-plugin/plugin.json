@@ -1,0 +1,48 @@
+{
+  "name": "zapier",
+  "version": "1.0.0",
+  "description": "Connect 9,000+ apps to your AI workflow. Discover, enable, and execute Zapier actions directly from your client.",
+  "author": {
+    "name": "Zapier",
+    "email": "support@zapier.com",
+    "url": "https://zapier.com"
+  },
+  "homepage": "https://github.com/zapier/zapier-mcp",
+  "repository": "https://github.com/zapier/zapier-mcp",
+  "license": "MIT",
+  "keywords": [
+    "zapier",
+    "mcp",
+    "model-context-protocol",
+    "automation",
+    "integrations",
+    "workflow",
+    "ai-actions",
+    "api",
+    "no-code",
+    "ai-tools",
+    "productivity"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Zapier",
+    "shortDescription": "Connect your AI to 9,000+ apps via the Model Context Protocol.",
+    "longDescription": "Zapier MCP gives your AI assistant direct access to 9,000+ apps and 40,000+ actions — Slack, Gmail, Google Calendar, Jira, Notion, HubSpot, and thousands more. Discover and enable actions in chat, then send messages, create tasks, update records, and automate workflows through natural conversation. Reads are free; writes are always confirmed before they run.",
+    "developerName": "Zapier",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://zapier.com/mcp",
+    "privacyPolicyURL": "https://zapier.com/privacy",
+    "termsOfServiceURL": "https://zapier.com/legal/terms-of-service",
+    "defaultPrompt": [
+      "Send a Slack message summarizing today's unread Gmail",
+      "Create a Jira ticket from this issue and notify the team in Slack",
+      "Find the latest deal in HubSpot and add it to a Google Sheet"
+    ],
+    "brandColor": "#FF4F00",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

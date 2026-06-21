@@ -1,0 +1,153 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/Zoominfo/zoominfo-mcp-plugin)
+# Source: https://www.zoominfo.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: zoominfo
+  name: zoominfo
+  version: 1.0.1
+  description: "Connect AI agents to ZoomInfo's verified GTM context graph: 100M companies, 300M professional\
+    \ contacts, buyer intent signals, and real-time scoops. Build prospect lists, enrich records, deep\
+    \ research key organizations, find decision-makers, and prioritize accounts by intent. The B2B sales\
+    \ intellige\u2026"
+  author: ZoomInfo
+  license: Apache-2.0
+  repository: https://www.zoominfo.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.zoominfo.account-research
+    file: skills/account-research/SKILL.md
+    description: "Produce a full intelligence brief on a target company \u2014 firmographics, CRM/account\
+      \ context, intent signals, recent news, scoops, and competitive landscape \u2014 framed by your\
+      \ GTM context and led with a\u2026"
+  - name: speckit.zoominfo.build-list
+    file: skills/build-list/SKILL.md
+    description: "Build a list of contacts or companies matching specific criteria. Describe what you're\
+      \ looking for in natural language and get a structured, tabular list you can export. Supports filtering\
+      \ by title,\u2026"
+  - name: speckit.zoominfo.buying-committee
+    file: skills/buying-committee/SKILL.md
+    description: "Map the buying committee at a target account. Identifies decision-makers, prioritizes\
+      \ who to engage, and surfaces gaps and multi-thread risks. Leads with a TL;DR (top 3 to engage,\
+      \ biggest gap, multi-\u2026"
+  - name: speckit.zoominfo.competitor-analysis
+    file: skills/competitor-analysis/SKILL.md
+    description: "Produce a fact-led competitive intel brief on one or more competitors \u2014 firmographics,\
+      \ recent strategic moves, product positioning, ICP overlap, and discovery questions. Defaults to\
+      \ your configured c\u2026"
+  - name: speckit.zoominfo.enrich-company
+    file: skills/enrich-company/SKILL.md
+    description: Look up a company's full profile. Provide a company name, domain, ticker symbol, or ZoomInfo
+      company ID. Returns firmographics, financials, corporate structure, growth signals, and contact
+      counts.
+  - name: speckit.zoominfo.enrich-contact
+    file: skills/enrich-contact/SKILL.md
+    description: "Look up a person's full professional profile. Provide a name and company, email address,\
+      \ phone number, or ZoomInfo person ID. Returns title, department, contact details, accuracy score,\
+      \ and company i\u2026"
+  - name: speckit.zoominfo.find-similar
+    file: skills/find-similar/SKILL.md
+    description: "Find companies or contacts similar to a given reference. Provide a company name/domain\
+      \ or a person's name/email and get a ranked list of lookalikes scored by similarity. Useful for\
+      \ territory expansio\u2026"
+  - name: speckit.zoominfo.meeting-prep
+    file: skills/meeting-prep/SKILL.md
+    description: "Prepare for an upcoming meeting with a company. Identify the account by ZoomInfo account/company\
+      \ ID (preferred) or by company name, domain, or ticker (which triggers a lookup step). Provide attendee\u2026"
+  - name: speckit.zoominfo.personalize-email
+    file: skills/personalize-email/SKILL.md
+    description: "Generate 1-3 personalized email variants for a single prospect. The composition bar\
+      \ adapts to the use case \u2014 cold_outbound demands a signal \u2192 pain \u2192 positioning chain;\
+      \ follow-ups / recaps / renewals\u2026"
+  - name: speckit.zoominfo.recommend-contacts
+    file: skills/recommend-contacts/SKILL.md
+    description: Get AI-powered contact recommendations at a target company based on your ZoomInfo interaction
+      history. Provide a company name or domain and optionally a use case.
+  - name: speckit.zoominfo.score-accounts
+    file: skills/score-accounts/SKILL.md
+    description: "Score and rank a list of accounts (mixed ZoomInfo company IDs, names, or domains) by\
+      \ ICP fit + buying intent + recent triggers. Returns per-account composite score (0\u2013100), tier\
+      \ (A/B/C), explainable\u2026"
+  - name: speckit.zoominfo.score-leads
+    file: skills/score-leads/SKILL.md
+    description: "Score and prioritize leads or cold contacts (mixed ZoomInfo person IDs, emails, or name+company\
+      \ rows). Returns Hot / Warm / Cold tier per lead with a response-time SLA tuned to the use case\
+      \ (live inb\u2026"
+  - name: speckit.zoominfo.tam-sizer
+    file: skills/tam-sizer/SKILL.md
+    description: "Size the total addressable market (TAM) for an Ideal Customer Profile (ICP) using ZoomInfo's\
+      \ verified company database. Iteratively refine the firmographic and technographic filter set with\
+      \ the user\u2026"
+  - name: speckit.zoominfo.tech-stack-snapshot
+    file: skills/tech-stack-snapshot/SKILL.md
+    description: "Produce a technology-stack snapshot for one or more companies \u2014 what CRM, marketing\
+      \ automation, sales engagement, data warehouse, analytics, conversation intelligence, and other\
+      \ tools they have tagge\u2026"
+tags:
+- zoominfo
+- gtm
+- go-to-market
+- gtm context graph
+- b2b
+- sales
+- sales intelligence
+- sales prospecting
+- b2b prospecting
+- prospecting
+- lead generation
+- b2b lead generation
+- find contacts
+- contact search
+- contact information
+- contacts
+- decision-makers
+- find accounts
+- account search
+- account research
+- business information
+- companies
+- company data
+- build a list
+- lead lists
+- account lists
+- target account list
+- enrich records
+- lead enrichment
+- contact enrichment
+- account enrichment
+- crm data enrichment
+- salesforce data enrichment
+- firmographics
+- technographics
+- buyer intent
+- buyer intent data
+- intent data
+- intent signals
+- buying signals
+- buying committee
+- meeting prep
+- recommended contacts
+- lookalikes
+- lookalike accounts
+- similar companies
+- similar contacts
+- market intelligence
+- competitive intelligence
+- conversation intelligence
+- tam analysis
+- total addressable market
+- territory planning
+- account-based selling
+- abm
+- sales pipeline
+- icp
+- ideal customer profile
+- scoops
+- direct dial
+- verified email
+- mobile numbers
+- website visitor identification
+- mcp

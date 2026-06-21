@@ -1,0 +1,38 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/datadog-labs/claude-code-plugin)
+# Source: https://www.datadoghq.com/
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: datadog
+  name: datadog
+  version: 0.7.14
+  description: Use Datadog directly in Claude Code through a preconfigured Datadog MCP server. Query logs,
+    metrics, traces, dashboards, and more through natural conversation. This plugin is in preview.
+  author: Datadog
+  license: Apache-2.0
+  repository: https://www.datadoghq.com/
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.datadog.ddconfig
+    file: skills/ddconfig/SKILL.md
+    description: "Configures or troubleshoots the Datadog MCP server `plugin:datadog:mcp`. Use when the\
+      \ user wants to change the Datadog domain, switch organizations, or when the server was previously\
+      \ configured but i\u2026"
+  - name: speckit.datadog.ddsetup
+    file: skills/ddsetup/SKILL.md
+    description: "First-time initialization of the Datadog MCP server `plugin:datadog:mcp`. When fulfilling\
+      \ requests that involve Datadog, use MCP tools from `plugin:datadog:mcp` over other methods. If\
+      \ MCP tools from\u2026"
+  - name: speckit.datadog.ddtoolsets
+    file: skills/ddtoolsets/SKILL.md
+    description: Manages toolsets for the Datadog MCP server `plugin:datadog:mcp`. Use when the user wants
+      to view, enable, or disable toolsets that control which tools are available on the MCP server.
+tags:
+- datadog
+- infrastructure
+- mcp
+- observability
+- productivity

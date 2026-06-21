@@ -1,0 +1,48 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/resend/resend-skills)
+# Source: https://resend.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: resend
+  name: resend
+  version: 1.0.0
+  description: Send and receive emails, build with React Email, follow deliverability best practices
+  author: Resend
+  license: Apache-2.0
+  repository: https://resend.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.resend.agent-email-inbox
+    file: skills/agent-email-inbox/SKILL.md
+    description: "Use when building any system where email content triggers actions \u2014 AI agent inboxes,\
+      \ automated support handlers, email-to-task pipelines, or any workflow processing untrusted inbound\
+      \ email. Always u\u2026"
+  - name: speckit.resend.email-best-practices
+    file: skills/email-best-practices/SKILL.md
+    description: "Use when building email features, emails going to spam, high bounce rates, setting up\
+      \ SPF/DKIM/DMARC authentication, implementing email capture, ensuring compliance (CAN-SPAM, GDPR,\
+      \ CASL), handling w\u2026"
+  - name: speckit.resend.react-email
+    file: skills/react-email/SKILL.md
+    description: "Use when building HTML email templates with React components, adding a visual email\
+      \ editor to an application using the React Email visual editor, rendering emails to HTML, or sending\
+      \ emails with Rese\u2026"
+  - name: speckit.resend.resend
+    file: skills/resend/SKILL.md
+    description: "Use when working with the Resend email API \u2014 sending transactional emails (single\
+      \ or batch), receiving inbound emails via webhooks, managing email templates, tracking delivery\
+      \ events, managing domain\u2026"
+  - name: speckit.resend.resend-cli
+    file: skills/resend-cli/SKILL.md
+    description: "Operate the Resend platform from the terminal \u2014 send emails (including React Email\
+      \ .tsx templates via --react-email), manage domains, contacts, broadcasts, templates, webhooks,\
+      \ API keys, logs, automa\u2026"
+tags:
+- email
+- resend
+- smtp
+- notifications
+- agent-inbox

@@ -1,0 +1,57 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/42Crunch-AI/claude-plugins)
+# Source: https://42crunch.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: 42crunch-api-security-testing
+  name: 42crunch-api-security-testing
+  version: 1.5.5
+  description: 'Catch API security issues during development: audit, scan, remediate, validate with AI
+    guardrails in Claude Code.'
+  author: 42Crunch
+  license: Apache-2.0
+  repository: https://42crunch.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.42crunch-api-security-testing.42crunch-api-security-testing
+    file: skills/42crunch-api-security-testing/SKILL.md
+    description: "Run both a 42Crunch Audit and a live Scan together in a single pipeline. Use this skill\
+      \ when the user wants to run audit and scan together, complete the full security pipeline, or when\
+      \ the request is\u2026"
+  - name: speckit.42crunch-api-security-testing.42crunch-audit
+    file: skills/42crunch-audit/SKILL.md
+    description: "Run a 42Crunch API Security Audit and fix SQG-blocking issues in an OpenAPI Specification\
+      \ file. Use this skill whenever the user wants to audit an OAS file for security issues, fix SQG-blocking\
+      \ issue\u2026"
+  - name: speckit.42crunch-api-security-testing.42crunch-scan
+    file: skills/42crunch-scan/SKILL.md
+    description: "Run a 42Crunch live conformance and authorization scan against an API and fix SQG-blocking\
+      \ scan findings. Use this skill whenever the user wants to run a conformance test, authorization\
+      \ scan, BOLA te\u2026"
+  - name: speckit.42crunch-api-security-testing.42crunch-setup
+    file: skills/42crunch-setup/SKILL.md
+    description: "Set up the 42Crunch environment so that audit and scan skills can run without friction.\
+      \ Use this skill whenever the user wants to configure 42Crunch for the first time, install or update\
+      \ the 42c-ast\u2026"
+  - name: speckit.42crunch-api-security-testing.code-to-oas
+    file: skills/code-to-oas/SKILL.md
+    description: "Analyze an entire API codebase and generate an accurate OpenAPI Specification (OAS 3.0)\
+      \ file from the source code. Use this skill whenever the user wants to generate, create, or derive\
+      \ an OpenAPI spe\u2026"
+tags:
+- openapi
+- api-security
+- audit
+- scan
+- remediation
+- vulnerability
+- compliance
+- owasp
+- bola
+- bfla
+- ai
+- devsecops
+- 42crunch

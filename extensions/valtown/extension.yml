@@ -1,0 +1,67 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/val-town/plugins)
+# Source: https://val.town
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: valtown
+  name: Val Town
+  version: 0.2.1
+  description: Build and deploy on Val Town. Bundles the Val Town MCP server and platform skills (HTTP
+    vals, cron/intervals, SQLite, email, OAuth, React UI, third-party integrations, templates).
+  author: Val Town
+  license: Apache-2.0
+  repository: https://val.town
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.valtown.blob-storage
+    file: skills/blob-storage/SKILL.md
+    description: "Use when a val needs simple key/value persistence \u2014 JSON documents, cached responses,\
+      \ uploaded files, or binary assets. Covers the std/blob API, listing and deleting keys, account-global\
+      \ or val scopi\u2026"
+  - name: speckit.valtown.cron-and-intervals
+    file: skills/cron-and-intervals/SKILL.md
+    description: "Use when building a val that runs on a schedule \u2014 periodic jobs, recurring tasks,\
+      \ polling, cron jobs, monitoring, alerting. Covers the interval handler signature, cron expressions,\
+      \ the UTC timezone c\u2026"
+  - name: speckit.valtown.email
+    file: skills/email/SKILL.md
+    description: "Use when a val sends email, receives email, or is triggered by an incoming email. Covers\
+      \ email-type vals (the Email handler shape, attachment limits, the assigned val email address) and\
+      \ sending mail\u2026"
+  - name: speckit.valtown.http-endpoints
+    file: skills/http-endpoints/SKILL.md
+    description: "Use when building an HTTP val \u2014 a web endpoint, API route, webhook receiver, or\
+      \ any val that responds to HTTP requests. Covers the handler signature, Hono usage, the endpoint\
+      \ URL, CORS behavior, redi\u2026"
+  - name: speckit.valtown.oauth
+    file: skills/oauth/SKILL.md
+    description: "Use when a val needs to require login with a Val Town account \u2014 gating routes behind\
+      \ authentication, identifying the current user, building user-specific dashboards. Covers std/oauth's\
+      \ `oauthMiddlewa\u2026"
+  - name: speckit.valtown.react-ui
+    file: skills/react-ui/SKILL.md
+    description: "Use when building any val with a user interface \u2014 dashboards, web apps, landing\
+      \ pages, forms, admin tools, anything users see in a browser. Covers JSX/React conventions, Twind/Tailwind\
+      \ styling, React\u2026"
+  - name: speckit.valtown.sqlite-storage
+    file: skills/sqlite-storage/SKILL.md
+    description: Use when a val needs to store structured or relational data. Covers the std/sqlite API,
+      parameterized queries, transactions, and the val-scoped vs organization-scoped database distinction.
+  - name: speckit.valtown.templates
+    file: skills/templates/SKILL.md
+    description: "Use when creating a new val and choosing which starter to fork. Covers the catalog of\
+      \ official starter templates, which project shape each one fits, and when forking an existing val\
+      \ is the better sta\u2026"
+  - name: speckit.valtown.third-party-integrations
+    file: skills/third-party-integrations/SKILL.md
+    description: "Use when a val talks to an external service \u2014 Slack, Discord, Telegram, Stripe,\
+      \ GitHub, Gmail, Google Sheets, Postgres/Supabase/Upstash/Neon, browser automation (Playwright,\
+      \ Browserbase, Kernel, Stee\u2026"
+tags:
+- val-town
+- deno
+- serverless
+- typescript

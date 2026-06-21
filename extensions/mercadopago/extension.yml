@@ -1,0 +1,70 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/mercadopago/mercadopago-claude-marketplace)
+# Source: https://github.com/mercadopago/mercadopago-claude-marketplace/tree/main/plugins/mercadopago
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: mercadopago
+  name: mercadopago
+  version: 4.1.0
+  description: "Mercado Pago full-product integration toolkit. One agent routes to four orchestration\
+    \ skills (mp-integrate, mp-webhooks, mp-test-setup, mp-review) that pull live data from the official\
+    \ Mercado Pago MCP server. The MCP must always be connected \u2014 there is no offline mode."
+  author: Mercado Pago Developer Experience
+  license: Apache-2.0
+  repository: https://github.com/mercadopago/mercadopago-claude-marketplace/tree/main/plugins/mercadopago
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.mercadopago.mp-connect
+    file: commands/mp-connect.md
+    description: Verify or manually trigger Mercado Pago MCP authentication
+  - name: speckit.mercadopago.mp-integrate
+    file: commands/mp-integrate.md
+    description: "Scaffold a Mercado Pago integration via the mp-integrate wizard. Supports every product\
+      \ (Checkout Pro, Checkout API, Bricks, QR, Point, Subscriptions, Marketplace, Wallet Connect, Money\
+      \ Out, SmartApp\u2026"
+  - name: speckit.mercadopago.mp-review
+    file: commands/mp-review.md
+    description: Review a Mercado Pago integration against the official quality checklist (live from MCP)
+      and a fixed cross-cutting security checklist.
+  - name: speckit.mercadopago.mp-integrate-skill
+    file: skills/mp-integrate/SKILL.md
+    description: "Wizard that scaffolds a complete Mercado Pago integration for any product. Asks the\
+      \ developer the minimum questions needed (country, product, variant, SDK, mode), queries the MCP\
+      \ server for live docs\u2026"
+  - name: speckit.mercadopago.mp-review-skill
+    file: skills/mp-review/SKILL.md
+    description: "Review a Mercado Pago integration against the official quality checklist and a fixed\
+      \ cross-cutting security checklist. Calls quality_checklist (and quality_evaluation when applicable)\
+      \ on the Mercado\u2026"
+  - name: speckit.mercadopago.mp-test-setup
+    file: skills/mp-test-setup/SKILL.md
+    description: "Create test users and add funds to them for Mercado Pago testing. Wraps create_test_user\
+      \ and add_money_test_user from the MCP. Clarifies that all credentials (including test users) use\
+      \ the APP_USR- p\u2026"
+  - name: speckit.mercadopago.mp-webhooks
+    file: skills/mp-webhooks/SKILL.md
+    description: "Configure, simulate, and validate Mercado Pago webhooks. Wraps the MCP webhook tools\
+      \ (save_webhook, simulate_webhook, notifications_history_diagnostics) and provides the HMAC-SHA256\
+      \ signature validat\u2026"
+  - name: speckit.mercadopago.agent-mp-integration-expert
+    file: agents/mp-integration-expert.md
+    description: "Use when implementing, reviewing, or debugging any Mercado Pago payment integration.\
+      \ Routes the request to one of four skills (mp-integrate, mp-webhooks, mp-test-setup, mp-review)\
+      \ and uses the Mercad\u2026"
+tags:
+- mercadopago
+- payments
+- checkout
+- webhooks
+- ipn
+- qr
+- point
+- subscriptions
+- marketplace
+- wallet
+- 3ds
+- fintech
+- meli

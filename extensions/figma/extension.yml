@@ -1,0 +1,62 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/figma/mcp-server-guide)
+# Source: https://github.com/figma/mcp-server-guide
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: figma
+  name: figma
+  version: 2.2.50
+  description: Plugin that includes the Figma MCP server and Skills for common workflows
+  author: Figma
+  license: Apache-2.0
+  repository: https://github.com/figma/mcp-server-guide
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.figma.figma-code-connect
+    file: skills/figma-code-connect/SKILL.md
+    description: "Creates and maintains Figma Code Connect template files that map Figma components to\
+      \ code snippets. Use when the user mentions Code Connect, Figma component mapping, design-to-code\
+      \ translation, or as\u2026"
+  - name: speckit.figma.figma-create-new-file
+    file: skills/figma-create-new-file/SKILL.md
+    description: "**MANDATORY prerequisite** \u2014 you MUST invoke this skill BEFORE every `create_new_file`\
+      \ tool call. NEVER call `create_new_file` directly without loading this skill first. Trigger whenever\
+      \ the user wan\u2026"
+  - name: speckit.figma.figma-generate-design
+    file: skills/figma-generate-design/SKILL.md
+    description: "Use this skill alongside figma-use when the task involves translating an application\
+      \ page, view, or multi-section layout into Figma. Triggers: 'write to Figma', 'create in Figma from\
+      \ code', 'push pag\u2026"
+  - name: speckit.figma.figma-generate-diagram
+    file: skills/figma-generate-diagram/SKILL.md
+    description: "MANDATORY prerequisite \u2014 load this skill BEFORE every `generate_diagram` tool call.\
+      \ NEVER call `generate_diagram` directly without loading this skill first. Trigger whenever the\
+      \ user asks to create,\u2026"
+  - name: speckit.figma.figma-generate-library
+    file: skills/figma-generate-library/SKILL.md
+    description: "Build or update a professional-grade design system in Figma from a codebase. Use when\
+      \ the user wants to create variables/tokens, build component libraries, create individual components\
+      \ with proper va\u2026"
+  - name: speckit.figma.figma-swiftui
+    file: skills/figma-swiftui/SKILL.md
+    description: "SwiftUI \u2194 Figma translation. Use whenever the user mentions Swift, SwiftUI, iOS,\
+      \ iPhone, or iPad \u2014 in EITHER direction \u2014 translating a Figma design into SwiftUI (design\
+      \ \u2192 code), or pushing SwiftUI vi\u2026"
+  - name: speckit.figma.figma-use
+    file: skills/figma-use/SKILL.md
+    description: "**MANDATORY prerequisite** \u2014 you MUST invoke this skill BEFORE every `use_figma`\
+      \ tool call. NEVER call `use_figma` directly without loading this skill first. Skipping it causes\
+      \ common, hard-to-debug\u2026"
+  - name: speckit.figma.figma-use-figjam
+    file: skills/figma-use-figjam/SKILL.md
+    description: This skill helps agents use Figma's use_figma MCP tool in the FigJam context. Can be
+      used alongside figma-use which has foundational context for using the use_figma tool.
+  - name: speckit.figma.figma-use-slides
+    file: skills/figma-use-slides/SKILL.md
+    description: This skill helps agents use Figma's use_figma MCP tool in the Slides context. Can be
+      used alongside figma-use which has foundational context for using the use_figma tool.
+tags:
+- design

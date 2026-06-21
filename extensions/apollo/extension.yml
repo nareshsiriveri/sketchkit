@@ -1,0 +1,44 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/apolloio/apollo-mcp-plugin)
+# Source: https://www.apollo.io/
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: apollo
+  name: apollo
+  version: 0.1.1
+  description: "Prospect, enrich leads, load outreach sequences, and query sales analytics with Apollo.io\
+    \ \u2014 one-click MCP server integration for Claude Code and Cowork."
+  author: Apollo.io
+  license: Apache-2.0
+  repository: https://www.apollo.io/
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.apollo.analytics
+    file: skills/analytics/SKILL.md
+    description: "Instant sales analytics. Ask any performance question \u2014 emails, calls, meetings,\
+      \ tasks, opportunities, sequences, conversation intelligence \u2014 and get formatted tables with\
+      \ real Apollo data."
+  - name: speckit.apollo.enrich-lead
+    file: skills/enrich-lead/SKILL.md
+    description: Instant lead enrichment. Drop a name, company, LinkedIn URL, or email and get the full
+      contact card with email, phone, title, company intel, and next actions.
+  - name: speckit.apollo.prospect
+    file: skills/prospect/SKILL.md
+    description: Full ICP-to-leads pipeline. Describe your ideal customer in plain English and get a ranked
+      table of enriched decision-maker leads with emails and phone numbers.
+  - name: speckit.apollo.sequence-load
+    file: skills/sequence-load/SKILL.md
+    description: Find leads matching criteria and bulk-add them to an Apollo outreach sequence. Handles
+      enrichment, contact creation, deduplication, and enrollment in one flow.
+tags:
+- apollo
+- sales
+- prospecting
+- icp
+- enrichment
+- sequences
+- analytics
+- mcp

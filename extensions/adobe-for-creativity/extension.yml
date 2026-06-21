@@ -1,0 +1,59 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/adobe/skills)
+# Source: https://github.com/adobe/skills/tree/main/plugins/creative-cloud/adobe-for-creativity
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: adobe-for-creativity
+  name: adobe-for-creativity
+  version: 1.1.0
+  description: Brings together Adobe Creative Cloud tools for images, vectors, design, and video. Edit
+    multiple assets at once, adapt for different platforms, and complete multi-step creative workflows
+    for polished results.
+  author: Adobe
+  license: Apache-2.0
+  repository: https://github.com/adobe/skills/tree/main/plugins/creative-cloud/adobe-for-creativity
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.adobe-for-creativity.adobe-batch-edit-photos
+    file: skills/adobe-batch-edit-photos/SKILL.md
+    description: "Apply consistent photo adjustments across a set of images so they look like they were\
+      \ edited together. Use this skill whenever the user says \"make my photos look cohesive\", \"give\
+      \ all these the same s\u2026"
+  - name: speckit.adobe-for-creativity.adobe-create-pdfs-from-data
+    file: skills/adobe-create-pdfs-from-data/SKILL.md
+    description: "Perform a full InDesign data merge from a CSV/TSV and an .indd template (or a PDF that\
+      \ gets converted to .indd automatically). Use this skill whenever the user wants to merge a data\
+      \ file with a layou\u2026"
+  - name: speckit.adobe-for-creativity.adobe-create-social-variations
+    file: skills/adobe-create-social-variations/SKILL.md
+    description: "Resize, crop, or export any image or video into platform-ready social media assets using\
+      \ Adobe Creative Cloud tools. Use this skill when a user wants to prepare a photo, image, or video\
+      \ for one or mo\u2026"
+  - name: speckit.adobe-for-creativity.adobe-design-from-template
+    file: skills/adobe-design-from-template/SKILL.md
+    description: "Create any visual design using Adobe Express templates \u2014 including flyers, posters,\
+      \ banners, social media posts (Instagram stories, Facebook posts, LinkedIn graphics), business cards,\
+      \ invitations, gr\u2026"
+  - name: speckit.adobe-for-creativity.adobe-edit-quick-cut
+    file: skills/adobe-edit-quick-cut/SKILL.md
+    description: "Create a punchy sizzle reel from a video using Adobe Quick Cut. Use this skill whenever\
+      \ a user wants to cut, trim, or shorten a video into highlights \u2014 including phrases like \"\
+      make a sizzle reel\", \"m\u2026"
+  - name: speckit.adobe-for-creativity.adobe-resize-photos-and-videos
+    file: skills/adobe-resize-photos-and-videos/SKILL.md
+    description: "Resize photos and videos to exact pixel dimensions or aspect ratios using Adobe tools.\
+      \ Use this skill whenever a user wants to resize, scale, or change the dimensions of an image or\
+      \ video file \u2014 incl\u2026"
+  - name: speckit.adobe-for-creativity.adobe-retouch-portraits
+    file: skills/adobe-retouch-portraits/SKILL.md
+    description: "Bulk-retouch a folder of portrait photos using Adobe tools \u2014 designed for wedding\
+      \ photographers and event photographers who need fast, walk-away batch processing. Use this skill\
+      \ when the user says \"r\u2026"
+tags:
+- adobe
+- creative-cloud
+- image-editing
+- design

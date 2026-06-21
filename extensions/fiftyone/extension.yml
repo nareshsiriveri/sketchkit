@@ -1,0 +1,106 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/voxel51/fiftyone-skills)
+# Source: https://docs.voxel51.com/
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: fiftyone
+  name: fiftyone
+  version: 1.0.3
+  description: Build high-quality datasets and computer vision models. Visualize datasets, analyze models,
+    find duplicates, run inference, evaluate predictions, and develop custom plugins.
+  author: Voxel51
+  license: Apache-2.0
+  repository: https://docs.voxel51.com/
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.fiftyone.help
+    file: commands/help.md
+    description: Get help with FiftyOne skills, understand available workflows, and troubleshoot setup
+      issues
+  - name: speckit.fiftyone.quickstart
+    file: commands/quickstart.md
+    description: Guided quickstart for FiftyOne - choose between user workflows (import, inference, visualization)
+      or developer workflows (plugin development)
+  - name: speckit.fiftyone.fiftyone-code-style
+    file: skills/fiftyone-code-style/SKILL.md
+    description: Writes Python code following FiftyOne's official conventions. Use when contributing to
+      FiftyOne, developing plugins, or writing code that integrates with FiftyOne's codebase.
+  - name: speckit.fiftyone.fiftyone-create-notebook
+    file: skills/fiftyone-create-notebook/SKILL.md
+    description: "Creates Jupyter notebooks for FiftyOne workflows including getting-started guides, tutorials,\
+      \ recipes, and full ML pipelines. Use when creating notebooks, writing tutorials, building demos,\
+      \ or genera\u2026"
+  - name: speckit.fiftyone.fiftyone-dataset-curation
+    file: skills/fiftyone-dataset-curation/SKILL.md
+    description: "End-to-end dataset curation for FiftyOne: inspect schema and quality, audit annotations,\
+      \ analyze class distributions, explore embeddings, find duplicates, create curated subsets, and\
+      \ build train/val/\u2026"
+  - name: speckit.fiftyone.fiftyone-dataset-export
+    file: skills/fiftyone-dataset-export/SKILL.md
+    description: "Exports FiftyOne datasets to standard formats (COCO, YOLO, VOC, CVAT, CSV, etc.) and\
+      \ Hugging Face Hub. Use when converting datasets, exporting for training, creating archives, sharing\
+      \ data in specifi\u2026"
+  - name: speckit.fiftyone.fiftyone-dataset-import
+    file: skills/fiftyone-dataset-import/SKILL.md
+    description: "Imports datasets into FiftyOne with automatic format detection. Supports all media types\
+      \ (images, videos, point clouds), label formats (COCO, YOLO, VOC, KITTI), multimodal grouped datasets,\
+      \ and Huggi\u2026"
+  - name: speckit.fiftyone.fiftyone-dataset-inference
+    file: skills/fiftyone-dataset-inference/SKILL.md
+    description: "Run ML model inference on FiftyOne datasets. Use when running models for detection,\
+      \ classification, segmentation, or embeddings. Discovers available models dynamically from the Zoo,\
+      \ plugin operators,\u2026"
+  - name: speckit.fiftyone.fiftyone-develop-plugin
+    file: skills/fiftyone-develop-plugin/SKILL.md
+    description: Develops custom FiftyOne plugins (operators and panels) from scratch. Use when creating
+      plugins, extending FiftyOne with custom operators, building interactive panels, or integrating external
+      APIs.
+  - name: speckit.fiftyone.fiftyone-embeddings-visualization
+    file: skills/fiftyone-embeddings-visualization/SKILL.md
+    description: "Visualizes datasets in 2D using embeddings with UMAP or t-SNE dimensionality reduction.\
+      \ Use when exploring dataset structure, finding clusters, identifying outliers, or understanding\
+      \ data distributio\u2026"
+  - name: speckit.fiftyone.fiftyone-eval-plugin
+    file: skills/fiftyone-eval-plugin/SKILL.md
+    description: "Evaluates FiftyOne plugins for quality, security, and agent-readiness. Use when reviewing\
+      \ a plugin before installation, auditing an existing plugin, validating a plugin you just built,\
+      \ or assessing c\u2026"
+  - name: speckit.fiftyone.fiftyone-find-duplicates
+    file: skills/fiftyone-find-duplicates/SKILL.md
+    description: Finds duplicate or near-duplicate images in FiftyOne datasets using brain similarity
+      computation. Use when deduplicating datasets, finding similar images, or removing redundant samples.
+  - name: speckit.fiftyone.fiftyone-generate-data-lens-connector
+    file: skills/fiftyone-generate-data-lens-connector/SKILL.md
+    description: "Generate a Data Lens connector from an external database schema. Use when users want\
+      \ to connect an external data source (PostgreSQL, BigQuery, Databricks, MySQL, etc.) to FiftyOne\
+      \ Data Lens, or when\u2026"
+  - name: speckit.fiftyone.fiftyone-issue-triage
+    file: skills/fiftyone-issue-triage/SKILL.md
+    description: "Triages FiftyOne GitHub issues by categorizing as fixed, won't fix, not reproducible,\
+      \ or still valid. Use when reviewing GitHub issues, triaging bugs, or closing stale issues in the\
+      \ voxel51/fiftyone\u2026"
+  - name: speckit.fiftyone.fiftyone-model-evaluation
+    file: skills/fiftyone-model-evaluation/SKILL.md
+    description: "Evaluate model predictions against ground truth using COCO, Open Images, or custom protocols.\
+      \ Use when computing mAP, precision, recall, confusion matrices, or analyzing TP/FP/FN examples\
+      \ for detecti\u2026"
+  - name: speckit.fiftyone.fiftyone-troubleshoot
+    file: skills/fiftyone-troubleshoot/SKILL.md
+    description: "Diagnose and fix common FiftyOne issues automatically. Use when a dataset disappeared,\
+      \ the App won't open, changes aren't saving, MongoDB errors occur, video codecs fail, notebook connectivity\
+      \ breaks\u2026"
+  - name: speckit.fiftyone.fiftyone-voodo-design
+    file: skills/fiftyone-voodo-design/SKILL.md
+    description: "Build FiftyOne UIs using VOODO (@voxel51/voodo), the official React component library.\
+      \ Use when building plugin panels, creating interactive UIs, or styling FiftyOne applications. Fetches\
+      \ complete co\u2026"
+  - name: speckit.fiftyone.fiftyone-zoo-remote-model
+    file: skills/fiftyone-zoo-remote-model/SKILL.md
+    description: "Use when integrating a model into FiftyOne's remote model zoo \u2014 detection, classification,\
+      \ segmentation, embedding, keypoint, or vision-language (VLM) models loaded via `register_zoo_model_source`\
+      \ an\u2026"
+tags:
+- claude-code

@@ -1,0 +1,176 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/oracle-samples/oracle-aidp-samples)
+# Source: https://docs.oracle.com/en/cloud/paas/ai-data-platform/index.html
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: oracle-ai-data-platform-workbench-spark-connectors
+  name: oracle-ai-data-platform-workbench-spark-connectors
+  version: 0.5.0
+  description: "Oracle AI Data Platform Workbench Spark connectors for Claude Code. 23 connector skills\
+    \ covering every data source workbench customers commonly need: Oracle Autonomous DB family (ALH/ADW/ATP)\
+    \ via wallet/IAM-DB-Token/API-key, generic Oracle Database, ExaCS, Oracle PeopleSoft, Oracle Siebel,\
+    \ Fusion E\u2026"
+  author: Ahmed Awan
+  license: Apache-2.0
+  repository: https://docs.oracle.com/en/cloud/paas/ai-data-platform/index.html
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-alh
+    file: skills/aidp-alh/SKILL.md
+    description: "Connect from an AIDP notebook to Oracle AI Lakehouse (ALH), Autonomous Data Warehouse\
+      \ (ADW), or Autonomous Transaction Processing (ATP) via Spark JDBC. Use when the user mentions ALH,\
+      \ AI Lakehouse, A\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-aws-s3
+    file: skills/aidp-aws-s3/SKILL.md
+    description: "Read and write AWS S3 (`s3a://`) from an AIDP notebook. Use when the user mentions S3,\
+      \ AWS S3 bucket, s3a, or has AWS access keys. Auth is access key + secret key via the Hadoop S3A\
+      \ connector. boto3\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-azure-adls
+    file: skills/aidp-azure-adls/SKILL.md
+    description: "Read and write Azure Data Lake Storage Gen2 (`abfss://`) from an AIDP notebook. Use\
+      \ when the user mentions ADLS, Azure Data Lake, abfss, or wants to ingest from a multi-cloud Azure\
+      \ source. Auth is OA\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-connectors-bootstrap
+    file: skills/aidp-connectors-bootstrap/SKILL.md
+    description: "First-time setup. Use when the user wants to install/upload the AIDP Spark connectors\
+      \ helper package into their AIDP workspace, or has just installed this plugin and asks \"how do\
+      \ I set it up\", \"first\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-connectors-overview
+    file: skills/aidp-connectors-overview/SKILL.md
+    description: "Help the user pick the right connector skill for their data source from an AIDP notebook.\
+      \ Use as a router when the user mentions multiple sources, isn't sure which connector applies, or\
+      \ asks \"how do\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-epm-cloud
+    file: skills/aidp-epm-cloud/SKILL.md
+    description: "Run a Planning data-slice export against Oracle EPM Cloud (Planning / EPBCS) and materialize\
+      \ as a Spark DataFrame in an AIDP notebook. Use when the user mentions EPM Cloud, EPBCS, Hyperion\
+      \ Planning,\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-essbase
+    file: skills/aidp-essbase/SKILL.md
+    description: "Run an MDX query against an Oracle Essbase 21c cube and materialize the result as a\
+      \ Spark DataFrame in an AIDP notebook. Use when the user mentions Essbase, MDX, Essbase 21c, OLAP\
+      \ cube, or wants to r\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-exacs
+    file: skills/aidp-exacs/SKILL.md
+    description: "Connect from an AIDP notebook to Oracle Exadata Cloud Service (ExaCS) via Spark JDBC.\
+      \ Use when the user mentions ExaCS, Exadata, Exadata Cloud, RAC SCAN listener, or has a private-subnet\
+      \ Oracle DB. A\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-excel
+    file: skills/aidp-excel/SKILL.md
+    description: "Read Excel (.xlsx, .xls) files into a Spark DataFrame from an AIDP notebook. Use when\
+      \ the user mentions Excel, .xlsx, .xls, or has spreadsheet files in a Volume / Object Storage bucket.\
+      \ Two paths \u2014 t\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-fusion-bicc
+    file: skills/aidp-fusion-bicc/SKILL.md
+    description: "Pull a Fusion BICC bulk extract into a Spark DataFrame from an AIDP notebook. Use when\
+      \ the user mentions BICC, Fusion bulk extract, BI Cloud Connector, PVO, or needs >50k rows from\
+      \ Fusion. The recomm\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-fusion-rest
+    file: skills/aidp-fusion-rest/SKILL.md
+    description: "Pull data from Oracle Fusion ERP / HCM / SCM REST APIs into a Spark DataFrame from an\
+      \ AIDP notebook. Use when the user mentions Fusion ERP, Fusion REST API, FA REST, Cloud ERP, or\
+      \ wants live data fro\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-hive
+    file: skills/aidp-hive/SKILL.md
+    description: "Read or write Apache Hive from an AIDP notebook via the AIDP `aidataplatform` Spark\
+      \ format handler. Use when the user mentions Hive, HiveServer2, HS2, HCatalog, or has a Hive metastore\
+      \ host/port. Aut\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-iceberg
+    file: skills/aidp-iceberg/SKILL.md
+    description: "Read and write Apache Iceberg tables backed by OCI Object Storage from an AIDP notebook.\
+      \ Use when the user mentions Iceberg, Apache Iceberg, time travel, snapshots, schema evolution,\
+      \ partition evolut\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-jdbc-custom
+    file: skills/aidp-jdbc-custom/SKILL.md
+    description: "Connect to ANY database that has a JDBC driver from an AIDP notebook using Spark's native\
+      \ `format(\"jdbc\")`. Use when the user mentions a DB without a dedicated AIDP connector \u2014\
+      \ SQLite, ClickHouse, Du\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-mysql
+    file: skills/aidp-mysql/SKILL.md
+    description: "Read or write MySQL or OCI MySQL HeatWave from an AIDP notebook via the AIDP `aidataplatform`\
+      \ Spark format handler. Use when the user mentions MySQL, HeatWave, MySQL Database Service, MDS,\
+      \ or has a M\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-object-storage
+    file: skills/aidp-object-storage/SKILL.md
+    description: "Read and write OCI Object Storage natively from an AIDP notebook using the `oci://`\
+      \ URI scheme. Use when the user mentions OCI Object Storage, \"oci://\", external volumes, external\
+      \ tables backed by Ob\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-oracle-db
+    file: skills/aidp-oracle-db/SKILL.md
+    description: "Read or write an Oracle Database (Compute / Base DB / on-prem / Oracle 19c, 21c, 23ai,\
+      \ 26ai non-Autonomous) from an AIDP notebook via the AIDP `aidataplatform` Spark format handler.\
+      \ Use when the user\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-peoplesoft
+    file: skills/aidp-peoplesoft/SKILL.md
+    description: "Read from Oracle PeopleSoft into a Spark DataFrame in an AIDP notebook via the AIDP\
+      \ `aidataplatform` Spark format handler. Use when the user mentions PeopleSoft, PSFT, HCM, FSCM,\
+      \ Campus Solutions, or\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-postgresql
+    file: skills/aidp-postgresql/SKILL.md
+    description: "Read or write PostgreSQL from an AIDP notebook via the AIDP `aidataplatform` Spark format\
+      \ handler. Use when the user mentions PostgreSQL, Postgres, \"psql\", or has a Postgres host/port\
+      \ to connect to.\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-rest-generic
+    file: skills/aidp-rest-generic/SKILL.md
+    description: "Pull data from any REST API into a Spark DataFrame using the AIDP `aidataplatform` Generic\
+      \ REST connector. Use when the user has a non-Fusion / non-EPM / non-Essbase REST endpoint with\
+      \ a `manifest.ur\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-salesforce
+    file: skills/aidp-salesforce/SKILL.md
+    description: "Read from Salesforce into a Spark DataFrame in an AIDP notebook via the AIDP `aidataplatform`\
+      \ Spark format handler. Use when the user mentions Salesforce, SFDC, Sales Cloud, Service Cloud,\
+      \ Account, O\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-siebel
+    file: skills/aidp-siebel/SKILL.md
+    description: "Read from Oracle Siebel CRM into a Spark DataFrame in an AIDP notebook via the AIDP\
+      \ `aidataplatform` Spark format handler. Use when the user mentions Siebel, Siebel CRM, S_CONTACT,\
+      \ S_ORG_EXT, or has\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-snowflake
+    file: skills/aidp-snowflake/SKILL.md
+    description: "Read or write Snowflake from an AIDP notebook via Spark using the Snowflake Spark connector.\
+      \ Use when the user mentions Snowflake, Snowflake warehouse, sfUrl, sfUser, or wants to migrate\
+      \ from Snowfla\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-sqlserver
+    file: skills/aidp-sqlserver/SKILL.md
+    description: "Read or write Microsoft SQL Server from an AIDP notebook via the AIDP `aidataplatform`\
+      \ Spark format handler. Use when the user mentions SQL Server, MSSQL, Azure SQL Database, or has\
+      \ a TDS host/port.\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-spark-connectors.aidp-streaming-kafka
+    file: skills/aidp-streaming-kafka/SKILL.md
+    description: "Consume an OCI Streaming stream from an AIDP notebook via Spark structured streaming\
+      \ (Kafka-compat). Use when the user mentions OCI Streaming, Kafka on OCI, stream pool, structured\
+      \ streaming, or want\u2026"
+tags:
+- oracle
+- aidp
+- spark
+- jdbc
+- lakehouse
+- autonomous-database
+- atp
+- adw
+- exacs
+- fusion
+- epm
+- essbase
+- kafka
+- streaming
+- object-storage
+- iceberg
+- postgresql
+- mysql
+- sqlserver
+- snowflake
+- adls
+- s3
+- rest
+- connector
+- peoplesoft
+- siebel
+- salesforce
+- hive
+- pushdown
+- catalog

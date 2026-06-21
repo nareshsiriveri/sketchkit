@@ -1,0 +1,24 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: frontend-design
+  name: frontend-design
+  version: 0.1.0
+  description: Frontend design skill for UI/UX implementation
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.frontend-design.frontend-design
+    file: skills/frontend-design/SKILL.md
+    description: "Guidance for distinctive, intentional visual design when building new UI or reshaping\
+      \ an existing one. Helps with aesthetic direction, typography, and making choices that don't read\
+      \ as templated defa\u2026"
+tags:
+- claude-code

@@ -1,0 +1,45 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/wix/skills)
+# Source: https://dev.wix.com/docs/wix-cli/guides/development/about-wix-skills
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: wix
+  name: wix
+  version: 1.1.0
+  description: Build, manage, and deploy Wix sites and apps. Includes CLI development skills and Wix MCP
+    server for site management, eCommerce, CMS, dashboard extensions, and more.
+  author: Wix
+  license: Apache-2.0
+  repository: https://dev.wix.com/docs/wix-cli/guides/development/about-wix-skills
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.wix.wix-app
+    file: skills/wix-app/SKILL.md
+    description: "Build and review Wix CLI app extensions \u2014 dashboard pages, modals, plugins, menu\
+      \ plugins, custom element widgets, Editor React components, site plugins, embedded scripts, backend\
+      \ APIs, backend events\u2026"
+  - name: speckit.wix.wix-design-system
+    file: skills/wix-design-system/SKILL.md
+    description: "Wix Design System component reference. Use when building UI with @wix/design-system,\
+      \ choosing components, checking props and examples, or writing tests with component testkits. Triggers\
+      \ on \"what comp\u2026"
+  - name: speckit.wix.wix-headless
+    file: skills/wix-headless/SKILL.md
+    description: "Build a complete Wix Managed Headless site from a single prompt, OR connect an existing\
+      \ project (HTML/JSX/Vite app, Claude Design output, etc.) to Wix Headless for hosting + Business\
+      \ Solutions. Entry\u2026"
+  - name: speckit.wix.wix-manage
+    file: skills/wix-manage/SKILL.md
+    description: "Wix business solution management recipes \u2014 REST API operations for configuring\
+      \ and managing Wix business solutions. Routes to: stores, bookings, get-paid, CMS, contacts, forms,\
+      \ media, app-installatio\u2026"
+tags:
+- wix
+- wix-cli
+- wix-mcp
+- ecommerce
+- cms
+- wix-apps

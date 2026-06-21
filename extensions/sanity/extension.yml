@@ -1,0 +1,72 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/sanity-io/agent-toolkit)
+# Source: https://www.sanity.io
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: sanity
+  name: sanity
+  version: 1.0.0
+  description: Sanity plugin for Claude Code with MCP server, agent skills, agent rules, and slash commands.
+  author: Sanity
+  license: Apache-2.0
+  repository: https://www.sanity.io
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.sanity.deploy-schema
+    file: commands/deploy-schema.md
+    description: Deploy Sanity schema to the Content Lake with verification.
+  - name: speckit.sanity.sanity-review
+    file: commands/sanity-review.md
+    description: Review code for Sanity best practices and common issues.
+  - name: speckit.sanity.sanity
+    file: commands/sanity.md
+    description: Lists available Sanity skills and help topics.
+  - name: speckit.sanity.typegen
+    file: commands/typegen.md
+    description: Run Sanity TypeGen and troubleshoot type generation issues.
+  - name: speckit.sanity.content-experimentation-best-practices
+    file: skills/content-experimentation-best-practices/SKILL.md
+    description: "Content experimentation and A/B testing guidance covering experiment design, hypotheses,\
+      \ metrics, sample size, statistical foundations, CMS-managed variants, and common analysis pitfalls.\
+      \ Use this sk\u2026"
+  - name: speckit.sanity.content-modeling-best-practices
+    file: skills/content-modeling-best-practices/SKILL.md
+    description: "Structured content modeling guidance for schema design, content architecture, content\
+      \ reuse, references versus embedded objects, separation of concerns, and taxonomies across Sanity\
+      \ and other headles\u2026"
+  - name: speckit.sanity.portable-text-conversion
+    file: skills/portable-text-conversion/SKILL.md
+    description: "Convert HTML and Markdown content into Portable Text blocks for Sanity. Use when migrating\
+      \ content from legacy CMSs, importing HTML or Markdown into Sanity, building content pipelines that\
+      \ ingest ext\u2026"
+  - name: speckit.sanity.portable-text-serialization
+    file: skills/portable-text-serialization/SKILL.md
+    description: "Render and serialize Portable Text to React, Svelte, Vue, Astro, HTML, Markdown, and\
+      \ plain text. Use when implementing Portable Text rendering in any frontend framework, building\
+      \ custom serializers f\u2026"
+  - name: speckit.sanity.sanity-best-practices
+    file: skills/sanity-best-practices/SKILL.md
+    description: "Sanity development best practices for schema design, GROQ queries, TypeGen, Visual Editing,\
+      \ images, Portable Text, Studio structure, localization, migrations, Sanity Functions, Blueprints,\
+      \ and framew\u2026"
+  - name: speckit.sanity.sanity-migration
+    file: skills/sanity-migration/SKILL.md
+    description: "Plans, implements, and reviews migrations from other CMSes and content systems into\
+      \ Sanity. Use when migrating or replatforming to Sanity from AEM, Adobe Experience Manager, Contentful,\
+      \ Strapi, Webfl\u2026"
+  - name: speckit.sanity.seo-aeo-best-practices
+    file: skills/seo-aeo-best-practices/SKILL.md
+    description: "SEO and AEO best practices for metadata, Open Graph, sitemaps, robots.txt, hreflang,\
+      \ JSON-LD structured data, EEAT, and content optimized for search engines and AI answer surfaces.\
+      \ Use this skill whe\u2026"
+tags:
+- sanity
+- cms
+- content-lake
+- groq
+- content
+- structured-content
+- visual-editing

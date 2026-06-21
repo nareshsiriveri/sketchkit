@@ -1,0 +1,73 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/TheQtCompanyRnD/agent-skills)
+# Source: https://www.qt.io/
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: qt-development-skills
+  name: qt-development-skills
+  version: 1.5.0
+  description: Agentic engineering skills for Qt software development, including Qt C++/QML code review,
+    QML coding, and Qt C++/QML code documentation. Bundles the hosted Qt Documentation MCP server for
+    live Qt API lookups. These skills use AI and can make mistakes. Always double-check the output carefully.
+  author: Qt Group
+  license: Apache-2.0
+  repository: https://www.qt.io/
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.qt-development-skills.qt-cpp-docs
+    file: skills/qt-cpp-docs/SKILL.md
+    description: "Generates standalone Markdown reference documentation for any Qt/C++ source files \u2014\
+      \ Qt Widgets classes, Qt Quick backends, Qt/C++ modules, plain C++ utilities, structs, free-function\
+      \ headers, and ent\u2026"
+  - name: speckit.qt-development-skills.qt-cpp-review
+    file: skills/qt-cpp-review/SKILL.md
+    description: "Invoke when the user asks to review, check, audit, or look over Qt6 C++ code \u2014\
+      \ or suggest before committing. Runs deterministic linting (60+ rules) then six parallel deep- analysis\
+      \ agents covering mo\u2026"
+  - name: speckit.qt-development-skills.qt-figma-component-generation
+    file: skills/qt-figma-component-generation/SKILL.md
+    description: "Extract component metadata from a Figma design system and generate production-ready\
+      \ QML controls. Use this skill whenever someone wants to turn Figma components into QML files \u2014\
+      \ whether they say \"gen\u2026"
+  - name: speckit.qt-development-skills.qt-figma-token-extraction
+    file: skills/qt-figma-token-extraction/SKILL.md
+    description: "Extract design tokens, text styles, and variables from a Figma design system and produce\
+      \ a design-tokens.json plus ready-to-use QML singletons. Use this skill whenever someone wants to\
+      \ pull their des\u2026"
+  - name: speckit.qt-development-skills.qt-qml
+    file: skills/qt-qml/SKILL.md
+    description: "Applies QML best practices when producing or working with QML source code. Use whenever\
+      \ QML code is the primary subject: writing, reviewing, fixing, refactoring, optimizing, or debugging\
+      \ QML files, c\u2026"
+  - name: speckit.qt-development-skills.qt-qml-docs
+    file: skills/qt-qml-docs/SKILL.md
+    description: "Generates standalone Markdown reference documentation for QML components and applications.\
+      \ Use this skill whenever you want to document QML files, create API reference docs for a QML component\
+      \ or mod\u2026"
+  - name: speckit.qt-development-skills.qt-qml-profiler
+    file: skills/qt-qml-profiler/SKILL.md
+    description: "Use when the user is investigating QML / Qt Quick performance \u2014 both vague complaints\
+      \ (\"the UI feels laggy\", \"this is slow\", \"frames are dropping\", \"the app stutters\") and\
+      \ explicit asks to profile, f\u2026"
+  - name: speckit.qt-development-skills.qt-qml-review
+    file: skills/qt-qml-review/SKILL.md
+    description: "Invoke when the user asks to review, check, audit, or look over Qt6 QML code -- or suggest\
+      \ before committing. Runs deterministic linting (47+ rules) then six parallel deep- analysis agents\
+      \ covering b\u2026"
+  - name: speckit.qt-development-skills.qt-qml-test
+    file: skills/qt-qml-test/SKILL.md
+    description: Generates Qt Quick Test cases (TestCase, SignalSpy, tryCompare) for QML components. Use
+      for "write QML tests", "qml test", "qt quick test".
+  - name: speckit.qt-development-skills.qt-qml-test-run
+    file: skills/qt-qml-test-run/SKILL.md
+    description: Builds and runs Qt Quick Test (qmltestrunner / CTest) for a QML project, then writes
+      a Markdown report. Use for "run qml tests", "run qmltestrunner".
+  - name: speckit.qt-development-skills.qt-ui-design
+    file: skills/qt-ui-design/SKILL.md
+    description: Design or audit UI for Qt/QML, Qt projects, web, or embedded MPU or MCU targets. Use
+      when creating screens, layouts, navigation, or auditing UX.
+tags:
+- development

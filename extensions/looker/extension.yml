@@ -1,0 +1,26 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gemini-cli-extensions/looker)
+# Source: https://github.com/gemini-cli-extensions/looker
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: looker
+  name: looker
+  version: 0.3.5
+  description: Connect to Looker and interact with your data using LookML.
+  author: Google LLC
+  license: Apache-2.0
+  repository: https://github.com/gemini-cli-extensions/looker
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.looker.looker
+    file: skills/looker/SKILL.md
+    description: These skills are designed for data discovery and business intelligence.
+  - name: speckit.looker.looker-dev
+    file: skills/looker-dev/SKILL.md
+    description: These skills are built for LookML developers, data engineers, and administrators who
+      manage the backbone of Looker.
+tags:
+- database

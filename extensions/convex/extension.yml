@@ -1,0 +1,56 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/get-convex/convex-backend-skill)
+# Source: https://github.com/get-convex/convex-backend-skill
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: convex
+  name: Convex
+  version: 1.3.0
+  description: "Bundled design + quickstart skills, code-writing subagent, lint+typecheck guard hooks,\
+    \ runtime-error and OCC-insights monitors, and MCP server for live deployment introspection. Scaffold\
+    \ a running app from one sentence, then build reactive, type-safe backends on one platform \u2014\
+    \ schema, real-time, au\u2026"
+  author: Convex
+  license: Apache-2.0
+  repository: https://github.com/get-convex/convex-backend-skill
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.convex.quickstart
+    file: commands/quickstart.md
+    description: "Scaffold a new Convex app from a one-sentence idea and build it live \u2014 a Next.js\
+      \ + shadcn app with a floating Chef panel (progress feed, todo checklist, inline refinement questions,\
+      \ feature-request f\u2026"
+  - name: speckit.convex.design
+    file: skills/design/SKILL.md
+    description: "Design and build reactive, type-safe, production-grade backends on Convex. Covers schema,\
+      \ queries/mutations/actions, indexes, auth, file storage, scheduling, real-time multiplayer, mobile\
+      \ backends, a\u2026"
+  - name: speckit.convex.quickstart-skill
+    file: skills/quickstart/SKILL.md
+    description: "Scaffold a brand-new Convex app from a one-sentence idea and build it live in front\
+      \ of the user \u2014 a Next.js + shadcn 'wow-shell' with a floating Chef panel (live progress feed,\
+      \ pulsing todo checklist\u2026"
+  - name: speckit.convex.agent-convex-expert
+    file: agents/convex-expert.md
+    description: "Convex backend specialist. Use this agent for any code inside a `convex/` directory\
+      \ \u2014 function definitions, schemas, indexes, queries, mutations, actions, HTTP endpoints, cron\
+      \ jobs, file storage, aut\u2026"
+tags:
+- convex
+- backend
+- database
+- realtime
+- reactive
+- websocket
+- auth
+- storage
+- scheduler
+- cron
+- agent
+- rag
+- mobile
+- typescript
+- mcp

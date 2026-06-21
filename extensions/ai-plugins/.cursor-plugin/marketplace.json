@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "description": "Endor Labs Agent Kit plugin marketplace for Cursor."
+  },
+  "name": "endorlabs",
+  "owner": {
+    "email": "support@endor.ai",
+    "name": "Endor Labs"
+  },
+  "plugins": [
+    {
+      "author": {
+        "name": "Endor Labs",
+        "url": "https://www.endorlabs.com/"
+      },
+      "category": "Developer Tools",
+      "description": "Endor Labs Agent Kit setup and security workflow agents and skills.",
+      "keywords": [
+        "endor-labs",
+        "security",
+        "sca",
+        "sast",
+        "cursor",
+        "agentic remediation",
+        "AppSec"
+      ],
+      "name": "endorlabs",
+      "source": "./",
+      "version": "2.1.0"
+    }
+  ]
+}

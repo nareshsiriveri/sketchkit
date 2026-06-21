@@ -1,0 +1,32 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/explorium-ai/vibeprospecting-plugin)
+# Source: https://www.vibeprospecting.ai/product/claude-plugin
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: vibe-prospecting
+  name: vibe-prospecting
+  version: 0.1.62
+  description: Power your chat with B2B data to create lead lists, research companies, personalize your
+    outreach, and more. Search any company or professional to access emails, phone numbers, roles, growth
+    signals, tech stack details, business events, website changes, and more.
+  author: vibeprospecting.ai
+  license: Apache-2.0
+  repository: https://www.vibeprospecting.ai/product/claude-plugin
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.vibe-prospecting.vibe-prospecting
+    file: skills/vibe-prospecting/SKILL.md
+    description: "Find company & contact data. Turn your agent into a prospecting platform. Get contact\
+      \ information, roles, tech stack, business events, website changes, intent data. Build lead lists,\
+      \ research prospec\u2026"
+tags:
+- b2b
+- prospecting
+- leads
+- sales
+- enrichment
+- companies
+- contacts

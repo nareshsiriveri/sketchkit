@@ -1,0 +1,34 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/ory/lumen)
+# Source: https://www.ory.sh
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: lumen
+  name: lumen
+  version: 0.0.41
+  description: "Precise local semantic code search via MCP. Indexes your codebase with Go AST parsing,\
+    \ embeds with Ollama or LM Studio, and exposes vector search to Claude through an MCP server \u2014\
+    \ no cloud, no npm."
+  author: Ory Corp
+  license: Apache-2.0
+  repository: https://www.ory.sh
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.lumen.doctor
+    file: skills/doctor/SKILL.md
+    description: Run a health check on the bundled Lumen semantic search setup for the current project,
+      verify backend reachability and index freshness, and summarize remediation steps.
+  - name: speckit.lumen.reindex
+    file: skills/reindex/SKILL.md
+    description: Refresh or rebuild the bundled Lumen index for the current project, preferring MCP-driven
+      refreshes and using the CLI only for an explicit clean rebuild.
+tags:
+- semantic-search
+- code-index
+- mcp
+- embeddings
+- ollama
+- rag

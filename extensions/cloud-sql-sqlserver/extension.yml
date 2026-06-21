@@ -1,0 +1,35 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gemini-cli-extensions/cloud-sql-sqlserver)
+# Source: https://github.com/gemini-cli-extensions/cloud-sql-sqlserver
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: cloud-sql-sqlserver
+  name: cloud-sql-sqlserver
+  version: 0.2.0
+  description: Connect to Cloud SQL for SQL Server
+  author: Google LLC
+  license: Apache-2.0
+  repository: https://github.com/gemini-cli-extensions/cloud-sql-sqlserver
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.cloud-sql-sqlserver.cloud-sql-sqlserver-admin
+    file: skills/cloud-sql-sqlserver-admin/SKILL.md
+    description: Use these skills when you need to provision new Cloud SQL for SQL Server instances, create
+      databases and users, clone existing environments, and monitor the progress of long-running operations.
+  - name: speckit.cloud-sql-sqlserver.cloud-sql-sqlserver-data
+    file: skills/cloud-sql-sqlserver-data/SKILL.md
+    description: Use these skills when you need to explore the database schema, execute SQL queries to
+      interact with your data, and monitor system-level performance metrics using PromQL queries.
+  - name: speckit.cloud-sql-sqlserver.cloud-sql-sqlserver-lifecycle
+    file: skills/cloud-sql-sqlserver-lifecycle/SKILL.md
+    description: Use these skills when you need to manage the lifecycle and durability of your data, including
+      creating backups, restoring from existing backups, and cloning instances for testing or migration.
+  - name: speckit.cloud-sql-sqlserver.cloud-sql-sqlserver-monitor
+    file: skills/cloud-sql-sqlserver-monitor/SKILL.md
+    description: Use these skills when you need to troubleshoot slow queries and analyze system-level
+      PromQL metrics.
+tags:
+- database

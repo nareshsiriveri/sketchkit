@@ -1,0 +1,145 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/astronomer/agents)
+# Source: https://github.com/astronomer/agents
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: data-engineering
+  name: astronomer-data-agents
+  version: 0.1.0
+  description: Data engineering plugin - warehouse exploration, pipeline authoring, Airflow integration
+  author: Unknown
+  license: Apache-2.0
+  repository: https://github.com/astronomer/agents
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.data-engineering.airflow
+    file: skills/airflow/SKILL.md
+    description: "Queries, manages, and troubleshoots Apache Airflow using the af CLI. Covers listing\
+      \ DAGs, triggering runs, reading task logs, diagnosing failures, debugging DAG import errors, checking\
+      \ connections, v\u2026"
+  - name: speckit.data-engineering.airflow-hitl
+    file: skills/airflow-hitl/SKILL.md
+    description: "Use when the user needs human-in-the-loop workflows in Airflow (approval/reject, form\
+      \ input, or human-driven branching). Covers ApprovalOperator, HITLOperator, HITLBranchOperator,\
+      \ HITLEntryOperator,\u2026"
+  - name: speckit.data-engineering.airflow-plugins
+    file: skills/airflow-plugins/SKILL.md
+    description: "Build Airflow 3.1+ plugins that embed FastAPI apps, custom UI pages, React components,\
+      \ middleware, macros, and operator links directly into the Airflow UI. Use this skill whenever the\
+      \ user wants to c\u2026"
+  - name: speckit.data-engineering.analyzing-data
+    file: skills/analyzing-data/SKILL.md
+    description: "Queries data warehouse and answers business questions about data. Handles questions\
+      \ requiring database/warehouse queries including \"who uses X\", \"how many Y\", \"show me Z\",\
+      \ \"find customers\", \"what is\u2026"
+  - name: speckit.data-engineering.annotating-task-lineage
+    file: skills/annotating-task-lineage/SKILL.md
+    description: "Annotate Airflow tasks with data lineage using inlets and outlets. Use when the user\
+      \ wants to add lineage metadata to tasks, specify input/output datasets, or enable lineage tracking\
+      \ for operators wi\u2026"
+  - name: speckit.data-engineering.authoring-dags
+    file: skills/authoring-dags/SKILL.md
+    description: "Workflow and best practices for writing Apache Airflow DAGs. Use when the user wants\
+      \ to create a new DAG, write pipeline code, or asks about DAG patterns and conventions. For testing\
+      \ and debugging DA\u2026"
+  - name: speckit.data-engineering.blueprint
+    file: skills/blueprint/SKILL.md
+    description: "Define reusable Airflow task group templates with Pydantic validation and compose DAGs\
+      \ from YAML. Use when creating blueprint templates, composing DAGs from YAML, validating configurations,\
+      \ or enabli\u2026"
+  - name: speckit.data-engineering.checking-freshness
+    file: skills/checking-freshness/SKILL.md
+    description: Quick data freshness check. Use when the user asks if data is up to date, when a table
+      was last updated, if data is stale, or needs to verify data currency before using it.
+  - name: speckit.data-engineering.cosmos-dbt-core
+    file: skills/cosmos-dbt-core/SKILL.md
+    description: "Use when turning a dbt Core project into an Airflow DAG/TaskGroup using Astronomer Cosmos.\
+      \ Does not cover dbt Fusion. Before implementing, verify dbt engine, warehouse, Airflow version,\
+      \ execution env\u2026"
+  - name: speckit.data-engineering.cosmos-dbt-fusion
+    file: skills/cosmos-dbt-fusion/SKILL.md
+    description: "Use when running a dbt Fusion project with Astronomer Cosmos. Covers Cosmos 1.11+ configuration\
+      \ for Fusion on Snowflake/Databricks with ExecutionMode.LOCAL. Before implementing, verify dbt engine\
+      \ is\u2026"
+  - name: speckit.data-engineering.creating-openlineage-extractors
+    file: skills/creating-openlineage-extractors/SKILL.md
+    description: "Create custom OpenLineage extractors for Airflow operators. Use when the user needs\
+      \ lineage from unsupported or third-party operators, wants column-level lineage, or needs complex\
+      \ extraction logic be\u2026"
+  - name: speckit.data-engineering.dag-factory
+    file: skills/dag-factory/SKILL.md
+    description: "Author Apache Airflow DAGs declaratively with dag-factory YAML configs. Use when creating\
+      \ dag-factory templates, composing DAGs from YAML for dag-factory, configuring defaults/dynamic\
+      \ tasks/datasets/\u2026"
+  - name: speckit.data-engineering.debugging-dags
+    file: skills/debugging-dags/SKILL.md
+    description: "Comprehensive DAG failure diagnosis and root cause analysis. Use for complex debugging\
+      \ requests requiring deep investigation like \"diagnose and fix the pipeline\", \"full root cause\
+      \ analysis\", \"why is\u2026"
+  - name: speckit.data-engineering.delegating-to-otto
+    file: skills/delegating-to-otto/SKILL.md
+    description: "Drives Astronomer's Otto agent (`astro otto`) as a delegated sub-agent for Airflow,\
+      \ dbt, and data-engineering work. Use when the user explicitly asks to \"use Otto\", \"ask Otto\"\
+      , \"delegate to Otto\", or\u2026"
+  - name: speckit.data-engineering.deploying-airflow
+    file: skills/deploying-airflow/SKILL.md
+    description: Deploy Airflow DAGs and projects. Use when the user wants to deploy code, push DAGs,
+      set up CI/CD, deploy to production, or asks about deployment strategies for Airflow.
+  - name: speckit.data-engineering.managing-astro-deployments
+    file: skills/managing-astro-deployments/SKILL.md
+    description: Manage Astronomer production deployments with Astro CLI. Use when the user wants to authenticate,
+      switch workspaces, create/update/delete deployments, or deploy code to production.
+  - name: speckit.data-engineering.managing-astro-local-env
+    file: skills/managing-astro-local-env/SKILL.md
+    description: "Manage local Airflow environment with Astro CLI (Docker and standalone modes). Use when\
+      \ the user wants to start, stop, or restart Airflow, view logs, query the Airflow API, troubleshoot,\
+      \ or fix envir\u2026"
+  - name: speckit.data-engineering.migrating-ai-sdk-to-common-ai
+    file: skills/migrating-ai-sdk-to-common-ai/SKILL.md
+    description: "Migrates Airflow projects from airflow-ai-sdk to apache-airflow-providers-common-ai\
+      \ 0.1.0+. Use this skill when the user wants to replace airflow-ai-sdk with the official Airflow\
+      \ AI provider, migrate\u2026"
+  - name: speckit.data-engineering.migrating-airflow-2-to-3
+    file: skills/migrating-airflow-2-to-3/SKILL.md
+    description: "Guide for migrating Apache Airflow 2.x projects to Airflow 3.x. Use when the user mentions\
+      \ Airflow 3 migration, upgrade, compatibility issues, breaking changes, or wants to modernize their\
+      \ Airflow co\u2026"
+  - name: speckit.data-engineering.profiling-tables
+    file: skills/profiling-tables/SKILL.md
+    description: "Deep-dive data profiling for a specific table. Use when the user asks to profile a table,\
+      \ wants statistics about a dataset, asks about data quality, or needs to understand a table's structure\
+      \ and con\u2026"
+  - name: speckit.data-engineering.setting-up-astro-project
+    file: skills/setting-up-astro-project/SKILL.md
+    description: "Initialize and configure Astro/Airflow projects. Use when the user wants to create a\
+      \ new project, set up dependencies, configure connections/variables, or understand project structure.\
+      \ For running th\u2026"
+  - name: speckit.data-engineering.testing-dags
+    file: skills/testing-dags/SKILL.md
+    description: "Complex DAG testing workflows with debugging and fixing cycles. Use for multi-step testing\
+      \ requests like \"test this dag and fix it if it fails\", \"test and debug\", \"run the pipeline\
+      \ and troubleshoot i\u2026"
+  - name: speckit.data-engineering.tracing-downstream-lineage
+    file: skills/tracing-downstream-lineage/SKILL.md
+    description: "Trace downstream data lineage and impact analysis. Use when the user asks what depends\
+      \ on this data, what breaks if something changes, downstream dependencies, or needs to assess change\
+      \ risk before m\u2026"
+  - name: speckit.data-engineering.tracing-upstream-lineage
+    file: skills/tracing-upstream-lineage/SKILL.md
+    description: Trace upstream data lineage. Use when the user asks where data comes from, what feeds
+      a table, upstream dependencies, data sources, or needs to understand data origins.
+  - name: speckit.data-engineering.troubleshooting-astro-deployments
+    file: skills/troubleshooting-astro-deployments/SKILL.md
+    description: Troubleshoot Astronomer production deployments with Astro CLI. Use when investigating
+      deployment issues, viewing production logs, analyzing failures, or managing deployment environment
+      variables.
+  - name: speckit.data-engineering.warehouse-init
+    file: skills/warehouse-init/SKILL.md
+    description: "Initialize warehouse schema discovery. Generates .astro/warehouse.md with all table\
+      \ metadata for instant lookups. Run once per project, refresh when schema changes. Use when user\
+      \ says \"/astronomer-da\u2026"
+tags:
+- claude-code

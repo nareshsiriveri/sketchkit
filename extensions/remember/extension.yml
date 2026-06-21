@@ -1,0 +1,26 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/Digital-Process-Tools/claude-remember)
+# Source: https://github.com/Digital-Process-Tools/claude-remember
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: remember
+  name: remember
+  version: 0.8.2
+  description: Continuous memory for Claude Code. Extracts, summarizes, and compresses conversations into
+    tiered daily logs. Claude remembers what you did yesterday.
+  author: Digital Process Tools
+  license: Apache-2.0
+  repository: https://github.com/Digital-Process-Tools/claude-remember
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.remember.remember
+    file: skills/remember/SKILL.md
+    description: Save session state for clean continuation next session.
+tags:
+- memory
+- context
+- persistence
+- session

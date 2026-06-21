@@ -1,0 +1,37 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/cloudinary-devs/cloudinary-plugin)
+# Source: https://cloudinary.com/documentation
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: cloudinary
+  name: cloudinary
+  version: 1.1.1
+  description: Use Cloudinary directly in Claude. Upload, manage, optimize, and transform images and videos
+    at scale using natural language.
+  author: Cloudinary
+  license: Apache-2.0
+  repository: https://cloudinary.com/documentation
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.cloudinary.cloudinary-docs
+    file: skills/cloudinary-docs/SKILL.md
+    description: "Looks up implementation details in the latest Cloudinary docs via llms.txt. Use when\
+      \ building code or answering questions relating to image or video uploads, optimization, or transformations,\
+      \ and for\u2026"
+  - name: speckit.cloudinary.cloudinary-transformations
+    file: skills/cloudinary-transformations/SKILL.md
+    description: "Create and debug Cloudinary transformation URLs from natural language instructions.\
+      \ Use when building Cloudinary delivery URLs, applying image/video transformations, optimizing media,\
+      \ or debugging tr\u2026"
+tags:
+- cloudinary
+- media
+- images
+- video
+- transformations
+- asset-management
+- optimization
+- mcp

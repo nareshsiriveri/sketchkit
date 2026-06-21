@@ -1,0 +1,83 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/NVIDIA/skills)
+# Source: https://github.com/NVIDIA/skills
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: nvidia-skills
+  name: NVIDIA
+  version: 1.0.0
+  description: Skills for NVIDIAs ecosystem spans GPU acceleration, CUDA, AI agents, inference, robotics,
+    Physical AI, Omniverse, and simulation. This plugin helps you understand the pieces, choose a path,
+    validate your setup, and build practical NVIDIA-powered workflows.
+  author: NVIDIA
+  license: Apache-2.0
+  repository: https://github.com/NVIDIA/skills
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.nvidia-skills.aiq-deploy
+    file: skills/aiq-deploy/SKILL.md
+    description: Use when asked to install, deploy, run, validate, troubleshoot, or stop NVIDIA AI-Q Blueprint
+      infrastructure.
+  - name: speckit.nvidia-skills.aiq-research
+    file: skills/aiq-research/SKILL.md
+    description: Use when asked to run deep research or AI-Q research through a reachable NVIDIA AI-Q
+      Blueprint backend.
+  - name: speckit.nvidia-skills.cuopt-user-rules
+    file: skills/cuopt-user-rules/SKILL.md
+    description: "Base rules for end users calling NVIDIA cuOpt (routing/LP/MILP/QP/install/server). Not\
+      \ for cuOpt internals \u2014 use cuopt-developer for those."
+  - name: speckit.nvidia-skills.dynamo-interconnect-check
+    file: skills/dynamo-interconnect-check/SKILL.md
+    description: "Validate that a Dynamo deployment's NIXL/UCX/NCCL interconnect is ready for disaggregated\
+      \ serving over RDMA/NVLink. Use after recipe-runner brings a deployment up (especially disagg/multi-node)\
+      \ to co\u2026"
+  - name: speckit.nvidia-skills.dynamo-router-starter
+    file: skills/dynamo-router-starter/SKILL.md
+    description: "Start or patch Dynamo router modes and run router endpoint smoke checks. Use for round-robin,\
+      \ KV-aware, least-loaded, or device-aware routing setup; use recipe-runner for recipe deployment\
+      \ and troubl\u2026"
+  - name: speckit.nvidia-skills.nemoclaw-user-get-started
+    file: skills/nemoclaw-user-get-started/SKILL.md
+    description: "Installs NemoClaw, launches a sandbox, and runs the first agent prompt. Use when onboarding,\
+      \ installing, or launching a NemoClaw sandbox for the first time. Trigger keywords - nemoclaw quickstart,\
+      \ in\u2026"
+  - name: speckit.nvidia-skills.omniverse-cad-to-simready
+    file: skills/omniverse-cad-to-simready/SKILL.md
+    description: "Coordinate the end-to-end CAD/source-asset to SimReady workflow. Use for broad requests\
+      \ such as CAD to SimReady, source asset to simulation-ready USD, or prop packaging that require\
+      \ conversion, mater\u2026"
+  - name: speckit.nvidia-skills.omniverse-realtime-viewer
+    file: skills/omniverse-realtime-viewer/SKILL.md
+    description: Use as the top-level router for Omniverse Realtime Viewer USD app requests and focused
+      viewer reference documents.
+  - name: speckit.nvidia-skills.omniverse-usd-performance-tuning
+    file: skills/omniverse-usd-performance-tuning/SKILL.md
+    description: Top-level workflow skill for USD performance diagnosis and optimization. Use for slow
+      loading, high memory, low FPS, or 'optimize my scene' requests; delegates auth/runtime setup to
+      Phase 0 owners.
+  - name: speckit.nvidia-skills.physical-ai-infrastructure-setup-and-resilient-scaling
+    file: skills/physical-ai-infrastructure-setup-and-resilient-scaling/SKILL.md
+    description: "Use when the user wants to set up, scale, validate, or harden NVIDIA physical AI infrastructure\
+      \ for synthetic data generation workflows across local MicroK8s or Azure AKS, including Kubernetes\
+      \ cluste\u2026"
+  - name: speckit.nvidia-skills.physical-ai-neural-reconstruction
+    file: skills/physical-ai-neural-reconstruction/SKILL.md
+    description: 'Router for NVIDIA NuRec/NRE: USDZ rendering, NCore conversion, 3DGS, gRPC sensor sim,
+      PhysicalAI HF datasets. Do NOT use for SimReady or infra setup.'
+tags:
+- nvidia
+- gpu
+- cuda
+- ai-agents
+- inference
+- llm-serving
+- robotics
+- simulation
+- omniverse
+- openusd
+- digital-twin
+- physical-ai
+- cad

@@ -1,0 +1,32 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/awslabs/agent-plugins)
+# Source: https://github.com/awslabs/agent-plugins
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: aws-amplify
+  name: aws-amplify
+  version: 1.0.0
+  description: Build full-stack apps with AWS Amplify Gen 2 using guided workflows for authentication,
+    data models, storage, GraphQL APIs, and Lambda functions.
+  author: Amazon Web Services
+  license: Apache-2.0
+  repository: https://github.com/awslabs/agent-plugins
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.aws-amplify.amplify-workflow
+    file: skills/amplify-workflow/SKILL.md
+    description: "Build and deploy full-stack web and mobile apps with AWS Amplify Gen2 (TypeScript code-first).\
+      \ Covers auth (Cognito), data (AppSync/DynamoDB including schema modeling, enum types, relationships,\
+      \ auth\u2026"
+tags:
+- aws
+- amplify
+- fullstack
+- authentication
+- data
+- storage
+- graphql
+- functions

@@ -1,0 +1,43 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/rilldata/agent-skills)
+# Source: https://docs.rilldata.com/developers/build/ai-configuration
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: rill
+  name: rill
+  version: 1.0.0
+  description: Skills for developing and querying projects in the Rill business intelligence platform
+  author: Rill Data
+  license: Apache-2.0
+  repository: https://docs.rilldata.com/developers/build/ai-configuration
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.rill.rill-canvas
+    file: skills/rill-canvas/SKILL.md
+    description: Detailed instructions and examples for developing canvas dashboard resources in Rill
+  - name: speckit.rill.rill-connector
+    file: skills/rill-connector/SKILL.md
+    description: Detailed instructions and examples for developing connector resources in Rill
+  - name: speckit.rill.rill-development
+    file: skills/rill-development/SKILL.md
+    description: Overview of how to develop a Rill project
+  - name: speckit.rill.rill-explore
+    file: skills/rill-explore/SKILL.md
+    description: Detailed instructions and examples for developing explore dashboard resources in Rill
+  - name: speckit.rill.rill-metrics-view
+    file: skills/rill-metrics-view/SKILL.md
+    description: Detailed instructions and examples for developing metrics view resources in Rill
+  - name: speckit.rill.rill-model
+    file: skills/rill-model/SKILL.md
+    description: Detailed instructions and examples for developing model resources in Rill
+  - name: speckit.rill.rill-rillyaml
+    file: skills/rill-rillyaml/SKILL.md
+    description: Detailed instructions and examples for developing the rill.yaml file
+  - name: speckit.rill.rill-theme
+    file: skills/rill-theme/SKILL.md
+    description: Detailed instructions and examples for developing theme resources in Rill
+tags:
+- development

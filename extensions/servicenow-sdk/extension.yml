@@ -1,0 +1,28 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/ServiceNow/sdk)
+# Source: https://servicenow.github.io/sdk/
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: servicenow-sdk
+  name: servicenow-sdk
+  version: 1.0.2
+  description: Create, edit, and deploy ServiceNow applications with the Fluent SDK effortlessly through
+    Claude AI
+  author: ServiceNow
+  license: Apache-2.0
+  repository: https://servicenow.github.io/sdk/
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.servicenow-sdk.now-sdk-explain
+    file: skills/now-sdk-explain/SKILL.md
+    description: "Use whenever the user mentions fluent, ServiceNow, or the now-sdk, OR when the user\
+      \ prompts for edits within a fluent application (identified by a now.config.json at the project\
+      \ root). Fetches SDK do\u2026"
+tags:
+- servicenow
+- fluent
+- now-sdk
+- platform

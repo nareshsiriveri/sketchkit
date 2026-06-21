@@ -1,0 +1,26 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/sumup/sumup-skills)
+# Source: https://www.sumup.com/
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: sumup
+  name: sumup
+  version: 0.1.0
+  description: SumUp payment integrations across terminal and online checkout flows. Build Android and
+    iOS POS apps with SumUp card readers, online checkout with server SDKs and the checkout widget, and
+    control card readers remotely via Cloud API.
+  author: Unknown
+  license: Apache-2.0
+  repository: https://www.sumup.com/
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.sumup.sumup
+    file: skills/sumup/SKILL.md
+    description: "Guide for building SumUp payment integrations that cover both terminal (card-present)\
+      \ and online (card-not-present) checkout flows using SumUp SDKs and APIs. Use when implementing\
+      \ or debugging SumUp\u2026"
+tags:
+- development

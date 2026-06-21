@@ -81,7 +81,13 @@ def short(text: str, limit: int = 200) -> str:
     return text if len(text) <= limit else text[: limit - 1].rstrip() + "…"
 
 
-def convert_plugin(plugin_dir: Path, attribution_url: str) -> tuple[str, int] | None:
+def convert_plugin(
+    plugin_dir: Path,
+    attribution_url: str,
+    source_label: str,
+    default_author: str,
+    default_tag: str,
+) -> tuple[str, int] | None:
     meta = json.loads((plugin_dir / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8"))
     raw_id = meta.get("name") or plugin_dir.name
     ext_id = sanitize(raw_id)
@@ -150,17 +156,17 @@ def convert_plugin(plugin_dir: Path, attribution_url: str) -> tuple[str, int] | 
             "name": meta.get("displayName") or meta.get("name") or ext_id,
             "version": str(meta.get("version", "0.1.0")),
             "description": short(plugin_desc, 300),
-            "author": author_name or "Anthropic FSI",
+            "author": author_name or default_author,
             "license": "Apache-2.0",
             "repository": attribution_url,
         },
         "requires": {"speckit_version": ">=0.2.0"},
         "provides": {"commands": commands},
-        "tags": meta.get("keywords") or ["financial-services"],
+        "tags": meta.get("keywords") or [default_tag],
     }
 
     text = (
-        "# Converted from a Claude Code plugin in anthropics/financial-services\n"
+        f"# Converted from a Claude Code plugin in {source_label}\n"
         f"# Source: {attribution_url}\n"
         "# License: Apache-2.0\n\n"
         + yaml.safe_dump(manifest, sort_keys=False, default_flow_style=False, width=100)
@@ -178,6 +184,21 @@ def main() -> int:
         default="https://github.com/anthropics/financial-services",
         help="Upstream repository URL recorded in each manifest.",
     )
+    parser.add_argument(
+        "--source-label",
+        default="anthropics/financial-services",
+        help="Human-readable source repo label for the manifest header comment.",
+    )
+    parser.add_argument(
+        "--default-author",
+        default="Anthropic FSI",
+        help="Author recorded when a plugin.json omits one.",
+    )
+    parser.add_argument(
+        "--default-tag",
+        default="financial-services",
+        help="Tag applied when a plugin.json declares no keywords.",
+    )
     args = parser.parse_args()
 
     src = Path(args.src).resolve()
@@ -189,7 +210,13 @@ def main() -> int:
     converted, total_cmds = 0, 0
     for pj in plugin_jsons:
         plugin_dir = pj.parent.parent
-        result = convert_plugin(plugin_dir, args.attribution_url)
+        result = convert_plugin(
+            plugin_dir,
+            args.attribution_url,
+            args.source_label,
+            args.default_author,
+            args.default_tag,
+        )
         if result:
             converted += 1
             total_cmds += result[1]

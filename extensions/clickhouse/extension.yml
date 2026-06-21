@@ -1,0 +1,32 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/ClickHouse/clickhouse-claude-code-plugin)
+# Source: https://github.com/ClickHouse/clickhouse-claude-code-plugin
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: clickhouse
+  name: clickhouse
+  version: 1.0.0
+  description: 'ClickHouse Claude Code plugin: skills (ClickHouse best practices), rules and MCP.'
+  author: ClickHouse
+  license: Apache-2.0
+  repository: https://github.com/ClickHouse/clickhouse-claude-code-plugin
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.clickhouse.clickhouse-best-practices
+    file: skills/clickhouse-best-practices/SKILL.md
+    description: "MUST USE when reviewing ClickHouse schemas, queries, or configurations. Contains 31\
+      \ rules that MUST be checked before providing recommendations. Always read relevant rule files and\
+      \ cite specific rule\u2026"
+  - name: speckit.clickhouse.setup
+    file: skills/setup/SKILL.md
+    description: Guides users through setting up the ClickHouse MCP server connection bundled with this
+      plugin. Use when the user first installs the plugin or has trouble connecting to ClickHouse.
+tags:
+- database
+- clickhouse
+- skills
+- mcp
+- analytics

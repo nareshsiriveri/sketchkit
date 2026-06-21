@@ -1,0 +1,59 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/mongodb/agent-skills)
+# Source: https://www.mongodb.com/docs/mcp-server/overview/
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: mongodb
+  name: mongodb
+  version: 1.1.0
+  description: Official Claude plugin for MongoDB (MCP Server + Skills). Connect to databases, explore
+    data, manage collections, optimize queries, generate reliable code, implement best practices, develop
+    advanced features, and more.
+  author: MongoDB
+  license: Apache-2.0
+  repository: https://www.mongodb.com/docs/mcp-server/overview/
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.mongodb.mongodb-atlas-stream-processing
+    file: skills/mongodb-atlas-stream-processing/SKILL.md
+    description: "Manages MongoDB Atlas Stream Processing (ASP) workflows. Handles workspace provisioning,\
+      \ data source/sink connections, processor lifecycle operations, debugging diagnostics, and tier\
+      \ sizing. Supports\u2026"
+  - name: speckit.mongodb.mongodb-connection
+    file: skills/mongodb-connection/SKILL.md
+    description: "Optimize MongoDB client connection configuration (pools, timeouts, patterns) for any\
+      \ supported driver language. Use this skill when working/updating/reviewing on functions that instantiate\
+      \ or configu\u2026"
+  - name: speckit.mongodb.mongodb-mcp-setup
+    file: skills/mongodb-mcp-setup/SKILL.md
+    description: "Guide users through configuring key MongoDB MCP server options. Use this skill when\
+      \ a user has the MongoDB MCP server installed but hasn't configured the required environment variables,\
+      \ or when they\u2026"
+  - name: speckit.mongodb.mongodb-natural-language-querying
+    file: skills/mongodb-natural-language-querying/SKILL.md
+    description: "Generate read-only MongoDB queries (find) or aggregation pipelines using natural language,\
+      \ with collection schema context and sample documents. Use this skill whenever the user asks to\
+      \ write, create,\u2026"
+  - name: speckit.mongodb.mongodb-query-optimizer
+    file: skills/mongodb-query-optimizer/SKILL.md
+    description: "Help with MongoDB query optimization and indexing. Use only when the user asks for optimization\
+      \ or performance: \"How do I optimize this query?\", \"How do I index this?\", \"Why is this query\
+      \ slow?\", \"Ca\u2026"
+  - name: speckit.mongodb.mongodb-schema-design
+    file: skills/mongodb-schema-design/SKILL.md
+    description: "MongoDB schema design patterns and anti-patterns. Use when designing data models, reviewing\
+      \ schemas, migrating from SQL, or troubleshooting performance issues caused by schema problems.\
+      \ Triggers on \"\u2026"
+  - name: speckit.mongodb.mongodb-search-and-ai
+    file: skills/mongodb-search-and-ai/SKILL.md
+    description: "Guides MongoDB users through implementing and optimizing Atlas Search (full-text), Vector\
+      \ Search (semantic), and Hybrid Search solutions. Use this skill when users need to build search\
+      \ functionality\u2026"
+tags:
+- mongodb
+- database
+- mcp
+- vector-search

@@ -1,0 +1,83 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/obra/superpowers)
+# Source: https://github.com/obra/superpowers.git
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: superpowers
+  name: superpowers
+  version: 6.0.3
+  description: 'Core skills library for Claude Code: TDD, debugging, collaboration patterns, and proven
+    techniques'
+  author: Jesse Vincent
+  license: Apache-2.0
+  repository: https://github.com/obra/superpowers.git
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.superpowers.brainstorming
+    file: skills/brainstorming/SKILL.md
+    description: You MUST use this before any creative work - creating features, building components,
+      adding functionality, or modifying behavior. Explores user intent, requirements and design before
+      implementation.
+  - name: speckit.superpowers.dispatching-parallel-agents
+    file: skills/dispatching-parallel-agents/SKILL.md
+    description: Use when facing 2+ independent tasks that can be worked on without shared state or sequential
+      dependencies
+  - name: speckit.superpowers.executing-plans
+    file: skills/executing-plans/SKILL.md
+    description: Use when you have a written implementation plan to execute in a separate session with
+      review checkpoints
+  - name: speckit.superpowers.finishing-a-development-branch
+    file: skills/finishing-a-development-branch/SKILL.md
+    description: Use when implementation is complete, all tests pass, and you need to decide how to integrate
+      the work - guides completion of development work by presenting structured options for merge, PR,
+      or cleanup
+  - name: speckit.superpowers.receiving-code-review
+    file: skills/receiving-code-review/SKILL.md
+    description: "Use when receiving code review feedback, before implementing suggestions, especially\
+      \ if feedback seems unclear or technically questionable - requires technical rigor and verification,\
+      \ not performativ\u2026"
+  - name: speckit.superpowers.requesting-code-review
+    file: skills/requesting-code-review/SKILL.md
+    description: Use when completing tasks, implementing major features, or before merging to verify work
+      meets requirements
+  - name: speckit.superpowers.subagent-driven-development
+    file: skills/subagent-driven-development/SKILL.md
+    description: Use when executing implementation plans with independent tasks in the current session
+  - name: speckit.superpowers.systematic-debugging
+    file: skills/systematic-debugging/SKILL.md
+    description: Use when encountering any bug, test failure, or unexpected behavior, before proposing
+      fixes
+  - name: speckit.superpowers.test-driven-development
+    file: skills/test-driven-development/SKILL.md
+    description: Use when implementing any feature or bugfix, before writing implementation code
+  - name: speckit.superpowers.using-git-worktrees
+    file: skills/using-git-worktrees/SKILL.md
+    description: Use when starting feature work that needs isolation from current workspace or before
+      executing implementation plans - ensures an isolated workspace exists via native tools or git worktree
+      fallback
+  - name: speckit.superpowers.using-superpowers
+    file: skills/using-superpowers/SKILL.md
+    description: Use when starting any conversation - establishes how to find and use skills, requiring
+      skill invocation before ANY response including clarifying questions
+  - name: speckit.superpowers.verification-before-completion
+    file: skills/verification-before-completion/SKILL.md
+    description: "Use when about to claim work is complete, fixed, or passing, before committing or creating\
+      \ PRs - requires running verification commands and confirming output before making any success claims;\
+      \ evidenc\u2026"
+  - name: speckit.superpowers.writing-plans
+    file: skills/writing-plans/SKILL.md
+    description: Use when you have a spec or requirements for a multi-step task, before touching code
+  - name: speckit.superpowers.writing-skills
+    file: skills/writing-skills/SKILL.md
+    description: Use when creating new skills, editing existing skills, or verifying skills work before
+      deployment
+tags:
+- skills
+- tdd
+- debugging
+- collaboration
+- best-practices
+- workflows

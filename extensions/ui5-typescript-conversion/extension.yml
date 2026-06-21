@@ -1,0 +1,22 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/UI5/plugins-coding-agents)
+# Source: https://github.com/UI5/plugins-coding-agents
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: ui5-typescript-conversion
+  name: ui5-typescript-conversion
+  version: 0.1.0
+  description: SAPUI5 / OpenUI5 plugin for coding agents. Convert JavaScript based UI5 projects to TypeScript.
+  author: SAP SE
+  license: Apache-2.0
+  repository: https://github.com/UI5/plugins-coding-agents
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.ui5-typescript-conversion.ui5-typescript-conversion
+    file: skills/ui5-typescript-conversion/SKILL.md
+    description: A skill for converting UI5 (SAPUI5/OpenUI5) projects to TypeScript.
+tags:
+- development

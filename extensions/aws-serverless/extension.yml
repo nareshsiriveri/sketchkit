@@ -1,0 +1,59 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/awslabs/agent-plugins)
+# Source: https://github.com/awslabs/agent-plugins
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: aws-serverless
+  name: aws-serverless
+  version: 1.1.1
+  description: Design, build, deploy, test, and debug serverless applications with AWS Serverless services.
+  author: Amazon Web Services
+  license: Apache-2.0
+  repository: https://github.com/awslabs/agent-plugins
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.aws-serverless.api-gateway
+    file: skills/api-gateway/SKILL.md
+    description: "Build, manage, and operate APIs with Amazon API Gateway (REST, HTTP, and WebSocket).\
+      \ Triggers on phrases like: API Gateway, REST API, HTTP API, WebSocket API, custom domain, Lambda\
+      \ authorizer, usage\u2026"
+  - name: speckit.aws-serverless.aws-lambda
+    file: skills/aws-lambda/SKILL.md
+    description: "Design, build, deploy, test, and debug serverless applications with AWS Lambda. Triggers\
+      \ on phrases like: Lambda function, event source, serverless application, API Gateway, EventBridge,\
+      \ Step Functio\u2026"
+  - name: speckit.aws-serverless.aws-lambda-durable-functions
+    file: skills/aws-lambda-durable-functions/SKILL.md
+    description: "Build resilient, long-running, multi-step applications with AWS Lambda durable functions\
+      \ with automatic state persistence, retry logic, and orchestration for long-running executions.\
+      \ Covers the criti\u2026"
+  - name: speckit.aws-serverless.aws-lambda-managed-instances
+    file: skills/aws-lambda-managed-instances/SKILL.md
+    description: "Evaluate, configure, and migrate workloads to AWS Lambda Managed Instances (LMI). Triggers\
+      \ on: Lambda Managed Instances, LMI, capacity provider, multi-concurrency Lambda, dedicated instance\
+      \ Lambda, E\u2026"
+  - name: speckit.aws-serverless.aws-serverless-deployment
+    file: skills/aws-serverless-deployment/SKILL.md
+    description: "AWS SAM and AWS CDK deployment for serverless applications. Triggers on phrases like:\
+      \ use SAM, SAM template, SAM init, SAM deploy, CDK serverless, CDK Lambda construct, NodejsFunction,\
+      \ PythonFunction\u2026"
+  - name: speckit.aws-serverless.aws-step-functions
+    file: skills/aws-step-functions/SKILL.md
+    description: "Build workflows with AWS Step Functions state machines using the JSONata query language.\
+      \ Covers Amazon States Language (ASL) structure, state types, variables, data transformation, error\
+      \ handling, AW\u2026"
+tags:
+- aws
+- lambda
+- durable functions
+- managed-instances
+- lmi
+- serverless
+- development
+- sam
+- api-gateway
+- eventbridge
+- step-functions

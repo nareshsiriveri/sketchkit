@@ -1,0 +1,74 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: plugin-dev
+  name: plugin-dev
+  version: 0.1.0
+  description: Plugin development toolkit with skills for creating agents, commands, hooks, MCP integrations,
+    and comprehensive plugin structure guidance
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.plugin-dev.create-plugin
+    file: commands/create-plugin.md
+    description: Guided end-to-end plugin creation workflow with component design, implementation, and
+      validation
+  - name: speckit.plugin-dev.agent-development
+    file: skills/agent-development/SKILL.md
+    description: "This skill should be used when the user asks to \"create an agent\", \"add an agent\"\
+      , \"write a subagent\", \"agent frontmatter\", \"when to use description\", \"agent examples\",\
+      \ \"agent tools\", \"agent colors\",\u2026"
+  - name: speckit.plugin-dev.command-development
+    file: skills/command-development/SKILL.md
+    description: "This skill should be used when the user asks to \"create a slash command\", \"add a\
+      \ command\", \"write a custom command\", \"define command arguments\", \"use command frontmatter\"\
+      , \"organize commands\", \"creat\u2026"
+  - name: speckit.plugin-dev.hook-development
+    file: skills/hook-development/SKILL.md
+    description: "This skill should be used when the user asks to \"create a hook\", \"add a PreToolUse/PostToolUse/Stop\
+      \ hook\", \"validate tool use\", \"implement prompt-based hooks\", \"use ${CLAUDE_PLUGIN_ROOT}\"\
+      , \"set up ev\u2026"
+  - name: speckit.plugin-dev.mcp-integration
+    file: skills/mcp-integration/SKILL.md
+    description: "This skill should be used when the user asks to \"add MCP server\", \"integrate MCP\"\
+      , \"configure MCP in plugin\", \"use .mcp.json\", \"set up Model Context Protocol\", \"connect external\
+      \ service\", mentions \"$\u2026"
+  - name: speckit.plugin-dev.plugin-settings
+    file: skills/plugin-settings/SKILL.md
+    description: "This skill should be used when the user asks about \"plugin settings\", \"store plugin\
+      \ configuration\", \"user-configurable plugin\", \".local.md files\", \"plugin state files\", \"\
+      read YAML frontmatter\", \"per-\u2026"
+  - name: speckit.plugin-dev.plugin-structure
+    file: skills/plugin-structure/SKILL.md
+    description: "This skill should be used when the user asks to \"create a plugin\", \"scaffold a plugin\"\
+      , \"understand plugin structure\", \"organize plugin components\", \"set up plugin.json\", \"use\
+      \ ${CLAUDE_PLUGIN_ROOT}\",\u2026"
+  - name: speckit.plugin-dev.skill-development
+    file: skills/skill-development/SKILL.md
+    description: "This skill should be used when the user wants to \"create a skill\", \"add a skill to\
+      \ plugin\", \"write a new skill\", \"improve skill description\", \"organize skill content\", or\
+      \ needs guidance on skill stru\u2026"
+  - name: speckit.plugin-dev.agent-agent-creator
+    file: agents/agent-creator.md
+    description: "Use this agent when the user asks to \"create an agent\", \"generate an agent\", \"\
+      build a new agent\", \"make me an agent that...\", or describes agent functionality they need. Trigger\
+      \ when user wants to cr\u2026"
+  - name: speckit.plugin-dev.agent-plugin-validator
+    file: agents/plugin-validator.md
+    description: "Use this agent when the user asks to \"validate my plugin\", \"check plugin structure\"\
+      , \"verify plugin is correct\", \"validate plugin.json\", \"check plugin files\", or mentions plugin\
+      \ validation. Also trig\u2026"
+  - name: speckit.plugin-dev.agent-skill-reviewer
+    file: agents/skill-reviewer.md
+    description: "Use this agent when the user has created or modified a skill and needs quality review,\
+      \ asks to \"review my skill\", \"check skill quality\", \"improve skill description\", or wants\
+      \ to ensure skill follows\u2026"
+tags:
+- claude-code

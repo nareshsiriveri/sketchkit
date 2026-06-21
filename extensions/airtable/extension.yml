@@ -1,0 +1,89 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/Airtable/skills)
+# Source: https://www.airtable.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: airtable
+  name: airtable
+  version: 0.1.0
+  description: "Airtable is the database and operations layer for your agents \u2014 whether running product,\
+    \ marketing, sales, ops, HR, or a custom business app. It combines structured data with multiplayer\
+    \ visual surfaces (grid, kanban, calendar, gallery, timeline) humans and agents share \u2014 plus\
+    \ sync integrations to\u2026"
+  author: Airtable
+  license: Apache-2.0
+  repository: https://www.airtable.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.airtable.agent-activity-log
+    file: skills/agent-activity-log/SKILL.md
+    description: "Scaffold and operate an opt-in `Agent activity log` table that records what the agent\
+      \ did, decided, and got blocked on across a long-running or multi-session Airtable workflow. Use\
+      \ whenever a workflo\u2026"
+  - name: speckit.airtable.airtable-cli
+    file: skills/airtable-cli/SKILL.md
+    description: "Lists bases, reads and writes records, manages tables and fields, filters and searches\
+      \ data in Airtable via the `airtable-mcp` CLI. Use when the task involves Airtable data or the user\
+      \ mentions airta\u2026"
+  - name: speckit.airtable.airtable-filters
+    file: skills/airtable-filters/SKILL.md
+    description: "Builds Airtable filters parameters for the MCP tools that list or display records \u2014\
+      \ field-type-aware comparison operators, choice and collaborator IDs, date ranges, and nested AND/OR\
+      \ logic. Use when\u2026"
+  - name: speckit.airtable.airtable-overview
+    file: skills/airtable-overview/SKILL.md
+    description: "Explains what Airtable is and how data is structured \u2014 bases, tables, fields, records,\
+      \ views, automations, and interfaces. Use when you need context about the Airtable data model."
+  - name: speckit.airtable.marketing-ops
+    file: skills/marketing-ops/SKILL.md
+    description: "Set up and run Airtable-based marketing operations workflows \u2014 request intake,\
+      \ campaign orchestration, creative production, content calendars, brand and compliance review, events,\
+      \ localization, budge\u2026"
+  - name: speckit.airtable.product-ops
+    file: skills/product-ops/SKILL.md
+    description: "Set up and run Airtable-based product operations workflows \u2014 roadmap management,\
+      \ customer feedback synthesis, launch coordination, OKR cascading, sprint planning, release tracking.\
+      \ Use when the user\u2026"
+  - name: speckit.airtable.sales-ops
+    file: skills/sales-ops/SKILL.md
+    description: "Set up and run Airtable-based sales operations and CRM workflows \u2014 pipeline management,\
+      \ account and renewal management, deal desk, RFP / tender pipelines, partner CRMs, sales forecasting,\
+      \ vertical CR\u2026"
+  - name: speckit.airtable.show-airtable-link
+    file: skills/show-airtable-link/SKILL.md
+    description: "Provides a clickable Airtable link whenever the agent has touched user-visible Airtable\
+      \ content. Use after every MCP call that creates, updates, lists, searches, or returns records,\
+      \ schema, or interf\u2026"
+tags:
+- airtable
+- database
+- relational-database
+- application-database
+- data-store
+- persistence
+- crud
+- product
+- product-ops
+- crm
+- sales
+- marketing
+- operations
+- hr
+- hiring
+- project-management
+- roadmap
+- customer-success
+- nocode
+- low-code
+- spreadsheet
+- collaboration
+- real-time
+- governance
+- workflow
+- automation
+- internal-tools
+- mcp
+- content

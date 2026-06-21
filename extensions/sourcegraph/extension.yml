@@ -1,0 +1,24 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/sourcegraph-community/sourcegraph-claudecode-plugin)
+# Source: https://sourcegraph.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: sourcegraph
+  name: sourcegraph
+  version: 0.1.0
+  description: Use Sourcegraph MCP from Claude Code for code search, navigation, history, and Deep Search.
+  author: Sourcegraph Community
+  license: Apache-2.0
+  repository: https://sourcegraph.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.sourcegraph.searching-sourcegraph
+    file: skills/searching-sourcegraph/SKILL.md
+    description: "Use when the user needs to search or navigate code with Sourcegraph MCP tools. Provides\
+      \ disciplined search workflows for finding implementations, understanding systems, debugging issues,\
+      \ fixing bugs,\u2026"
+tags:
+- development

@@ -1,0 +1,105 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/circlefin/skills)
+# Source: https://www.circle.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: circle-skills
+  name: circle-skills
+  version: 1.0.0
+  description: "Ship stablecoin apps faster. Best-practice skills for USDC payments, cross-chain transfers,\
+    \ wallets, and smart contracts \u2014 plus Circle's MCP server for real-time SDK and documentation\
+    \ guidance."
+  author: Circle Technology Services
+  license: Apache-2.0
+  repository: https://www.circle.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.circle-skills.agent-wallet-policy
+    file: skills/agent-wallet-policy/SKILL.md
+    description: "View spending policy on a Circle agent wallet \u2014 per-transaction, daily, weekly,\
+      \ and monthly USDC caps via the `circle` CLI. Use when the user wants to inspect current limits.\
+      \ Setting or resetting lim\u2026"
+  - name: speckit.circle-skills.bridge-stablecoin
+    file: skills/bridge-stablecoin/SKILL.md
+    description: "Build USDC bridging with Circle App Kit or standalone Bridge Kit SDK and Crosschain\
+      \ Transfer Protocol (CCTP). App Kit (`@circle-fin/app-kit`) is an all-inclusive SDK covering bridge,\
+      \ swap, and send -\u2026"
+  - name: speckit.circle-skills.fund-agent-wallet
+    file: skills/fund-agent-wallet/SKILL.md
+    description: "Fund a Circle agent wallet with USDC via the `circle` CLI. payments are gas-abstracted.\
+      \ users can pay with USDC only, no ETH required. Covers two top-level paths \u2014 fiat on-ramp\
+      \ (buy USDC with USD/cre\u2026"
+  - name: speckit.circle-skills.pay-via-agent-wallet
+    file: skills/pay-via-agent-wallet/SKILL.md
+    description: "Use this skill when the user wants to call a paid API, look something up online, search\
+      \ for data, get prices or odds or stats, or use any paid service with automatic USDC payment. Also\
+      \ use this as a\u2026"
+  - name: speckit.circle-skills.swap-tokens
+    file: skills/swap-tokens/SKILL.md
+    description: "Build token swap functionality with Circle App Kit or standalone Swap Kit SDKs. App\
+      \ Kit (@circle-fin/app-kit) is an all-inclusive SDK covering swap, bridge, and send. Swap Kit (@circle-fin/swap-kit)\u2026"
+  - name: speckit.circle-skills.unify-balance
+    file: skills/unify-balance/SKILL.md
+    description: "Build unified cross-chain USDC balance management with Circle Unified Balance Kit SDK\
+      \ via App Kit (`@circle-fin/app-kit`) or standalone (`@circle-fin/unified-balance-kit`). Abstracts\
+      \ Gateway deposit,\u2026"
+  - name: speckit.circle-skills.use-agent-wallet
+    file: skills/use-agent-wallet/SKILL.md
+    description: "Set up and manage a Circle agent wallet through the `circle` CLI. The agent wallet is\
+      \ Circle's programmatic USDC wallet for AI agents \u2014 used to authenticate, hold USDC, and pay\
+      \ for x402 services. Thi\u2026"
+  - name: speckit.circle-skills.use-arc
+    file: skills/use-arc/SKILL.md
+    description: "Provide instructions on how to build with Arc, Circle's blockchain where USDC is the\
+      \ native gas token. Arc offers key advantages: USDC as gas (no other native token needed), stable\
+      \ and predictable tr\u2026"
+  - name: speckit.circle-skills.use-circle-cli
+    file: skills/use-circle-cli/SKILL.md
+    description: "Use this skill when the user wants to do anything onchain with stablecoins, USDC, or\
+      \ Circle through a CLI \u2014 paying for APIs, sending USDC, bridging, checking balances, or managing\
+      \ spending. **Also us\u2026"
+  - name: speckit.circle-skills.use-circle-wallets
+    file: skills/use-circle-wallets/SKILL.md
+    description: "Choose and implement the right Circle wallet type for your application. Compares developer-controlled,\
+      \ user-controlled, and modular (passkey) wallets across custody model, key management, account typ\u2026"
+  - name: speckit.circle-skills.use-developer-controlled-wallets
+    file: skills/use-developer-controlled-wallets/SKILL.md
+    description: "Create and manage Circle developer-controlled wallets where the application retains\
+      \ full custody of wallet keys on behalf of end-users. Covers wallet sets, entity secret registration,\
+      \ token transfers\u2026"
+  - name: speckit.circle-skills.use-gateway
+    file: skills/use-gateway/SKILL.md
+    description: "Integrate Circle Gateway to hold a unified USDC balance across multiple blockchains\
+      \ and transfer USDC instantly (<500ms) via permissionless deposit, burn, and mint workflows. Available\
+      \ on 11 EVM chai\u2026"
+  - name: speckit.circle-skills.use-modular-wallets
+    file: skills/use-modular-wallets/SKILL.md
+    description: "Build crypto wallets using Circle Modular Wallets SDK with passkey authentication, gasless\
+      \ transactions, and extensible module architecture. Use when: creating crypto wallets with passkey-based\
+      \ (WebA\u2026"
+  - name: speckit.circle-skills.use-smart-contract-platform
+    file: skills/use-smart-contract-platform/SKILL.md
+    description: "Deploy, import, interact with, and monitor smart contracts using Circle Smart Contract\
+      \ Platform APIs. Supports bytecode deployment, template contracts (ERC-20/721/1155/Airdrop), ABI-based\
+      \ read/write\u2026"
+  - name: speckit.circle-skills.use-usdc
+    file: skills/use-usdc/SKILL.md
+    description: "USDC is Circle's stablecoin deployed across multiple blockchain ecosystems including\
+      \ EVM chains (Ethereum, Base, Arbitrum, Polygon, Arc) and Solana. Use this skill to check balances,\
+      \ send transfers,\u2026"
+  - name: speckit.circle-skills.use-user-controlled-wallets
+    file: skills/use-user-controlled-wallets/SKILL.md
+    description: "Build non-custodial wallets where end users retain control of their private keys via\
+      \ Circle's user-controlled wallets SDK. Supports Google, Apple, Facebook social login, email OTP,\
+      \ and PIN authentica\u2026"
+tags:
+- usdc
+- stablecoin
+- circle
+- cctp
+- wallets
+- web3
+- payments

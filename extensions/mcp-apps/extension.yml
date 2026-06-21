@@ -1,0 +1,43 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/modelcontextprotocol/ext-apps)
+# Source: https://modelcontextprotocol.io
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: mcp-apps
+  name: mcp-apps
+  version: 0.1.0
+  description: Claude Code skill for building MCP Apps with interactive UIs
+  author: MCP Apps
+  license: Apache-2.0
+  repository: https://modelcontextprotocol.io
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.mcp-apps.add-app-to-server
+    file: skills/add-app-to-server/SKILL.md
+    description: "This skill should be used when the user asks to \"add an app to my MCP server\", \"\
+      add UI to my MCP server\", \"add a view to my MCP tool\", \"enrich MCP tools with UI\", \"add interactive\
+      \ UI to existing serv\u2026"
+  - name: speckit.mcp-apps.convert-web-app
+    file: skills/convert-web-app/SKILL.md
+    description: "This skill should be used when the user asks to \"add MCP App support to my web app\"\
+      , \"turn my web app into a hybrid MCP App\", \"make my web page work as an MCP App too\", \"wrap\
+      \ my existing UI as an MCP\u2026"
+  - name: speckit.mcp-apps.create-mcp-app
+    file: skills/create-mcp-app/SKILL.md
+    description: "This skill should be used when the user asks to \"create an MCP App\", \"add a UI to\
+      \ an MCP tool\", \"build an interactive MCP View\", \"scaffold an MCP App\", or needs guidance on\
+      \ MCP Apps SDK patterns, UI-\u2026"
+  - name: speckit.mcp-apps.migrate-oai-app
+    file: skills/migrate-oai-app/SKILL.md
+    description: "This skill should be used when the user asks to \"migrate from OpenAI Apps SDK\", \"\
+      convert OpenAI App to MCP\", \"port from window.openai\", \"migrate from skybridge\", \"convert\
+      \ openai/outputTemplate\", or n\u2026"
+tags:
+- mcp
+- mcp-apps
+- model-context-protocol
+- ui
+- interactive

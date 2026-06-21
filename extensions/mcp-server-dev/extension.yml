@@ -1,0 +1,36 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: mcp-server-dev
+  name: mcp-server-dev
+  version: 0.1.0
+  description: "Skills for designing and building MCP servers that work seamlessly with Claude \u2014\
+    \ guides you through deployment models (remote HTTP, MCPB, local), tool design patterns, auth, and\
+    \ interactive MCP apps."
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.mcp-server-dev.build-mcp-app
+    file: skills/build-mcp-app/SKILL.md
+    description: "This skill should be used when the user wants to build an \"MCP app\", add \"interactive\
+      \ UI\" or \"widgets\" to an MCP server, \"render components in chat\", build \"MCP UI resources\"\
+      , make a tool that shows\u2026"
+  - name: speckit.mcp-server-dev.build-mcp-server
+    file: skills/build-mcp-server/SKILL.md
+    description: "This skill should be used when the user asks to \"build an MCP server\", \"create an\
+      \ MCP\", \"make an MCP integration\", \"wrap an API for Claude\", \"expose tools to Claude\", \"\
+      make an MCP app\", or discusses\u2026"
+  - name: speckit.mcp-server-dev.build-mcpb
+    file: skills/build-mcpb/SKILL.md
+    description: "This skill should be used when the user wants to \"package an MCP server\", \"bundle\
+      \ an MCP\", \"make an MCPB\", \"ship a local MCP server\", \"distribute a local MCP\", discusses\
+      \ \".mcpb files\", mentions bundl\u2026"
+tags:
+- claude-code

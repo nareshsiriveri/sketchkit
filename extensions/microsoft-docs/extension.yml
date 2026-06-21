@@ -1,0 +1,45 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/MicrosoftDocs/mcp)
+# Source: https://github.com/microsoftdocs/mcp
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: microsoft-docs
+  name: microsoft-docs
+  version: 0.3.1
+  description: Access official Microsoft documentation, API references, and code samples for Azure, .NET,
+    Windows, and more.
+  author: Microsoft
+  license: Apache-2.0
+  repository: https://github.com/microsoftdocs/mcp
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.microsoft-docs.microsoft-code-reference
+    file: skills/microsoft-code-reference/SKILL.md
+    description: "Find working code samples, verify API signatures, and fix Microsoft SDK errors using\
+      \ official docs. Use whenever the user is writing, debugging, or reviewing code that touches any\
+      \ Microsoft SDK, .NET\u2026"
+  - name: speckit.microsoft-docs.microsoft-docs
+    file: skills/microsoft-docs/SKILL.md
+    description: "Understand Microsoft technologies by querying official documentation. Use whenever the\
+      \ user asks how something works, wants tutorials, needs configuration options, limits, quotas, or\
+      \ best practices f\u2026"
+  - name: speckit.microsoft-docs.microsoft-skill-creator
+    file: skills/microsoft-skill-creator/SKILL.md
+    description: "Create agent skills for Microsoft technologies using official documentation. Use whenever\
+      \ the user wants to build, generate, or scaffold a skill for any Microsoft technology (Azure, .NET,\
+      \ M365, VS Co\u2026"
+tags:
+- microsoft
+- docs
+- azure
+- .net
+- windows
+- api
+- documentation
+- rag
+- dynamics
+- powerbi
+- office

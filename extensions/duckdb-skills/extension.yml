@@ -1,0 +1,78 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/duckdb/duckdb-skills)
+# Source: https://duckdb.org
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: duckdb-skills
+  name: duckdb-skills
+  version: 0.2.4
+  description: 'DuckDB-powered skills for Claude Code: read any data file, attach and query DuckDB databases,
+    search DuckDB/DuckLake docs, search past session logs, and install/update DuckDB extensions.'
+  author: duckdb
+  license: Apache-2.0
+  repository: https://duckdb.org
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.duckdb-skills.attach-db
+    file: skills/attach-db/SKILL.md
+    description: "Attach a DuckDB database file for use with /duckdb-skills:query. Explores the schema\
+      \ (tables, columns, row counts) and writes a SQL state file so subsequent queries can restore this\
+      \ session automatic\u2026"
+  - name: speckit.duckdb-skills.convert-file
+    file: skills/convert-file/SKILL.md
+    description: "Convert any data file to another format: CSV, Parquet, JSON, Excel, GeoJSON, and more.\
+      \ Use when the user says \"convert to parquet\", \"save as xlsx\", \"export as JSON\", \"make this\
+      \ a CSV\", \"turn into par\u2026"
+  - name: speckit.duckdb-skills.duckdb-docs
+    file: skills/duckdb-docs/SKILL.md
+    description: Search DuckDB and DuckLake documentation and blog posts. Returns relevant doc chunks
+      for a question or keyword using full-text search against a locally cached index.
+  - name: speckit.duckdb-skills.install-duckdb
+    file: skills/install-duckdb/SKILL.md
+    description: Install or update DuckDB extensions. Each argument is either a plain extension name (installs
+      from core) or name@repo (e.g. magic@community). Pass --update to update extensions instead of installing.
+  - name: speckit.duckdb-skills.query
+    file: skills/query/SKILL.md
+    description: Run SQL queries against the attached DuckDB database or ad-hoc against files. Accepts
+      raw SQL or natural language questions. Uses DuckDB Friendly SQL idioms.
+  - name: speckit.duckdb-skills.read-file
+    file: skills/read-file/SKILL.md
+    description: "Read any data file (CSV, JSON, Parquet, Avro, Excel, spatial, SQLite) or remote URL\
+      \ (S3, HTTPS). Use when user references a data file, asks \"what's in this file\", or wants to preview/profile\
+      \ a datase\u2026"
+  - name: speckit.duckdb-skills.read-memories
+    file: skills/read-memories/SKILL.md
+    description: "Search past Claude Code session logs to recall prior decisions, patterns, or unresolved\
+      \ work. Use when user says \"do you remember\", \"what did we do\", references past conversations,\
+      \ or you need contex\u2026"
+  - name: speckit.duckdb-skills.s3-explore
+    file: skills/s3-explore/SKILL.md
+    description: "Explore and query data on S3, Cloudflare R2, GCS, MinIO, or any S3-compatible storage.\
+      \ Use when the user mentions an s3://, r2://, gs://, or gcs:// URL, asks \"what's in this bucket\"\
+      , wants to list re\u2026"
+  - name: speckit.duckdb-skills.spatial
+    file: skills/spatial/SKILL.md
+    description: "Answer questions about spatial data using DuckDB. Use when the user mentions locations,\
+      \ coordinates, lat/lng, distances, maps, addresses, \"near\", \"within\", \"closest\", geographic\
+      \ names, or spatial fil\u2026"
+tags:
+- duckdb
+- ducklake
+- parquet
+- csv
+- json
+- avro
+- excel
+- iceberg
+- delta
+- read-file
+- read-memories
+- duckdb-docs
+- data-exploration
+- session-logs
+- query
+- sql
+- attach-db

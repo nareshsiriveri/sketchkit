@@ -1,0 +1,52 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gemini-cli-extensions/cloud-sql-postgresql)
+# Source: https://cloud.google.com/sql
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: cloud-sql-postgresql
+  name: cloud-sql-postgresql
+  version: 0.4.0
+  description: Create, connect, and interact with a Cloud SQL for PostgreSQL database and data.
+  author: Google LLC
+  license: Apache-2.0
+  repository: https://cloud.google.com/sql
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.cloud-sql-postgresql.cloud-sql-postgres-admin
+    file: skills/cloud-sql-postgres-admin/SKILL.md
+    description: Use these skills when you need to provision new Cloud SQL instances, create databases
+      and users, clone existing environments, and monitor the progress of long-running operations.
+  - name: speckit.cloud-sql-postgresql.cloud-sql-postgres-data
+    file: skills/cloud-sql-postgres-data/SKILL.md
+    description: Use these skills when you need to explore the database structure, discover schema objects
+      like views or stored procedures, and execute custom SQL queries to interact with your data.
+  - name: speckit.cloud-sql-postgresql.cloud-sql-postgres-health
+    file: skills/cloud-sql-postgres-health/SKILL.md
+    description: Use these skills when you need to audit database health, identify storage bloat, find
+      invalid indexes, analyze table statistics, and manage maintenance configurations like autovacuum.
+  - name: speckit.cloud-sql-postgresql.cloud-sql-postgres-lifecycle
+    file: skills/cloud-sql-postgres-lifecycle/SKILL.md
+    description: "Use these skills when you need to manage the lifecycle of your instances, including\
+      \ performing backups and restores, checking major version upgrade compatibility, and monitoring\
+      \ overall instance stat\u2026"
+  - name: speckit.cloud-sql-postgresql.cloud-sql-postgres-monitor
+    file: skills/cloud-sql-postgres-monitor/SKILL.md
+    description: Use these skills when you need to troubleshoot performance bottlenecks, analyze query
+      execution plans, identify resource-heavy processes, and monitor system-level PromQL metrics.
+  - name: speckit.cloud-sql-postgresql.cloud-sql-postgres-replication
+    file: skills/cloud-sql-postgres-replication/SKILL.md
+    description: Use these skills when you need to monitor replication health, manage sync states between
+      nodes, and audit database roles and security settings to ensure environment integrity.
+  - name: speckit.cloud-sql-postgresql.cloud-sql-postgres-vectorassist
+    file: skills/cloud-sql-postgres-vectorassist/SKILL.md
+    description: Use these skills to set up and optimize production-ready vector workloads by simply expressing
+      your intent and performance requirements.
+  - name: speckit.cloud-sql-postgresql.cloud-sql-postgres-view-config
+    file: skills/cloud-sql-postgres-view-config/SKILL.md
+    description: Use these skills when you need to discover and manage PostgreSQL extensions or fine-tune
+      engine-level settings such as memory allocation and server configuration parameters.
+tags:
+- database

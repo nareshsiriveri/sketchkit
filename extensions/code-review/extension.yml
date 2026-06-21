@@ -1,0 +1,23 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: code-review
+  name: code-review
+  version: 0.1.0
+  description: Automated code review for pull requests using multiple specialized agents with confidence-based
+    scoring
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.code-review.code-review
+    file: commands/code-review.md
+    description: Code review a pull request
+tags:
+- claude-code

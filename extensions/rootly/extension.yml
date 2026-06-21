@@ -1,0 +1,119 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/Rootly-AI-Labs/rootly-claude-plugin)
+# Source: https://rootly.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: rootly
+  name: rootly
+  version: 2.2.0
+  description: Full-lifecycle incident management from your IDE. Prevent incidents before deploy, respond
+    in real-time, and learn from post-mortems -- powered by Rootly.
+  author: Rootly AI Labs
+  license: Apache-2.0
+  repository: https://rootly.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.rootly.action
+    file: skills/action/SKILL.md
+    description: "Manage incident action items from the terminal. Subcommands - list (default - your open\
+      \ action items) or add <incident> \"<summary>\" (create one on an incident). Use to capture follow-ups\
+      \ during or af\u2026"
+  - name: speckit.rootly.alert
+    file: skills/alert/SKILL.md
+    description: "Triage a Rootly alert by short ID. Pulls the alert record, its event timeline, related\
+      \ alerts in the same group, and any incident the alert is attached to. Use when a page comes in\
+      \ and you want conte\u2026"
+  - name: speckit.rootly.announce
+    file: skills/announce/SKILL.md
+    description: "Draft a stakeholder-facing status update for an active incident, then post it after\
+      \ explicit confirmation. Useful for incident commanders pushing public-status-page or internal updates\
+      \ without openin\u2026"
+  - name: speckit.rootly.ask
+    file: skills/ask/SKILL.md
+    description: Ask natural language questions about incidents, on-call, services, and reliability data.
+      Translates your question into Rootly API calls and returns structured answers.
+  - name: speckit.rootly.brief
+    file: skills/brief/SKILL.md
+    description: Generate a concise stakeholder brief for an incident. Creates executive summary with
+      key details, impact, timeline, and current status.
+  - name: speckit.rootly.cover
+    file: skills/cover/SKILL.md
+    description: "Offer to cover someone else's on-call shift. Lists upcoming shifts on a team or schedule\
+      \ and creates an override placing you on the chosen one after explicit confirmation. Write action\
+      \ - never execut\u2026"
+  - name: speckit.rootly.deploy-check
+    file: skills/deploy-check/SKILL.md
+    description: "[experimental] Evaluate deployment risk by analyzing code changes against incident history,\
+      \ active incidents, and on-call readiness. Forked-subagent flow may not have MCP access in all Claude\
+      \ Code co\u2026"
+  - name: speckit.rootly.handoff
+    file: skills/handoff/SKILL.md
+    description: Prepare an incident or on-call handoff document. Creates structured summary for shift
+      changes or incident commander transitions.
+  - name: speckit.rootly.lookup
+    file: skills/lookup/SKILL.md
+    description: "Look up a service, team, or catalog entity in Rootly. Returns owner, on-call, recent\
+      \ reliability, dependencies, and any active incidents. Use when something breaks and the first question\
+      \ is who owns\u2026"
+  - name: speckit.rootly.my
+    file: skills/my/SKILL.md
+    description: "Personal Rootly dashboard. Shows your open action items, your active incidents (where\
+      \ you're a responder), and your upcoming on-call shifts. Use to start the day or to context-switch\
+      \ back into incide\u2026"
+  - name: speckit.rootly.oncall
+    file: skills/oncall/SKILL.md
+    description: Show current on-call status, shift metrics, and health indicators for your team. Use
+      to check who's on-call, handoff context, or on-call workload.
+  - name: speckit.rootly.respond
+    file: skills/respond/SKILL.md
+    description: "[experimental] Investigate and respond to a production incident. Pulls context, finds\
+      \ similar past incidents, suggests solutions, and enables coordination. Forked-subagent flow may\
+      \ not have MCP acces\u2026"
+  - name: speckit.rootly.retro
+    file: skills/retro/SKILL.md
+    description: '[experimental] Generate a structured post-incident retrospective from incident data.
+      Forked-subagent flow may not have MCP access in all Claude Code contexts.'
+  - name: speckit.rootly.setup
+    file: skills/setup/SKILL.md
+    description: Set up the Rootly plugin. Verifies MCP server connection via OAuth2 or API token and
+      guides through configuration. Run this after installing the plugin.
+  - name: speckit.rootly.status
+    file: skills/status/SKILL.md
+    description: Show a compact service health overview including active incidents by severity. Use for
+      a quick health check of your services.
+  - name: speckit.rootly.swap
+    file: skills/swap/SKILL.md
+    description: "Request someone to cover one of your upcoming on-call shifts. Lists your shifts, helps\
+      \ identify a candidate based on availability, and creates an override after explicit confirmation.\
+      \ Write action -\u2026"
+  - name: speckit.rootly.test
+    file: skills/test/SKILL.md
+    description: Simple test skill
+  - name: speckit.rootly.trend
+    file: skills/trend/SKILL.md
+    description: "Reliability trend summary for a service, team, or the whole org. Reports incident volume,\
+      \ severity mix, and MTTR direction over a window (default 30 days). Use for standups, 1-on-1s, or\
+      \ quarterly rev\u2026"
+  - name: speckit.rootly.agent-deploy-guardian
+    file: agents/deploy-guardian.md
+    description: Deployment safety specialist for blast-radius analysis, downstream dependency checks,
+      and cross-team coordination planning.
+  - name: speckit.rootly.agent-incident-investigator
+    file: agents/incident-investigator.md
+    description: Deep production-incident investigator for root-cause analysis, evidence gathering, and
+      remediation planning beyond the initial response brief.
+  - name: speckit.rootly.agent-retro-analyst
+    file: agents/retro-analyst.md
+    description: Reliability pattern analyst for retrospectives, recurring-incident clustering, and systemic
+      improvement recommendations.
+tags:
+- incident-management
+- on-call
+- sre
+- devops
+- deploy-safety
+- retrospectives
+- rootly

@@ -1,0 +1,41 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: cwc-makers
+  name: cwc-makers
+  version: 1.0.0
+  description: 'Seamless onboarding for the Code-with-Claude Makers Cardputer: one /maker-setup command
+    clones the build-with-claude repo, flashes UIFlow firmware, and installs the Claude Buddy app bundle
+    onto a freshly-plugged-in M5Stack Cardputer-Adv.'
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.cwc-makers.maker-setup
+    file: commands/maker-setup.md
+    description: "Onboard a Code-with-Claude Makers Cardputer \u2014 fetch the build-with-claude repo,\
+      \ flash firmware, and install the Claude Buddy apps."
+  - name: speckit.cwc-makers.cardputer-buddy
+    file: skills/cardputer-buddy/SKILL.md
+    description: "Iterate on the Cardputer-Adv MicroPython app bundle (Claude Buddy, Snake, Hello) after\
+      \ the device is already provisioned via m5-onboard. Use when the user wants to add a new app, push\
+      \ a single change\u2026"
+  - name: speckit.cwc-makers.m5-onboard
+    file: skills/m5-onboard/SKILL.md
+    description: "End-to-end onboarding for a freshly-plugged-in M5Stack ESP32 device (Cardputer, Cardputer-Adv,\
+      \ Core, CoreS3, Stick) \u2014 detect on USB, flash UIFlow 2.0 firmware, and install the Claude Buddy\
+      \ MicroPytho\u2026"
+tags:
+- cardputer
+- m5stack
+- esp32
+- hardware
+- maker
+- onboarding
+- cwc

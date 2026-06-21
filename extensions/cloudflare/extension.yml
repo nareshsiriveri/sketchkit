@@ -1,0 +1,80 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/cloudflare/skills)
+# Source: https://github.com/cloudflare/skills
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: cloudflare
+  name: cloudflare
+  version: 1.0.0
+  description: 'Skills for the Cloudflare developer platform: Workers, Durable Objects, Agents SDK, MCP
+    servers, Wrangler CLI, and web performance'
+  author: Cloudflare
+  license: Apache-2.0
+  repository: https://github.com/cloudflare/skills
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.cloudflare.build-agent
+    file: commands/build-agent.md
+    description: Build an AI agent on Cloudflare using the Agents SDK
+  - name: speckit.cloudflare.build-mcp
+    file: commands/build-mcp.md
+    description: Build a remote MCP server on Cloudflare using McpAgent
+  - name: speckit.cloudflare.agents-sdk
+    file: skills/agents-sdk/SKILL.md
+    description: "Build AI agents on Cloudflare Workers using the Agents SDK. Load when creating stateful\
+      \ agents, durable workflows, real-time WebSocket apps, scheduled tasks, MCP servers, chat applications,\
+      \ voice age\u2026"
+  - name: speckit.cloudflare.cloudflare
+    file: skills/cloudflare/SKILL.md
+    description: "Comprehensive Cloudflare platform skill covering Workers, Pages, storage (KV, D1, R2),\
+      \ AI (Workers AI, Vectorize, Agents SDK), feature flags (Flagship), networking (Tunnel, Spectrum),\
+      \ security (WAF,\u2026"
+  - name: speckit.cloudflare.cloudflare-email-service
+    file: skills/cloudflare-email-service/SKILL.md
+    description: "Send and receive transactional emails with Cloudflare Email Service (Email Sending +\
+      \ Email Routing). Use when building email sending (Workers binding or REST API), email routing,\
+      \ Agents SDK email han\u2026"
+  - name: speckit.cloudflare.cloudflare-one
+    file: skills/cloudflare-one/SKILL.md
+    description: "Guides Cloudflare One Zero Trust and SASE work across Access, Gateway, WARP, Tunnel,\
+      \ Cloudflare WAN, DLP, CASB, device posture, and identity. Use when designing, configuring, troubleshooting,\
+      \ or revi\u2026"
+  - name: speckit.cloudflare.cloudflare-one-migrations
+    file: skills/cloudflare-one-migrations/SKILL.md
+    description: Plans migrations from Zscaler ZIA/ZPA, Palo Alto, legacy VPN, SWG, or SASE stacks to
+      Cloudflare One. Use for migration assessments, policy mapping, rollout plans, and parity/gap analysis.
+  - name: speckit.cloudflare.durable-objects
+    file: skills/durable-objects/SKILL.md
+    description: "Create and review Cloudflare Durable Objects. Use when building stateful coordination\
+      \ (chat rooms, multiplayer games, booking systems), implementing RPC methods, SQLite storage, alarms,\
+      \ WebSockets, o\u2026"
+  - name: speckit.cloudflare.sandbox-sdk
+    file: skills/sandbox-sdk/SKILL.md
+    description: "Build sandboxed applications for secure code execution. Load when building AI code execution,\
+      \ code interpreters, CI/CD systems, interactive dev environments, or executing untrusted code. Covers\
+      \ Sandb\u2026"
+  - name: speckit.cloudflare.turnstile-spin
+    file: skills/turnstile-spin/SKILL.md
+    description: "Set up Cloudflare Turnstile end-to-end in a project \u2014 scan the codebase, create\
+      \ the widget via the Cloudflare API, deploy the managed siteverify Worker, write the frontend snippets,\
+      \ validate, and per\u2026"
+  - name: speckit.cloudflare.web-perf
+    file: skills/web-perf/SKILL.md
+    description: "Analyzes web performance using Chrome DevTools MCP. Measures Core Web Vitals (LCP, INP,\
+      \ CLS) and supplementary metrics (FCP, TBT, Speed Index), identifies render-blocking resources,\
+      \ network dependenc\u2026"
+  - name: speckit.cloudflare.workers-best-practices
+    file: skills/workers-best-practices/SKILL.md
+    description: "Reviews and authors Cloudflare Workers code against production best practices. Load\
+      \ when writing new Workers, reviewing Worker code, configuring wrangler.jsonc, or checking for common\
+      \ Workers anti-pa\u2026"
+  - name: speckit.cloudflare.wrangler
+    file: skills/wrangler/SKILL.md
+    description: "Cloudflare Workers CLI for deploying, developing, and managing Workers, KV, R2, D1,\
+      \ Vectorize, Hyperdrive, Workers AI, Containers, Queues, Workflows, Pipelines, and Secrets Store.\
+      \ Load before running\u2026"
+tags:
+- deployment

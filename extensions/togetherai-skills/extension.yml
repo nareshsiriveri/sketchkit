@@ -1,0 +1,88 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/togethercomputer/skills)
+# Source: https://www.together.ai
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: togetherai-skills
+  name: togetherai-skills
+  version: 1.0.0
+  description: "Agent Skills for Together AI platform \u2014 inference, training, embeddings, audio, video,\
+    \ images, function calling, and infrastructure"
+  author: Together AI
+  license: Apache-2.0
+  repository: https://www.together.ai
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.togetherai-skills.together-audio
+    file: skills/together-audio/SKILL.md
+    description: "Text-to-speech and speech-to-text via Together AI, including REST, streaming, and realtime\
+      \ WebSocket TTS, plus transcription, translation, diarization, timestamps, and live STT. Reach for\
+      \ it whenever\u2026"
+  - name: speckit.togetherai-skills.together-batch-inference
+    file: skills/together-batch-inference/SKILL.md
+    description: "High-volume, asynchronous offline inference at up to 50% lower cost via Together AI's\
+      \ Batch API. Prepare JSONL inputs, upload files, create jobs, poll status, and download outputs.\
+      \ Reach for it whene\u2026"
+  - name: speckit.togetherai-skills.together-chat-completions
+    file: skills/together-chat-completions/SKILL.md
+    description: "Real-time and streaming text generation via Together AI's OpenAI-compatible chat/completions\
+      \ API, including multi-turn conversations, tool and function calling, structured JSON outputs, and\
+      \ reasoning\u2026"
+  - name: speckit.togetherai-skills.together-dedicated-containers
+    file: skills/together-dedicated-containers/SKILL.md
+    description: "Custom Dockerized inference workers on Together AI's managed GPU infrastructure. Build\
+      \ with Sprocket SDK, configure with Jig CLI, submit async queue jobs, and poll results. Reach for\
+      \ it whenever the\u2026"
+  - name: speckit.togetherai-skills.together-dedicated-endpoints
+    file: skills/together-dedicated-endpoints/SKILL.md
+    description: "Single-tenant GPU endpoints on Together AI with autoscaling and no rate limits. Deploy\
+      \ fine-tuned or uploaded models, size hardware, and manage endpoint lifecycle. Reach for it whenever\
+      \ the user need\u2026"
+  - name: speckit.togetherai-skills.together-embeddings
+    file: skills/together-embeddings/SKILL.md
+    description: "Dense vector embeddings, semantic search, RAG pipelines, and reranking via Together\
+      \ AI. Generate embeddings with open-source models and rerank results behind dedicated endpoints.\
+      \ Reach for it wheneve\u2026"
+  - name: speckit.togetherai-skills.together-evaluations
+    file: skills/together-evaluations/SKILL.md
+    description: "LLM-as-a-judge evaluation framework on Together AI. Classify, score, and compare model\
+      \ outputs, select judge models, use external-provider judges or targets, poll results and download\
+      \ reports. Reach\u2026"
+  - name: speckit.togetherai-skills.together-fine-tuning
+    file: skills/together-fine-tuning/SKILL.md
+    description: "LoRA, full fine-tuning, DPO preference tuning, VLM training, function-calling tuning,\
+      \ reasoning tuning, and BYOM uploads on Together AI. Reach for it whenever the user wants to adapt\
+      \ a model on custo\u2026"
+  - name: speckit.togetherai-skills.together-gpu-clusters
+    file: skills/together-gpu-clusters/SKILL.md
+    description: "On-demand and reserved GPU clusters (H100, H200, B200) on Together AI with Kubernetes\
+      \ or Slurm orchestration, shared storage, credential management, and cluster scaling for ML and\
+      \ HPC jobs. Reach for\u2026"
+  - name: speckit.togetherai-skills.together-images
+    file: skills/together-images/SKILL.md
+    description: "Text-to-image generation and image editing via Together AI, including FLUX and Kontext\
+      \ models, LoRA-based styling, reference-image guidance, and local image downloads. Reach for it\
+      \ whenever the user\u2026"
+  - name: speckit.togetherai-skills.together-sandboxes
+    file: skills/together-sandboxes/SKILL.md
+    description: "Remote Python execution in managed sandboxes on Together AI with stateful sessions,\
+      \ file uploads, data analysis, chart generation, and notebook-like runs via the Sandboxes API. Reach\
+      \ for it whenever\u2026"
+  - name: speckit.togetherai-skills.together-video
+    file: skills/together-video/SKILL.md
+    description: "Text-to-video and image-to-video generation via Together AI, including keyframe control,\
+      \ model and dimension selection, asynchronous job polling, and video downloads. Reach for it whenever\
+      \ the user w\u2026"
+tags:
+- together-ai
+- inference
+- fine-tuning
+- gpu
+- llm
+- embeddings
+- images
+- video
+- audio

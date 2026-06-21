@@ -1,0 +1,32 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: agent-sdk-dev
+  name: agent-sdk-dev
+  version: 0.1.0
+  description: Claude Agent SDK Development Plugin
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.agent-sdk-dev.new-sdk-app
+    file: commands/new-sdk-app.md
+    description: Create and setup a new Claude Agent SDK application
+  - name: speckit.agent-sdk-dev.agent-agent-sdk-verifier-py
+    file: agents/agent-sdk-verifier-py.md
+    description: "Use this agent to verify that a Python Agent SDK application is properly configured,\
+      \ follows SDK best practices and documentation recommendations, and is ready for deployment or testing.\
+      \ This agent s\u2026"
+  - name: speckit.agent-sdk-dev.agent-agent-sdk-verifier-ts
+    file: agents/agent-sdk-verifier-ts.md
+    description: "Use this agent to verify that a TypeScript Agent SDK application is properly configured,\
+      \ follows SDK best practices and documentation recommendations, and is ready for deployment or testing.\
+      \ This age\u2026"
+tags:
+- claude-code

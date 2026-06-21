@@ -1,0 +1,36 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/Automattic/claude-code-wordpress.com)
+# Source: https://developer.wordpress.com/wordpress-com-claude-code-plugin/
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: wordpress-com
+  name: wordpress.com
+  version: 0.0.2
+  description: Craft production-grade WordPress sites and applications. Everything from themes and plugins
+    to commerce and deployment.
+  author: Automattic
+  license: Apache-2.0
+  repository: https://developer.wordpress.com/wordpress-com-claude-code-plugin/
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.wordpress-com.design-site
+    file: commands/design-site.md
+    description: Design a WordPress site, starting with a clear design direction and style tokens, then
+      intial page layouts, followed by a full custom theme build with content pages deployed to a local
+      Studio site
+  - name: speckit.wordpress-com.preview-designs
+    file: commands/preview-designs.md
+    description: Generate or regenerate design preview options for a site
+  - name: speckit.wordpress-com.quick-build
+    file: commands/quick-build.md
+    description: Creates a WordPress block theme from a description with an index.html landing page template
+      and deploys it to a local Studio site
+  - name: speckit.wordpress-com.site-specification
+    file: skills/site-specification/SKILL.md
+    description: Extract comprehensive site specifications from simple descriptions. Use when analyzing
+      a user's theme request to determine site type, audience, tone, layout requirements, and typography.
+tags:
+- claude-code

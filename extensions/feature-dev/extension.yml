@@ -1,0 +1,37 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: feature-dev
+  name: feature-dev
+  version: 0.1.0
+  description: Comprehensive feature development workflow with specialized agents for codebase exploration,
+    architecture design, and quality review
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.feature-dev.feature-dev
+    file: commands/feature-dev.md
+    description: Guided feature development with codebase understanding and architecture focus
+  - name: speckit.feature-dev.agent-code-architect
+    file: agents/code-architect.md
+    description: "Designs feature architectures by analyzing existing codebase patterns and conventions,\
+      \ then providing comprehensive implementation blueprints with specific files to create/modify, component\
+      \ designs,\u2026"
+  - name: speckit.feature-dev.agent-code-explorer
+    file: agents/code-explorer.md
+    description: Deeply analyzes existing codebase features by tracing execution paths, mapping architecture
+      layers, understanding patterns and abstractions, and documenting dependencies to inform new development
+  - name: speckit.feature-dev.agent-code-reviewer
+    file: agents/code-reviewer.md
+    description: "Reviews code for bugs, logic errors, security vulnerabilities, code quality issues,\
+      \ and adherence to project conventions, using confidence-based filtering to report only high-priority\
+      \ issues that tru\u2026"
+tags:
+- claude-code

@@ -1,0 +1,149 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/Nimbleway/agent-skills)
+# Source: https://docs.nimbleway.com/integrations/agent-skills/plugin-installation
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: nimble
+  name: nimble
+  version: 0.23.0
+  description: "Real-time web search and data extraction for AI agents - powered by Nimble. Search, extract,\
+    \ map, and crawl any site on the web with built-in stealth, JS rendering, and retries. Get clean,\
+    \ structured web data from any public webpage with pre-built Web Search Agents, or build your own\
+    \ reusable extra\u2026"
+  author: Nimble
+  license: Apache-2.0
+  repository: https://docs.nimbleway.com/integrations/agent-skills/plugin-installation
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.nimble.search
+    file: commands/search.md
+    description: Web search (default for all search and research queries)
+  - name: speckit.nimble.company-deep-dive
+    file: skills/business-research/company-deep-dive/SKILL.md
+    description: "Use this skill ANY TIME the user asks about a specific company. Triggers: \"tell me\
+      \ about [company]\", \"research [company]\", \"what does [company] do\", \"who is [company]\", \"\
+      look up [company]\", \"company\u2026"
+  - name: speckit.nimble.competitor-intel
+    file: skills/business-research/competitor-intel/SKILL.md
+    description: "Searches the live web via Nimble APIs to monitor competitors and produce a structured\
+      \ intelligence briefing. Runs parallel searches for news, product launches, hiring signals, and\
+      \ funding \u2014 then comp\u2026"
+  - name: speckit.nimble.market-finder
+    file: skills/business-research/market-finder/SKILL.md
+    description: "Discovers all businesses of a given type in any geography using Nimble WSAs. Two modes:\
+      \ Discovery finds businesses from scratch; Audit compares a user's existing list (Google Sheet,\
+      \ CSV, inline) agai\u2026"
+  - name: speckit.nimble.nimble-databricks-data-products
+    file: skills/data-platforms/nimble-databricks-data-products/SKILL.md
+    description: "Builds Databricks data products from live web data, end to end: discovers the right\
+      \ Nimble web-data agents, scrapes into Delta tables, and produces an AI/BI dashboard and/or a deployed\
+      \ Databricks App\u2026"
+  - name: speckit.nimble.healthcare-providers-enrich
+    file: skills/healthcare/healthcare-providers-enrich/SKILL.md
+    description: "Fills gaps in existing healthcare practitioner lists \u2014 adds missing phone numbers,\
+      \ credentials, specialties, contact info, education, reviews, and regulatory data. Triggers: \"\
+      enrich my provider list\"\u2026"
+  - name: speckit.nimble.healthcare-providers-extract
+    file: skills/healthcare/healthcare-providers-extract/SKILL.md
+    description: "Extracts structured practitioner data from healthcare practice websites. Returns names,\
+      \ credentials, specialties, contact info, and education for every provider on a practice's site.\
+      \ Use when user as\u2026"
+  - name: speckit.nimble.healthcare-providers-verify
+    file: skills/healthcare/healthcare-providers-verify/SKILL.md
+    description: "Validates practitioner credentials and license status against the NPI registry. Cross-references\
+      \ specialties, credentials, and practice addresses against official records. Returns Verified /\
+      \ Partiall\u2026"
+  - name: speckit.nimble.talent-sourcing
+    file: skills/human-resources/talent-sourcing/SKILL.md
+    description: "Finds qualified candidates for a role by searching LinkedIn, Indeed, GitHub, and other\
+      \ professional platforms using Nimble Web Search Agents. Accepts a job description, role title,\
+      \ or freeform reques\u2026"
+  - name: speckit.nimble.competitor-positioning
+    file: skills/marketing/competitor-positioning/SKILL.md
+    description: "Tracks how competitors position themselves online \u2014 scrapes homepages, features,\
+      \ pricing, and blogs to extract messaging, value props, CTAs, and pricing models. Compares against\
+      \ previous snapshots to\u2026"
+  - name: speckit.nimble.local-places
+    file: skills/productivity/local-places/SKILL.md
+    description: "Discovers, enriches, and scores local businesses in any neighborhood using Nimble Web\
+      \ Search Agents (WSAs) and web data. Returns a structured, ranked list with confidence scores, reviews,\
+      \ social pres\u2026"
+  - name: speckit.nimble.meeting-prep
+    file: skills/productivity/meeting-prep/SKILL.md
+    description: "Researches meeting attendees and their companies before any meeting using real-time\
+      \ web data. Surfaces roles, recent activity, company context, and talking points \u2014 then maps\
+      \ cross-attendee relations\u2026"
+  - name: speckit.nimble.seo-intel
+    file: skills/seo/seo-intel/SKILL.md
+    description: "SEO intelligence toolkit covering the full lifecycle via live web data: keyword research,\
+      \ rank tracking, site audits, content gap analysis, competitor keyword reverse-engineering, AI visibility\
+      \ acros\u2026"
+  - name: speckit.nimble.nimble-agent-builder
+    file: skills/web-search-tools/nimble-agent-builder/SKILL.md
+    description: "A building experience: create, test, validate, refine, and publish extraction workflows\
+      \ based on existing or new Nimble agents. For users who want to invest in a durable, reusable workflow\
+      \ for a spec\u2026"
+  - name: speckit.nimble.nimble-agents
+    file: skills/web-search-tools/nimble-web-expert/references/nimble-agents/SKILL.md
+    description: "Reference for nimble agent commands. Load for Step 0 agent lookup. Contains: full agent\
+      \ table (50+ sites across e-commerce, food, real estate, jobs, social, travel), discover/list/schema/run\
+      \ commands\u2026"
+  - name: speckit.nimble.nimble-crawl
+    file: skills/web-search-tools/nimble-web-expert/references/nimble-crawl/SKILL.md
+    description: "Reference for nimble crawl command. Load when bulk-crawling many pages asynchronously.\
+      \ Contains: async workflow (create \u2192 status \u2192 tasks results), all flags, polling guidelines,\
+      \ CRITICAL: use task_id\u2026"
+  - name: speckit.nimble.nimble-extract
+    file: skills/web-search-tools/nimble-web-expert/references/nimble-extract/SKILL.md
+    description: "Reference for nimble extract command. Load when fetching URLs or scraping pages. Contains:\
+      \ render tiers 1-3, all flags, browser actions, network capture, parser schemas, geo targeting,\
+      \ async, paralle\u2026"
+  - name: speckit.nimble.nimble-map
+    file: skills/web-search-tools/nimble-web-expert/references/nimble-map/SKILL.md
+    description: "Reference for nimble map command. Load when discovering URLs on a site before bulk extraction.\
+      \ Contains: all flags (limit 1-100000, sitemap include/only/skip, domain_filter), response structure\
+      \ {link\u2026"
+  - name: speckit.nimble.nimble-search
+    file: skills/web-search-tools/nimble-web-expert/references/nimble-search/SKILL.md
+    description: "Reference for nimble search command. Load when searching the live web. Contains: all\
+      \ flags, 8 focus modes (general/coding/news/academic/shopping/social/geo/location), search_depth\
+      \ modes (lite/fast/de\u2026"
+  - name: speckit.nimble.nimble-tasks
+    file: skills/web-search-tools/nimble-web-expert/references/nimble-tasks/SKILL.md
+    description: "Reference for nimble tasks and batches commands. Load when polling async task status,\
+      \ tracking batch progress, or fetching results. Works for ALL async types: agent run-async, agent\
+      \ run-batch, extrac\u2026"
+  - name: speckit.nimble.nimble-web-expert
+    file: skills/web-search-tools/nimble-web-expert/SKILL.md
+    description: "Get web data now \u2014 fast, incremental, immediately responsive to what the user needs.\
+      \ The only way Claude can access live websites. USE FOR: - Fetching any URL or reading any webpage\
+      \ - Scraping prices\u2026"
+  - name: speckit.nimble.agent-nimble-analyst
+    file: agents/nimble-analyst.md
+    description: "Deep analysis agent for Nimble business skills. Use when a skill needs to synthesize\
+      \ research findings, cross-reference data, produce structured reports, or make strategic assessments.\
+      \ Has persistent\u2026"
+  - name: speckit.nimble.agent-nimble-researcher
+    file: agents/nimble-researcher.md
+    description: "Fast data gathering agent for Nimble business skills. Use proactively when a skill needs\
+      \ to search the web, find news, or gather raw data about companies, competitors, or people. Optimized\
+      \ for speed\u2026"
+tags:
+- nimble
+- web-extraction
+- web-search
+- web-crawl
+- web-map
+- scraping
+- agents
+- mcp
+- cli
+- data-extraction
+- structured-data
+- competitor-intelligence
+- meeting-prep
+- company-research
+- business-intelligence

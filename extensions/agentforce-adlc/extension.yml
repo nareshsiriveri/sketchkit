@@ -1,0 +1,55 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/SalesforceAIResearch/agentforce-adlc)
+# Source: https://github.com/SalesforceAIResearch/agentforce-adlc
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: agentforce-adlc
+  name: agentforce-adlc
+  version: 0.7.0
+  description: "Agentforce Agent Development Life Cycle \u2014 author, discover, scaffold, deploy, test,\
+    \ secure, and optimize .agent files"
+  author: SalesforceAIResearch
+  license: Apache-2.0
+  repository: https://github.com/SalesforceAIResearch/agentforce-adlc
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.agentforce-adlc.developing-agentforce
+    file: skills/developing-agentforce/SKILL.md
+    description: "Build, modify, debug, and deploy agents with Agentforce Agent Script. TRIGGER when:\
+      \ user creates, modifies, or asks about .agent files or aiAuthoringBundle metadata; changes agent\
+      \ behavior, responses\u2026"
+  - name: speckit.agentforce-adlc.observing-agentforce
+    file: skills/observing-agentforce/SKILL.md
+    description: "Analyze production Agentforce agent behavior using session traces and Data Cloud. TRIGGER\
+      \ when: user queries STDM session data or Data Cloud trace records; investigates production agent\
+      \ failures, reg\u2026"
+  - name: speckit.agentforce-adlc.securing-agentforce
+    file: skills/securing-agentforce/SKILL.md
+    description: "Run OWASP LLM Top 10 security assessments against live Agentforce agents. TRIGGER when:\
+      \ user asks for security testing, OWASP scan, red-teaming, penetration testing, security grade,\
+      \ vulnerability ass\u2026"
+  - name: speckit.agentforce-adlc.testing-agentforce
+    file: skills/testing-agentforce/SKILL.md
+    description: "Write, run, and analyze structured test suites for Agentforce agents. TRIGGER when:\
+      \ user writes or modifies test spec YAML (AiEvaluationDefinition); runs sf agent test create, run,\
+      \ run-eval, or resul\u2026"
+  - name: speckit.agentforce-adlc.agent-adlc-author
+    file: agents/adlc-author.md
+    description: Writes Agentforce Agent Script (.agent) files from requirements
+  - name: speckit.agentforce-adlc.agent-adlc-engineer
+    file: agents/adlc-engineer.md
+    description: "Platform engineer \u2014 scaffolds Flow/Apex metadata and deploys agent bundles"
+  - name: speckit.agentforce-adlc.agent-adlc-orchestrator
+    file: agents/adlc-orchestrator.md
+    description: Plan-mode orchestrator for the Agent Development Life Cycle
+  - name: speckit.agentforce-adlc.agent-adlc-qa
+    file: agents/adlc-qa.md
+    description: Tests Agentforce agents and optimizes based on session trace analysis
+tags:
+- agentforce
+- agent-script
+- salesforce
+- adlc

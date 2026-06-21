@@ -1,0 +1,25 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: playground
+  name: playground
+  version: 0.1.0
+  description: "Creates interactive HTML playgrounds \u2014 self-contained single-file explorers with\
+    \ visual controls, live preview, and prompt output with copy button"
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.playground.playground
+    file: skills/playground/SKILL.md
+    description: "Creates interactive HTML playgrounds \u2014 self-contained single-file explorers that\
+      \ let users configure something visually through controls, see a live preview, and copy out a prompt.\
+      \ Use when the user\u2026"
+tags:
+- claude-code

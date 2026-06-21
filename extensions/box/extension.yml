@@ -1,0 +1,49 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/box/box-for-ai)
+# Source: https://github.com/box/box-for-ai
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: box
+  name: box
+  version: 1.0.0
+  description: Box Plugin for Claude Code to help with Box Platform integrations including content workflows,
+    shared links, webhooks, metadata, and Box AI retrieval.
+  author: Box
+  license: Apache-2.0
+  repository: https://github.com/box/box-for-ai
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.box.box
+    file: skills/box/SKILL.md
+    description: "Build and troubleshoot Box integrations for uploads, folders, folder listings, downloads\
+      \ and previews, shared links, collaborations, search, metadata, event-driven automations, and Box\
+      \ AI retrieval f\u2026"
+  - name: speckit.box.box-legal-workflows
+    file: skills/box-legal-workflows/SKILL.md
+    description: "Legal concepts for Box-based legal workflows \u2014 risk rating frameworks, human-in-the-loop\
+      \ requirements, confidentiality principles, Box AI governance, collaboration roles, metadata strategy,\
+      \ and commo\u2026"
+  - name: speckit.box.box-legal-workflows-contract
+    file: skills/box-legal-workflows-contract/SKILL.md
+    description: "Automate contract review and monitoring with Box MCP \u2014 identify new contracts added\
+      \ since last review period using metadata or keyword search, compare contracts against standard\
+      \ firm templates to fla\u2026"
+  - name: speckit.box.box-legal-workflows-intake
+    file: skills/box-legal-workflows-intake/SKILL.md
+    description: "Automate legal client intake and onboarding with Box MCP \u2014 review uploaded intake\
+      \ documents for completeness against firm requirements, assess risk levels based on client profile\
+      \ and document content\u2026"
+  - name: speckit.box.box-legal-workflows-ma
+    file: skills/box-legal-workflows-ma/SKILL.md
+    description: "Build and manage M&A Virtual Data Rooms with Box MCP \u2014 create secure folder structures\
+      \ with numbered prefixes for due diligence, assign role-based access to internal teams and external\
+      \ parties (couns\u2026"
+tags:
+- box
+- content
+- cloud-storage
+- file-management
+- collaboration

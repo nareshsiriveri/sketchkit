@@ -1,0 +1,24 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/JetBrains/teamcity-cli)
+# Source: https://www.jetbrains.com/teamcity/
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: teamcity-cli
+  name: teamcity-cli
+  version: 1.2.0
+  description: Agent skill for interacting with TeamCity CI/CD using the teamcity CLI. Enables Claude
+    to explore builds, view logs, start jobs, manage queues, agents, and more.
+  author: JetBrains
+  license: Apache-2.0
+  repository: https://www.jetbrains.com/teamcity/
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.teamcity-cli.teamcity-cli
+    file: skills/teamcity-cli/SKILL.md
+    description: "Use when working with TeamCity CI/CD or when a user provides a TeamCity build URL \u2014\
+      \ drives the `teamcity` CLI for builds, logs, jobs, queues, agents, pools, projects, and pipelines."
+tags:
+- development

@@ -1,0 +1,40 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: hookify
+  name: hookify
+  version: 0.1.0
+  description: Easily create hooks to prevent unwanted behaviors by analyzing conversation patterns
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.hookify.configure
+    file: commands/configure.md
+    description: Enable or disable hookify rules interactively
+  - name: speckit.hookify.help
+    file: commands/help.md
+    description: Get help with the hookify plugin
+  - name: speckit.hookify.hookify
+    file: commands/hookify.md
+    description: Create hooks to prevent unwanted behaviors from conversation analysis or explicit instructions
+  - name: speckit.hookify.list
+    file: commands/list.md
+    description: List all configured hookify rules
+  - name: speckit.hookify.writing-rules
+    file: skills/writing-rules/SKILL.md
+    description: This skill should be used when the user asks to "create a hookify rule", "write a hook
+      rule", "configure hookify", "add a hookify rule", or needs guidance on hookify rule syntax and patterns.
+  - name: speckit.hookify.agent-conversation-analyzer
+    file: agents/conversation-analyzer.md
+    description: "Use this agent when analyzing conversation transcripts to find behaviors worth preventing\
+      \ with hooks. Typical triggers include the /hookify command being invoked without arguments, or\
+      \ the user explic\u2026"
+tags:
+- claude-code

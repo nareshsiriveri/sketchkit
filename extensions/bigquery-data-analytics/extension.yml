@@ -1,0 +1,33 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gemini-cli-extensions/bigquery-data-analytics)
+# Source: https://github.com/gemini-cli-extensions/bigquery-data-analytics
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: bigquery-data-analytics
+  name: bigquery-data-analytics
+  version: 0.2.1
+  description: Connect, query, and generate data insights for BigQuery datasets and data.
+  author: Google LLC
+  license: Apache-2.0
+  repository: https://github.com/gemini-cli-extensions/bigquery-data-analytics
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.bigquery-data-analytics.bigquery-ai-ml
+    file: skills/bigquery-ai-ml/SKILL.md
+    description: Skill for BigQuery AI and Machine Learning queries using standard SQL and `AI.*` functions
+      (preferred over dedicated tools).
+  - name: speckit.bigquery-data-analytics.bigquery-analytics
+    file: skills/bigquery-analytics/SKILL.md
+    description: "Use these skills when you need to handle advanced data intelligence and predictive tasks.\
+      \ Use when a user asks \"why\" data changed or needs future projections. Provides automated insight\
+      \ generation an\u2026"
+  - name: speckit.bigquery-data-analytics.bigquery-data
+    file: skills/bigquery-data/SKILL.md
+    description: "Use these skills when you need to handle large-scale data exploration and dataset management.\
+      \ Use when users need to find data assets or run SQL at scale. Provides metadata discovery and query\
+      \ execut\u2026"
+tags:
+- database

@@ -1,0 +1,197 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/microsoft/azure-skills)
+# Source: https://github.com/microsoft/azure-skills
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: azure
+  name: azure
+  version: 1.1.71
+  description: Microsoft Azure MCP and Skills integration for cloud resource management, deployments,
+    and Azure services. Manage your Azure infrastructure, monitor applications, and deploy resources directly
+    from Claude Code.
+  author: Microsoft
+  license: Apache-2.0
+  repository: https://github.com/microsoft/azure-skills
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.azure.airunway-aks-setup
+    file: skills/airunway-aks-setup/SKILL.md
+    description: "Set up AI Runway on AKS \u2014 from bare cluster to running model. Covers cluster verification,\
+      \ controller install, GPU assessment, provider setup, and first deployment. WHEN: \"setup AI Runway\"\
+      , \"onboard\u2026"
+  - name: speckit.azure.appinsights-instrumentation
+    file: skills/appinsights-instrumentation/SKILL.md
+    description: "Guidance for instrumenting webapps with Azure Application Insights. Provides telemetry\
+      \ patterns, SDK setup, and configuration references. WHEN: how to instrument app, App Insights SDK,\
+      \ telemetry patt\u2026"
+  - name: speckit.azure.azure-ai
+    file: skills/azure-ai/SKILL.md
+    description: "Use for Azure AI: Search, Speech, OpenAI, Document Intelligence. Helps with search,\
+      \ vector/hybrid search, speech-to-text, text-to-speech, transcription, OCR. WHEN: AI Search, query\
+      \ search, vector sea\u2026"
+  - name: speckit.azure.azure-aigateway
+    file: skills/azure-aigateway/SKILL.md
+    description: "Configure Azure API Management as an AI Gateway for AI models, MCP tools, and agents.\
+      \ WHEN: semantic caching, token limit, content safety, load balancing, AI model governance, MCP\
+      \ rate limiting, jail\u2026"
+  - name: speckit.azure.azure-cloud-migrate
+    file: skills/azure-cloud-migrate/SKILL.md
+    description: "Assess and migrate cross-cloud workloads to Azure with reports and code conversion.\
+      \ Supports Lambda\u2192Functions, Beanstalk/Heroku/App Engine\u2192App Service, Fargate/Kubernetes/Cloud\
+      \ Run/Spring Boot\u2192Contai\u2026"
+  - name: speckit.azure.azure-compliance
+    file: skills/azure-compliance/SKILL.md
+    description: "Run Azure compliance and security audits with azqr plus Key Vault expiration checks.\
+      \ Covers best-practice assessment, resource review, policy/compliance validation, and security posture\
+      \ checks. WHEN:\u2026"
+  - name: speckit.azure.azure-compute
+    file: skills/azure-compute/SKILL.md
+    description: "Azure VM/VMSS router. WHEN: create / provision / deploy / spin-up VM, recommend VM size,\
+      \ compare VM pricing, VMSS, scale set, autoscale, burstable, lightweight server, website, backend,\
+      \ GPU, machine\u2026"
+  - name: speckit.azure.azure-cost
+    file: skills/azure-cost/SKILL.md
+    description: "Azure cost management: query costs, forecast spending, optimize to reduce waste. WHEN:\
+      \ \"Azure costs\", \"Azure bill\", \"cost breakdown\", \"how much am I spending\", \"forecast spending\"\
+      , \"optimize costs\",\u2026"
+  - name: speckit.azure.azure-deploy
+    file: skills/azure-deploy/SKILL.md
+    description: "Execute Azure deployments for ALREADY-PREPARED applications that have existing .azure/deployment-plan.md\
+      \ and infrastructure files. DO NOT use this skill when the user asks to CREATE a new application\u2026"
+  - name: speckit.azure.azure-diagnostics
+    file: skills/azure-diagnostics/SKILL.md
+    description: "Debug Azure production issues on Azure using AppLens, Azure Monitor, resource health,\
+      \ and safe triage. WHEN: debug production issues, troubleshoot app service, app service high CPU,\
+      \ app service deplo\u2026"
+  - name: speckit.azure.azure-enterprise-infra-planner
+    file: skills/azure-enterprise-infra-planner/SKILL.md
+    description: "Architect and provision enterprise Azure infrastructure from workload descriptions.\
+      \ For cloud architects and platform engineers planning networking, identity, security, compliance,\
+      \ and multi-resource\u2026"
+  - name: speckit.azure.azure-hosted-copilot-sdk
+    file: skills/azure-hosted-copilot-sdk/SKILL.md
+    description: "Build, deploy, and modify GitHub Copilot SDK apps on Azure. MANDATORY when codebase\
+      \ contains @github/copilot-sdk or CopilotClient in package.json. PREFER OVER azure-prepare when\
+      \ copilot-sdk markers d\u2026"
+  - name: speckit.azure.azure-kubernetes-automatic-readiness
+    file: skills/azure-kubernetes/azure-kubernetes-automatic-readiness/SKILL.md
+    description: "Assess Kubernetes workloads and cluster configuration for AKS Automatic compatibility.\
+      \ Identifies incompatibilities, generates fixes, and guides migration from AKS Standard to AKS Automatic.\
+      \ WHEN: mi\u2026"
+  - name: speckit.azure.azure-kubernetes
+    file: skills/azure-kubernetes/SKILL.md
+    description: "Plan, create, and configure production-ready Azure Kubernetes Service (AKS) clusters.\
+      \ Covers Day-0 checklist, SKU selection (Automatic vs Standard), networking options (private API\
+      \ server, Azure CNI\u2026"
+  - name: speckit.azure.azure-kusto
+    file: skills/azure-kusto/SKILL.md
+    description: "Query and analyze data in Azure Data Explorer (Kusto/ADX) using KQL for log analytics,\
+      \ telemetry, and time series analysis. WHEN: KQL queries, Kusto database queries, Azure Data Explorer,\
+      \ ADX cluster\u2026"
+  - name: speckit.azure.azure-messaging
+    file: skills/azure-messaging/SKILL.md
+    description: "Troubleshoot and resolve issues with Azure Messaging SDKs for Event Hubs and Service\
+      \ Bus. Covers connection failures, authentication errors, message processing issues, and SDK configuration\
+      \ problems.\u2026"
+  - name: speckit.azure.azure-prepare
+    file: skills/azure-prepare/SKILL.md
+    description: "Prepare Azure apps for deployment (infra Bicep/Terraform, azure.yaml, Dockerfiles).\
+      \ Use for create/modernize or create+deploy; not cross-cloud migration (use azure-cloud-migrate).\
+      \ DO NOT USE FOR: cop\u2026"
+  - name: speckit.azure.azure-quotas
+    file: skills/azure-quotas/SKILL.md
+    description: "Check/manage Azure quotas and usage across providers. For deployment planning, capacity\
+      \ validation, region selection. WHEN: \"check quotas\", \"service limits\", \"current usage\", \"\
+      request quota increase\"\u2026"
+  - name: speckit.azure.azure-rbac
+    file: skills/azure-rbac/SKILL.md
+    description: "Helps users find the right Azure RBAC role for an identity with least privilege access,\
+      \ then generate CLI commands and Bicep code to assign it. Also provides guidance on permissions\
+      \ required to grant\u2026"
+  - name: speckit.azure.azure-reliability
+    file: skills/azure-reliability/SKILL.md
+    description: "Assess and improve the reliability posture of PaaS Applications (Azure Functions and\
+      \ Azure App Service). Scans deployed resources for zone redundancy, ZRS storage, health probes,\
+      \ and multi-region fai\u2026"
+  - name: speckit.azure.azure-resource-lookup
+    file: skills/azure-resource-lookup/SKILL.md
+    description: "List, find, and show Azure resources across subscriptions or resource groups. Handles\
+      \ prompts like \"list the websites in my subscription\", \"list my web apps\", \"show my app services\"\
+      , \"list virtual ma\u2026"
+  - name: speckit.azure.azure-resource-visualizer
+    file: skills/azure-resource-visualizer/SKILL.md
+    description: "Analyze Azure resource groups and generate detailed Mermaid architecture diagrams showing\
+      \ the relationships between individual resources. WHEN: create architecture diagram, visualize Azure\
+      \ resources,\u2026"
+  - name: speckit.azure.azure-storage
+    file: skills/azure-storage/SKILL.md
+    description: "Azure Storage Services including Blob Storage, File Shares, Queue Storage, Table Storage,\
+      \ and Data Lake. Answers questions about storage access tiers (hot, cool, cold, archive), when to\
+      \ use each tier\u2026"
+  - name: speckit.azure.azure-upgrade
+    file: skills/azure-upgrade/SKILL.md
+    description: "Assess and upgrade Azure workloads between plans, tiers, or SKUs, or modernize Azure\
+      \ SDK dependencies in source code. WHEN: upgrade Consumption to Flex Consumption, upgrade Azure\
+      \ Functions plan, chan\u2026"
+  - name: speckit.azure.azure-validate
+    file: skills/azure-validate/SKILL.md
+    description: "Pre-deployment validation for Azure readiness. Run deep checks on configuration, infrastructure\
+      \ (Bicep or Terraform), RBAC role assignments, managed identity permissions, and prerequisites before\
+      \ dep\u2026"
+  - name: speckit.azure.entra-agent-id
+    file: skills/entra-agent-id/SKILL.md
+    description: "Provision Microsoft Entra Agent Identity Blueprints, BlueprintPrincipals, and per-instance\
+      \ Agent Identities via Microsoft Graph, and configure OAuth 2.0 token exchange (fmi_path, OBO, cross-tenant)\
+      \ i\u2026"
+  - name: speckit.azure.entra-app-registration
+    file: skills/entra-app-registration/SKILL.md
+    description: "Guides Microsoft Entra ID app registration, OAuth 2.0 authentication, and MSAL integration.\
+      \ USE FOR: create app registration, register Azure AD app, configure OAuth, set up authentication,\
+      \ add API pe\u2026"
+  - name: speckit.azure.finetuning
+    file: skills/microsoft-foundry/finetuning/SKILL.md
+    description: "Fine-tune models on Azure AI Foundry using SFT (supervised), DPO (preference), or RFT\
+      \ (reinforcement with graders). Covers dataset preparation, training job submission, deployment,\
+      \ and evaluation. US\u2026"
+  - name: speckit.azure.capacity
+    file: skills/microsoft-foundry/models/deploy-model/capacity/SKILL.md
+    description: "Discovers available Azure OpenAI model capacity across regions and projects. Analyzes\
+      \ quota limits, compares availability, and recommends optimal deployment locations based on capacity\
+      \ requirements.\u2026"
+  - name: speckit.azure.customize
+    file: skills/microsoft-foundry/models/deploy-model/customize/SKILL.md
+    description: "Interactive guided deployment flow for Azure OpenAI models with full customization control.\
+      \ Step-by-step selection of model version, SKU (GlobalStandard/Standard/ProvisionedManaged), capacity,\
+      \ RAI po\u2026"
+  - name: speckit.azure.preset
+    file: skills/microsoft-foundry/models/deploy-model/preset/SKILL.md
+    description: "Intelligently deploys Azure OpenAI models to optimal regions by analyzing capacity across\
+      \ all available regions. Automatically checks current region first and shows alternatives if needed.\
+      \ USE FOR: q\u2026"
+  - name: speckit.azure.deploy-model
+    file: skills/microsoft-foundry/models/deploy-model/SKILL.md
+    description: "Unified Azure OpenAI model deployment skill with intelligent intent-based routing. Handles\
+      \ quick preset deployments, fully customized deployments (version/SKU/capacity/RAI policy), and\
+      \ capacity disco\u2026"
+  - name: speckit.azure.microsoft-foundry
+    file: skills/microsoft-foundry/SKILL.md
+    description: "Deploy, evaluate, fine-tune, and manage Foundry agents end-to-end with azd: hosted agent\
+      \ scaffold/run/deploy, prompt agent create, batch eval, continuous eval, prompt optimizer, Agent\
+      \ Optimizer scaff\u2026"
+  - name: speckit.azure.python-appservice-deploy
+    file: skills/python-appservice-deploy/SKILL.md
+    description: "Deploy Python (Flask/Django/FastAPI) code to Azure App Service Linux. WHEN: \"Flask\
+      \ App Service\", \"Django App Service\", \"FastAPI App Service\", \"deploy Python to App Service\"\
+      . DO NOT USE FOR: Container\u2026"
+tags:
+- azure
+- cloud
+- infrastructure
+- deployment
+- microsoft
+- devops
+- foundry
+- diagnostics

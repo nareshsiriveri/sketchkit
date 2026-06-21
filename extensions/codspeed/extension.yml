@@ -1,0 +1,33 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/CodSpeedHQ/codspeed)
+# Source: https://codspeed.io
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: codspeed
+  name: codspeed
+  version: 1.0.0
+  description: CodSpeed plugin for Claude Code helping with performance measurement and optimization.
+  author: CodSpeed
+  license: Apache-2.0
+  repository: https://codspeed.io
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.codspeed.codspeed-optimize
+    file: skills/codspeed-optimize/SKILL.md
+    description: "Autonomously optimize code for performance using CodSpeed benchmarks, flamegraph analysis,\
+      \ and iterative improvement. Use this skill whenever the user wants to make code faster, reduce\
+      \ CPU usage, opt\u2026"
+  - name: speckit.codspeed.codspeed-setup-harness
+    file: skills/codspeed-setup-harness/SKILL.md
+    description: "Set up performance benchmarks and CodSpeed harness for a project. Use this skill whenever\
+      \ the user wants to create benchmarks, add performance tests, set up CodSpeed, configure codspeed.yml,\
+      \ integrat\u2026"
+tags:
+- codspeed
+- performance
+- profiling
+- optimization
+- benchmarking

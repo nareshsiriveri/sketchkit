@@ -1,0 +1,70 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/hunter-io/claude-plugin)
+# Source: https://hunter.io
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: hunter
+  name: hunter
+  version: 0.1.0
+  description: Find and verify professional email addresses, search contacts by domain, and enrich company
+    data -- directly in Claude.
+  author: Hunter.io
+  license: Apache-2.0
+  repository: https://hunter.io
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.hunter.campaign-setup
+    file: skills/campaign-setup/SKILL.md
+    description: Prepares an email campaign by adding recipients from your leads. Use when the user wants
+      to set up a campaign, add recipients to a campaign, or prepare for outreach.
+  - name: speckit.hunter.company-enrichment
+    file: skills/company-enrichment/SKILL.md
+    description: "Retrieves detailed company information including industry, size, location, and description\
+      \ from a domain name. Use when the user asks about a company, wants company details, or says \"\
+      tell me about [c\u2026"
+  - name: speckit.hunter.discover
+    file: skills/discover/SKILL.md
+    description: "Searches for companies matching specific criteria like industry, size, location, and\
+      \ technologies. Use when the user wants to find companies, build a target list, or search for businesses\
+      \ in a market\u2026"
+  - name: speckit.hunter.domain-search
+    file: skills/domain-search/SKILL.md
+    description: "Finds all publicly available email addresses and contacts at a company domain. Use when\
+      \ the user asks who works at a company, wants to find contacts at a domain, or needs email addresses\
+      \ for an organ\u2026"
+  - name: speckit.hunter.email-finder
+    file: skills/email-finder/SKILL.md
+    description: "Finds a professional email address from a person's name and company domain. Use when\
+      \ the user asks to find someone's email, look up a contact's email address, or needs to reach a\
+      \ specific person at a\u2026"
+  - name: speckit.hunter.email-verifier
+    file: skills/email-verifier/SKILL.md
+    description: "Verifies whether an email address is deliverable by checking DNS and SMTP records. Use\
+      \ when the user wants to check if an email is valid, verify an email address, or assess deliverability\
+      \ before send\u2026"
+  - name: speckit.hunter.list-builder
+    file: skills/list-builder/SKILL.md
+    description: Creates and populates a Hunter leads list from a set of contacts or domains. Use when
+      the user wants to build a lead list, organize contacts into a list, or save search results to Hunter.
+  - name: speckit.hunter.person-enrichment
+    file: skills/person-enrichment/SKILL.md
+    description: "Retrieves detailed information about a person from their email address, including name,\
+      \ position, company, and social profiles. Use when the user asks about a person, wants to enrich\
+      \ a contact, or ne\u2026"
+  - name: speckit.hunter.prospecting
+    file: skills/prospecting/SKILL.md
+    description: "Runs end-to-end B2B prospecting by chaining company discovery, contact search, email\
+      \ verification, and enrichment. Use when the user wants to build a prospect list, find and qualify\
+      \ leads, or run a f\u2026"
+tags:
+- hunter
+- email
+- leads
+- b2b
+- prospecting
+- sales
+- enrichment
+- verification

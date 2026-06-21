@@ -1,0 +1,29 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/LogRocket/logrocket-claude-plugin)
+# Source: https://logrocket.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: logrocket
+  name: logrocket
+  version: 0.1.0
+  description: Connect Claude Code to LogRocket to query session replays, metrics, issues, and user behavior
+    using natural language.
+  author: LogRocket
+  license: Apache-2.0
+  repository: https://logrocket.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.logrocket.use-logrocket
+    file: skills/use-logrocket/SKILL.md
+    description: "Query LogRocket for session replays, metrics, issues, and user behavior using natural\
+      \ language. Use when debugging issues, analyzing feature usage, investigating errors, triaging problems,\
+      \ or underst\u2026"
+tags:
+- logrocket
+- session-replay
+- analytics
+- mcp
+- galileo

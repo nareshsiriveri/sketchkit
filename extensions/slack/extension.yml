@@ -1,0 +1,61 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/slackapi/slack-mcp-plugin)
+# Source: https://github.com/slackapi/slack-mcp-plugin/tree/main
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: slack
+  name: slack
+  version: 1.0.0
+  description: Slack integration for searching messages, sending communications, managing canvases, and
+    more
+  author: Slack
+  license: Apache-2.0
+  repository: https://github.com/slackapi/slack-mcp-plugin/tree/main
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.slack.channel-digest
+    file: commands/channel-digest.md
+    description: Get a digest of recent activity across multiple Slack channels
+  - name: speckit.slack.draft-announcement
+    file: commands/draft-announcement.md
+    description: Draft a well-formatted Slack announcement and save it as a draft
+  - name: speckit.slack.find-discussions
+    file: commands/find-discussions.md
+    description: Find discussions about a specific topic across Slack channels
+  - name: speckit.slack.standup
+    file: commands/standup.md
+    description: Generate a standup update based on your recent Slack activity
+  - name: speckit.slack.summarize-channel
+    file: commands/summarize-channel.md
+    description: Summarize recent activity in a Slack channel
+  - name: speckit.slack.block-kit
+    file: skills/block-kit/SKILL.md
+    description: "Help developers build and validate Block Kit layouts for Slack messages, modals, and\
+      \ Home tabs. Provides authoritative block references and validates with the blocks.validate API.\
+      \ Use this skill when\u2026"
+  - name: speckit.slack.create-slack-app
+    file: skills/create-slack-app/SKILL.md
+    description: "Guide developers through creating a Slack app or agent using the Slack CLI and Bolt\
+      \ (JS or Python). Handles prerequisites, sandbox setup, authentication, project creation from templates,\
+      \ and local de\u2026"
+  - name: speckit.slack.slack-api
+    file: skills/slack-api/SKILL.md
+    description: "Discover, navigate, and call Slack Web API methods (the family.method endpoints at slack.com/api\
+      \ like chat.postMessage, conversations.history, users.info, views.open). Use this skill whenever\
+      \ the dev\u2026"
+  - name: speckit.slack.slack-cli
+    file: skills/slack-cli/SKILL.md
+    description: "Use the Slack CLI to create, run, and manage Slack apps from the terminal. Use whenever\
+      \ the developer wants to log in, add a team, switch workspaces, or authenticate with Slack; whenever\
+      \ Slack CLI co\u2026"
+  - name: speckit.slack.slack-messaging
+    file: skills/slack-messaging/SKILL.md
+    description: Guidance for composing well-formatted, effective Slack messages using standard markdown
+  - name: speckit.slack.slack-search
+    file: skills/slack-search/SKILL.md
+    description: Guidance for effectively searching Slack to find messages, files, channels, and people
+tags:
+- productivity

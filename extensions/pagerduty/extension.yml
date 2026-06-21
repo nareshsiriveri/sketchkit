@@ -1,0 +1,26 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/PagerDuty/claude-code-plugins)
+# Source: https://github.com/PagerDuty/claude-code-plugins
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: pagerduty
+  name: pagerduty
+  version: 1.1.0
+  description: A collection of Claude Code plugins developed by PagerDuty for pre-commit risk assessment
+    and PagerDuty skill creation for AI agents (Early Access).
+  author: PagerDuty
+  license: Apache-2.0
+  repository: https://github.com/PagerDuty/claude-code-plugins
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.pagerduty.create-pagerduty-skill
+    file: commands/create-pagerduty-skill.md
+    description: Create or update PagerDuty skills for AI agents through guided interview
+  - name: speckit.pagerduty.pre-commit-risk-scoring
+    file: commands/pre-commit-risk-scoring.md
+    description: Assess pre-commit risk by correlating PagerDuty incidents with current code changes
+tags:
+- monitoring

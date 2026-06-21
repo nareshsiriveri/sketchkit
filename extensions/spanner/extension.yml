@@ -1,0 +1,23 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gemini-cli-extensions/spanner)
+# Source: https://github.com/gemini-cli-extensions/spanner
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: spanner
+  name: spanner
+  version: 0.3.1
+  description: Connect and interact with Spanner data using natural language.
+  author: Google LLC
+  license: Apache-2.0
+  repository: https://github.com/gemini-cli-extensions/spanner
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.spanner.spanner-data
+    file: skills/spanner-data/SKILL.md
+    description: Use these skills when you need to explore the database structure, discover schema objects
+      like tables and graphs, and execute custom SQL queries to interact with your data.
+tags:
+- database

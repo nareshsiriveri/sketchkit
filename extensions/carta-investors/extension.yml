@@ -1,0 +1,98 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/carta/plugins)
+# Source: https://carta.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: carta-investors
+  name: carta-investors
+  version: 0.107.1
+  description: "Carta Investors plugin \u2014 skills for querying investors data, performance benchmarks,\
+    \ regulatory reporting, AGM deck generation, brand extraction, and more via the Carta MCP server"
+  author: Carta
+  license: Apache-2.0
+  repository: https://carta.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.carta-investors.carta-budget-actuals
+    file: skills/carta-budget-actuals/SKILL.md
+    description: "Write actuals into an existing Excel budget workbook from Carta MCP \u2014 add/interleave\
+      \ Budget/Actual/Variance columns, a tag-view tab, or a vendor-view tab. TRIGGER: pull/fetch/get/retrieve/refresh/syn\u2026"
+  - name: speckit.carta-investors.carta-budget-scenarios
+    file: skills/carta-budget-scenarios/SKILL.md
+    description: "Build what-if scenario columns on an existing Excel budget workbook \u2014 trim, growth,\
+      \ or additive layers (new fund raise, headcount/FTE hires, expansion). TRIGGER: what-if questions,\
+      \ \"how would X affec\u2026"
+  - name: speckit.carta-investors.carta-budget-vs-actuals
+    file: skills/carta-budget-vs-actuals/SKILL.md
+    description: "Analyze pacing and variance: compare YTD actuals against a budget workbook (read-only\
+      \ analysis, pulls actuals from Carta MCP). TRIGGER: \"how are we doing\", pacing, on-track, variance\
+      \ analysis, compar\u2026"
+  - name: speckit.carta-investors.carta-co-investors
+    file: skills/carta-co-investors/SKILL.md
+    description: Interactive co-investor report from Carta SPA data with clickable portfolio drill-downs.
+      Use for co-investor analysis or asking who invested in a specific portfolio company.
+  - name: speckit.carta-investors.carta-consolidating-balance-sheet
+    file: skills/carta-consolidating-balance-sheet/SKILL.md
+    description: "Generate a consolidating Balance Sheet for all entities under a firm for a given month\
+      \ and write it as a side-by-side Excel tab with Assets / Liabilities / Equity sections and a Total\
+      \ column. Sourced\u2026"
+  - name: speckit.carta-investors.carta-consolidating-pnl
+    file: skills/carta-consolidating-pnl/SKILL.md
+    description: "Firm-wide consolidating P&L (Income Statement) across ALL entities of a firm for one\
+      \ month. Produces TWO Excel tabs: detailed P&L (Month + YTD Actual/Budget/Variance/%) and executive\
+      \ Summary P&L form\u2026"
+  - name: speckit.carta-investors.carta-create-budget
+    file: skills/carta-create-budget/SKILL.md
+    description: "Build or restructure a fund/ManCo budget workbook in Excel from Carta prior-year actuals.\
+      \ TRIGGER: build/create/draft a budget for a future year; group/categorize budget line items into\
+      \ sections with\u2026"
+  - name: speckit.carta-investors.carta-download-tearsheet
+    file: skills/carta-download-tearsheet/SKILL.md
+    description: "Download tear sheets for your portfolio companies and funds on Carta. Use when asked\
+      \ to \"create a [portco] tear sheet\", \"download tear sheet for all portfolio companies\", or \"\
+      preview the tear sheet f\u2026"
+  - name: speckit.carta-investors.carta-explore-data
+    file: skills/carta-explore-data/SKILL.md
+    description: "Carta Web / Fund Admin investors data queries against the data warehouse. For investments,\
+      \ portfolio companies, fund metrics, NAV, TVPI, DPI, IRR, cash flows, balance sheets, cap tables,\
+      \ ownership %,\u2026"
+  - name: speckit.carta-investors.carta-fetch-budget
+    file: skills/carta-fetch-budget/SKILL.md
+    description: "Pull a ManCo budget from Carta and write it to an Excel workbook with monthly amounts\
+      \ and subtotals. TRIGGER: pull/fetch/import/sync Carta budget for a ManCo. NOT: pull/fetch/get actuals\
+      \ (carta-budge\u2026"
+  - name: speckit.carta-investors.carta-form-adv
+    file: skills/carta-form-adv/SKILL.md
+    description: "Fetches Form ADV Part 1A filing data and generates an interactive HTML filing guide\
+      \ + Excel filing reference. Covers Items 5.D/F/H, Schedule D \xA77.B.(1) per-fund detail, beneficial\
+      \ owner breakdown, as\u2026"
+  - name: speckit.carta-investors.carta-investors-tutorial
+    file: skills/carta-investors-tutorial/SKILL.md
+    description: "Interactive 5-minute walkthrough of the carta-investors plugin. Covers plugin overview,\
+      \ setup verification, and demo of 3 real-world scenarios: fundraising benchmarks, LP reporting tear\
+      \ sheets, and L\u2026"
+  - name: speckit.carta-investors.carta-performance-benchmarks
+    file: skills/carta-performance-benchmarks/SKILL.md
+    description: "Compare a fund's performance against peer benchmark cohorts. Use when asked about fund\
+      \ benchmarks, peer comparison, percentile ranking, Net IRR vs peers, TVPI benchmarks, or how a fund\
+      \ stacks up agai\u2026"
+  - name: speckit.carta-investors.carta-soi
+    file: skills/carta-soi/SKILL.md
+    description: "Display a fund's Schedule of Investments (SOI) as a Live Artifact in Cowork. The artifact\
+      \ is firm-scoped \u2014 it loads every fund the user has access to in the firm and presents them\
+      \ in a header dropdow\u2026"
+tags:
+- investors
+- mcp
+- carta
+- agm
+- annual-general-meeting
+- deck
+- presentation
+- brand
+- brand-board
+- pdf
+- pptx

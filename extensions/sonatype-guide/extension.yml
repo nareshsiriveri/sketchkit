@@ -1,0 +1,26 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/sonatype/sonatype-guide-claude-plugin)
+# Source: https://github.com/sonatype/sonatype-guide-claude-plugin.git
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: sonatype-guide
+  name: sonatype-guide
+  version: 1.0.0
+  description: Sonatype Guide MCP server for software supply chain intelligence and dependency security
+    analysis. Scan dependencies for vulnerabilities, get version recommendations, and check component
+    quality metrics.
+  author: Sonatype
+  license: Apache-2.0
+  repository: https://github.com/sonatype/sonatype-guide-claude-plugin.git
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.sonatype-guide.sonatype-guide
+    file: skills/sonatype-guide/SKILL.md
+    description: "MUST use before installing, adding, or upgrading any dependency. Trigger when: running\
+      \ pip install, npm install, cargo add, go get, or any package manager command; adding a package\
+      \ to requirements.tx\u2026"
+tags:
+- security

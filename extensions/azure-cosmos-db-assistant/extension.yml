@@ -1,0 +1,46 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/AzureCosmosDB/cosmosdb-claude-code-plugin)
+# Source: https://github.com/AzureCosmosDB/cosmosdb-claude-code-plugin
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: azure-cosmos-db-assistant
+  name: Azure Cosmos DB
+  version: 1.0.0
+  description: "Azure Cosmos DB plugin for Claude Code. Includes 73 best-practice rules across 10 categories\
+    \ covering data modeling, partition key design, query optimization, SDK usage, indexing, throughput\
+    \ management, global distribution, monitoring, design patterns, and vector search. No external services\
+    \ or con\u2026"
+  author: Azure Cosmos DB
+  license: Apache-2.0
+  repository: https://github.com/AzureCosmosDB/cosmosdb-claude-code-plugin
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.azure-cosmos-db-assistant.cosmos-review
+    file: commands/cosmos-review.md
+    description: Review code for Azure Cosmos DB best practices and suggest optimizations
+  - name: speckit.azure-cosmos-db-assistant.cosmos-setup
+    file: commands/cosmos-setup.md
+    description: Set up the optional Azure Cosmos DB MCP Toolkit connection for live database operations
+  - name: speckit.azure-cosmos-db-assistant.generate-skills
+    file: commands/generate-skills.md
+    description: Regenerate best-practice skills from the upstream cosmosdb-agent-kit repository
+  - name: speckit.azure-cosmos-db-assistant.cosmosdb-best-practices
+    file: skills/cosmosdb-best-practices/SKILL.md
+    description: "Azure Cosmos DB performance optimization and best practices guidelines for NoSQL, partitioning,\
+      \ queries, SDK usage, and vector search. Use when writing, reviewing, or refactoring code that interacts\u2026"
+  - name: speckit.azure-cosmos-db-assistant.agent-cosmosdb-expert
+    file: agents/cosmosdb-expert.md
+    description: "Azure Cosmos DB expert agent. Use when designing data models, choosing partition keys,\
+      \ optimizing queries, configuring SDK clients, reviewing Cosmos DB code, troubleshooting performance\
+      \ issues, or bu\u2026"
+tags:
+- azure
+- cosmos-db
+- cosmosdb
+- nosql
+- database
+- vector-search
+- best-practices

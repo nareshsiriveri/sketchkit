@@ -1,0 +1,46 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/atlassian/atlassian-mcp-server)
+# Source: https://github.com/atlassian/atlassian-mcp-server
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: atlassian
+  name: atlassian
+  version: 0.1.0
+  description: Connect to Atlassian products including Jira and Confluence. Search and create issues,
+    access documentation, manage sprints, and integrate your development workflow with Atlassian's collaboration
+    tools.
+  author: Atlassian
+  license: Apache-2.0
+  repository: https://github.com/atlassian/atlassian-mcp-server
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.atlassian.capture-tasks-from-meeting-notes
+    file: skills/capture-tasks-from-meeting-notes/SKILL.md
+    description: "Analyze meeting notes to find action items and create Jira tasks for assigned work.\
+      \ When an agent needs to: (1) Create Jira tasks or tickets from meeting notes, (2) Extract or find\
+      \ action items from\u2026"
+  - name: speckit.atlassian.generate-status-report
+    file: skills/generate-status-report/SKILL.md
+    description: "Generate project status reports from Jira issues and publish to Confluence. When an\
+      \ agent needs to: (1) Create a status report for a project, (2) Summarize project progress or updates,\
+      \ (3) Generate w\u2026"
+  - name: speckit.atlassian.search-company-knowledge
+    file: skills/search-company-knowledge/SKILL.md
+    description: "Search across company knowledge bases (Confluence, Jira, internal docs) to find and\
+      \ explain internal concepts, processes, and technical details. When an agent needs to: (1) Find\
+      \ or search for informa\u2026"
+  - name: speckit.atlassian.spec-to-backlog
+    file: skills/spec-to-backlog/SKILL.md
+    description: "Automatically convert Confluence specification documents into structured Jira backlogs\
+      \ with Epics and implementation tickets. When an agent needs to: (1) Create Jira tickets from a\
+      \ Confluence page, (\u2026"
+  - name: speckit.atlassian.triage-issue
+    file: skills/triage-issue/SKILL.md
+    description: "Intelligently triage bug reports and error messages by searching for duplicates in Jira\
+      \ and offering to create new issues or add comments to existing ones. When an agent needs to: (1)\
+      \ Triage a bug re\u2026"
+tags:
+- productivity

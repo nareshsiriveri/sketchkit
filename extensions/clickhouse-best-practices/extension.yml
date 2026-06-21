@@ -1,0 +1,69 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/ClickHouse/agent-skills)
+# Source: https://clickhouse.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: clickhouse-best-practices
+  name: clickhouse-best-practices
+  version: 0.3.0
+  description: "28 best practice rules for ClickHouse schema design, query optimization, and data ingestion\
+    \ \u2014 prioritized by impact"
+  author: ClickHouse Inc
+  license: Apache-2.0
+  repository: https://clickhouse.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.clickhouse-best-practices.chdb-datastore
+    file: skills/chdb-datastore/SKILL.md
+    description: "Use when the user has tabular data (pandas DataFrame, parquet, csv, Arrow, json) and\
+      \ wants to filter, group, aggregate, join, or speed up slow pandas. Provides chDB DataStore \u2014\
+      \ same pandas API, Click\u2026"
+  - name: speckit.clickhouse-best-practices.chdb-sql
+    file: skills/chdb-sql/SKILL.md
+    description: "Use when the user wants to run SQL \u2014 especially analytical SQL \u2014 on local\
+      \ files (parquet/csv/json), URLs, S3 paths, or remote databases (Postgres, MySQL, MongoDB, ClickHouse\
+      \ Cloud, Iceberg, Delta Lak\u2026"
+  - name: speckit.clickhouse-best-practices.clickhouse-architecture-advisor
+    file: skills/clickhouse-architecture-advisor/SKILL.md
+    description: "MUST USE when designing ClickHouse architectures, selecting between ingestion or modeling\
+      \ patterns, or translating best practices into workload-specific system designs. Complements clickhouse-best-pr\u2026"
+  - name: speckit.clickhouse-best-practices.clickhouse-best-practices
+    file: skills/clickhouse-best-practices/SKILL.md
+    description: "MUST USE when reviewing ClickHouse schemas, queries, or configurations. Contains 31\
+      \ rules that MUST be checked before providing recommendations. Always read relevant rule files and\
+      \ cite specific rule\u2026"
+  - name: speckit.clickhouse-best-practices.clickhouse-js-node-coding
+    file: skills/clickhouse-js-node-coding/SKILL.md
+    description: "Write idiomatic application code with the ClickHouse Node.js client (`@clickhouse/client`).\
+      \ Use this skill whenever a user is *building* against the Node.js client \u2014 configuring the\
+      \ client, pinging,\u2026"
+  - name: speckit.clickhouse-best-practices.clickhouse-js-node-troubleshooting
+    file: skills/clickhouse-js-node-troubleshooting/SKILL.md
+    description: "Troubleshoot and resolve common issues with the ClickHouse Node.js client (@clickhouse/client).\
+      \ Use this skill whenever a user reports errors, unexpected behavior, or configuration questions\
+      \ involvin\u2026"
+  - name: speckit.clickhouse-best-practices.clickhouse-managed-postgres-rca
+    file: skills/clickhouse-managed-postgres-rca/SKILL.md
+    description: "MUST USE when investigating performance issues on a ClickHouse-managed Postgres instance.\
+      \ Provides an evidence-based RCA workflow that scrapes the Prometheus endpoint for system signal,\
+      \ pulls per-dig\u2026"
+  - name: speckit.clickhouse-best-practices.clickhousectl-cloud-deploy
+    file: skills/clickhousectl-cloud-deploy/SKILL.md
+    description: Use when a user wants to deploy ClickHouse to the cloud, go to production, use ClickHouse
+      Cloud, host a managed ClickHouse service, or migrate from a local ClickHouse setup to ClickHouse
+      Cloud.
+  - name: speckit.clickhouse-best-practices.clickhousectl-local-dev
+    file: skills/clickhousectl-local-dev/SKILL.md
+    description: "Use when a user wants to build an application with ClickHouse, set up a local ClickHouse\
+      \ development environment, install ClickHouse, create a local server, create tables, or start developing\
+      \ with Cl\u2026"
+tags:
+- clickhouse
+- database
+- query-optimization
+- schema-design
+- best-practices
+- data-ingestion

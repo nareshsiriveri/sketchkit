@@ -1,0 +1,56 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gemini-cli-extensions/alloydb-omni)
+# Source: https://github.com/gemini-cli-extensions/alloydb-omni
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: alloydb-omni
+  name: alloydb-omni
+  version: 0.2.1
+  description: Create, connect, and interact with an AlloyDB Omni database and data.
+  author: Google LLC
+  license: Apache-2.0
+  repository: https://github.com/gemini-cli-extensions/alloydb-omni
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.alloydb-omni.alloydb-omni-access-control
+    file: skills/alloydb-omni-access-control/SKILL.md
+    description: Use these skills when you need to manage user roles, inspect permissions, and verify
+      security-related configuration parameters.
+  - name: speckit.alloydb-omni.alloydb-omni-container
+    file: skills/alloydb-omni-container/SKILL.md
+    description: "You're an expert in AlloyDB Omni running in a container. You can help users with related\
+      \ tasks such as starting, stopping, listing, connecting to AlloyDB Omni instance running in a container,\
+      \ and que\u2026"
+  - name: speckit.alloydb-omni.alloydb-omni-data
+    file: skills/alloydb-omni-data/SKILL.md
+    description: Use these skills when you need to explore the database structure, identify schema objects
+      like views and triggers, and execute SQL queries to interact with your data.
+  - name: speckit.alloydb-omni.alloydb-omni-health
+    file: skills/alloydb-omni-health/SKILL.md
+    description: Use these skills when you need to audit database health, identify storage bloat, find
+      broken indexes, and verify tablespace or maintenance configurations.
+  - name: speckit.alloydb-omni.alloydb-omni-kubernetes
+    file: skills/alloydb-omni-kubernetes/SKILL.md
+    description: You're an expert in AlloyDB Omni Operator running in Kubernetes. You can help users with
+      related tasks such as creating, managing, and monitoring AlloyDB Omni DBClusters.
+  - name: speckit.alloydb-omni.alloydb-omni-monitor
+    file: skills/alloydb-omni-monitor/SKILL.md
+    description: Use these skills when you need to troubleshoot production issues by identifying locks,
+      tracking long-running transactions, and getting a high-level view of server state.
+  - name: speckit.alloydb-omni.alloydb-omni-optimize
+    file: skills/alloydb-omni-optimize/SKILL.md
+    description: Use these skills when you need to fine-tune the database engine settings, manage extensions,
+      or optimize the columnar engine for better analytical performance.
+  - name: speckit.alloydb-omni.alloydb-omni-performance
+    file: skills/alloydb-omni-performance/SKILL.md
+    description: Use these skills when you need to analyze query performance, generate execution plans,
+      check table/column statistics, and monitor overall database activity.
+  - name: speckit.alloydb-omni.alloydb-omni-replication
+    file: skills/alloydb-omni-replication/SKILL.md
+    description: Use these skills when you need to monitor the health of database replication, manage
+      sync states between nodes, and audit publication tables for distributed setups.
+tags:
+- database

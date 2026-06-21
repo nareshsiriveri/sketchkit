@@ -1,0 +1,72 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/firecrawl/firecrawl-claude-plugin)
+# Source: https://github.com/firecrawl/firecrawl-claude-plugin.git
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: firecrawl
+  name: firecrawl
+  version: 1.0.9
+  description: Scrape, search, crawl, and map the web with a single command.
+  author: Firecrawl
+  license: Apache-2.0
+  repository: https://github.com/firecrawl/firecrawl-claude-plugin.git
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.firecrawl.skill-gen
+    file: commands/skill-gen.md
+    description: Generate a complete Agent Skill from a documentation URL using Firecrawl
+  - name: speckit.firecrawl.firecrawl-agent
+    file: skills/firecrawl-agent/SKILL.md
+    description: "AI-powered autonomous data extraction that navigates complex sites and returns structured\
+      \ JSON. Use this skill when the user wants structured data from websites, needs to extract pricing\
+      \ tiers, produ\u2026"
+  - name: speckit.firecrawl.firecrawl-cli
+    file: skills/firecrawl-cli/SKILL.md
+    description: "Search, scrape, and interact with the web via the Firecrawl CLI. Use this skill whenever\
+      \ the user wants to search the web, find articles, research a topic, look something up online, scrape\
+      \ a webpage,\u2026"
+  - name: speckit.firecrawl.firecrawl-crawl
+    file: skills/firecrawl-crawl/SKILL.md
+    description: "Bulk extract content from an entire website or site section. Use this skill when the\
+      \ user wants to crawl a site, extract all pages from a docs section, bulk-scrape multiple pages\
+      \ following links, or\u2026"
+  - name: speckit.firecrawl.firecrawl-download
+    file: skills/firecrawl-download/SKILL.md
+    description: "Download an entire website as local files \u2014 markdown, screenshots, or multiple\
+      \ formats per page. Use this skill when the user wants to save a site locally, download documentation\
+      \ for offline use, bul\u2026"
+  - name: speckit.firecrawl.firecrawl-interact
+    file: skills/firecrawl-interact/SKILL.md
+    description: "Control and interact with a live browser session on any scraped page \u2014 click buttons,\
+      \ fill forms, navigate flows, and extract data using natural language prompts or code. Use when\
+      \ the user needs to i\u2026"
+  - name: speckit.firecrawl.firecrawl-map
+    file: skills/firecrawl-map/SKILL.md
+    description: "Discover and list all URLs on a website, with optional search filtering. Use this skill\
+      \ when the user wants to find a specific page on a large site, list all URLs, see the site structure,\
+      \ find where\u2026"
+  - name: speckit.firecrawl.firecrawl-monitor
+    file: skills/firecrawl-monitor/SKILL.md
+    description: "Detect when content on a website changes and get notified by webhook or email \u2014\
+      \ no cron jobs, scrapers, or diff scripts required. Use this skill whenever the user wants to track\
+      \ changes on a page, wa\u2026"
+  - name: speckit.firecrawl.firecrawl-parse
+    file: skills/firecrawl-parse/SKILL.md
+    description: "Efficiently extract and convert the contents of any local file\u2014such as PDF, DOCX,\
+      \ DOC, ODT, RTF, XLSX, XLS, or HTML\u2014into clean, well-formatted markdown saved to disk. Use\
+      \ this skill whenever the user\u2026"
+  - name: speckit.firecrawl.firecrawl-scrape
+    file: skills/firecrawl-scrape/SKILL.md
+    description: "Extract clean markdown from any URL, including JavaScript-rendered SPAs. Use this skill\
+      \ whenever the user provides a URL and wants its content, says \"scrape\", \"grab\", \"fetch\",\
+      \ \"pull\", \"get the page\",\u2026"
+  - name: speckit.firecrawl.firecrawl-search
+    file: skills/firecrawl-search/SKILL.md
+    description: "Web search with full page content extraction. Use this skill whenever the user asks\
+      \ to search the web, find articles, research a topic, look something up, find recent news, discover\
+      \ sources, or says\u2026"
+tags:
+- development

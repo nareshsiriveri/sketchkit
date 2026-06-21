@@ -1,0 +1,70 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/youdotcom-oss/agent-skills)
+# Source: https://you.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: youdotcom-agent-skills
+  name: youdotcom-agent-skills
+  version: 1.0.0
+  description: You.com agent skills for web search, research with citations, and content extraction. Guided
+    integrations for Vercel AI SDK, Claude Agent SDK, OpenAI Agents SDK, crewAI, LangChain, Microsoft
+    Teams.ai, direct REST API, and bash CLI.
+  author: You.com
+  license: Apache-2.0
+  repository: https://you.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.youdotcom-agent-skills.teams-anthropic-integration
+    file: skills/teams-anthropic-integration/SKILL.md
+    description: "Add Anthropic Claude models (Opus, Sonnet, Haiku) to Microsoft Teams.ai applications\
+      \ using @youdotcom-oss/teams-anthropic. Optionally integrate You.com MCP server for web search and\
+      \ content extractio\u2026"
+  - name: speckit.youdotcom-agent-skills.ydc-ai-sdk-integration
+    file: skills/ydc-ai-sdk-integration/SKILL.md
+    description: "Integrate Vercel AI SDK applications with You.com tools (web search, AI agent, content\
+      \ extraction). Use when developer mentions AI SDK, Vercel AI SDK, generateText, streamText, or You.com\
+      \ integration\u2026"
+  - name: speckit.youdotcom-agent-skills.ydc-claude-agent-sdk-integration
+    file: skills/ydc-claude-agent-sdk-integration/SKILL.md
+    description: Integrate Claude Agent SDK with You.com HTTP MCP server for Python and TypeScript. Use
+      when developer mentions Claude Agent SDK, Anthropic Agent SDK, or integrating Claude with MCP tools.
+  - name: speckit.youdotcom-agent-skills.ydc-crewai-mcp-integration
+    file: skills/ydc-crewai-mcp-integration/SKILL.md
+    description: "Integrate You.com remote MCP server with crewAI agents for web search, AI-powered answers,\
+      \ and content extraction. - MANDATORY TRIGGERS: crewAI MCP, crewai mcp integration, remote MCP servers,\
+      \ You.co\u2026"
+  - name: speckit.youdotcom-agent-skills.ydc-langchain-integration
+    file: skills/ydc-langchain-integration/SKILL.md
+    description: "Integrate LangChain applications with You.com tools (web search, content extraction,\
+      \ retrieval) in TypeScript or Python. Use when developer mentions LangChain, LangChain.js, LangChain\
+      \ Python, createA\u2026"
+  - name: speckit.youdotcom-agent-skills.ydc-openai-agent-sdk-integration
+    file: skills/ydc-openai-agent-sdk-integration/SKILL.md
+    description: "Integrate OpenAI Agents SDK with You.com MCP server - Hosted and Streamable HTTP support\
+      \ for Python and TypeScript. - MANDATORY TRIGGERS: OpenAI Agents SDK, OpenAI agents, openai-agents,\
+      \ @openai/agen\u2026"
+  - name: speckit.youdotcom-agent-skills.youdotcom-api
+    file: skills/youdotcom-api/SKILL.md
+    description: "Integrate You.com APIs (Research, Search, Contents) into any language using direct HTTP\
+      \ calls \u2014 no SDK required. - MANDATORY TRIGGERS: YDC API, You.com API integration, ydc-api,\
+      \ direct API integratio\u2026"
+  - name: speckit.youdotcom-agent-skills.youdotcom-cli
+    file: skills/youdotcom-cli/SKILL.md
+    description: "Web search, research with citations, and content extraction for bash agents using curl\
+      \ and You.com's REST API. - MANDATORY TRIGGERS: You.com, youdotcom, YDC, web search CLI, livecrawl,\
+      \ you.com API, r\u2026"
+tags:
+- you.com
+- web-search
+- research
+- content-extraction
+- mcp
+- ai-sdk
+- claude-agent-sdk
+- openai
+- crewai
+- langchain
+- teams-ai

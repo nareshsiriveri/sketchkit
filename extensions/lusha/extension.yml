@@ -1,0 +1,54 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/lusha-oss/lusha-mcp-plugin)
+# Source: https://www.lusha.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: lusha
+  name: lusha
+  version: 0.1.1
+  description: "Connect Lusha to Claude to pull verified B2B data, contact data, and company data \u2014\
+    \ including verified emails, direct dials, mobile numbers, and real-time buying signals \u2014 straight\
+    \ into your conversation. Lusha is the B2B data layer behind 300M+ verified contacts, used for sales\
+    \ intelligence, prosp\u2026"
+  author: Lusha
+  license: Apache-2.0
+  repository: https://www.lusha.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.lusha.enrich-contact
+    file: skills/enrich-contact/SKILL.md
+    description: "Look up a person and get their verified phone numbers, email, and company context. Use\
+      \ when the user says \"look up [name]\", \"get me the contact info for [person]\", \"find [name]'s\
+      \ phone number\", \"who\u2026"
+  - name: speckit.lusha.lookalike-prospect
+    file: skills/lookalike-prospect/SKILL.md
+    description: "Find companies or contacts similar to a set of references, then enrich results with\
+      \ verified phone numbers. Use when the user says \"find companies like my best customers\", \"find\
+      \ more contacts like th\u2026"
+  - name: speckit.lusha.prospect
+    file: skills/prospect/SKILL.md
+    description: "Build a targeted list of contacts or companies from Lusha and return verified phone\
+      \ numbers alongside emails. Use when the user says \"find me [title] at [company type]\", \"build\
+      \ a list of [ICP descrip\u2026"
+  - name: speckit.lusha.signal-prospect
+    file: skills/signal-prospect/SKILL.md
+    description: "Find companies or contacts triggered by a buying signal, then surface verified phone\
+      \ numbers for the right decision makers. Use when the user says \"find companies that just raised\
+      \ funding\", \"who's su\u2026"
+tags:
+- lusha
+- b2b
+- sales-intelligence
+- prospecting
+- data-enrichment
+- lead-enrichment
+- verified-emails
+- phone-numbers
+- buying-signals
+- contacts
+- companies
+- revops
+- mcp

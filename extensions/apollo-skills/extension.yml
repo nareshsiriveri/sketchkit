@@ -1,0 +1,103 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/apollographql/skills)
+# Source: https://www.apollographql.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: apollo-skills
+  name: apollo-skills
+  version: 1.2.5
+  description: Agent skills for AI coding agents working with Apollo GraphQL tools and technologies
+  author: Apollo GraphQL
+  license: Apache-2.0
+  repository: https://www.apollographql.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.apollo-skills.apollo-client
+    file: skills/apollo-client/SKILL.md
+    description: "Guide for building React applications with Apollo Client 4.x. Use this skill when: (1)\
+      \ setting up Apollo Client in a React project, (2) writing GraphQL queries or mutations with hooks,\
+      \ (3) configurin\u2026"
+  - name: speckit.apollo-skills.apollo-connectors
+    file: skills/apollo-connectors/SKILL.md
+    description: "Guide for integrating REST APIs into GraphQL supergraphs using Apollo Connectors with\
+      \ @source and @connect directives. Use this skill when the user: (1) mentions \"connectors\", \"\
+      Apollo Connectors\", or\u2026"
+  - name: speckit.apollo-skills.apollo-federation
+    file: skills/apollo-federation/SKILL.md
+    description: "Guide for authoring Apollo Federation subgraph schemas. Use this skill when: (1) creating\
+      \ new subgraph schemas for a federated supergraph, (2) defining or modifying entities with @key,\
+      \ (3) sharing ty\u2026"
+  - name: speckit.apollo-skills.apollo-ios
+    file: skills/apollo-ios/SKILL.md
+    description: "Guide for building Apple-platform applications with Apollo iOS, the strongly-typed GraphQL\
+      \ client for Swift. Use this skill when: (1) adding Apollo iOS to a Swift Package Manager or Xcode\
+      \ project, (2\u2026"
+  - name: speckit.apollo-skills.apollo-kotlin
+    file: skills/apollo-kotlin/SKILL.md
+    description: "Guide for building applications with Apollo Kotlin, the GraphQL client library for Android\
+      \ and Kotlin. Use this skill when: (1) setting up Apollo Kotlin in a Gradle project for Android,\
+      \ Kotlin/JVM, o\u2026"
+  - name: speckit.apollo-skills.apollo-mcp-server
+    file: skills/apollo-mcp-server/SKILL.md
+    description: "Guide for using Apollo MCP Server to connect AI agents with GraphQL APIs. Use this skill\
+      \ when: (1) setting up or configuring Apollo MCP Server, (2) defining MCP tools from GraphQL operations,\
+      \ (3) usi\u2026"
+  - name: speckit.apollo-skills.apollo-router
+    file: skills/apollo-router/SKILL.md
+    description: "Version-aware guide for configuring and running Apollo Router for federated GraphQL\
+      \ supergraphs. Generates correct YAML for both Router v1.x and v2.x. Use this skill when: (1) setting\
+      \ up Apollo Route\u2026"
+  - name: speckit.apollo-skills.apollo-router-plugin-creator
+    file: skills/apollo-router-plugin-creator/SKILL.md
+    description: "Guide for writing Apollo Router native Rust plugins. Use this skill when: (1) users\
+      \ want to create a new router plugin, (2) users want to add service hooks (router_service, supergraph_service,\
+      \ execut\u2026"
+  - name: speckit.apollo-skills.apollo-server
+    file: skills/apollo-server/SKILL.md
+    description: "Guide for building GraphQL servers with Apollo Server 5.x. Use this skill when: (1)\
+      \ setting up a new Apollo Server project, (2) writing resolvers or defining GraphQL schemas, (3)\
+      \ implementing authent\u2026"
+  - name: speckit.apollo-skills.graphql-operations
+    file: skills/graphql-operations/SKILL.md
+    description: "Guide for writing GraphQL operations (queries, mutations, fragments) following best\
+      \ practices. Use this skill when: (1) writing GraphQL queries or mutations, (2) organizing operations\
+      \ with fragments,\u2026"
+  - name: speckit.apollo-skills.graphql-schema
+    file: skills/graphql-schema/SKILL.md
+    description: "Guide for designing GraphQL schemas following industry best practices. Use this skill\
+      \ when: (1) designing a new GraphQL schema or API, (2) reviewing existing schema for improvements,\
+      \ (3) deciding on\u2026"
+  - name: speckit.apollo-skills.rover
+    file: skills/rover/SKILL.md
+    description: "Guide for using Apollo Rover CLI to manage GraphQL schemas and federation. Use this\
+      \ skill when: (1) publishing or fetching subgraph/graph schemas, (2) composing supergraph schemas\
+      \ locally or via Grap\u2026"
+  - name: speckit.apollo-skills.rust-best-practices
+    file: skills/rust-best-practices/SKILL.md
+    description: "Guide for writing idiomatic Rust code based on Apollo GraphQL's best practices handbook.\
+      \ Use this skill when: (1) writing new Rust code or functions, (2) reviewing or refactoring existing\
+      \ Rust code,\u2026"
+  - name: speckit.apollo-skills.skill-creator
+    file: skills/skill-creator/SKILL.md
+    description: "Guide for creating effective skills for Apollo GraphQL and GraphQL development. Use\
+      \ this skill when: (1) users want to create a new skill, (2) users want to update an existing skill,\
+      \ (3) users ask ab\u2026"
+tags:
+- graphql
+- apollo
+- apollo-client
+- apollo-connectors
+- apollo-federation
+- apollo-ios
+- apollo-kotlin
+- apollo-mcp-server
+- apollo-router
+- apollo-server
+- graphql-operations
+- graphql-schema
+- graphql-lsp
+- rover
+- rust-best-practices

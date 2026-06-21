@@ -1,0 +1,25 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/pydantic/skills)
+# Source: https://github.com/pydantic/skills/tree/main/plugins/ai
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: pydantic-ai
+  name: pydantic-ai
+  version: 0.1.0
+  description: "Build production-grade AI agents with Pydantic AI \u2014 tools, capabilities, structured\
+    \ output, streaming, and testing patterns"
+  author: Pydantic
+  license: Apache-2.0
+  repository: https://github.com/pydantic/skills/tree/main/plugins/ai
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.pydantic-ai.building-pydantic-ai-agents
+    file: skills/building-pydantic-ai-agents/SKILL.md
+    description: "Build AI agents with Pydantic AI \u2014 tools, capabilities (including on-demand loading),\
+      \ structured output, streaming, testing, and multi-agent patterns. Use when the user mentions Pydantic\
+      \ AI, imports\u2026"
+tags:
+- development

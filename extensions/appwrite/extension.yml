@@ -1,0 +1,84 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/appwrite/claude-plugin)
+# Source: https://appwrite.io
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: appwrite
+  name: appwrite
+  version: 0.1.0
+  description: Appwrite tools for Claude Code, including SDK skills, Appwrite MCP servers, and deployment
+    commands.
+  author: Appwrite
+  license: Apache-2.0
+  repository: https://appwrite.io
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.appwrite.deploy-function
+    file: commands/deploy-function.md
+    description: Deploy a function using the Appwrite CLI
+  - name: speckit.appwrite.deploy-site
+    file: commands/deploy-site.md
+    description: Deploy a site using the Appwrite CLI
+  - name: speckit.appwrite.cli
+    file: skills/cli/SKILL.md
+    description: "Appwrite CLI skill. Use when managing Appwrite projects from the command line. Covers\
+      \ installation, login, project initialization, deploying functions/sites/tables/buckets/teams/topics,\
+      \ managing reso\u2026"
+  - name: speckit.appwrite.dart
+    file: skills/dart/SKILL.md
+    description: "Appwrite Dart SDK skill. Use when building Flutter apps (mobile, web, desktop) or server-side\
+      \ Dart applications with Appwrite. Covers client-side auth (email, OAuth), database queries, file\
+      \ uploads w\u2026"
+  - name: speckit.appwrite.dotnet
+    file: skills/dotnet/SKILL.md
+    description: "Appwrite .NET SDK skill. Use when building server-side C# or .NET applications with\
+      \ Appwrite, including ASP.NET and Blazor integrations. Covers user management, database/table CRUD,\
+      \ file storage, and\u2026"
+  - name: speckit.appwrite.go
+    file: skills/go/SKILL.md
+    description: "Appwrite Go SDK skill. Use when building server-side Go applications with Appwrite.\
+      \ Covers user management, database/table CRUD, file storage, and functions via API keys. Uses per-service\
+      \ packages an\u2026"
+  - name: speckit.appwrite.kotlin
+    file: skills/kotlin/SKILL.md
+    description: "Appwrite Kotlin SDK skill. Use when building native Android apps or server-side Kotlin/JVM\
+      \ backends with Appwrite. Covers client-side auth (email, OAuth with Activity integration), database\
+      \ queries,\u2026"
+  - name: speckit.appwrite.php
+    file: skills/php/SKILL.md
+    description: "Appwrite PHP SDK skill. Use when building server-side PHP applications with Appwrite,\
+      \ including Laravel and Symfony integrations. Covers user management, database/table CRUD, file\
+      \ storage, and functi\u2026"
+  - name: speckit.appwrite.python
+    file: skills/python/SKILL.md
+    description: "Appwrite Python SDK skill. Use when building server-side Python applications with Appwrite,\
+      \ including Django, Flask, and FastAPI integrations. Covers user management, database/table CRUD,\
+      \ file storag\u2026"
+  - name: speckit.appwrite.ruby
+    file: skills/ruby/SKILL.md
+    description: "Appwrite Ruby SDK skill. Use when building server-side Ruby applications with Appwrite,\
+      \ including Rails and Sinatra integrations. Covers user management, database/table CRUD, file storage,\
+      \ and functi\u2026"
+  - name: speckit.appwrite.rust
+    file: skills/rust/SKILL.md
+    description: "Appwrite Rust SDK skill. Use when building server-side Rust applications with Appwrite.\
+      \ Covers async client setup with API keys, user management, TablesDB database/table/row operations,\
+      \ file storage,\u2026"
+  - name: speckit.appwrite.swift
+    file: skills/swift/SKILL.md
+    description: "Appwrite Swift SDK skill. Use when building native iOS, macOS, watchOS, or tvOS apps,\
+      \ or server-side Swift applications with Appwrite. Covers client-side auth (email, OAuth), database\
+      \ queries, file u\u2026"
+  - name: speckit.appwrite.typescript
+    file: skills/typescript/SKILL.md
+    description: "Appwrite TypeScript SDK skill. Use when building browser-based JavaScript/TypeScript\
+      \ apps, React Native mobile apps, or server-side Node.js/Deno backends with Appwrite. Covers client-side\
+      \ auth (email\u2026"
+tags:
+- appwrite
+- claude-code
+- mcp
+- skills

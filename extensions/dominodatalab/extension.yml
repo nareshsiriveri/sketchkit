@@ -1,0 +1,174 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/dominodatalab/domino-claude-plugin)
+# Source: https://www.domino.ai
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: dominodatalab
+  name: dominodatalab
+  version: 1.0.0
+  description: "Full Domino Data Lab platform support \u2014 workspaces, jobs, model deployment, experiment\
+    \ tracking, GenAI tracing, Spark/Ray/Dask, and app deployment for data science teams"
+  author: Domino Data Lab
+  license: Apache-2.0
+  repository: https://www.domino.ai
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.dominodatalab.domino-app-init
+    file: commands/domino-app-init.md
+    description: Initialize a new Domino-ready web application with Vite+React, Streamlit, Dash, or Flask.
+      Configures proxy-compatible settings and app.sh.
+  - name: speckit.dominodatalab.domino-debug-proxy
+    file: commands/domino-debug-proxy.md
+    description: Debug Domino proxy and routing issues for web applications. Analyzes vite.config.js,
+      package.json, and app.sh for misconfigurations.
+  - name: speckit.dominodatalab.domino-experiment-setup
+    file: commands/domino-experiment-setup.md
+    description: Set up MLflow experiment tracking for traditional ML. Configures unique experiment names
+      and auto-logging.
+  - name: speckit.dominodatalab.domino-trace-setup
+    file: commands/domino-trace-setup.md
+    description: Set up GenAI tracing for an agent or LLM application. Adds Domino SDK imports, @add_tracing
+      decorators, and DominoRun context.
+  - name: speckit.dominodatalab.ai-gateway
+    file: skills/ai-gateway/SKILL.md
+    description: "Access external LLM providers through Domino AI Gateway - a secure proxy with centralized\
+      \ API key management, usage monitoring, and compliance. Supports OpenAI, AWS Bedrock, Azure OpenAI,\
+      \ Anthropic,\u2026"
+  - name: speckit.dominodatalab.app-deployment
+    file: skills/app-deployment/SKILL.md
+    description: "Deploy web applications to Domino Data Lab with expertise in React apps (Vite) behind\
+      \ Domino's reverse proxy. Covers app.sh configuration, port configuration, base path handling for\
+      \ SPAs, CI/CD with\u2026"
+  - name: speckit.dominodatalab.data-connectivity
+    file: skills/data-connectivity/SKILL.md
+    description: "Connect Domino workloads to external data sources including AWS S3 (via Mountpoint CSI\
+      \ driver), credential propagation with AWS IRSA and Azure Entra ID, and External Data Volumes. Use\
+      \ when configurin\u2026"
+  - name: speckit.dominodatalab.datasets
+    file: skills/datasets/SKILL.md
+    description: "Work with Domino Datasets - high-performance, versioned filesystem storage. Covers dataset\
+      \ creation, snapshots for versioning, sharing across projects, mounting paths (/domino/datasets/),\
+      \ and perform\u2026"
+  - name: speckit.dominodatalab.distributed-computing
+    file: skills/distributed-computing/SKILL.md
+    description: "Work with distributed computing frameworks in Domino including Apache Spark, Ray, and\
+      \ Dask clusters. Covers cluster configuration, on-demand clusters, choosing between frameworks,\
+      \ PySpark usage, and\u2026"
+  - name: speckit.dominodatalab.domino-data-sdk
+    file: skills/domino-data-sdk/SKILL.md
+    description: "Use the domino-data Python SDK (dominodatalab-data) for programmatic data access in\
+      \ Domino. Covers DataSourceClient for SQL queries and object storage, DatasetClient for dataset\
+      \ files, TrainingSets f\u2026"
+  - name: speckit.dominodatalab.domino-governance
+    file: skills/domino-governance/SKILL.md
+    description: "Manage model risk governance in Domino using policies, bundles, and evidence. Covers\
+      \ creating governance bundles, attaching model artifacts and MLflow results as evidence, progressing\
+      \ through policy\u2026"
+  - name: speckit.dominodatalab.domino-taxonomy
+    file: skills/domino-taxonomy/SKILL.md
+    description: "Manage Domino taxonomies \u2014 namespaces, tags, and entity tagging \u2014 via the\
+      \ Taxonomy API. Covers creating, listing, updating, and deleting tags and namespaces; tagging entities\
+      \ (project, model, dataset\u2026"
+  - name: speckit.dominodatalab.domino-ui-bootstrap
+    file: skills/domino-ui-bootstrap/SKILL.md
+    description: "Bootstrap or retrofit a Vite + React 18 + TypeScript project so it uses the Domino design\
+      \ system (`@dominodatalab/extensions-tools`). Scoped to projects that are (or will be) a **fully\
+      \ standalone SPA\u2026"
+  - name: speckit.dominodatalab.domino-ui-design
+    file: skills/domino-ui-design/SKILL.md
+    description: "Build Domino-styled web applications matching the Domino Design System. Use when creating\
+      \ or styling Domino apps (Dash, Streamlit, Flask, FastAPI+HTML), generating UI components, reviewing\
+      \ UX, or whe\u2026"
+  - name: speckit.dominodatalab.environments
+    file: skills/environments/SKILL.md
+    description: "Create and customize Domino Compute Environments - Docker containers defining tools,\
+      \ packages, and configurations. Covers Dockerfile customization, package installation, IDE configuration,\
+      \ DSE (Domin\u2026"
+  - name: speckit.dominodatalab.experiment-tracking
+    file: skills/experiment-tracking/SKILL.md
+    description: "Track traditional ML experiments in Domino using the MLflow-based Experiment Manager.\
+      \ Covers experiment setup, auto-logging for sklearn/TensorFlow/PyTorch, manual logging, artifact\
+      \ storage, run compa\u2026"
+  - name: speckit.dominodatalab.flows
+    file: skills/flows/SKILL.md
+    description: "Orchestrate multi-step ML workflows using Domino Flows (built on Flyte). Define DAGs\
+      \ with typed inputs/outputs, heterogeneous environments, automatic lineage, and reproducibility.\
+      \ Use when building d\u2026"
+  - name: speckit.dominodatalab.genai-tracing
+    file: skills/genai-tracing/SKILL.md
+    description: "Trace and evaluate GenAI applications including LLM calls, agents, RAG pipelines, and\
+      \ multi-step AI systems in Domino. Uses the Domino SDK (@add_tracing decorator, DominoRun context)\
+      \ with MLflow 3.2.\u2026"
+  - name: speckit.dominodatalab.jobs
+    file: skills/jobs/SKILL.md
+    description: "Create, run, and manage Domino Jobs - batch executions for scripts, training, and data\
+      \ processing. Covers job configuration, hardware tiers, scheduled jobs (cron), monitoring status,\
+      \ viewing logs, an\u2026"
+  - name: speckit.dominodatalab.launchers
+    file: skills/launchers/SKILL.md
+    description: "Create Domino Launchers - parameterized web forms for self-service job execution. Enable\
+      \ business users to run analyses, generate reports, and trigger batch predictions without coding.\
+      \ Covers paramet\u2026"
+  - name: speckit.dominodatalab.model-endpoints
+    file: skills/model-endpoints/SKILL.md
+    description: "Deploy and monitor model API endpoints in Domino. Covers creating prediction endpoints,\
+      \ version management, Grafana dashboards for latency/errors/resources, alerting, and GPU inference\
+      \ with NVIDIA Tr\u2026"
+  - name: speckit.dominodatalab.model-monitoring
+    file: skills/model-monitoring/SKILL.md
+    description: "Monitor deployed models in Domino including drift detection, model quality tracking,\
+      \ and alerting. Covers data drift analysis, prediction capture, baseline comparison, alert configuration,\
+      \ and remedi\u2026"
+  - name: speckit.dominodatalab.modeling-assistant
+    file: skills/modeling-assistant/SKILL.md
+    description: "Enable AI-assisted model development within Domino by writing needed model and training\
+      \ code and using MCP (Model Context Protocol) servers to execute domino jobs. AI coding assistants\
+      \ like Cursor an\u2026"
+  - name: speckit.dominodatalab.netapp-volumes
+    file: skills/netapp-volumes/SKILL.md
+    description: "Work with Domino Volumes for NetApp ONTAP - enterprise-grade, multi-terabyte storage\
+      \ with near-instant snapshots. Covers volume creation, snapshot versioning with commit messages,\
+      \ cross-project shari\u2026"
+  - name: speckit.dominodatalab.projects
+    file: skills/projects/SKILL.md
+    description: "Work with Domino Projects including Git integration, DFS vs Git-based projects, collaboration,\
+      \ and version control. Covers project creation, Git provider setup (GitHub, GitLab, Bitbucket),\
+      \ branch man\u2026"
+  - name: speckit.dominodatalab.python-sdk
+    file: skills/python-sdk/SKILL.md
+    description: "Programmatically interact with Domino using python-domino SDK and REST APIs. Covers\
+      \ authentication, running jobs, managing projects, file operations, model deployment, and automation.\
+      \ Use when automa\u2026"
+  - name: speckit.dominodatalab.workspaces
+    file: skills/workspaces/SKILL.md
+    description: "Work with Domino Workspaces - interactive development environments including Jupyter,\
+      \ JupyterLab, VS Code, and RStudio. Covers launching workspaces, configuring hardware tiers, environment\
+      \ selection,\u2026"
+  - name: speckit.dominodatalab.agent-domino-debug
+    file: agents/domino-debug.md
+    description: "Specialized agent for debugging Domino issues including app deployment problems, job\
+      \ failures, environment build errors, and connectivity issues. Use PROACTIVELY when troubleshooting\
+      \ errors or unexpe\u2026"
+  - name: speckit.dominodatalab.agent-domino-deploy
+    file: agents/domino-deploy.md
+    description: Specialized agent for deploying applications, models, and endpoints to Domino. Use PROACTIVELY
+      when deploying React/Streamlit/Dash apps, publishing model APIs, or configuring deployments.
+  - name: speckit.dominodatalab.agent-domino-setup
+    file: agents/domino-setup.md
+    description: "Specialized agent for setting up new Domino projects, environments, and configurations.\
+      \ Use PROACTIVELY when starting a new project, configuring experiment tracking, setting up GenAI\
+      \ tracing, or init\u2026"
+tags:
+- domino
+- mlops
+- data-science
+- machine-learning
+- experiment-tracking
+- genai-tracing
+- spark
+- ray
+- dask
+- app-deployment

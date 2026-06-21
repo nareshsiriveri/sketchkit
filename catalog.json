@@ -1,8 +1,33 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-06-19T17:34:20Z",
+  "updated_at": "2026-06-21T22:21:50Z",
   "catalog_url": "https://raw.githubusercontent.com/nareshsiriveri/sketchkit/main/catalog.json",
   "extensions": {
+    "42crunch-api-security-testing": {
+      "id": "42crunch-api-security-testing",
+      "name": "42crunch-api-security-testing",
+      "version": "1.5.5",
+      "description": "Catch API security issues during development: audit, scan, remediate, validate with AI guardrails in Claude Code.",
+      "author": "42Crunch",
+      "repository": "https://42crunch.com",
+      "bundled": false,
+      "tags": [
+        "openapi",
+        "api-security",
+        "audit",
+        "scan",
+        "remediation",
+        "vulnerability",
+        "compliance",
+        "owasp",
+        "bola",
+        "bfla",
+        "ai",
+        "devsecops",
+        "42crunch"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/42crunch-api-security-testing-1.5.5.zip"
+    },
     "acme-hello": {
       "id": "acme-hello",
       "name": "ACME Hello",
@@ -16,6 +41,22 @@
         "hello"
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/acme-hello-0.1.0.zip"
+    },
+    "adobe-for-creativity": {
+      "id": "adobe-for-creativity",
+      "name": "adobe-for-creativity",
+      "version": "1.1.0",
+      "description": "Brings together Adobe Creative Cloud tools for images, vectors, design, and video. Edit multiple assets at once, adapt for different platforms, and complete multi-step creative workflows for polished results.",
+      "author": "Adobe",
+      "repository": "https://github.com/adobe/skills/tree/main/plugins/creative-cloud/adobe-for-creativity",
+      "bundled": false,
+      "tags": [
+        "adobe",
+        "creative-cloud",
+        "image-editing",
+        "design"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/adobe-for-creativity-1.1.0.zip"
     },
     "adr-logger": {
       "id": "adr-logger",
@@ -32,6 +73,723 @@
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/adr-logger-0.1.0.zip"
     },
+    "agent-sdk-dev": {
+      "id": "agent-sdk-dev",
+      "name": "agent-sdk-dev",
+      "version": "0.1.0",
+      "description": "Claude Agent SDK Development Plugin",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/agent-sdk-dev-0.1.0.zip"
+    },
+    "agentforce-adlc": {
+      "id": "agentforce-adlc",
+      "name": "agentforce-adlc",
+      "version": "0.7.0",
+      "description": "Agentforce Agent Development Life Cycle \u2014 author, discover, scaffold, deploy, test, secure, and optimize .agent files",
+      "author": "SalesforceAIResearch",
+      "repository": "https://github.com/SalesforceAIResearch/agentforce-adlc",
+      "bundled": false,
+      "tags": [
+        "agentforce",
+        "agent-script",
+        "salesforce",
+        "adlc"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/agentforce-adlc-0.7.0.zip"
+    },
+    "ai-plugins": {
+      "id": "ai-plugins",
+      "name": "ai-plugins",
+      "version": "0.1.0",
+      "description": "Set up endorctl and use Endor Labs to scan, prioritize, and fix security risks across your software supply chain",
+      "author": "Unknown",
+      "repository": "https://www.endorlabs.com",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/ai-plugins-0.1.0.zip"
+    },
+    "aikido": {
+      "id": "aikido",
+      "name": "aikido",
+      "version": "1.2.0",
+      "description": "Aikido Security for Claude Code: scan code (SAST, secrets, IaC) and list all issues from your Aikido feed powered by the Aikido MCP server.",
+      "author": "Aikido Security",
+      "repository": "https://github.com/AikidoSec/aikido-claude-plugin",
+      "bundled": false,
+      "tags": [
+        "aikido",
+        "security",
+        "sast",
+        "secrets",
+        "iac",
+        "sca",
+        "scanning",
+        "vulnerability"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/aikido-1.2.0.zip"
+    },
+    "airtable": {
+      "id": "airtable",
+      "name": "airtable",
+      "version": "0.1.0",
+      "description": "Airtable is the database and operations layer for your agents \u2014 whether running product, marketing, sales, ops, HR, or a custom business app. It combines structured data with multiplayer visual surfaces (grid, kanban, calendar, gallery, timeline) humans and agents share \u2014 plus sync integrations to\u2026",
+      "author": "Airtable",
+      "repository": "https://www.airtable.com",
+      "bundled": false,
+      "tags": [
+        "airtable",
+        "database",
+        "relational-database",
+        "application-database",
+        "data-store",
+        "persistence",
+        "crud",
+        "product",
+        "product-ops",
+        "crm",
+        "sales",
+        "marketing",
+        "operations",
+        "hr",
+        "hiring",
+        "project-management",
+        "roadmap",
+        "customer-success",
+        "nocode",
+        "low-code",
+        "spreadsheet",
+        "collaboration",
+        "real-time",
+        "governance",
+        "workflow",
+        "automation",
+        "internal-tools",
+        "mcp",
+        "content"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/airtable-0.1.0.zip"
+    },
+    "airwallex-agentos": {
+      "id": "airwallex-agentos",
+      "name": "airwallex-agentos",
+      "version": "0.2.2",
+      "description": "Bring Airwallex's global financial infrastructure to Claude. Orchestrate actions across your account in plain language, e.g., set up invoices from a PO, onboard suppliers from invoices, and check current cash position across currencies. AgentOS bundles pre-built finance Skills with MCP servers. A p\u2026",
+      "author": "Airwallex",
+      "repository": "https://www.airwallex.com/docs",
+      "bundled": false,
+      "tags": [
+        "airwallex",
+        "business accounts",
+        "billing",
+        "invoices",
+        "payments",
+        "issuing",
+        "treasury",
+        "cli",
+        "mcp"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/airwallex-agentos-0.2.2.zip"
+    },
+    "alloydb": {
+      "id": "alloydb",
+      "name": "alloydb",
+      "version": "0.2.0",
+      "description": "Create, connect, and interact with an AlloyDB for PostgreSQL database and data.",
+      "author": "Google LLC",
+      "repository": "https://cloud.google.com/alloydb",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/alloydb-0.2.0.zip"
+    },
+    "alloydb-omni": {
+      "id": "alloydb-omni",
+      "name": "alloydb-omni",
+      "version": "0.2.1",
+      "description": "Create, connect, and interact with an AlloyDB Omni database and data.",
+      "author": "Google LLC",
+      "repository": "https://github.com/gemini-cli-extensions/alloydb-omni",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/alloydb-omni-0.2.1.zip"
+    },
+    "amazon-location-service": {
+      "id": "amazon-location-service",
+      "name": "amazon-location-service",
+      "version": "1.0.0",
+      "description": "Guide developers through adding maps, places search, geocoding, routing, and other geospatial features with Amazon Location Service, including authentication setup, SDK integration, and best practices.",
+      "author": "Amazon Web Services",
+      "repository": "https://github.com/awslabs/agent-plugins",
+      "bundled": false,
+      "tags": [
+        "location",
+        "maps",
+        "geocoding",
+        "routing",
+        "places",
+        "geofencing",
+        "tracking",
+        "amazon-location",
+        "maplibre",
+        "address",
+        "coordinates"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/amazon-location-service-1.0.0.zip"
+    },
+    "amplitude": {
+      "id": "amplitude",
+      "name": "amplitude",
+      "version": "0.1.0",
+      "description": "Use Amplitude like an expert - instrument analytics, discover product opportunities, analyze charts, create dashboards, manage experiments, and understand users and accounts",
+      "author": "Amplitude",
+      "repository": "https://github.com/amplitude/mcp-marketplace",
+      "bundled": false,
+      "tags": [
+        "monitoring"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/amplitude-0.1.0.zip"
+    },
+    "apollo": {
+      "id": "apollo",
+      "name": "apollo",
+      "version": "0.1.1",
+      "description": "Prospect, enrich leads, load outreach sequences, and query sales analytics with Apollo.io \u2014 one-click MCP server integration for Claude Code and Cowork.",
+      "author": "Apollo.io",
+      "repository": "https://www.apollo.io/",
+      "bundled": false,
+      "tags": [
+        "apollo",
+        "sales",
+        "prospecting",
+        "icp",
+        "enrichment",
+        "sequences",
+        "analytics",
+        "mcp"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/apollo-0.1.1.zip"
+    },
+    "apollo-skills": {
+      "id": "apollo-skills",
+      "name": "apollo-skills",
+      "version": "1.2.5",
+      "description": "Agent skills for AI coding agents working with Apollo GraphQL tools and technologies",
+      "author": "Apollo GraphQL",
+      "repository": "https://www.apollographql.com",
+      "bundled": false,
+      "tags": [
+        "graphql",
+        "apollo",
+        "apollo-client",
+        "apollo-connectors",
+        "apollo-federation",
+        "apollo-ios",
+        "apollo-kotlin",
+        "apollo-mcp-server",
+        "apollo-router",
+        "apollo-server",
+        "graphql-operations",
+        "graphql-schema",
+        "graphql-lsp",
+        "rover",
+        "rust-best-practices"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/apollo-skills-1.2.5.zip"
+    },
+    "appwrite": {
+      "id": "appwrite",
+      "name": "appwrite",
+      "version": "0.1.0",
+      "description": "Appwrite tools for Claude Code, including SDK skills, Appwrite MCP servers, and deployment commands.",
+      "author": "Appwrite",
+      "repository": "https://appwrite.io",
+      "bundled": false,
+      "tags": [
+        "appwrite",
+        "claude-code",
+        "mcp",
+        "skills"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/appwrite-0.1.0.zip"
+    },
+    "astronomer-data-agents": {
+      "id": "astronomer-data-agents",
+      "name": "astronomer-data-agents",
+      "version": "0.1.0",
+      "description": "Data engineering plugin - warehouse exploration, pipeline authoring, Airflow integration",
+      "author": "Unknown",
+      "repository": "https://github.com/astronomer/agents",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/astronomer-data-agents-0.1.0.zip"
+    },
+    "atlassian": {
+      "id": "atlassian",
+      "name": "atlassian",
+      "version": "0.1.0",
+      "description": "Connect to Atlassian products including Jira and Confluence. Search and create issues, access documentation, manage sprints, and integrate your development workflow with Atlassian's collaboration tools.",
+      "author": "Atlassian",
+      "repository": "https://github.com/atlassian/atlassian-mcp-server",
+      "bundled": false,
+      "tags": [
+        "productivity"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/atlassian-0.1.0.zip"
+    },
+    "auth0": {
+      "id": "auth0",
+      "name": "auth0",
+      "version": "1.1.0",
+      "description": "Auth0 skills for quickstarts, migration, major version upgrades, MFA, branding, custom domains, Advanced Custom Universal Login (ACUL) screen generation, and framework-specific SDK integrations for React, Next.js, Vue, Nuxt, Angular, Express, Fastify, FastAPI, Flask, Go, Spring Boot, Java MVC, Swif\u2026",
+      "author": "Auth0",
+      "repository": "https://auth0.com",
+      "bundled": false,
+      "tags": [
+        "security"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/auth0-1.1.0.zip"
+    },
+    "aws-amplify": {
+      "id": "aws-amplify",
+      "name": "aws-amplify",
+      "version": "1.0.0",
+      "description": "Build full-stack apps with AWS Amplify Gen 2 using guided workflows for authentication, data models, storage, GraphQL APIs, and Lambda functions.",
+      "author": "Amazon Web Services",
+      "repository": "https://github.com/awslabs/agent-plugins",
+      "bundled": false,
+      "tags": [
+        "aws",
+        "amplify",
+        "fullstack",
+        "authentication",
+        "data",
+        "storage",
+        "graphql",
+        "functions"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/aws-amplify-1.0.0.zip"
+    },
+    "aws-dev-toolkit": {
+      "id": "aws-dev-toolkit",
+      "name": "aws-dev-toolkit",
+      "version": "0.3.0",
+      "description": "AWS development toolkit \u2014 34 skills, 11 agents, and 3 MCP servers for building, migrating, and performing architecture reviews on AWS.",
+      "author": "aws-samples",
+      "repository": "https://github.com/aws-samples/sample-claude-code-plugins-for-startups",
+      "bundled": false,
+      "tags": [
+        "aws",
+        "cdk",
+        "cloudformation",
+        "terraform",
+        "serverless",
+        "well-architected",
+        "iac",
+        "migration",
+        "gcp",
+        "azure",
+        "bedrock"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/aws-dev-toolkit-0.3.0.zip"
+    },
+    "aws-serverless": {
+      "id": "aws-serverless",
+      "name": "aws-serverless",
+      "version": "1.1.1",
+      "description": "Design, build, deploy, test, and debug serverless applications with AWS Serverless services.",
+      "author": "Amazon Web Services",
+      "repository": "https://github.com/awslabs/agent-plugins",
+      "bundled": false,
+      "tags": [
+        "aws",
+        "lambda",
+        "durable functions",
+        "managed-instances",
+        "lmi",
+        "serverless",
+        "development",
+        "sam",
+        "api-gateway",
+        "eventbridge",
+        "step-functions"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/aws-serverless-1.1.1.zip"
+    },
+    "aws-transform": {
+      "id": "aws-transform",
+      "name": "aws-transform",
+      "version": "1.1.2",
+      "description": "Migrate, modernize, and upgrade codebases to AWS. Transforms .NET Framework to .NET 8/10, mainframe COBOL to Java, VMware VMs to EC2, SQL Server to Aurora, and upgrades Java/Python/Node.js versions and AWS SDKs. AWS Transform - continuous modernization analyzes codebases for tech debt, security iss\u2026",
+      "author": "Amazon Web Services",
+      "repository": "https://github.com/awslabs/agent-plugins",
+      "bundled": false,
+      "tags": [
+        "aws",
+        "aws-transform",
+        "migration",
+        "modernization",
+        "dotnet",
+        "mainframe",
+        "cobol",
+        "vmware",
+        "ec2",
+        "sql-server",
+        "aurora",
+        "java",
+        "python",
+        "sdk",
+        "continuous modernization",
+        "AWS Transform - continuous modernization",
+        "tech debt",
+        "security vulnerabilities",
+        "analyze repos",
+        "security analysis",
+        "modernization analysis",
+        "agentic readiness"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/aws-transform-1.1.2.zip"
+    },
+    "azure": {
+      "id": "azure",
+      "name": "azure",
+      "version": "1.1.71",
+      "description": "Microsoft Azure MCP and Skills integration for cloud resource management, deployments, and Azure services. Manage your Azure infrastructure, monitor applications, and deploy resources directly from Claude Code.",
+      "author": "Microsoft",
+      "repository": "https://github.com/microsoft/azure-skills",
+      "bundled": false,
+      "tags": [
+        "azure",
+        "cloud",
+        "infrastructure",
+        "deployment",
+        "microsoft",
+        "devops",
+        "foundry",
+        "diagnostics"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/azure-1.1.71.zip"
+    },
+    "azure-cosmos-db-assistant": {
+      "id": "azure-cosmos-db-assistant",
+      "name": "Azure Cosmos DB",
+      "version": "1.0.0",
+      "description": "Azure Cosmos DB plugin for Claude Code. Includes 73 best-practice rules across 10 categories covering data modeling, partition key design, query optimization, SDK usage, indexing, throughput management, global distribution, monitoring, design patterns, and vector search. No external services or con\u2026",
+      "author": "Azure Cosmos DB",
+      "repository": "https://github.com/AzureCosmosDB/cosmosdb-claude-code-plugin",
+      "bundled": false,
+      "tags": [
+        "azure",
+        "cosmos-db",
+        "cosmosdb",
+        "nosql",
+        "database",
+        "vector-search",
+        "best-practices"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/azure-cosmos-db-assistant-1.0.0.zip"
+    },
+    "base44": {
+      "id": "base44",
+      "name": "base44",
+      "version": "1.0.0-beta.1",
+      "description": "Build and deploy Base44 full-stack apps with CLI project management and JavaScript/TypeScript SDK development skills",
+      "author": "base44",
+      "repository": "https://docs.base44.com",
+      "bundled": false,
+      "tags": [
+        "base44",
+        "full-stack",
+        "sdk",
+        "cli",
+        "deployment",
+        "entities",
+        "backend-functions",
+        "javascript",
+        "typescript"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/base44-1.0.0-beta.1.zip"
+    },
+    "bigdata-com": {
+      "id": "bigdata-com",
+      "name": "bigdata-com",
+      "version": "1.1.0",
+      "description": "Financial research and market intelligence on stocks, companies, sectors, and economies. Run valuation snapshots, peer comparables, and investment memos; preview, digest, and analyze earnings (quality, reactions, surprises); assess risk, monitor catalysts, and review competitive moats and governanc\u2026",
+      "author": "RavenPack",
+      "repository": "https://docs.bigdata.com",
+      "bundled": false,
+      "tags": [
+        "Bigdata",
+        "finance",
+        "RavenPack",
+        "stocks",
+        "companies",
+        "sectors",
+        "economies",
+        "valuation",
+        "peers",
+        "investment memos",
+        "earnings",
+        "risk",
+        "catalysts",
+        "moats",
+        "governance",
+        "thematic research",
+        "sector research",
+        "cross-sector comparisons",
+        "regional comparisons",
+        "country analysis",
+        "macro analysis",
+        "G7 benchmarking",
+        "scenario analysis",
+        "company briefs"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/bigdata-com-1.1.0.zip"
+    },
+    "bigquery-data-analytics": {
+      "id": "bigquery-data-analytics",
+      "name": "bigquery-data-analytics",
+      "version": "0.2.1",
+      "description": "Connect, query, and generate data insights for BigQuery datasets and data.",
+      "author": "Google LLC",
+      "repository": "https://github.com/gemini-cli-extensions/bigquery-data-analytics",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/bigquery-data-analytics-0.2.1.zip"
+    },
+    "boltz": {
+      "id": "boltz",
+      "name": "boltz",
+      "version": "0.1.0",
+      "description": "Predict structures, screen molecules and proteins, and design binders with Boltz from Claude Code.",
+      "author": "Boltz",
+      "repository": "https://boltz.bio",
+      "bundled": false,
+      "tags": [
+        "boltz",
+        "boltz-compute",
+        "computational-biology",
+        "protein-design",
+        "protein-screening",
+        "small-molecule-design",
+        "virtual-screening",
+        "structure-prediction",
+        "molecular-modeling",
+        "drug-discovery"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/boltz-0.1.0.zip"
+    },
+    "box": {
+      "id": "box",
+      "name": "box",
+      "version": "1.0.0",
+      "description": "Box Plugin for Claude Code to help with Box Platform integrations including content workflows, shared links, webhooks, metadata, and Box AI retrieval.",
+      "author": "Box",
+      "repository": "https://github.com/box/box-for-ai",
+      "bundled": false,
+      "tags": [
+        "box",
+        "content",
+        "cloud-storage",
+        "file-management",
+        "collaboration"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/box-1.0.0.zip"
+    },
+    "brightdata-plugin": {
+      "id": "brightdata-plugin",
+      "name": "brightdata-plugin",
+      "version": "1.8.0",
+      "description": "Web scraping, Google search, structured data extraction, and MCP server integration powered by Bright Data. Includes 21 skills: scrape any webpage as markdown (with bot detection/CAPTCHA bypass), search Google with structured JSON results, extract data from 40+ websites (Amazon, LinkedIn, Instagram\u2026",
+      "author": "Bright Data",
+      "repository": "https://docs.brightdata.com",
+      "bundled": false,
+      "tags": [
+        "web-scraping",
+        "search",
+        "serp",
+        "bright-data",
+        "web-unlocker",
+        "captcha-bypass",
+        "claude-code",
+        "data-feeds",
+        "mcp",
+        "mcp-server",
+        "browser-automation",
+        "structured-data",
+        "best-practices",
+        "serp-api",
+        "browser-api",
+        "python-sdk",
+        "javascript-sdk",
+        "typescript-sdk",
+        "nodejs",
+        "discover-api",
+        "live-research",
+        "rag",
+        "rag-pipeline",
+        "semantic-search",
+        "vector-search",
+        "brightdata-sdk",
+        "brightdata-cli",
+        "bdata",
+        "cli",
+        "scraper-studio",
+        "ai-generated-scraper",
+        "linkedin",
+        "amazon",
+        "instagram",
+        "tiktok",
+        "youtube",
+        "facebook",
+        "competitive-intelligence",
+        "market-research",
+        "competitor-analysis",
+        "pricing-intelligence",
+        "social-listening",
+        "brand-monitoring",
+        "sentiment-analysis",
+        "brand-research",
+        "price-comparison",
+        "shopping",
+        "deal-finder",
+        "price-tracking"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/brightdata-plugin-1.8.0.zip"
+    },
+    "buildkite": {
+      "id": "buildkite",
+      "name": "buildkite",
+      "version": "1.0.0",
+      "description": "Official Buildkite skills for Claude Code, Cursor, and other AI coding agents \u2014 pipelines, migration, preflight, agent runtime, CLI, and API",
+      "author": "Buildkite",
+      "repository": "https://buildkite.com",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/buildkite-1.0.0.zip"
+    },
+    "carta-cap-table": {
+      "id": "carta-cap-table",
+      "name": "carta-cap-table",
+      "version": "6.21.5",
+      "description": "Carta Cap Table plugin \u2014 skills and hooks for querying cap tables, grants, SAFEs, 409A valuations, waterfall scenarios, and more",
+      "author": "Carta",
+      "repository": "https://carta.com",
+      "bundled": false,
+      "tags": [
+        "cap_table",
+        "mcp",
+        "carta",
+        "equity",
+        "grants"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/carta-cap-table-6.21.5.zip"
+    },
+    "carta-crm": {
+      "id": "carta-crm",
+      "name": "carta-crm",
+      "version": "0.8.1",
+      "description": "Manage the Carta CRM conversationally \u2014 search, add, update, and enrich investors, companies, contacts, deals, notes, and fundraisings via the Carta CRM MCP Server",
+      "author": "Carta",
+      "repository": "https://carta.com",
+      "bundled": false,
+      "tags": [
+        "carta",
+        "crm",
+        "investors",
+        "companies",
+        "contacts",
+        "deals",
+        "notes",
+        "fundraisings",
+        "search",
+        "enrich"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/carta-crm-0.8.1.zip"
+    },
+    "carta-investors": {
+      "id": "carta-investors",
+      "name": "carta-investors",
+      "version": "0.107.1",
+      "description": "Carta Investors plugin \u2014 skills for querying investors data, performance benchmarks, regulatory reporting, AGM deck generation, brand extraction, and more via the Carta MCP server",
+      "author": "Carta",
+      "repository": "https://carta.com",
+      "bundled": false,
+      "tags": [
+        "investors",
+        "mcp",
+        "carta",
+        "agm",
+        "annual-general-meeting",
+        "deck",
+        "presentation",
+        "brand",
+        "brand-board",
+        "pdf",
+        "pptx"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/carta-investors-0.107.1.zip"
+    },
+    "chrome-devtools-mcp": {
+      "id": "chrome-devtools-mcp",
+      "name": "chrome-devtools-mcp",
+      "version": "1.3.0",
+      "description": "Reliable automation, in-depth debugging, and performance analysis in Chrome using Chrome DevTools and Puppeteer",
+      "author": "Unknown",
+      "repository": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/chrome-devtools-mcp-1.3.0.zip"
+    },
+    "circle-skills": {
+      "id": "circle-skills",
+      "name": "circle-skills",
+      "version": "1.0.0",
+      "description": "Ship stablecoin apps faster. Best-practice skills for USDC payments, cross-chain transfers, wallets, and smart contracts \u2014 plus Circle's MCP server for real-time SDK and documentation guidance.",
+      "author": "Circle Technology Services",
+      "repository": "https://www.circle.com",
+      "bundled": false,
+      "tags": [
+        "usdc",
+        "stablecoin",
+        "circle",
+        "cctp",
+        "wallets",
+        "web3",
+        "payments"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/circle-skills-1.0.0.zip"
+    },
+    "claude-code-setup": {
+      "id": "claude-code-setup",
+      "name": "claude-code-setup",
+      "version": "1.0.0",
+      "description": "Analyze codebases and recommend tailored Claude Code automations such as hooks, skills, MCP servers, and subagents.",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/claude-code-setup-1.0.0.zip"
+    },
     "claude-for-msft-365-install": {
       "id": "claude-for-msft-365-install",
       "name": "claude-for-msft-365-install",
@@ -44,6 +802,276 @@
         "financial-services"
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/claude-for-msft-365-install-0.1.5.zip"
+    },
+    "claude-md-management": {
+      "id": "claude-md-management",
+      "name": "claude-md-management",
+      "version": "1.0.0",
+      "description": "Tools to maintain and improve CLAUDE.md files - audit quality, capture session learnings, and keep project memory current.",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/claude-md-management-1.0.0.zip"
+    },
+    "clickhouse": {
+      "id": "clickhouse",
+      "name": "clickhouse",
+      "version": "1.0.0",
+      "description": "ClickHouse Claude Code plugin: skills (ClickHouse best practices), rules and MCP.",
+      "author": "ClickHouse",
+      "repository": "https://github.com/ClickHouse/clickhouse-claude-code-plugin",
+      "bundled": false,
+      "tags": [
+        "database",
+        "clickhouse",
+        "skills",
+        "mcp",
+        "analytics"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/clickhouse-1.0.0.zip"
+    },
+    "clickhouse-best-practices": {
+      "id": "clickhouse-best-practices",
+      "name": "clickhouse-best-practices",
+      "version": "0.3.0",
+      "description": "28 best practice rules for ClickHouse schema design, query optimization, and data ingestion \u2014 prioritized by impact",
+      "author": "ClickHouse Inc",
+      "repository": "https://clickhouse.com",
+      "bundled": false,
+      "tags": [
+        "clickhouse",
+        "database",
+        "query-optimization",
+        "schema-design",
+        "best-practices",
+        "data-ingestion"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/clickhouse-best-practices-0.3.0.zip"
+    },
+    "cloud-sql-mysql": {
+      "id": "cloud-sql-mysql",
+      "name": "cloud-sql-mysql",
+      "version": "0.2.0",
+      "description": "Connect and interact with a Cloud SQL for MySQL database and data.",
+      "author": "Google LLC",
+      "repository": "https://github.com/gemini-cli-extensions/cloud-sql-mysql",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/cloud-sql-mysql-0.2.0.zip"
+    },
+    "cloud-sql-postgresql": {
+      "id": "cloud-sql-postgresql",
+      "name": "cloud-sql-postgresql",
+      "version": "0.4.0",
+      "description": "Create, connect, and interact with a Cloud SQL for PostgreSQL database and data.",
+      "author": "Google LLC",
+      "repository": "https://cloud.google.com/sql",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/cloud-sql-postgresql-0.4.0.zip"
+    },
+    "cloud-sql-sqlserver": {
+      "id": "cloud-sql-sqlserver",
+      "name": "cloud-sql-sqlserver",
+      "version": "0.2.0",
+      "description": "Connect to Cloud SQL for SQL Server",
+      "author": "Google LLC",
+      "repository": "https://github.com/gemini-cli-extensions/cloud-sql-sqlserver",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/cloud-sql-sqlserver-0.2.0.zip"
+    },
+    "cloudflare": {
+      "id": "cloudflare",
+      "name": "cloudflare",
+      "version": "1.0.0",
+      "description": "Skills for the Cloudflare developer platform: Workers, Durable Objects, Agents SDK, MCP servers, Wrangler CLI, and web performance",
+      "author": "Cloudflare",
+      "repository": "https://github.com/cloudflare/skills",
+      "bundled": false,
+      "tags": [
+        "deployment"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/cloudflare-1.0.0.zip"
+    },
+    "cloudinary": {
+      "id": "cloudinary",
+      "name": "cloudinary",
+      "version": "1.1.1",
+      "description": "Use Cloudinary directly in Claude. Upload, manage, optimize, and transform images and videos at scale using natural language.",
+      "author": "Cloudinary",
+      "repository": "https://cloudinary.com/documentation",
+      "bundled": false,
+      "tags": [
+        "cloudinary",
+        "media",
+        "images",
+        "video",
+        "transformations",
+        "asset-management",
+        "optimization",
+        "mcp"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/cloudinary-1.1.1.zip"
+    },
+    "cockroachdb": {
+      "id": "cockroachdb",
+      "name": "cockroachdb",
+      "version": "0.1.9",
+      "description": "Connect Claude Code directly to your CockroachDB clusters for hands-on database work \u2014 explore schemas, write optimized SQL, debug queries, and manage distributed database clusters. This plugin provides tools across two active MCP backends (self-hosted MCP Toolbox and managed CockroachDB Cloud MCP\u2026",
+      "author": "Cockroach Labs",
+      "repository": "https://github.com/cockroachdb/claude-plugin",
+      "bundled": false,
+      "tags": [
+        "cockroachdb",
+        "database",
+        "sql",
+        "distributed-sql",
+        "postgres-compatible",
+        "mcp",
+        "schema",
+        "migration",
+        "multi-region"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/cockroachdb-0.1.9.zip"
+    },
+    "code-modernization": {
+      "id": "code-modernization",
+      "name": "code-modernization",
+      "version": "0.1.0",
+      "description": "Modernize legacy codebases (COBOL, legacy Java/C++/.NET, monolith web apps) with a structured preflight / assess / map / extract-rules / brief / (reimagine | transform | uplift) / harden / status workflow. Cross-stack rewrites, greenfield reimagining, and same-stack version uplifts (e.g. .NET Frame\u2026",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/code-modernization-0.1.0.zip"
+    },
+    "code-review": {
+      "id": "code-review",
+      "name": "code-review",
+      "version": "0.1.0",
+      "description": "Automated code review for pull requests using multiple specialized agents with confidence-based scoring",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/code-review-0.1.0.zip"
+    },
+    "code-simplifier": {
+      "id": "code-simplifier",
+      "name": "code-simplifier",
+      "version": "1.0.0",
+      "description": "Agent that simplifies and refines code for clarity, consistency, and maintainability while preserving functionality",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/code-simplifier-1.0.0.zip"
+    },
+    "coderabbit": {
+      "id": "coderabbit",
+      "name": "coderabbit",
+      "version": "1.1.1",
+      "description": "AI-powered code review in Claude Code, powered by CodeRabbit",
+      "author": "CodeRabbit AI",
+      "repository": "https://github.com/coderabbitai/skills",
+      "bundled": false,
+      "tags": [
+        "code-review",
+        "ai",
+        "coderabbit",
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/coderabbit-1.1.1.zip"
+    },
+    "codspeed": {
+      "id": "codspeed",
+      "name": "codspeed",
+      "version": "1.0.0",
+      "description": "CodSpeed plugin for Claude Code helping with performance measurement and optimization.",
+      "author": "CodSpeed",
+      "repository": "https://codspeed.io",
+      "bundled": false,
+      "tags": [
+        "codspeed",
+        "performance",
+        "profiling",
+        "optimization",
+        "benchmarking"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/codspeed-1.0.0.zip"
+    },
+    "commit-commands": {
+      "id": "commit-commands",
+      "name": "commit-commands",
+      "version": "0.1.0",
+      "description": "Streamline your git workflow with simple commands for committing, pushing, and creating pull requests",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/commit-commands-0.1.0.zip"
+    },
+    "confidence": {
+      "id": "confidence",
+      "name": "confidence",
+      "version": "0.4.1",
+      "description": "Access Confidence feature flags, experiments, and migration tools directly from Claude Code.",
+      "author": "Spotify Confidence",
+      "repository": "https://confidence.spotify.com",
+      "bundled": false,
+      "tags": [
+        "feature-flags",
+        "experiments",
+        "a/b-testing",
+        "migration",
+        "openfeature"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/confidence-0.4.1.zip"
+    },
+    "convex": {
+      "id": "convex",
+      "name": "Convex",
+      "version": "1.3.0",
+      "description": "Bundled design + quickstart skills, code-writing subagent, lint+typecheck guard hooks, runtime-error and OCC-insights monitors, and MCP server for live deployment introspection. Scaffold a running app from one sentence, then build reactive, type-safe backends on one platform \u2014 schema, real-time, au\u2026",
+      "author": "Convex",
+      "repository": "https://github.com/get-convex/convex-backend-skill",
+      "bundled": false,
+      "tags": [
+        "convex",
+        "backend",
+        "database",
+        "realtime",
+        "reactive",
+        "websocket",
+        "auth",
+        "storage",
+        "scheduler",
+        "cron",
+        "agent",
+        "rag",
+        "mobile",
+        "typescript",
+        "mcp"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/convex-1.3.0.zip"
     },
     "coverage-gate": {
       "id": "coverage-gate",
@@ -59,6 +1087,321 @@
         "coverage"
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/coverage-gate-0.1.0.zip"
+    },
+    "crowdstrike-falcon-foundry": {
+      "id": "crowdstrike-falcon-foundry",
+      "name": "crowdstrike-falcon-foundry",
+      "version": "1.3.0",
+      "description": "CrowdStrike Falcon Foundry development skills for building cybersecurity applications on the Falcon platform. Includes UI development, collections, functions, workflows, API integration, security patterns, and debugging workflows. Swagger 2.0 specs are auto-converted to OpenAPI 3.0 via npx swagger2\u2026",
+      "author": "CrowdStrike",
+      "repository": "https://github.com/CrowdStrike/foundry-skills",
+      "bundled": false,
+      "tags": [
+        "foundry",
+        "crowdstrike",
+        "cybersecurity",
+        "falcon",
+        "ui-development",
+        "collections",
+        "functions",
+        "workflows",
+        "api-integration",
+        "security"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/crowdstrike-falcon-foundry-1.3.0.zip"
+    },
+    "cwc-makers": {
+      "id": "cwc-makers",
+      "name": "cwc-makers",
+      "version": "1.0.0",
+      "description": "Seamless onboarding for the Code-with-Claude Makers Cardputer: one /maker-setup command clones the build-with-claude repo, flashes UIFlow firmware, and installs the Claude Buddy app bundle onto a freshly-plugged-in M5Stack Cardputer-Adv.",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "cardputer",
+        "m5stack",
+        "esp32",
+        "hardware",
+        "maker",
+        "onboarding",
+        "cwc"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/cwc-makers-1.0.0.zip"
+    },
+    "dash0": {
+      "id": "dash0",
+      "name": "dash0",
+      "version": "0.1.10",
+      "description": "OpenTelemetry observability for Claude Code sessions. Captures tool calls, LLM invocations, token usage, and errors as OTel traces.",
+      "author": "Dash0",
+      "repository": "https://dash0.com/",
+      "bundled": false,
+      "tags": [
+        "observability",
+        "tracing",
+        "opentelemetry",
+        "dash0",
+        "otel"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/dash0-0.1.10.zip"
+    },
+    "data": {
+      "id": "data",
+      "name": "astronomer-data-agents",
+      "version": "0.1.0",
+      "description": "Data engineering plugin - warehouse exploration, pipeline authoring, Airflow integration",
+      "author": "Unknown",
+      "repository": "https://github.com/astronomer/agents",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/data-0.1.0.zip"
+    },
+    "data-agent-kit-starter-pack": {
+      "id": "data-agent-kit-starter-pack",
+      "name": "data-agent-kit-starter-pack",
+      "version": "0.4.0",
+      "description": "This plugin provides a specialized suite of skills for data engineers and database practitioners working on Google Cloud. It acts as an expert assistant, allowing you to use natural language prompts in your preferred coding agent to architect complex data pipelines, transform data with dbt, write S\u2026",
+      "author": "Google LLC",
+      "repository": "https://github.com/gemini-cli-extensions/data-agent-kit-starter-pack",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/data-agent-kit-starter-pack-0.4.0.zip"
+    },
+    "data-engineering": {
+      "id": "data-engineering",
+      "name": "astronomer-data-agents",
+      "version": "0.1.0",
+      "description": "Data engineering plugin - warehouse exploration, pipeline authoring, Airflow integration",
+      "author": "Unknown",
+      "repository": "https://github.com/astronomer/agents",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/data-engineering-0.1.0.zip"
+    },
+    "databases-on-aws": {
+      "id": "databases-on-aws",
+      "name": "databases-on-aws",
+      "version": "1.3.2",
+      "description": "Expert database guidance for the AWS database portfolio. Design schemas, execute queries, handle migrations, and choose the right database for your workload.",
+      "author": "Amazon Web Services",
+      "repository": "https://github.com/awslabs/agent-plugins",
+      "bundled": false,
+      "tags": [
+        "aws",
+        "aurora",
+        "database",
+        "databases",
+        "distributed-sql",
+        "dsql",
+        "iam-auth",
+        "migration",
+        "postgresql",
+        "postgres",
+        "schema",
+        "serverless",
+        "sql"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/databases-on-aws-1.3.2.zip"
+    },
+    "datadog": {
+      "id": "datadog",
+      "name": "datadog",
+      "version": "0.7.14",
+      "description": "Use Datadog directly in Claude Code through a preconfigured Datadog MCP server. Query logs, metrics, traces, dashboards, and more through natural conversation. This plugin is in preview.",
+      "author": "Datadog",
+      "repository": "https://www.datadoghq.com/",
+      "bundled": false,
+      "tags": [
+        "datadog",
+        "infrastructure",
+        "mcp",
+        "observability",
+        "productivity"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/datadog-0.7.14.zip"
+    },
+    "datahub-skills": {
+      "id": "datahub-skills",
+      "name": "datahub-skills",
+      "version": "1.4.1",
+      "description": "DataHub development and interaction toolkit with connector planning, PR review, catalog search, metadata enrichment, lineage tracing, data quality management, and connection setup skills",
+      "author": "DataHub Project",
+      "repository": "https://datahub.com",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/datahub-skills-1.4.1.zip"
+    },
+    "dataproc": {
+      "id": "dataproc",
+      "name": "dataproc",
+      "version": "0.1.0",
+      "description": "Manage Dataproc clusters and jobs.",
+      "author": "Google LLC",
+      "repository": "https://github.com/gemini-cli-extensions/dataproc",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/dataproc-0.1.0.zip"
+    },
+    "datarobot-agent-skills": {
+      "id": "datarobot-agent-skills",
+      "name": "datarobot-agent-skills",
+      "version": "1.3.2",
+      "description": "DataRobot skills for AI/ML workflows \u2014 model training, deployment, predictions, feature engineering, monitoring, explainability, data preparation, App Framework CI/CD, and external agent monitoring.",
+      "author": "DataRobot",
+      "repository": "https://datarobot.com",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/datarobot-agent-skills-1.3.2.zip"
+    },
+    "dataverse": {
+      "id": "dataverse",
+      "name": "dataverse",
+      "version": "1.6.0",
+      "description": "Microsoft Dataverse plugin for coding agents \u2014 powering CRUD, bulk data operations, advanced queries, schema lifecycle, and environment management through intelligent skills that unify MCP, CLI, and SDK workflows.",
+      "author": "Microsoft",
+      "repository": "https://github.com/microsoft/Dataverse-skills",
+      "bundled": false,
+      "tags": [
+        "dataverse",
+        "mcp",
+        "power-platform",
+        "dynamics-365"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/dataverse-1.6.0.zip"
+    },
+    "deploy-on-aws": {
+      "id": "deploy-on-aws",
+      "name": "deploy-on-aws",
+      "version": "1.3.0",
+      "description": "Deploy applications to AWS with architecture recommendations, cost estimates, and IaC deployment. Generate validated AWS architecture diagrams as draw.io XML.",
+      "author": "Amazon Web Services",
+      "repository": "https://github.com/awslabs/agent-plugins",
+      "bundled": false,
+      "tags": [
+        "aws",
+        "deploy",
+        "infrastructure",
+        "cdk",
+        "cloudformation",
+        "pricing",
+        "diagrams",
+        "draw.io",
+        "architecture"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/deploy-on-aws-1.3.0.zip"
+    },
+    "desktop-commander": {
+      "id": "desktop-commander",
+      "name": "Desktop Commander",
+      "version": "0.1.0",
+      "description": "MCP server for terminal commands, process management, and file operations across text, code, PDF, DOCX, Excel, images, and structured data",
+      "author": "Desktop Commander",
+      "repository": "https://desktopcommander.app",
+      "bundled": false,
+      "tags": [
+        "shell",
+        "terminal",
+        "filesystem",
+        "process",
+        "documents",
+        "pdf",
+        "spreadsheet",
+        "desktop-commander"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/desktop-commander-0.1.0.zip"
+    },
+    "discord": {
+      "id": "discord",
+      "name": "discord",
+      "version": "0.0.4",
+      "description": "Discord channel for Claude Code \u2014 messaging bridge with built-in access control. Manage pairing, allowlists, and policy via /discord:access.",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "discord",
+        "messaging",
+        "channel",
+        "mcp"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/discord-0.0.4.zip"
+    },
+    "dominodatalab": {
+      "id": "dominodatalab",
+      "name": "dominodatalab",
+      "version": "1.0.0",
+      "description": "Full Domino Data Lab platform support \u2014 workspaces, jobs, model deployment, experiment tracking, GenAI tracing, Spark/Ray/Dask, and app deployment for data science teams",
+      "author": "Domino Data Lab",
+      "repository": "https://www.domino.ai",
+      "bundled": false,
+      "tags": [
+        "domino",
+        "mlops",
+        "data-science",
+        "machine-learning",
+        "experiment-tracking",
+        "genai-tracing",
+        "spark",
+        "ray",
+        "dask",
+        "app-deployment"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/dominodatalab-1.0.0.zip"
+    },
+    "duckdb-skills": {
+      "id": "duckdb-skills",
+      "name": "duckdb-skills",
+      "version": "0.2.4",
+      "description": "DuckDB-powered skills for Claude Code: read any data file, attach and query DuckDB databases, search DuckDB/DuckLake docs, search past session logs, and install/update DuckDB extensions.",
+      "author": "duckdb",
+      "repository": "https://duckdb.org",
+      "bundled": false,
+      "tags": [
+        "duckdb",
+        "ducklake",
+        "parquet",
+        "csv",
+        "json",
+        "avro",
+        "excel",
+        "iceberg",
+        "delta",
+        "read-file",
+        "read-memories",
+        "duckdb-docs",
+        "data-exploration",
+        "session-logs",
+        "query",
+        "sql",
+        "attach-db"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/duckdb-skills-0.2.4.zip"
+    },
+    "duende-skills": {
+      "id": "duende-skills",
+      "name": "duende-skills",
+      "version": "0.1.0",
+      "description": "Duende development skills and agents for Claude Code \u2014 covering OAuth/OIDC protocols, IdentityServer, token management, ASP.NET Core authentication/authorization, BFF patterns, and secure identity architecture",
+      "author": "Duende Software",
+      "repository": "https://duendesoftware.com",
+      "bundled": false,
+      "tags": [
+        "security"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/duende-skills-0.1.0.zip"
     },
     "earnings-reviewer": {
       "id": "earnings-reviewer",
@@ -86,6 +1429,101 @@
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/equity-research-0.1.2.zip"
     },
+    "exa": {
+      "id": "exa",
+      "name": "exa",
+      "version": "3.3.9",
+      "description": "Exa AI web search, deep research, and content extraction. Provides MCP tools and research skills for comprehensive web search, people discovery, company research, academic papers, and more.",
+      "author": "Exa",
+      "repository": "https://exa.ai/docs/reference/exa-mcp",
+      "bundled": false,
+      "tags": [
+        "productivity"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/exa-3.3.9.zip"
+    },
+    "example-plugin": {
+      "id": "example-plugin",
+      "name": "example-plugin",
+      "version": "0.1.0",
+      "description": "A comprehensive example plugin demonstrating all Claude Code extension options including commands, agents, skills, hooks, and MCP servers",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/example-plugin-0.1.0.zip"
+    },
+    "expo": {
+      "id": "expo",
+      "name": "expo",
+      "version": "1.3.0",
+      "description": "Official Expo skills for building, deploying, upgrading, and debugging Expo apps",
+      "author": "Expo Team",
+      "repository": "https://github.com/expo/skills/blob/main/plugins/expo/README.md",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/expo-1.3.0.zip"
+    },
+    "fastly-agent-toolkit": {
+      "id": "fastly-agent-toolkit",
+      "name": "fastly-agent-toolkit",
+      "version": "0.1.0",
+      "description": "Fastly development tools and platform skills",
+      "author": "Fastly",
+      "repository": "https://github.com/fastly/fastly-agent-toolkit/blob/main/README.md",
+      "bundled": false,
+      "tags": [
+        "fastly",
+        "edge",
+        "compute",
+        "vcl",
+        "cdn"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/fastly-agent-toolkit-0.1.0.zip"
+    },
+    "feature-dev": {
+      "id": "feature-dev",
+      "name": "feature-dev",
+      "version": "0.1.0",
+      "description": "Comprehensive feature development workflow with specialized agents for codebase exploration, architecture design, and quality review",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/feature-dev-0.1.0.zip"
+    },
+    "fiftyone": {
+      "id": "fiftyone",
+      "name": "fiftyone",
+      "version": "1.0.3",
+      "description": "Build high-quality datasets and computer vision models. Visualize datasets, analyze models, find duplicates, run inference, evaluate predictions, and develop custom plugins.",
+      "author": "Voxel51",
+      "repository": "https://docs.voxel51.com/",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/fiftyone-1.0.3.zip"
+    },
+    "figma": {
+      "id": "figma",
+      "name": "figma",
+      "version": "2.2.50",
+      "description": "Plugin that includes the Figma MCP server and Skills for common workflows",
+      "author": "Figma",
+      "repository": "https://github.com/figma/mcp-server-guide",
+      "bundled": false,
+      "tags": [
+        "design"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/figma-2.2.50.zip"
+    },
     "financial-analysis": {
       "id": "financial-analysis",
       "name": "financial-analysis",
@@ -98,6 +1536,58 @@
         "financial-services"
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/financial-analysis-0.1.1.zip"
+    },
+    "firecrawl": {
+      "id": "firecrawl",
+      "name": "firecrawl",
+      "version": "1.0.9",
+      "description": "Scrape, search, crawl, and map the web with a single command.",
+      "author": "Firecrawl",
+      "repository": "https://github.com/firecrawl/firecrawl-claude-plugin.git",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/firecrawl-1.0.9.zip"
+    },
+    "firestore-native": {
+      "id": "firestore-native",
+      "name": "firestore-native",
+      "version": "0.3.1",
+      "description": "Connect and interact with Firestore databases, collections, and documents.",
+      "author": "Google LLC",
+      "repository": "https://github.com/gemini-cli-extensions/firestore-native",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/firestore-native-0.3.1.zip"
+    },
+    "forge-skills": {
+      "id": "forge-skills",
+      "name": "forge-skills",
+      "version": "0.1.0",
+      "description": "Forge app builder skill bundle with Forge MCP configuration for Atlassian Forge workflows.",
+      "author": "Atlassian Labs",
+      "repository": "https://developer.atlassian.com/platform/forge/",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/forge-skills-0.1.0.zip"
+    },
+    "frontend-design": {
+      "id": "frontend-design",
+      "name": "frontend-design",
+      "version": "0.1.0",
+      "description": "Frontend design skill for UI/UX implementation",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/frontend-design-0.1.0.zip"
     },
     "fund-admin": {
       "id": "fund-admin",
@@ -125,6 +1615,107 @@
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/gl-reconciler-0.1.0.zip"
     },
+    "hookify": {
+      "id": "hookify",
+      "name": "hookify",
+      "version": "0.1.0",
+      "description": "Easily create hooks to prevent unwanted behaviors by analyzing conversation patterns",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/hookify-0.1.0.zip"
+    },
+    "huggingface-skills": {
+      "id": "huggingface-skills",
+      "name": "huggingface-skills",
+      "version": "1.0.8",
+      "description": "Agent Skills for AI/ML tasks including dataset creation, model training, evaluation, and research paper publishing on Hugging Face Hub",
+      "author": "Hugging Face",
+      "repository": "https://github.com/huggingface/skills.git",
+      "bundled": false,
+      "tags": [
+        "huggingface",
+        "machine-learning",
+        "datasets",
+        "training",
+        "evaluation",
+        "papers",
+        "fine-tuning",
+        "llm"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/huggingface-skills-1.0.8.zip"
+    },
+    "hunter": {
+      "id": "hunter",
+      "name": "hunter",
+      "version": "0.1.0",
+      "description": "Find and verify professional email addresses, search contacts by domain, and enrich company data -- directly in Claude.",
+      "author": "Hunter.io",
+      "repository": "https://hunter.io",
+      "bundled": false,
+      "tags": [
+        "hunter",
+        "email",
+        "leads",
+        "b2b",
+        "prospecting",
+        "sales",
+        "enrichment",
+        "verification"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/hunter-0.1.0.zip"
+    },
+    "hyperframes": {
+      "id": "hyperframes",
+      "name": "hyperframes",
+      "version": "0.6.120",
+      "description": "HyperFrames by HeyGen. Write HTML, render video. Compositions, GSAP and runtime adapter animations, captions, voiceovers, audio-reactive visuals, and website-to-video capture for HyperFrames.",
+      "author": "HeyGen",
+      "repository": "https://hyperframes.heygen.com",
+      "bundled": false,
+      "tags": [
+        "design"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/hyperframes-0.6.120.zip"
+    },
+    "imessage": {
+      "id": "imessage",
+      "name": "imessage",
+      "version": "0.1.0",
+      "description": "iMessage channel for Claude Code \u2014 reads chat.db directly, sends via AppleScript. Built-in access control; manage pairing, allowlists, and policy via /imessage:access.",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "imessage",
+        "messaging",
+        "channel",
+        "mcp"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/imessage-0.1.0.zip"
+    },
+    "intercom": {
+      "id": "intercom",
+      "name": "intercom",
+      "version": "0.1.0",
+      "description": "Intercom integration for Claude Code. Search conversations, analyze customer support patterns, look up contacts and companies, and install the Intercom Messenger. Connect your Intercom workspace to get real-time insights from customer data.",
+      "author": "Intercom",
+      "repository": "https://github.com/intercom/claude-plugin-external",
+      "bundled": false,
+      "tags": [
+        "intercom",
+        "customer-support",
+        "conversations",
+        "contacts",
+        "messenger",
+        "crm",
+        "api"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/intercom-0.1.0.zip"
+    },
     "investment-banking": {
       "id": "investment-banking",
       "name": "investment-banking",
@@ -137,6 +1728,19 @@
         "financial-services"
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/investment-banking-0.2.1.zip"
+    },
+    "knowledge-catalog": {
+      "id": "knowledge-catalog",
+      "name": "knowledge-catalog",
+      "version": "0.5.2",
+      "description": "Connect to Knowledge Catalog to discover, manage, monitor, and govern data and AI artifacts across your data platform",
+      "author": "Google LLC",
+      "repository": "https://github.com/gemini-cli-extensions/knowledge-catalog",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/knowledge-catalog-0.5.2.zip"
     },
     "kyc-screener": {
       "id": "kyc-screener",
@@ -151,6 +1755,97 @@
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/kyc-screener-0.1.0.zip"
     },
+    "legalzoom": {
+      "id": "legalzoom",
+      "name": "legalzoom",
+      "version": "1.0.0",
+      "description": "LegalZoom Plugin - AI-powered business legal assistance with contract review and attorney consultation",
+      "author": "LegalZoom",
+      "repository": "https://www.legalzoom.com/",
+      "bundled": false,
+      "tags": [
+        "productivity"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/legalzoom-1.0.0.zip"
+    },
+    "liquid-skills": {
+      "id": "liquid-skills",
+      "name": "liquid-skills",
+      "version": "1.0.0",
+      "description": "Liquid language fundamentals, CSS/JS/HTML coding standards, and WCAG accessibility patterns for Shopify themes",
+      "author": "Shopify",
+      "repository": "https://github.com/Shopify/liquid-skills/tree/main/plugins/liquid-skills",
+      "bundled": false,
+      "tags": [
+        "liquid",
+        "shopify",
+        "theme",
+        "accessibility",
+        "css",
+        "javascript"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/liquid-skills-1.0.0.zip"
+    },
+    "logfire": {
+      "id": "logfire",
+      "name": "logfire",
+      "version": "0.1.3",
+      "description": "Add Logfire observability to Python applications with auto-instrumentation for FastAPI, httpx, asyncpg, SQLAlchemy, and more",
+      "author": "Pydantic",
+      "repository": "https://github.com/pydantic/skills/tree/main/plugins/logfire",
+      "bundled": false,
+      "tags": [
+        "monitoring"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/logfire-0.1.3.zip"
+    },
+    "logrocket": {
+      "id": "logrocket",
+      "name": "logrocket",
+      "version": "0.1.0",
+      "description": "Connect Claude Code to LogRocket to query session replays, metrics, issues, and user behavior using natural language.",
+      "author": "LogRocket",
+      "repository": "https://logrocket.com",
+      "bundled": false,
+      "tags": [
+        "logrocket",
+        "session-replay",
+        "analytics",
+        "mcp",
+        "galileo"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/logrocket-0.1.0.zip"
+    },
+    "looker": {
+      "id": "looker",
+      "name": "looker",
+      "version": "0.3.5",
+      "description": "Connect to Looker and interact with your data using LookML.",
+      "author": "Google LLC",
+      "repository": "https://github.com/gemini-cli-extensions/looker",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/looker-0.3.5.zip"
+    },
+    "lovable": {
+      "id": "lovable",
+      "name": "lovable",
+      "version": "0.1.0",
+      "description": "Build, iterate on, deploy, and manage Lovable apps from Claude Code. Bundles the official Lovable MCP server (remote, OAuth 2.1) and adds focused commands for the common build/iterate/database workflows, with credit- and publish-safety prompts.",
+      "author": "Lovable",
+      "repository": "https://lovable.dev",
+      "bundled": false,
+      "tags": [
+        "lovable",
+        "app-builder",
+        "deploy",
+        "full-stack",
+        "mcp"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/lovable-0.1.0.zip"
+    },
     "lseg": {
       "id": "lseg",
       "name": "lseg",
@@ -163,6 +1858,67 @@
         "financial-services"
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/lseg-1.0.0.zip"
+    },
+    "lumen": {
+      "id": "lumen",
+      "name": "lumen",
+      "version": "0.0.41",
+      "description": "Precise local semantic code search via MCP. Indexes your codebase with Go AST parsing, embeds with Ollama or LM Studio, and exposes vector search to Claude through an MCP server \u2014 no cloud, no npm.",
+      "author": "Ory Corp",
+      "repository": "https://www.ory.sh",
+      "bundled": false,
+      "tags": [
+        "semantic-search",
+        "code-index",
+        "mcp",
+        "embeddings",
+        "ollama",
+        "rag"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/lumen-0.0.41.zip"
+    },
+    "lusha": {
+      "id": "lusha",
+      "name": "lusha",
+      "version": "0.1.1",
+      "description": "Connect Lusha to Claude to pull verified B2B data, contact data, and company data \u2014 including verified emails, direct dials, mobile numbers, and real-time buying signals \u2014 straight into your conversation. Lusha is the B2B data layer behind 300M+ verified contacts, used for sales intelligence, prosp\u2026",
+      "author": "Lusha",
+      "repository": "https://www.lusha.com",
+      "bundled": false,
+      "tags": [
+        "lusha",
+        "b2b",
+        "sales-intelligence",
+        "prospecting",
+        "data-enrichment",
+        "lead-enrichment",
+        "verified-emails",
+        "phone-numbers",
+        "buying-signals",
+        "contacts",
+        "companies",
+        "revops",
+        "mcp"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/lusha-0.1.1.zip"
+    },
+    "mapbox": {
+      "id": "mapbox",
+      "name": "mapbox",
+      "version": "1.0.0",
+      "description": "Mapbox skills and MCP servers for building location-aware applications with AI. Includes geospatial tools, style management, and patterns for web, iOS, Android, and AI agent frameworks.",
+      "author": "Mapbox",
+      "repository": "https://www.mapbox.com",
+      "bundled": false,
+      "tags": [
+        "mapbox",
+        "maps",
+        "geospatial",
+        "location",
+        "mcp",
+        "gis"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/mapbox-1.0.0.zip"
     },
     "market-researcher": {
       "id": "market-researcher",
@@ -177,6 +1933,62 @@
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/market-researcher-0.1.1.zip"
     },
+    "math-olympiad": {
+      "id": "math-olympiad",
+      "name": "math-olympiad",
+      "version": "0.1.0",
+      "description": "Solve competition math (IMO, Putnam, USAMO) with adversarial verification that catches what self-verification misses. Fresh-context verifiers attack proofs with specific failure patterns. Calibrated abstention over bluffing.",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/math-olympiad-0.1.0.zip"
+    },
+    "mcp-apps": {
+      "id": "mcp-apps",
+      "name": "mcp-apps",
+      "version": "0.1.0",
+      "description": "Claude Code skill for building MCP Apps with interactive UIs",
+      "author": "MCP Apps",
+      "repository": "https://modelcontextprotocol.io",
+      "bundled": false,
+      "tags": [
+        "mcp",
+        "mcp-apps",
+        "model-context-protocol",
+        "ui",
+        "interactive"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/mcp-apps-0.1.0.zip"
+    },
+    "mcp-server-dev": {
+      "id": "mcp-server-dev",
+      "name": "mcp-server-dev",
+      "version": "0.1.0",
+      "description": "Skills for designing and building MCP servers that work seamlessly with Claude \u2014 guides you through deployment models (remote HTTP, MCPB, local), tool design patterns, auth, and interactive MCP apps.",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/mcp-server-dev-0.1.0.zip"
+    },
+    "mcp-tunnels": {
+      "id": "mcp-tunnels",
+      "name": "mcp-tunnels",
+      "version": "0.1.0",
+      "description": "Connect Claude to a private MCP server through an Anthropic MCP tunnel. Drives the Docker Compose quickstart end to end: certificates, proxy config, cloudflared, and a verifiable sample server.",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/mcp-tunnels-0.1.0.zip"
+    },
     "meeting-prep-agent": {
       "id": "meeting-prep-agent",
       "name": "meeting-prep-agent",
@@ -189,6 +2001,115 @@
         "financial-services"
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/meeting-prep-agent-0.1.1.zip"
+    },
+    "mercadopago": {
+      "id": "mercadopago",
+      "name": "mercadopago",
+      "version": "4.1.0",
+      "description": "Mercado Pago full-product integration toolkit. One agent routes to four orchestration skills (mp-integrate, mp-webhooks, mp-test-setup, mp-review) that pull live data from the official Mercado Pago MCP server. The MCP must always be connected \u2014 there is no offline mode.",
+      "author": "Mercado Pago Developer Experience",
+      "repository": "https://github.com/mercadopago/mercadopago-claude-marketplace/tree/main/plugins/mercadopago",
+      "bundled": false,
+      "tags": [
+        "mercadopago",
+        "payments",
+        "checkout",
+        "webhooks",
+        "ipn",
+        "qr",
+        "point",
+        "subscriptions",
+        "marketplace",
+        "wallet",
+        "3ds",
+        "fintech",
+        "meli"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/mercadopago-4.1.0.zip"
+    },
+    "microsoft-docs": {
+      "id": "microsoft-docs",
+      "name": "microsoft-docs",
+      "version": "0.3.1",
+      "description": "Access official Microsoft documentation, API references, and code samples for Azure, .NET, Windows, and more.",
+      "author": "Microsoft",
+      "repository": "https://github.com/microsoftdocs/mcp",
+      "bundled": false,
+      "tags": [
+        "microsoft",
+        "docs",
+        "azure",
+        ".net",
+        "windows",
+        "api",
+        "documentation",
+        "rag",
+        "dynamics",
+        "powerbi",
+        "office"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/microsoft-docs-0.3.1.zip"
+    },
+    "mintlify": {
+      "id": "mintlify",
+      "name": "mintlify",
+      "version": "0.1.0",
+      "description": "Build beautiful documentation sites with Mintlify. Convert non-markdown files into properly formatted MDX pages, add and modify content with correct component use, and automate documentation updates.",
+      "author": "Unknown",
+      "repository": "https://www.mintlify.com/",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/mintlify-0.1.0.zip"
+    },
+    "miro": {
+      "id": "miro",
+      "name": "miro",
+      "version": "1.3.0",
+      "description": "Secure access to Miro boards. Enables AI to read board context, create diagrams, and generate code with enterprise-grade security.",
+      "author": "Miro",
+      "repository": "https://miro.com",
+      "bundled": false,
+      "tags": [
+        "miro",
+        "whiteboard",
+        "boards",
+        "diagrams",
+        "flowchart",
+        "mindmap",
+        "uml",
+        "mermaid",
+        "plantuml",
+        "documents",
+        "tables",
+        "stickies",
+        "wireframes",
+        "prototypes",
+        "visualization",
+        "collaboration",
+        "design-to-code",
+        "mcp",
+        "prd",
+        "specs",
+        "documentation",
+        "planning",
+        "frames",
+        "cards",
+        "shapes",
+        "connectors",
+        "images",
+        "extraction",
+        "design",
+        "requirements",
+        "tasks",
+        "tracking",
+        "todos",
+        "project-management",
+        "kanban",
+        "sync"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/miro-1.3.0.zip"
     },
     "model-builder": {
       "id": "model-builder",
@@ -203,6 +2124,44 @@
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/model-builder-0.1.0.zip"
     },
+    "monday-crm": {
+      "id": "monday-crm",
+      "name": "monday CRM",
+      "version": "0.3.0",
+      "description": "Run your sales pipeline in monday CRM from plain language. Start the day with a ranked deal briefing, build a forecast, turn meeting notes into deal updates, set up a CRM workspace from scratch, and keep your data clean \u2014 every result written straight back into monday as a real board, dashboard, or\u2026",
+      "author": "monday.com",
+      "repository": "https://monday.com",
+      "bundled": false,
+      "tags": [
+        "monday",
+        "monday-crm",
+        "crm",
+        "sales",
+        "pipeline",
+        "forecast",
+        "daily-briefing",
+        "meeting-to-deal",
+        "data-cleanup",
+        "workspace-builder"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/monday-crm-0.3.0.zip"
+    },
+    "mongodb": {
+      "id": "mongodb",
+      "name": "mongodb",
+      "version": "1.1.0",
+      "description": "Official Claude plugin for MongoDB (MCP Server + Skills). Connect to databases, explore data, manage collections, optimize queries, generate reliable code, implement best practices, develop advanced features, and more.",
+      "author": "MongoDB",
+      "repository": "https://www.mongodb.com/docs/mcp-server/overview/",
+      "bundled": false,
+      "tags": [
+        "mongodb",
+        "database",
+        "mcp",
+        "vector-search"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/mongodb-1.1.0.zip"
+    },
     "month-end-closer": {
       "id": "month-end-closer",
       "name": "month-end-closer",
@@ -215,6 +2174,102 @@
         "financial-services"
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/month-end-closer-0.1.0.zip"
+    },
+    "netlify-skills": {
+      "id": "netlify-skills",
+      "name": "netlify-skills",
+      "version": "1.1.0",
+      "description": "Netlify platform skills for Claude Code",
+      "author": "Netlify",
+      "repository": "https://github.com/netlify/context-and-tools",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/netlify-skills-1.1.0.zip"
+    },
+    "nightvision": {
+      "id": "nightvision",
+      "name": "nightvision",
+      "version": "1.0.1",
+      "description": "Skills for working with NightVision, a DAST and API Discovery platform that finds exploitable vulnerabilities in web applications and REST APIs",
+      "author": "NightVision Engineering",
+      "repository": "https://github.com/nvsecurity/nightvision-skills",
+      "bundled": false,
+      "tags": [
+        "dast",
+        "api-discovery",
+        "security-scanning",
+        "ci-cd",
+        "openapi",
+        "vulnerability-detection"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/nightvision-1.0.1.zip"
+    },
+    "nimble": {
+      "id": "nimble",
+      "name": "nimble",
+      "version": "0.23.0",
+      "description": "Real-time web search and data extraction for AI agents - powered by Nimble. Search, extract, map, and crawl any site on the web with built-in stealth, JS rendering, and retries. Get clean, structured web data from any public webpage with pre-built Web Search Agents, or build your own reusable extra\u2026",
+      "author": "Nimble",
+      "repository": "https://docs.nimbleway.com/integrations/agent-skills/plugin-installation",
+      "bundled": false,
+      "tags": [
+        "nimble",
+        "web-extraction",
+        "web-search",
+        "web-crawl",
+        "web-map",
+        "scraping",
+        "agents",
+        "mcp",
+        "cli",
+        "data-extraction",
+        "structured-data",
+        "competitor-intelligence",
+        "meeting-prep",
+        "company-research",
+        "business-intelligence"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/nimble-0.23.0.zip"
+    },
+    "notion": {
+      "id": "notion",
+      "name": "notion",
+      "version": "0.1.0",
+      "description": "Notion Skills + Notion MCP server packaged as a Claude Code plugin.",
+      "author": "Notion Labs",
+      "repository": "https://github.com/makenotion/claude-code-notion-plugin",
+      "bundled": false,
+      "tags": [
+        "productivity"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/notion-0.1.0.zip"
+    },
+    "nvidia-skills": {
+      "id": "nvidia-skills",
+      "name": "NVIDIA",
+      "version": "1.0.0",
+      "description": "Skills for NVIDIAs ecosystem spans GPU acceleration, CUDA, AI agents, inference, robotics, Physical AI, Omniverse, and simulation. This plugin helps you understand the pieces, choose a path, validate your setup, and build practical NVIDIA-powered workflows.",
+      "author": "NVIDIA",
+      "repository": "https://github.com/NVIDIA/skills",
+      "bundled": false,
+      "tags": [
+        "nvidia",
+        "gpu",
+        "cuda",
+        "ai-agents",
+        "inference",
+        "llm-serving",
+        "robotics",
+        "simulation",
+        "omniverse",
+        "openusd",
+        "digital-twin",
+        "physical-ai",
+        "cad"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/nvidia-skills-1.0.0.zip"
     },
     "operations": {
       "id": "operations",
@@ -229,6 +2284,176 @@
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/operations-0.1.0.zip"
     },
+    "oracle-ai-data-platform-workbench-engineer-agent": {
+      "id": "oracle-ai-data-platform-workbench-engineer-agent",
+      "name": "oracle-ai-data-platform-workbench-engineer-agent",
+      "version": "0.5.0",
+      "description": "Operate the entire Oracle AI Data Platform (AIDP) Workbench in natural language \u2014 a 37-skill agent (not a single-engine orchestrator). Discovers your catalog into a grounding cache (FK/join hints + value dictionaries), turns plain English into accurate Spark SQL, and runs the full lakehouse SQL lif\u2026",
+      "author": "Oracle",
+      "repository": "https://docs.oracle.com/en/cloud/paas/ai-data-platform/index.html",
+      "bundled": false,
+      "tags": [
+        "oracle",
+        "aidp",
+        "data-engineering",
+        "spark",
+        "spark-sql",
+        "lakehouse",
+        "catalog",
+        "data-quality",
+        "data-profiling",
+        "pipelines",
+        "jobs",
+        "orchestration",
+        "notebooks",
+        "cluster",
+        "spark-ui",
+        "mcp",
+        "oci",
+        "session-token",
+        "credentials",
+        "delta-sharing",
+        "git",
+        "agent-flows",
+        "bundle",
+        "roles",
+        "mlops",
+        "mlflow",
+        "federation",
+        "ai-generate",
+        "migration",
+        "ddl",
+        "delta",
+        "merge",
+        "knowledge-bases",
+        "rag",
+        "langgraph",
+        "guardrails",
+        "agent-tools"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/oracle-ai-data-platform-workbench-engineer-agent-0.5.0.zip"
+    },
+    "oracle-ai-data-platform-workbench-spark-connectors": {
+      "id": "oracle-ai-data-platform-workbench-spark-connectors",
+      "name": "oracle-ai-data-platform-workbench-spark-connectors",
+      "version": "0.5.0",
+      "description": "Oracle AI Data Platform Workbench Spark connectors for Claude Code. 23 connector skills covering every data source workbench customers commonly need: Oracle Autonomous DB family (ALH/ADW/ATP) via wallet/IAM-DB-Token/API-key, generic Oracle Database, ExaCS, Oracle PeopleSoft, Oracle Siebel, Fusion E\u2026",
+      "author": "Ahmed Awan",
+      "repository": "https://docs.oracle.com/en/cloud/paas/ai-data-platform/index.html",
+      "bundled": false,
+      "tags": [
+        "oracle",
+        "aidp",
+        "spark",
+        "jdbc",
+        "lakehouse",
+        "autonomous-database",
+        "atp",
+        "adw",
+        "exacs",
+        "fusion",
+        "epm",
+        "essbase",
+        "kafka",
+        "streaming",
+        "object-storage",
+        "iceberg",
+        "postgresql",
+        "mysql",
+        "sqlserver",
+        "snowflake",
+        "adls",
+        "s3",
+        "rest",
+        "connector",
+        "peoplesoft",
+        "siebel",
+        "salesforce",
+        "hive",
+        "pushdown",
+        "catalog"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/oracle-ai-data-platform-workbench-spark-connectors-0.5.0.zip"
+    },
+    "oracledb": {
+      "id": "oracledb",
+      "name": "oracledb",
+      "version": "0.2.3",
+      "description": "Connect, query, and interact with Oracle Databases and their data.",
+      "author": "Google LLC",
+      "repository": "https://github.com/gemini-cli-extensions/oracledb",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/oracledb-0.2.3.zip"
+    },
+    "outputai": {
+      "id": "outputai",
+      "name": "outputai",
+      "version": "0.3.0",
+      "description": "Workflow development tools",
+      "author": "Output.ai",
+      "repository": "https://output.ai",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/outputai-0.3.0.zip"
+    },
+    "pagerduty": {
+      "id": "pagerduty",
+      "name": "pagerduty",
+      "version": "1.1.0",
+      "description": "A collection of Claude Code plugins developed by PagerDuty for pre-commit risk assessment and PagerDuty skill creation for AI agents (Early Access).",
+      "author": "PagerDuty",
+      "repository": "https://github.com/PagerDuty/claude-code-plugins",
+      "bundled": false,
+      "tags": [
+        "monitoring"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/pagerduty-1.1.0.zip"
+    },
+    "pigment": {
+      "id": "pigment",
+      "name": "pigment",
+      "version": "1.0.8",
+      "description": "Analyze business data and build planning models in your Pigment workspace",
+      "author": "Pigment",
+      "repository": "https://www.pigment.com",
+      "bundled": false,
+      "tags": [
+        "productivity"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/pigment-1.0.8.zip"
+    },
+    "pinecone": {
+      "id": "pinecone",
+      "name": "pinecone",
+      "version": "1.4.1",
+      "description": "Pinecone vector database integration. Streamline your Pinecone development with powerful tools for managing vector indexes, querying data, and rapid prototyping. Use slash commands like /quickstart to generate AGENTS.md files and initialize Python projects and /query to quickly explore indexes. Acc\u2026",
+      "author": "Pinecone",
+      "repository": "https://github.com/pinecone-io/pinecone-claude-code-plugin",
+      "bundled": false,
+      "tags": [
+        "pinecone",
+        "semantic search",
+        "retrieval",
+        "vector search",
+        "vector database",
+        "retrieval augmented generation",
+        "rag",
+        "agentic rag",
+        "sparse search",
+        "assistant",
+        "pinecone assistant",
+        "rag chatbot",
+        "full text search",
+        "bm25",
+        "hybrid search"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/pinecone-1.4.1.zip"
+    },
     "pitch-agent": {
       "id": "pitch-agent",
       "name": "pitch-agent",
@@ -242,6 +2467,111 @@
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/pitch-agent-0.1.1.zip"
     },
+    "playground": {
+      "id": "playground",
+      "name": "playground",
+      "version": "0.1.0",
+      "description": "Creates interactive HTML playgrounds \u2014 self-contained single-file explorers with visual controls, live preview, and prompt output with copy button",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/playground-0.1.0.zip"
+    },
+    "plugin-dev": {
+      "id": "plugin-dev",
+      "name": "plugin-dev",
+      "version": "0.1.0",
+      "description": "Plugin development toolkit with skills for creating agents, commands, hooks, MCP integrations, and comprehensive plugin structure guidance",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/plugin-dev-0.1.0.zip"
+    },
+    "posthog": {
+      "id": "posthog",
+      "name": "posthog",
+      "version": "1.1.39",
+      "description": "Access PostHog analytics, feature flags, experiments, error tracking, and insights directly from your AI coding tool. Optionally capture Claude Code sessions to PostHog LLM Analytics.",
+      "author": "PostHog",
+      "repository": "https://posthog.com/docs/model-context-protocol",
+      "bundled": false,
+      "tags": [
+        "analytics",
+        "feature-flags",
+        "experiments",
+        "error-tracking",
+        "a/b-testing",
+        "surveys",
+        "dashboards",
+        "llm-analytics"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/posthog-1.1.39.zip"
+    },
+    "postiz": {
+      "id": "postiz",
+      "name": "postiz",
+      "version": "2.0.12",
+      "description": "Social media automation CLI for scheduling posts, managing integrations, uploading media, and tracking analytics across 28+ platforms including X, LinkedIn, Reddit, YouTube, TikTok, Instagram, and more",
+      "author": "Nevo David",
+      "repository": "https://postiz.com/agent",
+      "bundled": false,
+      "tags": [
+        "postiz",
+        "social-media",
+        "scheduling",
+        "automation",
+        "ai-agent",
+        "twitter",
+        "linkedin",
+        "facebook",
+        "instagram",
+        "tiktok",
+        "youtube",
+        "reddit"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/postiz-2.0.12.zip"
+    },
+    "postman": {
+      "id": "postman",
+      "name": "postman",
+      "version": "1.2.0",
+      "description": "Full API lifecycle management for Claude Code. Sync collections, generate client code, discover APIs, run tests, create mocks, publish docs, and audit security. Powered by the Postman MCP Server.",
+      "author": "Postman",
+      "repository": "https://learning.postman.com/docs/developer/postman-mcp-server/",
+      "bundled": false,
+      "tags": [
+        "postman",
+        "api",
+        "collections",
+        "testing",
+        "mcp",
+        "mocks",
+        "documentation",
+        "security",
+        "openapi",
+        "agent-ready"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/postman-1.2.0.zip"
+    },
+    "pr-review-toolkit": {
+      "id": "pr-review-toolkit",
+      "name": "pr-review-toolkit",
+      "version": "0.1.0",
+      "description": "Comprehensive PR review agents specializing in comments, tests, error handling, type design, code quality, and code simplification",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/pr-review-toolkit-0.1.0.zip"
+    },
     "private-equity": {
       "id": "private-equity",
       "name": "private-equity",
@@ -254,6 +2584,381 @@
         "financial-services"
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/private-equity-0.1.2.zip"
+    },
+    "project-artifact": {
+      "id": "project-artifact",
+      "name": "project-artifact",
+      "version": "0.1.0",
+      "description": "Generate and publish a project status artifact \u2014 an opinionated, tabbed status page (overview & success criteria, the workstream sequence, next steps, plus background / plan / risks & open questions / decisions-FAQ when they earn a tab) published via the built-in Artifact tool to a default-private\u2026",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/project-artifact-0.1.0.zip"
+    },
+    "pydantic-ai": {
+      "id": "pydantic-ai",
+      "name": "pydantic-ai",
+      "version": "0.1.0",
+      "description": "Build production-grade AI agents with Pydantic AI \u2014 tools, capabilities, structured output, streaming, and testing patterns",
+      "author": "Pydantic",
+      "repository": "https://github.com/pydantic/skills/tree/main/plugins/ai",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/pydantic-ai-0.1.0.zip"
+    },
+    "qdrant-skills": {
+      "id": "qdrant-skills",
+      "name": "qdrant-skills",
+      "version": "1.0.0",
+      "description": "Agent skills for Qdrant vector search: scaling, performance optimization, search quality, monitoring, deployment, model migration, version upgrades, and SDK usage",
+      "author": "Qdrant",
+      "repository": "https://skills.qdrant.tech",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/qdrant-skills-1.0.0.zip"
+    },
+    "qodo-skills": {
+      "id": "qodo-skills",
+      "name": "qodo-skills",
+      "version": "0.6.1",
+      "description": "Shift-left code review skills that bring Qodo's quality standards and code review capabilities into your local development workflow. Catch issues before commit, enforce organizational standards, and resolve PR feedback directly in your agent.",
+      "author": "Qodo.ai",
+      "repository": "https://github.com/qodo-ai/qodo-skills.git",
+      "bundled": false,
+      "tags": [
+        "qodo",
+        "code-review",
+        "shift-left",
+        "rules",
+        "quality",
+        "standards",
+        "pr-review"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/qodo-skills-0.6.1.zip"
+    },
+    "qt-development-skills": {
+      "id": "qt-development-skills",
+      "name": "qt-development-skills",
+      "version": "1.5.0",
+      "description": "Agentic engineering skills for Qt software development, including Qt C++/QML code review, QML coding, and Qt C++/QML code documentation. Bundles the hosted Qt Documentation MCP server for live Qt API lookups. These skills use AI and can make mistakes. Always double-check the output carefully.",
+      "author": "Qt Group",
+      "repository": "https://www.qt.io/",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/qt-development-skills-1.5.0.zip"
+    },
+    "railway": {
+      "id": "railway",
+      "name": "railway",
+      "version": "1.3.1",
+      "description": "Railway agent skills and MCP server for deploying, configuring, monitoring, and troubleshooting apps and infrastructure on Railway from Claude Code. Manage services, environments, deployments, databases, object storage, networking, and observability.",
+      "author": "Railway",
+      "repository": "https://docs.railway.com/ai/claude-code-plugin",
+      "bundled": false,
+      "tags": [
+        "deployment"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/railway-1.3.1.zip"
+    },
+    "ralph-loop": {
+      "id": "ralph-loop",
+      "name": "ralph-loop",
+      "version": "1.0.0",
+      "description": "Continuous self-referential AI loops for interactive iterative development, implementing the Ralph Wiggum technique. Run Claude in a while-true loop with the same prompt until task completion.",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/ralph-loop-1.0.0.zip"
+    },
+    "remember": {
+      "id": "remember",
+      "name": "remember",
+      "version": "0.8.2",
+      "description": "Continuous memory for Claude Code. Extracts, summarizes, and compresses conversations into tiered daily logs. Claude remembers what you did yesterday.",
+      "author": "Digital Process Tools",
+      "repository": "https://github.com/Digital-Process-Tools/claude-remember",
+      "bundled": false,
+      "tags": [
+        "memory",
+        "context",
+        "persistence",
+        "session"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/remember-0.8.2.zip"
+    },
+    "resend": {
+      "id": "resend",
+      "name": "resend",
+      "version": "1.0.0",
+      "description": "Send and receive emails, build with React Email, follow deliverability best practices",
+      "author": "Resend",
+      "repository": "https://resend.com",
+      "bundled": false,
+      "tags": [
+        "email",
+        "resend",
+        "smtp",
+        "notifications",
+        "agent-inbox"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/resend-1.0.0.zip"
+    },
+    "rill": {
+      "id": "rill",
+      "name": "rill",
+      "version": "1.0.0",
+      "description": "Skills for developing and querying projects in the Rill business intelligence platform",
+      "author": "Rill Data",
+      "repository": "https://docs.rilldata.com/developers/build/ai-configuration",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/rill-1.0.0.zip"
+    },
+    "rootly": {
+      "id": "rootly",
+      "name": "rootly",
+      "version": "2.2.0",
+      "description": "Full-lifecycle incident management from your IDE. Prevent incidents before deploy, respond in real-time, and learn from post-mortems -- powered by Rootly.",
+      "author": "Rootly AI Labs",
+      "repository": "https://rootly.com",
+      "bundled": false,
+      "tags": [
+        "incident-management",
+        "on-call",
+        "sre",
+        "devops",
+        "deploy-safety",
+        "retrospectives",
+        "rootly"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/rootly-2.2.0.zip"
+    },
+    "runway-api": {
+      "id": "runway-api",
+      "name": "runway-api",
+      "version": "2.1.0",
+      "description": "Video generation at scale. Generate videos, images, and audio with Runway's API \u2014 batch ad campaigns, product videos, multishot stories, and creative iteration. Supports seedance2, gen4.5, veo3, Nano, Banana Pro, and more.",
+      "author": "Runway",
+      "repository": "https://runwayml.com",
+      "bundled": false,
+      "tags": [
+        "runway",
+        "runwayml",
+        "video-generation",
+        "image-generation",
+        "audio-generation",
+        "ai-api",
+        "seedance2",
+        "gen4",
+        "veo3",
+        "media-generation",
+        "batch",
+        "runway-api"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/runway-api-2.1.0.zip"
+    },
+    "sagemaker-ai": {
+      "id": "sagemaker-ai",
+      "name": "sagemaker-ai",
+      "version": "1.2.1",
+      "description": "Build, train, and deploy AI models with deep AWS AI/ML expertise brought directly into your coding assistants, covering the surface area of Amazon SageMaker AI.",
+      "author": "Amazon Web Services",
+      "repository": "https://github.com/awslabs/agent-plugins",
+      "bundled": false,
+      "tags": [
+        "sagemaker",
+        "machine-learning",
+        "generative-ai",
+        "fine-tuning",
+        "training",
+        "deployment",
+        "inference",
+        "mlops",
+        "aws"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/sagemaker-ai-1.2.1.zip"
+    },
+    "sanity": {
+      "id": "sanity",
+      "name": "sanity",
+      "version": "1.0.0",
+      "description": "Sanity plugin for Claude Code with MCP server, agent skills, agent rules, and slash commands.",
+      "author": "Sanity",
+      "repository": "https://www.sanity.io",
+      "bundled": false,
+      "tags": [
+        "sanity",
+        "cms",
+        "content-lake",
+        "groq",
+        "content",
+        "structured-content",
+        "visual-editing"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/sanity-1.0.0.zip"
+    },
+    "save-to-spotify": {
+      "id": "save-to-spotify",
+      "name": "save-to-spotify",
+      "version": "0.1.1",
+      "description": "Create polished audio episodes with TTS narration, rich timelines, cover images, and save them to Spotify via the save-to-spotify CLI.",
+      "author": "Spotify",
+      "repository": "https://github.com/spotify/save-to-spotify",
+      "bundled": false,
+      "tags": [
+        "spotify",
+        "audio",
+        "podcast",
+        "tts",
+        "timeline",
+        "save-to-spotify"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/save-to-spotify-0.1.1.zip"
+    },
+    "sentry": {
+      "id": "sentry",
+      "name": "sentry",
+      "version": "1.0.0",
+      "description": "Sentry Plugin for Claude Code to help with debugging including MCP, commands, and skill capabilities.",
+      "author": "Sentry",
+      "repository": "https://github.com/getsentry/sentry-for-claude/tree/main",
+      "bundled": false,
+      "tags": [
+        "sentry",
+        "debugging",
+        "monitoring",
+        "error-tracking"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/sentry-1.0.0.zip"
+    },
+    "sentry-cli": {
+      "id": "sentry-cli",
+      "name": "sentry-cli",
+      "version": "0.38.0",
+      "description": "Skills for using the Sentry CLI to interact with Sentry from the command line",
+      "author": "Sentry",
+      "repository": "https://sentry.io",
+      "bundled": false,
+      "tags": [
+        "monitoring"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/sentry-cli-0.38.0.zip"
+    },
+    "servicenow-sdk": {
+      "id": "servicenow-sdk",
+      "name": "servicenow-sdk",
+      "version": "1.0.2",
+      "description": "Create, edit, and deploy ServiceNow applications with the Fluent SDK effortlessly through Claude AI",
+      "author": "ServiceNow",
+      "repository": "https://servicenow.github.io/sdk/",
+      "bundled": false,
+      "tags": [
+        "servicenow",
+        "fluent",
+        "now-sdk",
+        "platform"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/servicenow-sdk-1.0.2.zip"
+    },
+    "skill-creator": {
+      "id": "skill-creator",
+      "name": "skill-creator",
+      "version": "0.1.0",
+      "description": "Create new skills, improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, update or optimize an existing skill, run evals to test a skill, or benchmark skill performance with variance analysis.",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/skill-creator-0.1.0.zip"
+    },
+    "slack": {
+      "id": "slack",
+      "name": "slack",
+      "version": "1.0.0",
+      "description": "Slack integration for searching messages, sending communications, managing canvases, and more",
+      "author": "Slack",
+      "repository": "https://github.com/slackapi/slack-mcp-plugin/tree/main",
+      "bundled": false,
+      "tags": [
+        "productivity"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/slack-1.0.0.zip"
+    },
+    "snowflake-cortex-code": {
+      "id": "snowflake-cortex-code",
+      "name": "snowflake-cortex-code",
+      "version": "3.2.2",
+      "description": "Automatically route Snowflake prompts from Claude Code to Cortex Code for execution.",
+      "author": "Snowflake",
+      "repository": "https://docs.snowflake.com/en/user-guide/cortex-code",
+      "bundled": false,
+      "tags": [
+        "snowflake",
+        "cortex-code",
+        "auto-routing",
+        "sql",
+        "data"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/snowflake-cortex-code-3.2.2.zip"
+    },
+    "sonarqube": {
+      "id": "sonarqube",
+      "name": "sonarqube",
+      "version": "2.2.0",
+      "description": "Automatically enforce SonarQube code quality and security in the agent coding loop \u2014 7,000+ rules, secrets scanning, agentic analysis, and quality gates across 40+ languages.",
+      "author": "Sonar",
+      "repository": "https://www.sonarsource.com",
+      "bundled": false,
+      "tags": [
+        "sonarqube",
+        "code-quality",
+        "static-analysis",
+        "security",
+        "secrets"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/sonarqube-2.2.0.zip"
+    },
+    "sonatype-guide": {
+      "id": "sonatype-guide",
+      "name": "sonatype-guide",
+      "version": "1.0.0",
+      "description": "Sonatype Guide MCP server for software supply chain intelligence and dependency security analysis. Scan dependencies for vulnerabilities, get version recommendations, and check component quality metrics.",
+      "author": "Sonatype",
+      "repository": "https://github.com/sonatype/sonatype-guide-claude-plugin.git",
+      "bundled": false,
+      "tags": [
+        "security"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/sonatype-guide-1.0.0.zip"
+    },
+    "sourcegraph": {
+      "id": "sourcegraph",
+      "name": "sourcegraph",
+      "version": "0.1.0",
+      "description": "Use Sourcegraph MCP from Claude Code for code search, navigation, history, and Deep Search.",
+      "author": "Sourcegraph Community",
+      "repository": "https://sourcegraph.com",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/sourcegraph-0.1.0.zip"
     },
     "sp-global": {
       "id": "sp-global",
@@ -274,6 +2979,38 @@
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/sp-global-1.0.1.zip"
     },
+    "spanner": {
+      "id": "spanner",
+      "name": "spanner",
+      "version": "0.3.1",
+      "description": "Connect and interact with Spanner data using natural language.",
+      "author": "Google LLC",
+      "repository": "https://github.com/gemini-cli-extensions/spanner",
+      "bundled": false,
+      "tags": [
+        "database"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/spanner-0.3.1.zip"
+    },
+    "spotify-ads-api": {
+      "id": "spotify-ads-api",
+      "name": "spotify-ads-api",
+      "version": "1.5.0",
+      "description": "Manage Spotify ad campaigns with natural language. Create campaigns, ad sets, ads, pull reports, and handle OAuth \u2014 all through conversation.",
+      "author": "Alex Murphy",
+      "repository": "https://github.com/spotify/ads-claude-plugin",
+      "bundled": false,
+      "tags": [
+        "spotify",
+        "ads",
+        "api",
+        "campaigns",
+        "advertising",
+        "oauth",
+        "reporting"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/spotify-ads-api-1.5.0.zip"
+    },
     "statement-auditor": {
       "id": "statement-auditor",
       "name": "statement-auditor",
@@ -286,6 +3023,182 @@
         "financial-services"
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/statement-auditor-0.1.0.zip"
+    },
+    "stripe": {
+      "id": "stripe",
+      "name": "stripe",
+      "version": "0.2.0",
+      "description": "Stripe development plugin for Claude",
+      "author": "Stripe",
+      "repository": "https://github.com/stripe/ai/tree/main/providers/claude/plugin",
+      "bundled": false,
+      "tags": [
+        "stripe",
+        "payments",
+        "webhooks",
+        "api",
+        "security"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/stripe-0.2.0.zip"
+    },
+    "sumup": {
+      "id": "sumup",
+      "name": "sumup",
+      "version": "0.1.0",
+      "description": "SumUp payment integrations across terminal and online checkout flows. Build Android and iOS POS apps with SumUp card readers, online checkout with server SDKs and the checkout widget, and control card readers remotely via Cloud API.",
+      "author": "Unknown",
+      "repository": "https://www.sumup.com/",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/sumup-0.1.0.zip"
+    },
+    "supabase": {
+      "id": "supabase",
+      "name": "supabase",
+      "version": "0.1.11",
+      "description": "Official Supabase plugin for Claude Code with bundled Supabase skills and MCP access for project management, database work, auth, storage, and Postgres best practices.",
+      "author": "Supabase",
+      "repository": "https://github.com/supabase-community/supabase-plugin",
+      "bundled": false,
+      "tags": [
+        "supabase",
+        "postgres",
+        "database",
+        "backend",
+        "mcp",
+        "auth",
+        "storage",
+        "realtime",
+        "edge-functions",
+        "migrations",
+        "rls"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/supabase-0.1.11.zip"
+    },
+    "superpowers": {
+      "id": "superpowers",
+      "name": "superpowers",
+      "version": "6.0.3",
+      "description": "Core skills library for Claude Code: TDD, debugging, collaboration patterns, and proven techniques",
+      "author": "Jesse Vincent",
+      "repository": "https://github.com/obra/superpowers.git",
+      "bundled": false,
+      "tags": [
+        "skills",
+        "tdd",
+        "debugging",
+        "collaboration",
+        "best-practices",
+        "workflows"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/superpowers-6.0.3.zip"
+    },
+    "teamcity-cli": {
+      "id": "teamcity-cli",
+      "name": "teamcity-cli",
+      "version": "1.2.0",
+      "description": "Agent skill for interacting with TeamCity CI/CD using the teamcity CLI. Enables Claude to explore builds, view logs, start jobs, manage queues, agents, and more.",
+      "author": "JetBrains",
+      "repository": "https://www.jetbrains.com/teamcity/",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/teamcity-cli-1.2.0.zip"
+    },
+    "telegram": {
+      "id": "telegram",
+      "name": "telegram",
+      "version": "0.0.6",
+      "description": "Telegram channel for Claude Code \u2014 messaging bridge with built-in access control. Manage pairing, allowlists, and policy via /telegram:access.",
+      "author": "Anthropic",
+      "repository": "https://github.com/anthropics/claude-plugins-official",
+      "bundled": false,
+      "tags": [
+        "telegram",
+        "messaging",
+        "channel",
+        "mcp"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/telegram-0.0.6.zip"
+    },
+    "togetherai-skills": {
+      "id": "togetherai-skills",
+      "name": "togetherai-skills",
+      "version": "1.0.0",
+      "description": "Agent Skills for Together AI platform \u2014 inference, training, embeddings, audio, video, images, function calling, and infrastructure",
+      "author": "Together AI",
+      "repository": "https://www.together.ai",
+      "bundled": false,
+      "tags": [
+        "together-ai",
+        "inference",
+        "fine-tuning",
+        "gpu",
+        "llm",
+        "embeddings",
+        "images",
+        "video",
+        "audio"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/togetherai-skills-1.0.0.zip"
+    },
+    "twilio-developer-kit": {
+      "id": "twilio-developer-kit",
+      "name": "twilio-developer-kit",
+      "version": "0.3.1",
+      "description": "Complete set of Twilio skills. Covers Setup, Planner, Product, and Guardrail skills across SMS, Voice, WhatsApp, AI agents, Conversation Orchestrator, and 30+ products.",
+      "author": "Twilio",
+      "repository": "https://www.twilio.com",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/twilio-developer-kit-0.3.1.zip"
+    },
+    "ui5": {
+      "id": "ui5",
+      "name": "ui5",
+      "version": "0.1.0",
+      "description": "SAPUI5 / OpenUI5 plugin for coding agents. Create and validate UI5 projects, access API documentation, run UI5 linter, get development guidelines and best practices for UI5 development.",
+      "author": "SAP SE",
+      "repository": "https://github.com/UI5/plugins-coding-agents",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/ui5-0.1.0.zip"
+    },
+    "ui5-typescript-conversion": {
+      "id": "ui5-typescript-conversion",
+      "name": "ui5-typescript-conversion",
+      "version": "0.1.0",
+      "description": "SAPUI5 / OpenUI5 plugin for coding agents. Convert JavaScript based UI5 projects to TypeScript.",
+      "author": "SAP SE",
+      "repository": "https://github.com/UI5/plugins-coding-agents",
+      "bundled": false,
+      "tags": [
+        "development"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/ui5-typescript-conversion-0.1.0.zip"
+    },
+    "valtown": {
+      "id": "valtown",
+      "name": "Val Town",
+      "version": "0.2.1",
+      "description": "Build and deploy on Val Town. Bundles the Val Town MCP server and platform skills (HTTP vals, cron/intervals, SQLite, email, OAuth, React UI, third-party integrations, templates).",
+      "author": "Val Town",
+      "repository": "https://val.town",
+      "bundled": false,
+      "tags": [
+        "val-town",
+        "deno",
+        "serverless",
+        "typescript"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/valtown-0.2.1.zip"
     },
     "valuation-reviewer": {
       "id": "valuation-reviewer",
@@ -300,6 +3213,81 @@
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/valuation-reviewer-0.1.1.zip"
     },
+    "vanta": {
+      "id": "vanta",
+      "name": "vanta",
+      "version": "1.0.0",
+      "description": "Vanta MCP server integration for Claude Code",
+      "author": "Vanta",
+      "repository": "https://help.vanta.com/en/articles/14094979-connecting-to-vanta-mcp#h_887ce3f337",
+      "bundled": false,
+      "tags": [
+        "vanta",
+        "security",
+        "compliance",
+        "mcp",
+        "grc",
+        "risk"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/vanta-1.0.0.zip"
+    },
+    "vanta-mcp-plugin": {
+      "id": "vanta-mcp-plugin",
+      "name": "vanta",
+      "version": "1.0.0",
+      "description": "Vanta MCP server integration for Claude Code",
+      "author": "Vanta",
+      "repository": "https://help.vanta.com/en/articles/14094979-connecting-to-vanta-mcp#h_887ce3f337",
+      "bundled": false,
+      "tags": [
+        "vanta",
+        "security",
+        "compliance",
+        "mcp",
+        "grc",
+        "risk"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/vanta-mcp-plugin-1.0.0.zip"
+    },
+    "vercel": {
+      "id": "vercel",
+      "name": "vercel",
+      "version": "0.44.0",
+      "description": "Build and deploy web apps and agents",
+      "author": "Vercel",
+      "repository": "https://github.com/vercel/vercel-plugin",
+      "bundled": false,
+      "tags": [
+        "vercel",
+        "nextjs",
+        "ai-sdk",
+        "turborepo",
+        "turbopack",
+        "workflow",
+        "deployment",
+        "serverless"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/vercel-0.44.0.zip"
+    },
+    "vibe-prospecting": {
+      "id": "vibe-prospecting",
+      "name": "vibe-prospecting",
+      "version": "0.1.62",
+      "description": "Power your chat with B2B data to create lead lists, research companies, personalize your outreach, and more. Search any company or professional to access emails, phone numbers, roles, growth signals, tech stack details, business events, website changes, and more.",
+      "author": "vibeprospecting.ai",
+      "repository": "https://www.vibeprospecting.ai/product/claude-plugin",
+      "bundled": false,
+      "tags": [
+        "b2b",
+        "prospecting",
+        "leads",
+        "sales",
+        "enrichment",
+        "companies",
+        "contacts"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/vibe-prospecting-0.1.62.zip"
+    },
     "wealth-management": {
       "id": "wealth-management",
       "name": "wealth-management",
@@ -312,6 +3300,235 @@
         "financial-services"
       ],
       "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/wealth-management-0.1.2.zip"
+    },
+    "windsor-ai": {
+      "id": "windsor-ai",
+      "name": "windsor-ai",
+      "version": "1.0.0",
+      "description": "Connect Claude Code to 325+ business data sources via Windsor.ai. Query marketing, sales, CRM, ecommerce, finance, and analytics data from Google Ads, Meta, HubSpot, Salesforce, Shopify, Stripe, and hundreds more \u2014 directly from your terminal.",
+      "author": "Windsor.ai",
+      "repository": "https://windsor.ai",
+      "bundled": false,
+      "tags": [
+        "data",
+        "analytics",
+        "marketing",
+        "sales",
+        "crm",
+        "ecommerce",
+        "finance",
+        "google-ads",
+        "facebook-ads",
+        "hubspot",
+        "salesforce",
+        "shopify",
+        "stripe",
+        "business-intelligence"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/windsor-ai-1.0.0.zip"
+    },
+    "wix": {
+      "id": "wix",
+      "name": "wix",
+      "version": "1.1.0",
+      "description": "Build, manage, and deploy Wix sites and apps. Includes CLI development skills and Wix MCP server for site management, eCommerce, CMS, dashboard extensions, and more.",
+      "author": "Wix",
+      "repository": "https://dev.wix.com/docs/wix-cli/guides/development/about-wix-skills",
+      "bundled": false,
+      "tags": [
+        "wix",
+        "wix-cli",
+        "wix-mcp",
+        "ecommerce",
+        "cms",
+        "wix-apps"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/wix-1.1.0.zip"
+    },
+    "wordpress-com": {
+      "id": "wordpress-com",
+      "name": "wordpress.com",
+      "version": "0.0.2",
+      "description": "Craft production-grade WordPress sites and applications. Everything from themes and plugins to commerce and deployment.",
+      "author": "Automattic",
+      "repository": "https://developer.wordpress.com/wordpress-com-claude-code-plugin/",
+      "bundled": false,
+      "tags": [
+        "claude-code"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/wordpress-com-0.0.2.zip"
+    },
+    "workos": {
+      "id": "workos",
+      "name": "workos",
+      "version": "0.6.1",
+      "description": "WorkOS integration skills for AuthKit, SSO, Directory Sync, RBAC, Vault, Audit Logs, migrations, and API references.",
+      "author": "WorkOS",
+      "repository": "https://workos.com",
+      "bundled": false,
+      "tags": [
+        "security"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/workos-0.6.1.zip"
+    },
+    "youdotcom-agent-skills": {
+      "id": "youdotcom-agent-skills",
+      "name": "youdotcom-agent-skills",
+      "version": "1.0.0",
+      "description": "You.com agent skills for web search, research with citations, and content extraction. Guided integrations for Vercel AI SDK, Claude Agent SDK, OpenAI Agents SDK, crewAI, LangChain, Microsoft Teams.ai, direct REST API, and bash CLI.",
+      "author": "You.com",
+      "repository": "https://you.com",
+      "bundled": false,
+      "tags": [
+        "you.com",
+        "web-search",
+        "research",
+        "content-extraction",
+        "mcp",
+        "ai-sdk",
+        "claude-agent-sdk",
+        "openai",
+        "crewai",
+        "langchain",
+        "teams-ai"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/youdotcom-agent-skills-1.0.0.zip"
+    },
+    "zapier": {
+      "id": "zapier",
+      "name": "zapier",
+      "version": "1.0.0",
+      "description": "Connect 9,000+ apps to your AI workflow. Discover, enable, and execute Zapier actions directly from your client.",
+      "author": "Zapier",
+      "repository": "https://github.com/zapier/zapier-mcp/tree/main/plugins/zapier",
+      "bundled": false,
+      "tags": [
+        "zapier",
+        "mcp",
+        "model-context-protocol",
+        "automation",
+        "integrations",
+        "workflow",
+        "ai-actions",
+        "api",
+        "no-code",
+        "ai-tools",
+        "productivity"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/zapier-1.0.0.zip"
+    },
+    "zoom-plugin": {
+      "id": "zoom-plugin",
+      "name": "zoom-plugin",
+      "version": "1.1.3",
+      "description": "Claude plugin for planning, building, and debugging Zoom integrations across REST APIs, SDKs, webhooks, bots, and MCP workflows",
+      "author": "Zoom",
+      "repository": "https://developers.zoom.us/",
+      "bundled": false,
+      "tags": [
+        "zoom",
+        "claude-plugin",
+        "rest-api",
+        "meeting-sdk",
+        "video-sdk",
+        "webhooks",
+        "oauth",
+        "ai-services",
+        "summarizer",
+        "translator",
+        "team-chat",
+        "mcp"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/zoom-plugin-1.1.3.zip"
+    },
+    "zoominfo": {
+      "id": "zoominfo",
+      "name": "zoominfo",
+      "version": "1.0.1",
+      "description": "Connect AI agents to ZoomInfo's verified GTM context graph: 100M companies, 300M professional contacts, buyer intent signals, and real-time scoops. Build prospect lists, enrich records, deep research key organizations, find decision-makers, and prioritize accounts by intent. The B2B sales intellige\u2026",
+      "author": "ZoomInfo",
+      "repository": "https://www.zoominfo.com",
+      "bundled": false,
+      "tags": [
+        "zoominfo",
+        "gtm",
+        "go-to-market",
+        "gtm context graph",
+        "b2b",
+        "sales",
+        "sales intelligence",
+        "sales prospecting",
+        "b2b prospecting",
+        "prospecting",
+        "lead generation",
+        "b2b lead generation",
+        "find contacts",
+        "contact search",
+        "contact information",
+        "contacts",
+        "decision-makers",
+        "find accounts",
+        "account search",
+        "account research",
+        "business information",
+        "companies",
+        "company data",
+        "build a list",
+        "lead lists",
+        "account lists",
+        "target account list",
+        "enrich records",
+        "lead enrichment",
+        "contact enrichment",
+        "account enrichment",
+        "crm data enrichment",
+        "salesforce data enrichment",
+        "firmographics",
+        "technographics",
+        "buyer intent",
+        "buyer intent data",
+        "intent data",
+        "intent signals",
+        "buying signals",
+        "buying committee",
+        "meeting prep",
+        "recommended contacts",
+        "lookalikes",
+        "lookalike accounts",
+        "similar companies",
+        "similar contacts",
+        "market intelligence",
+        "competitive intelligence",
+        "conversation intelligence",
+        "tam analysis",
+        "total addressable market",
+        "territory planning",
+        "account-based selling",
+        "abm",
+        "sales pipeline",
+        "icp",
+        "ideal customer profile",
+        "scoops",
+        "direct dial",
+        "verified email",
+        "mobile numbers",
+        "website visitor identification",
+        "mcp"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/zoominfo-1.0.1.zip"
+    },
+    "zscaler": {
+      "id": "zscaler",
+      "name": "zscaler",
+      "version": "0.12.7",
+      "description": "Manage Zscaler cloud security platform including ZPA (private access), ZIA (internet access), ZDX (digital experience), ZCC (client connector), EASM (attack surface), and Z-Insights (analytics). Create and manage policies, troubleshoot connectivity, audit security configurations, and investigate in\u2026",
+      "author": "Zscaler",
+      "repository": "https://github.com/zscaler/zscaler-mcp-server",
+      "bundled": false,
+      "tags": [
+        "security"
+      ],
+      "download_url": "https://github.com/nareshsiriveri/sketchkit/releases/download/v0.2.0/zscaler-0.12.7.zip"
     }
   }
 }

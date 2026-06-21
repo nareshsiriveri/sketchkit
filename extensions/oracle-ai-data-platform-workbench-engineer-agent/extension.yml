@@ -1,0 +1,241 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/oracle-samples/oracle-aidp-samples)
+# Source: https://docs.oracle.com/en/cloud/paas/ai-data-platform/index.html
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: oracle-ai-data-platform-workbench-engineer-agent
+  name: oracle-ai-data-platform-workbench-engineer-agent
+  version: 0.5.0
+  description: "Operate the entire Oracle AI Data Platform (AIDP) Workbench in natural language \u2014\
+    \ a 37-skill agent (not a single-engine orchestrator). Discovers your catalog into a grounding cache\
+    \ (FK/join hints + value dictionaries), turns plain English into accurate Spark SQL, and runs the\
+    \ full lakehouse SQL lif\u2026"
+  author: Oracle
+  license: Apache-2.0
+  repository: https://docs.oracle.com/en/cloud/paas/ai-data-platform/index.html
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-agent-flows
+    file: skills/aidp-agent-flows/SKILL.md
+    description: "Discover, author, deploy, and run AIDP agent flows. Use when the user wants to list/inspect\
+      \ agent flows, or create/update/deploy/run a flow, manage sessions/guardrails, attach compute, or\
+      \ attach a re\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-agent-highcode
+    file: skills/aidp-agent-highcode/SKILL.md
+    description: "Build AIDP agents in high-code Python with aidputils + LangGraph (the code-first alternative\
+      \ to the low-code agent-flow canvas). Use when the user wants to write an agent in Python, use LangGraph\
+      \ / c\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-ai-sql
+    file: skills/aidp-ai-sql/SKILL.md
+    description: "Run LLM functions inside Spark SQL on AIDP via ai_generate(). Use when the user wants\
+      \ to summarize/classify/extract/enrich rows with an LLM directly in SQL, generate narratives over\
+      \ aggregated result\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-analyzing-data
+    file: skills/aidp-analyzing-data/SKILL.md
+    description: "Answer business questions over the AIDP lakehouse with Spark SQL. Use when the user\
+      \ asks a data question (\"how many\u2026\", \"top N\u2026\", \"show me\u2026\", \"trend of\u2026\
+      \", \"revenue by\u2026\") or wants to run ad-hoc Spark S\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-audit
+    file: skills/aidp-audit/SKILL.md
+    description: "Manage and search AIDP audit logs \u2014 enable/disable auditing, set retention, and\
+      \ query audit-log entries for a DataLake. Use when the user asks about audit logging, who did what,\
+      \ compliance/retention\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-bundle
+    file: skills/aidp-bundle/SKILL.md
+    description: "Deploy AIDP resources as a bundle \u2014 create a bundle, deploy all its assets atomically,\
+      \ query deployment status, and purge. Use when the user wants to promote/deploy a set of AIDP resources\
+      \ together,\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-catalog-explore
+    file: skills/aidp-catalog-explore/SKILL.md
+    description: "Browse the AIDP data catalog live \u2014 list catalogs, schemas, tables, and volumes,\
+      \ inspect a table's columns/properties, and resolve a human name to its catalog key. Use when the\
+      \ user asks \"what catalo\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-catalog-init
+    file: skills/aidp-catalog-init/SKILL.md
+    description: "One-time AIDP catalog discovery that writes a cached, version-controllable .aidp/catalog.md\
+      \ grounding file (tables, columns, FK/join hints, value dictionaries). Use when the user says \"\
+      /aidp-catalog-\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-cluster-ops
+    file: skills/aidp-cluster-ops/SKILL.md
+    description: "Manage AIDP Spark compute clusters \u2014 list, status, start/stop/restart, installed\
+      \ libraries (JARs/Python), provision/scale a new cluster (driver/worker shapes, autoscale, GPU/RAPIDS,\
+      \ AI Compute), and\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-credentials
+    file: skills/aidp-credentials/SKILL.md
+    description: "Manage the AIDP credential store (secrets) \u2014 list, get, create, update, delete\
+      \ credentials used by AIDP workflows. Use when the user wants to store/rotate a secret centrally\
+      \ instead of embedding it,\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-data-quality
+    file: skills/aidp-data-quality/SKILL.md
+    description: "Run data-quality rule checks on AIDP tables \u2014 not-null, uniqueness, allowed ranges/sets,\
+      \ referential integrity, and freshness. Use when the user wants to validate data, check for nulls/duplicates/orp\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-data-sharing
+    file: skills/aidp-data-sharing/SKILL.md
+    description: "Share AIDP data via Delta Sharing \u2014 create/manage shares, add data assets, manage\
+      \ recipients, and grant access/permissions. Use when the user wants to share a table/schema with\
+      \ another team or org, s\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-engineer-bootstrap
+    file: skills/aidp-engineer-bootstrap/SKILL.md
+    description: "First-run setup for the self-contained AIDP plugin. Verifies the oci CLI + a DEFAULT\
+      \ api_key profile, installs the bundled Python deps, discovers region + DataLake OCID + workspace,\
+      \ then smoke-tests\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-engineer-overview
+    file: skills/aidp-engineer-overview/SKILL.md
+    description: "Router + setup/auth troubleshooting for Oracle AI Data Platform (AIDP) data-engineering\
+      \ work. Use when the user mentions AIDP and isn't sure which skill applies, asks \"what can you\
+      \ do with AIDP\", des\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-federate
+    file: skills/aidp-federate/SKILL.md
+    description: "Federate across multiple data sources in one AIDP Spark session \u2014 read from several\
+      \ connectors (Oracle ADB/ExaCS, Fusion, Snowflake, S3, lakehouse tables, \u2026) and join them in\
+      \ a single notebook. Use w\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-git
+    file: skills/aidp-git/SKILL.md
+    description: "Operate native Git in an AIDP workspace \u2014 branches, checkout, commit/push, pull,\
+      \ merge, rebase, reset, diff, and conflict resolution on workspace git repositories. Use when the\
+      \ user wants to version\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-ingest-file-to-table
+    file: skills/aidp-ingest-file-to-table/SKILL.md
+    description: "Load a data file (CSV/JSON/Parquet/etc.) into a managed AIDP Delta table. Use when the\
+      \ user wants to ingest a file into a table, create a table from a file, or land raw data in the\
+      \ lakehouse. Support\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-knowledge-bases
+    file: skills/aidp-knowledge-bases/SKILL.md
+    description: "Build and manage AIDP Knowledge Bases for RAG \u2014 create a KB over catalog data,\
+      \ pick an embedding model + chunking, build an HNSW/IVF vector index, add data sources (volume/table),\
+      \ run ingestion jobs,\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-migration
+    file: skills/aidp-migration/SKILL.md
+    description: "Guide a migration of notebooks/jobs from another platform (e.g. Databricks) into AIDP.\
+      \ Use when the user wants to port Databricks notebooks/jobs to AIDP, move workloads onto the AIDP\
+      \ lakehouse, or pl\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-mlops
+    file: skills/aidp-mlops/SKILL.md
+    description: "Track ML work in AIDP's MLflow-compatible MLOps \u2014 experiments, runs, metrics/params,\
+      \ registered models, and model versions. Use when the user wants to log/track experiments, list\
+      \ runs or metrics, reg\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-models-catalog
+    file: skills/aidp-models-catalog/SKILL.md
+    description: "List the models available/installed in the AIDP DataLake and inspect their parameters,\
+      \ and browse the MLOps model registry. Use when the user asks \"what models are available\", needs\
+      \ a model name for\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-notebooks
+    file: skills/aidp-notebooks/SKILL.md
+    description: "Create, edit, and execute AIDP notebooks and manage their kernel sessions. Use when\
+      \ the user wants to author a notebook, run cells/code on a cluster, attach/detach a kernel session,\
+      \ or build an inter\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-observability
+    file: skills/aidp-observability/SKILL.md
+    description: "Surface AIDP operational state \u2014 recently accessed resources and long-running async\
+      \ operations (status, completion, waiting). Use when the user asks \"what happened recently\", \"\
+      what's running\", \"is th\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-pipelines
+    file: skills/aidp-pipelines/SKILL.md
+    description: "Author, schedule, run, and monitor AIDP Jobs (task DAGs of notebooks/python with cron).\
+      \ Use when the user wants to build a pipeline, create/update/run a Job, schedule a recurring run,\
+      \ check a run's s\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-profiling-tables
+    file: skills/aidp-profiling-tables/SKILL.md
+    description: "Profile an AIDP table \u2014 row count, per-column null %, distinct count, min/max/mean,\
+      \ and top-K values. Use when the user asks to profile a table, wants column statistics or a data-quality\
+      \ snapshot, or\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-roles-access
+    file: skills/aidp-roles-access/SKILL.md
+    description: "Manage AIDP roles and access \u2014 list roles, view permissions, create roles, add/remove\
+      \ members, and grant/revoke per-resource permissions on catalogs, schemas, tables, views, volumes,\
+      \ workspaces, work\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-semantic-model
+    file: skills/aidp-semantic-model/SKILL.md
+    description: "Maintain a semantic grounding layer (.aidp/semantic.md) for AIDP \u2014 logical entity\
+      \ names, SQL-defined metrics, joins with cardinality, synonyms, and value dictionaries. Use when\
+      \ the user wants to defi\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-spark-debugging
+    file: skills/aidp-spark-debugging/SKILL.md
+    description: "Diagnose slow or failed AIDP Spark work using cluster logs, metrics, and the Spark UI\
+      \ REST API. Use when a job/query is slow or failed, the user asks \"why did this fail / why is it\
+      \ slow\", or you need\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-spark-optimization
+    file: skills/aidp-spark-optimization/SKILL.md
+    description: "Use when a Spark job/notebook is slow, missing an SLA, spilling, OOMing, generating\
+      \ too many small files, or shuffling/skewing heavily; when reviewing Spark/PySpark code or a Spark\
+      \ UI for performance\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-sql-ddl
+    file: skills/aidp-sql-ddl/SKILL.md
+    description: "Write-side Spark SQL on the AIDP lakehouse \u2014 DDL (CREATE/ALTER/DROP table\xB7view\xB7\
+      schema), DML (INSERT/UPDATE/DELETE/MERGE upsert), and Delta maintenance (OPTIMIZE, VACUUM, time\
+      \ travel, RESTORE, schema\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-table-management
+    file: skills/aidp-table-management/SKILL.md
+    description: "Control-plane lifecycle for AIDP catalog objects \u2014 create/update/delete/refresh\
+      \ tables, views, schemas, and catalogs, and register an EXTERNAL catalog/connection (ALH/ADW/object-storage)\
+      \ as a persist\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-tools
+    file: skills/aidp-tools/SKILL.md
+    description: "Create and manage standalone reusable AIDP agent Tools \u2014 SQL, Prompt, RAG, HTTP,\
+      \ Custom, and MCP tools that can be shared across agent flows by key. Use when the user wants to\
+      \ define a reusable tool\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-user-settings
+    file: skills/aidp-user-settings/SKILL.md
+    description: "Manage AIDP user settings / preferences \u2014 list, get, create, update, delete a user's\
+      \ settings for the DataLake. Use when the user wants to view or change their AIDP workbench preferences/settings,\
+      \ or\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-verified-queries
+    file: skills/aidp-verified-queries/SKILL.md
+    description: "Register and validate reusable question\u2192Spark-SQL pairs in .aidp/verified-queries.md\
+      \ so the agent reuses trusted SQL before generating new SQL. Use when the user wants to save a working\
+      \ query as cano\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-volumes
+    file: skills/aidp-volumes/SKILL.md
+    description: "Work with AIDP volumes \u2014 list volumes, browse files inside a volume, upload/download\
+      \ via the PAR flow, and create directories. Use when the user mentions volumes, needs to stage large/binary\
+      \ files, o\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-workspace-admin
+    file: skills/aidp-workspace-admin/SKILL.md
+    description: "Provision and inspect AIDP DataLake instances and workspaces, including private-network\
+      \ workspaces attached to a customer VCN/subnet. Use when the user wants to create/list/get a workspace\
+      \ or DataLak\u2026"
+  - name: speckit.oracle-ai-data-platform-workbench-engineer-agent.aidp-workspace-files
+    file: skills/aidp-workspace-files/SKILL.md
+    description: "Manage files and notebooks in the AIDP workspace filesystem \u2014 list, upload, download,\
+      \ read, create, move, rename, delete files/folders/notebooks. Use when the user wants to put a script/notebook/conf\u2026"
+tags:
+- oracle
+- aidp
+- data-engineering
+- spark
+- spark-sql
+- lakehouse
+- catalog
+- data-quality
+- data-profiling
+- pipelines
+- jobs
+- orchestration
+- notebooks
+- cluster
+- spark-ui
+- mcp
+- oci
+- session-token
+- credentials
+- delta-sharing
+- git
+- agent-flows
+- bundle
+- roles
+- mlops
+- mlflow
+- federation
+- ai-generate
+- migration
+- ddl
+- delta
+- merge
+- knowledge-bases
+- rag
+- langgraph
+- guardrails
+- agent-tools

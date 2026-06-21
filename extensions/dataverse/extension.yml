@@ -1,0 +1,64 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/microsoft/Dataverse-skills)
+# Source: https://github.com/microsoft/Dataverse-skills
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: dataverse
+  name: dataverse
+  version: 1.6.0
+  description: "Microsoft Dataverse plugin for coding agents \u2014 powering CRUD, bulk data operations,\
+    \ advanced queries, schema lifecycle, and environment management through intelligent skills that unify\
+    \ MCP, CLI, and SDK workflows."
+  author: Microsoft
+  license: Apache-2.0
+  repository: https://github.com/microsoft/Dataverse-skills
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.dataverse.dv-admin
+    file: skills/dv-admin/SKILL.md
+    description: "Environment-level Dataverse administration \u2014 bulk delete, retention/archival, organization\
+      \ settings, OrgDB settings, recycle bin, audit, and the 37 allowlisted PPAC toggles. Use when the\
+      \ user wants t\u2026"
+  - name: speckit.dataverse.dv-connect
+    file: skills/dv-connect/SKILL.md
+    description: "One-step setup for a Dataverse environment \u2014 installs tools, authenticates, registers\
+      \ the MCP server, and writes `.env`. Use when starting a new project, switching environments, fixing\
+      \ authentication\u2026"
+  - name: speckit.dataverse.dv-data
+    file: skills/dv-data/SKILL.md
+    description: "Record-level CRUD and bulk operations via the Python SDK \u2014 create, update, delete,\
+      \ upsert, CSV import, multi-table foreign-key loads, AI-generated sample data. Use when the user\
+      \ wants to write, modif\u2026"
+  - name: speckit.dataverse.dv-metadata
+    file: skills/dv-metadata/SKILL.md
+    description: "Dataverse schema authoring via the Python SDK and Web API \u2014 tables, columns, relationships,\
+      \ forms, and views. Use when the user wants to define or evolve the data model \u2014 add a column,\
+      \ create a table\u2026"
+  - name: speckit.dataverse.dv-overview
+    file: skills/dv-overview/SKILL.md
+    description: "Tool routing and cross-cutting rules for Dataverse work \u2014 which skill applies to\
+      \ which task, environment-confirmation, and pull-to-repo. Use when the user mentions Dataverse,\
+      \ Dynamics 365, Power Plat\u2026"
+  - name: speckit.dataverse.dv-query
+    file: skills/dv-query/SKILL.md
+    description: "Bulk reads, multi-page iteration, and analytics over Dataverse data via the Python SDK\
+      \ and Web API. Use when the user wants to read, list, filter, aggregate, group, join, or analyze\
+      \ records \u2014 includi\u2026"
+  - name: speckit.dataverse.dv-security
+    file: skills/dv-security/SKILL.md
+    description: "Security-role assignment, user access, application users, business units, and admin\
+      \ self-elevation in Dataverse environments. Use when the user wants to give someone access, grant\
+      \ a role, become an a\u2026"
+  - name: speckit.dataverse.dv-solution
+    file: skills/dv-solution/SKILL.md
+    description: "Dataverse solution lifecycle \u2014 create, export, import, promote across environments,\
+      \ and validate deployments. Use when the user wants to package customizations, deploy to another\
+      \ environment, or move\u2026"
+tags:
+- dataverse
+- mcp
+- power-platform
+- dynamics-365

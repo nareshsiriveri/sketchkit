@@ -1,0 +1,81 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/CrowdStrike/foundry-skills)
+# Source: https://github.com/CrowdStrike/foundry-skills
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: crowdstrike-falcon-foundry
+  name: crowdstrike-falcon-foundry
+  version: 1.3.0
+  description: "CrowdStrike Falcon Foundry development skills for building cybersecurity applications\
+    \ on the Falcon platform. Includes UI development, collections, functions, workflows, API integration,\
+    \ security patterns, and debugging workflows. Swagger 2.0 specs are auto-converted to OpenAPI 3.0\
+    \ via npx swagger2\u2026"
+  author: CrowdStrike
+  license: Apache-2.0
+  repository: https://github.com/CrowdStrike/foundry-skills
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.crowdstrike-falcon-foundry.api-integrations
+    file: skills/api-integrations/SKILL.md
+    description: "Expose external APIs to Falcon Foundry via OpenAPI specs. TRIGGER when user asks to\
+      \ \"create an API integration\", \"adapt an OpenAPI spec for Foundry\", \"expose an API to workflows\"\
+      , \"connect to a third\u2026"
+  - name: speckit.crowdstrike-falcon-foundry.collections-development
+    file: skills/collections-development/SKILL.md
+    description: "Design JSON Schema collections and CRUD patterns for Falcon Foundry apps. TRIGGER when\
+      \ user asks to \"create a collection\", \"define a JSON schema\", \"store data in Foundry\", runs\
+      \ `foundry collections c\u2026"
+  - name: speckit.crowdstrike-falcon-foundry.debugging-workflows
+    file: skills/debugging-workflows/SKILL.md
+    description: "Systematic troubleshooting for Falcon Foundry CLI errors, manifest validation failures,\
+      \ deploy failures, and development server issues. TRIGGER when user encounters CLI errors, `foundry\
+      \ ui run` not w\u2026"
+  - name: speckit.crowdstrike-falcon-foundry.development-workflow
+    file: skills/development-workflow/SKILL.md
+    description: "Orchestrates the complete Falcon Foundry app lifecycle from requirements through deployment.\
+      \ TRIGGER when user asks to \"create a Foundry app\", \"build a Foundry app\", \"plan a Foundry\
+      \ app\", runs any `f\u2026"
+  - name: speckit.crowdstrike-falcon-foundry.e2e-testing
+    file: skills/e2e-testing/SKILL.md
+    description: "End-to-end testing for Falcon Foundry apps using Playwright and @crowdstrike/foundry-playwright.\
+      \ TRIGGER when user asks to \"add e2e tests\", \"add playwright tests\", \"write end-to-end tests\"\
+      , \"test my\u2026"
+  - name: speckit.crowdstrike-falcon-foundry.functions-development
+    file: skills/functions-development/SKILL.md
+    description: "Build serverless Go or Python functions for Falcon Foundry apps. TRIGGER when user asks\
+      \ to \"create a function\", \"write a serverless function\", \"build backend logic\", runs `foundry\
+      \ functions create`,\u2026"
+  - name: speckit.crowdstrike-falcon-foundry.functions-falcon-api
+    file: skills/functions-falcon-api/SKILL.md
+    description: "Call CrowdStrike Falcon platform APIs (detections, alerts, hosts, RTR) from within Foundry\
+      \ function handlers. TRIGGER when user asks to \"call Falcon APIs from a function\", \"use FalconPy\
+      \ in a function\u2026"
+  - name: speckit.crowdstrike-falcon-foundry.security-patterns
+    file: skills/security-patterns/SKILL.md
+    description: "Security patterns for Falcon Foundry apps including OAuth scopes, RBAC, input validation,\
+      \ UI security, and credential management. TRIGGER when user asks to \"configure OAuth scopes\",\
+      \ \"secure a Foundry\u2026"
+  - name: speckit.crowdstrike-falcon-foundry.ui-development
+    file: skills/ui-development/SKILL.md
+    description: "Build UI pages and extensions for Falcon Foundry apps using React or Vue with the Shoelace\
+      \ design system and Foundry-JS. TRIGGER when user asks to \"create a UI page\", \"build a UI extension\"\
+      , \"add a S\u2026"
+  - name: speckit.crowdstrike-falcon-foundry.workflows-development
+    file: skills/workflows-development/SKILL.md
+    description: "Create and configure Falcon Fusion SOAR workflow YAML for Falcon Foundry apps. TRIGGER\
+      \ when user asks to \"create a workflow\", \"build an automation\", \"configure Fusion SOAR\", \"\
+      add an on-demand workflo\u2026"
+tags:
+- foundry
+- crowdstrike
+- cybersecurity
+- falcon
+- ui-development
+- collections
+- functions
+- workflows
+- api-integration
+- security

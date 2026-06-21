@@ -1,0 +1,85 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/pinecone-io/pinecone-claude-code-plugin)
+# Source: https://github.com/pinecone-io/pinecone-claude-code-plugin
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: pinecone
+  name: pinecone
+  version: 1.4.1
+  description: "Pinecone vector database integration. Streamline your Pinecone development with powerful\
+    \ tools for managing vector indexes, querying data, and rapid prototyping. Use slash commands like\
+    \ /quickstart to generate AGENTS.md files and initialize Python projects and /query to quickly explore\
+    \ indexes. Acc\u2026"
+  author: Pinecone
+  license: Apache-2.0
+  repository: https://github.com/pinecone-io/pinecone-claude-code-plugin
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.pinecone.join-discord
+    file: commands/join-discord.md
+    description: Opens a link to join the Pinecone Discord, allowing users to learn from each other, contact
+      the Pinecone team, and get help in our dedicated help channel.
+  - name: speckit.pinecone.assistant
+    file: skills/assistant/SKILL.md
+    description: "Create, manage, and chat with Pinecone Assistants for document Q&A with citations. Handles\
+      \ all assistant operations - create, upload, sync, chat, context retrieval, and list. Recognizes\
+      \ natural langu\u2026"
+  - name: speckit.pinecone.cli
+    file: skills/cli/SKILL.md
+    description: "Guide for using the Pinecone CLI (pc) to manage Pinecone resources from the terminal.\
+      \ The CLI supports ALL index types (standard, integrated, sparse) and all vector operations \u2014\
+      \ unlike the MCP which\u2026"
+  - name: speckit.pinecone.docs
+    file: skills/docs/SKILL.md
+    description: "Curated documentation reference for developers building with Pinecone. Contains links\
+      \ to official docs organized by topic and data format references. Use when writing Pinecone code,\
+      \ looking up API pa\u2026"
+  - name: speckit.pinecone.full-text-search
+    file: skills/full-text-search/SKILL.md
+    description: "Create, ingest into, and query a Pinecone full-text-search (FTS) index using the preview\
+      \ API (2026-01.alpha, public preview). Use when the user or agent asks to build a text search index\
+      \ on Pinecone,\u2026"
+  - name: speckit.pinecone.help
+    file: skills/help/SKILL.md
+    description: "Overview of all available Pinecone skills and what a user needs to get started. Invoke\
+      \ when a user asks what skills are available, how to get started with Pinecone, or what they need\
+      \ to set up before\u2026"
+  - name: speckit.pinecone.mcp
+    file: skills/mcp/SKILL.md
+    description: "Reference for the Pinecone MCP server tools. Documents all available tools - list-indexes,\
+      \ describe-index, describe-index-stats, create-index-for-model, upsert-records, search-records,\
+      \ cascading-sear\u2026"
+  - name: speckit.pinecone.n8n
+    file: skills/n8n/SKILL.md
+    description: "Build n8n workflows using the Pinecone Assistant node or Pinecone Vector Store node.\
+      \ Use when building RAG pipelines, chat-with-docs workflows, configuring Pinecone nodes in n8n,\
+      \ troubleshooting Pine\u2026"
+  - name: speckit.pinecone.query
+    file: skills/query/SKILL.md
+    description: "Query integrated indexes using text with Pinecone MCP. IMPORTANT - This skill ONLY works\
+      \ with integrated indexes (indexes with built-in Pinecone embedding models like multilingual-e5-large).\
+      \ For stan\u2026"
+  - name: speckit.pinecone.quickstart
+    file: skills/quickstart/SKILL.md
+    description: "Interactive Pinecone quickstart for new developers. Choose between two paths - Database\
+      \ (create an integrated index, upsert data, and query using Pinecone MCP + Python) or Assistant\
+      \ (create a Pinecon\u2026"
+tags:
+- pinecone
+- semantic search
+- retrieval
+- vector search
+- vector database
+- retrieval augmented generation
+- rag
+- agentic rag
+- sparse search
+- assistant
+- pinecone assistant
+- rag chatbot
+- full text search
+- bm25
+- hybrid search

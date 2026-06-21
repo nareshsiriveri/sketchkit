@@ -1,0 +1,24 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: mcp-tunnels
+  name: mcp-tunnels
+  version: 0.1.0
+  description: 'Connect Claude to a private MCP server through an Anthropic MCP tunnel. Drives the Docker
+    Compose quickstart end to end: certificates, proxy config, cloudflared, and a verifiable sample server.'
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.mcp-tunnels.create-docker-mcp-tunnel
+    file: commands/create-docker-mcp-tunnel.md
+    description: Stand up an Anthropic MCP tunnel locally with Docker Compose so Claude can call a private
+      MCP server (manual-credentials quickstart).
+tags:
+- claude-code

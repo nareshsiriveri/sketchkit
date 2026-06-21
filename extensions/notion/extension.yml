@@ -1,0 +1,71 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/makenotion/claude-code-notion-plugin)
+# Source: https://github.com/makenotion/claude-code-notion-plugin
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: notion
+  name: notion
+  version: 0.1.0
+  description: Notion Skills + Notion MCP server packaged as a Claude Code plugin.
+  author: Notion Labs
+  license: Apache-2.0
+  repository: https://github.com/makenotion/claude-code-notion-plugin
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.notion.create-database-row
+    file: commands/create-database-row.md
+    description: Insert a new row into a specified Notion database using natural-language property values.
+  - name: speckit.notion.create-page
+    file: commands/create-page.md
+    description: Create a new Notion page, optionally under a specific parent, using the Notion Workspace
+      Skill and Notion MCP server.
+  - name: speckit.notion.create-task
+    file: commands/create-task.md
+    description: "Create a new task in the user\u2019s Notion tasks database with sensible defaults."
+  - name: speckit.notion.database-query
+    file: commands/database-query.md
+    description: Query a Notion database by name or ID and return structured, readable results.
+  - name: speckit.notion.find
+    file: commands/find.md
+    description: Quickly find pages or databases in Notion by title keywords.
+  - name: speckit.notion.search
+    file: commands/search.md
+    description: "Search the user\u2019s Notion workspace using the Notion MCP server and Notion Workspace\
+      \ Skill."
+  - name: speckit.notion.build
+    file: commands/tasks/build.md
+    description: Build a task from a Notion page URL
+  - name: speckit.notion.explain-diff
+    file: commands/tasks/explain-diff.md
+    description: Makes a Notion doc explaining a code change.
+  - name: speckit.notion.plan
+    file: commands/tasks/plan.md
+    description: Plan a task from a Notion page URL
+  - name: speckit.notion.setup
+    file: commands/tasks/setup.md
+    description: Set up a Notion task board for tracking tasks
+  - name: speckit.notion.knowledge-capture
+    file: skills/notion/knowledge-capture/SKILL.md
+    description: "Transforms conversations and discussions into structured documentation pages in Notion.\
+      \ Captures insights, decisions, and knowledge from chat context, formats appropriately, and saves\
+      \ to wikis or dat\u2026"
+  - name: speckit.notion.meeting-intelligence
+    file: skills/notion/meeting-intelligence/SKILL.md
+    description: "Prepares meeting materials by gathering context from Notion, enriching with Claude research,\
+      \ and creating both an internal pre-read and external agenda saved to Notion. Helps you arrive prepared\
+      \ with\u2026"
+  - name: speckit.notion.research-documentation
+    file: skills/notion/research-documentation/SKILL.md
+    description: "Searches across your Notion workspace, synthesizes findings from multiple pages, and\
+      \ creates comprehensive research documentation saved as new Notion pages. Turns scattered information\
+      \ into structure\u2026"
+  - name: speckit.notion.spec-to-implementation
+    file: skills/notion/spec-to-implementation/SKILL.md
+    description: "Turns product or tech specs into concrete Notion tasks that Claude code can implement.\
+      \ Breaks down spec pages into detailed implementation plans with clear tasks, acceptance criteria,\
+      \ and progress tr\u2026"
+tags:
+- productivity

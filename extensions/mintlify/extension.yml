@@ -1,0 +1,26 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/mintlify/mintlify-claude-plugin)
+# Source: https://www.mintlify.com/
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: mintlify
+  name: mintlify
+  version: 0.1.0
+  description: Build beautiful documentation sites with Mintlify. Convert non-markdown files into properly
+    formatted MDX pages, add and modify content with correct component use, and automate documentation
+    updates.
+  author: Unknown
+  license: Apache-2.0
+  repository: https://www.mintlify.com/
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.mintlify.mintlify
+    file: skills/mintlify/SKILL.md
+    description: "Comprehensive reference for building Mintlify documentation sites. Use when creating\
+      \ pages, configuring docs.json, adding components, setting up navigation, or working with API references.\
+      \ Routes to\u2026"
+tags:
+- development

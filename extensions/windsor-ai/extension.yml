@@ -1,0 +1,51 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/windsor-ai/claude-windsor-ai-plugin)
+# Source: https://windsor.ai
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: windsor-ai
+  name: windsor-ai
+  version: 1.0.0
+  description: "Connect Claude Code to 325+ business data sources via Windsor.ai. Query marketing, sales,\
+    \ CRM, ecommerce, finance, and analytics data from Google Ads, Meta, HubSpot, Salesforce, Shopify,\
+    \ Stripe, and hundreds more \u2014 directly from your terminal."
+  author: Windsor.ai
+  license: Apache-2.0
+  repository: https://windsor.ai
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.windsor-ai.campaign-report
+    file: commands/campaign-report.md
+    description: Generate a quick campaign performance report from any connected data source
+  - name: speckit.windsor-ai.windsor-sources
+    file: commands/windsor-sources.md
+    description: Show all connected data sources and what data is available from each
+  - name: speckit.windsor-ai.windsor-types
+    file: commands/windsor-types.md
+    description: Generate TypeScript type definitions for a Windsor.ai connector's data schema
+  - name: speckit.windsor-ai.business-data
+    file: skills/business-data/SKILL.md
+    description: "Connect Claude Code to 325+ business data sources via Windsor.ai. Query marketing, sales,\
+      \ CRM, ecommerce, finance, and analytics data from Google Ads, Meta, HubSpot, Salesforce, Shopify,\
+      \ Stripe, and\u2026"
+  - name: speckit.windsor-ai.agent-business-data-analyst
+    file: agents/business-data-analyst.md
+    description: Pull, transform, and integrate business data from Windsor.ai's 325+ connectors
+tags:
+- data
+- analytics
+- marketing
+- sales
+- crm
+- ecommerce
+- finance
+- google-ads
+- facebook-ads
+- hubspot
+- salesforce
+- shopify
+- stripe
+- business-intelligence

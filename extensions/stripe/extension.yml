@@ -1,0 +1,55 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/stripe/ai)
+# Source: https://github.com/stripe/ai/tree/main/providers/claude/plugin
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: stripe
+  name: stripe
+  version: 0.2.0
+  description: Stripe development plugin for Claude
+  author: Stripe
+  license: Apache-2.0
+  repository: https://github.com/stripe/ai/tree/main/providers/claude/plugin
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.stripe.explain-error
+    file: commands/explain-error.md
+    description: Explain Stripe error codes and provide solutions with code examples
+  - name: speckit.stripe.test-cards
+    file: commands/test-cards.md
+    description: Display Stripe test card numbers for various testing scenarios
+  - name: speckit.stripe.connect-recommend
+    file: skills/connect-recommend/SKILL.md
+    description: "This skill should be used when the user asks about Stripe Connect configuration, charge\
+      \ patterns, dashboard access, or how to get started with Connect, is building a marketplace, platform,\
+      \ multi-vend\u2026"
+  - name: speckit.stripe.stripe-best-practices
+    file: skills/stripe-best-practices/SKILL.md
+    description: "Guides Stripe integration decisions \u2014 API selection (Checkout Sessions vs PaymentIntents),\
+      \ Connect platform setup (Accounts v2, controller properties), billing/subscriptions, Treasury financial\
+      \ accou\u2026"
+  - name: speckit.stripe.stripe-directory
+    file: skills/stripe-directory/SKILL.md
+    description: "Use when the user wants to find businesses, software, service providers, or partners\
+      \ for a specific industry, workflow, pain point, capability, or job to be done. Also use when the\
+      \ agent needs to pro\u2026"
+  - name: speckit.stripe.stripe-projects
+    file: skills/stripe-projects/SKILL.md
+    description: "Use when the user wants to provision infrastructure or third-party services using Stripe\
+      \ Projects. Triggers: \"I need a database\", \"set up auth\", \"add caching\", \"give me a Postgres\"\
+      , \"provision Redis\"\u2026"
+  - name: speckit.stripe.upgrade-stripe
+    file: skills/upgrade-stripe/SKILL.md
+    description: Guide for upgrading Stripe API versions and SDKs
+  - name: speckit.stripe.agent-company-researcher
+    file: agents/company-researcher.md
+    description: Research a company from its URL or description to infer Stripe Connect integration shape
+tags:
+- stripe
+- payments
+- webhooks
+- api
+- security

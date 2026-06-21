@@ -1,0 +1,93 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official
+# Source: https://github.com/anthropics/claude-plugins-official
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: code-modernization
+  name: code-modernization
+  version: 0.1.0
+  description: "Modernize legacy codebases (COBOL, legacy Java/C++/.NET, monolith web apps) with a structured\
+    \ preflight / assess / map / extract-rules / brief / (reimagine | transform | uplift) / harden / status\
+    \ workflow. Cross-stack rewrites, greenfield reimagining, and same-stack version uplifts (e.g. .NET\
+    \ Frame\u2026"
+  author: Anthropic
+  license: Apache-2.0
+  repository: https://github.com/anthropics/claude-plugins-official
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.code-modernization.modernize-assess
+    file: commands/modernize-assess.md
+    description: "Full discovery & portfolio analysis of a legacy system \u2014 inventory, complexity,\
+      \ debt, relative scale"
+  - name: speckit.code-modernization.modernize-brief
+    file: commands/modernize-brief.md
+    description: "Generate a phased Modernization Brief \u2014 the approved plan that transformation agents\
+      \ will execute against"
+  - name: speckit.code-modernization.modernize-extract-rules
+    file: commands/modernize-extract-rules.md
+    description: Mine business logic from legacy code into testable, human-readable rule specifications
+  - name: speckit.code-modernization.modernize-harden
+    file: commands/modernize-harden.md
+    description: "Security vulnerability scan with a reviewable remediation patch \u2014 OWASP, CWE, CVE,\
+      \ secrets, injection"
+  - name: speckit.code-modernization.modernize-map
+    file: commands/modernize-map.md
+    description: "Dependency & topology mapping \u2014 call graphs, data lineage, batch flows, rendered\
+      \ as navigable diagrams"
+  - name: speckit.code-modernization.modernize-preflight
+    file: commands/modernize-preflight.md
+    description: "Environment readiness check \u2014 analysis tools, build toolchain, source completeness,\
+      \ telemetry access"
+  - name: speckit.code-modernization.modernize-reimagine
+    file: commands/modernize-reimagine.md
+    description: "Multi-agent greenfield rebuild \u2014 extract specs from legacy, design AI-native, scaffold\
+      \ & validate with HITL"
+  - name: speckit.code-modernization.modernize-status
+    file: commands/modernize-status.md
+    description: "Where am I in the modernization workflow \u2014 artifact inventory, staleness, secrets\
+      \ hygiene, next step"
+  - name: speckit.code-modernization.modernize-transform
+    file: commands/modernize-transform.md
+    description: "Transform one legacy module to the target stack \u2014 idiomatic rewrite with behavior-equivalence\
+      \ tests"
+  - name: speckit.code-modernization.modernize-uplift
+    file: commands/modernize-uplift.md
+    description: "Same-stack version uplift (e.g. .NET Framework 4.8 \u2192 .NET 8) \u2014 preserve the\
+      \ code, fix the version deltas, prove equivalence by running one test suite on both runtimes"
+  - name: speckit.code-modernization.agent-architecture-critic
+    file: agents/architecture-critic.md
+    description: "Reviews proposed target architectures and transformed code against modern best practice.\
+      \ Adversarial \u2014 looks for over-engineering, missed requirements, and simpler alternatives."
+  - name: speckit.code-modernization.agent-business-rules-extractor
+    file: agents/business-rules-extractor.md
+    description: "Mines domain logic, calculations, validations, and policies from legacy code into testable\
+      \ Given/When/Then specifications. Use when you need to separate \"what the business requires\" from\
+      \ \"how the old\u2026"
+  - name: speckit.code-modernization.agent-legacy-analyst
+    file: agents/legacy-analyst.md
+    description: "Deep-reads legacy codebases (COBOL, Java, .NET, Node, anything) to build structural\
+      \ and behavioral understanding. Use for discovery, dependency mapping, dead-code detection, and\
+      \ \"what does this syste\u2026"
+  - name: speckit.code-modernization.agent-scaffolder
+    file: agents/scaffolder.md
+    description: "Scaffolds one service of a reimagined system from the approved architecture and spec\
+      \ \u2014 project skeleton, domain model, API stubs, executable acceptance tests. Write access is\
+      \ scoped to its own servic\u2026"
+  - name: speckit.code-modernization.agent-security-auditor
+    file: agents/security-auditor.md
+    description: "Adversarial security reviewer \u2014 OWASP Top 10, CWE, dependency CVEs, secrets, injection.\
+      \ Use for security debt scanning and pre-modernization hardening."
+  - name: speckit.code-modernization.agent-test-engineer
+    file: agents/test-engineer.md
+    description: Writes characterization, contract, and equivalence tests that pin down legacy behavior
+      so transformation can be proven correct. Use before any rewrite.
+  - name: speckit.code-modernization.agent-version-delta-analyst
+    file: agents/version-delta-analyst.md
+    description: "Modernize legacy codebases (COBOL, legacy Java/C++/.NET, monolith web apps) with a structured\
+      \ preflight / assess / map / extract-rules / brief / (reimagine | transform | uplift) / harden /\
+      \ status wor\u2026"
+tags:
+- claude-code

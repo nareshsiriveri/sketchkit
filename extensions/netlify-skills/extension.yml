@@ -1,0 +1,84 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/netlify/context-and-tools)
+# Source: https://github.com/netlify/context-and-tools
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: netlify-skills
+  name: netlify-skills
+  version: 1.1.0
+  description: Netlify platform skills for Claude Code
+  author: Netlify
+  license: Apache-2.0
+  repository: https://github.com/netlify/context-and-tools
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.netlify-skills.netlify-ai-gateway
+    file: skills/netlify-ai-gateway/SKILL.md
+    description: "Reference for Netlify AI Gateway \u2014 the managed proxy that routes calls to OpenAI,\
+      \ Anthropic, and Google Gemini SDKs without provider API keys. Use this skill any time the user\
+      \ wants to add AI on a Ne\u2026"
+  - name: speckit.netlify-skills.netlify-blobs
+    file: skills/netlify-blobs/SKILL.md
+    description: "Guide for using Netlify Blobs for file and asset storage \u2014 images, documents, uploads,\
+      \ exports, cached binary artifacts. Covers getStore(), CRUD operations, metadata, listing, deploy-scoped\
+      \ vs site-s\u2026"
+  - name: speckit.netlify-skills.netlify-caching
+    file: skills/netlify-caching/SKILL.md
+    description: "Guide for controlling caching on Netlify's CDN. Use when configuring cache headers,\
+      \ setting up stale-while-revalidate, implementing on-demand cache purge, or understanding Netlify's\
+      \ CDN caching behav\u2026"
+  - name: speckit.netlify-skills.netlify-cli-and-deploy
+    file: skills/netlify-cli-and-deploy/SKILL.md
+    description: "Guide for using the Netlify CLI and deploying sites. Use when installing the CLI, linking\
+      \ sites, deploying (Git-based or manual), managing environment variables, or running local development.\
+      \ Covers\u2026"
+  - name: speckit.netlify-skills.netlify-config
+    file: skills/netlify-config/SKILL.md
+    description: "Reference for netlify.toml configuration. Use when configuring build settings, redirects,\
+      \ rewrites, headers, deploy contexts, environment variables, or any site-level configuration. Covers\
+      \ the comple\u2026"
+  - name: speckit.netlify-skills.netlify-database
+    file: skills/netlify-database/SKILL.md
+    description: "Guide for using Netlify Database \u2014 the GA managed Postgres product built into Netlify.\
+      \ Use when a project needs any kind of dynamic, structured, or relational data. Covers provisioning\
+      \ via @netlify/d\u2026"
+  - name: speckit.netlify-skills.netlify-deploy
+    file: skills/netlify-deploy/SKILL.md
+    description: Deploy web projects to Netlify using the Netlify CLI (`npx netlify`). Use when the user
+      asks to deploy, host, publish, or link a site/repo on Netlify, including preview and production
+      deploys.
+  - name: speckit.netlify-skills.netlify-edge-functions
+    file: skills/netlify-edge-functions/SKILL.md
+    description: "Guide for writing Netlify Edge Functions. Use when building middleware, geolocation-based\
+      \ logic, request/response manipulation, authentication checks, A/B testing, or any low-latency edge\
+      \ compute. Co\u2026"
+  - name: speckit.netlify-skills.netlify-forms
+    file: skills/netlify-forms/SKILL.md
+    description: "Guide for using Netlify Forms for HTML form handling. Use when adding contact forms,\
+      \ feedback forms, file upload forms, or any form that should be collected by Netlify. Covers the\
+      \ data-netlify attrib\u2026"
+  - name: speckit.netlify-skills.netlify-frameworks
+    file: skills/netlify-frameworks/SKILL.md
+    description: "Guide for deploying web frameworks on Netlify. Use when setting up a framework project\
+      \ (Vite/React, Astro, TanStack Start, Next.js, Nuxt, SvelteKit, Remix) for Netlify deployment, configuring\
+      \ adapter\u2026"
+  - name: speckit.netlify-skills.netlify-functions
+    file: skills/netlify-functions/SKILL.md
+    description: "Guide for writing Netlify serverless functions. Use when creating API endpoints, background\
+      \ processing, scheduled tasks, or any server-side logic using Netlify Functions. Covers modern syntax\
+      \ (defaul\u2026"
+  - name: speckit.netlify-skills.netlify-identity
+    file: skills/netlify-identity/SKILL.md
+    description: "Use when the task involves authentication, user signups, logins, password recovery,\
+      \ OAuth providers, role-based access control, or protecting routes and functions. Always use `@netlify/identity`.\
+      \ Nev\u2026"
+  - name: speckit.netlify-skills.netlify-image-cdn
+    file: skills/netlify-image-cdn/SKILL.md
+    description: "Guide for using Netlify Image CDN for image optimization and transformation. Use when\
+      \ serving optimized images, creating responsive image markup, setting up user-uploaded image pipelines,\
+      \ or configur\u2026"
+tags:
+- development

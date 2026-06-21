@@ -1,0 +1,518 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/PostHog/ai-plugin)
+# Source: https://posthog.com/docs/model-context-protocol
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: posthog
+  name: posthog
+  version: 1.1.39
+  description: Access PostHog analytics, feature flags, experiments, error tracking, and insights directly
+    from your AI coding tool. Optionally capture Claude Code sessions to PostHog LLM Analytics.
+  author: PostHog
+  license: Apache-2.0
+  repository: https://posthog.com/docs/model-context-protocol
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.posthog.llma-cc-ingest
+    file: commands/llma-cc-ingest.md
+    description: Manually send a Claude Code session log to PostHog LLM Analytics
+  - name: speckit.posthog.llma-cc-setup
+    file: commands/llma-cc-setup.md
+    description: Set up PostHog LLM Analytics to capture Claude Code sessions
+  - name: speckit.posthog.llma-cc-status
+    file: commands/llma-cc-status.md
+    description: Check if Claude Code sessions are being sent to PostHog LLM Analytics
+  - name: speckit.posthog.analyzing-experiment-session-replays
+    file: skills/analyzing-experiment-session-replays/SKILL.md
+    description: "Analyze session replay patterns across experiment variants to understand user behavior\
+      \ differences. Use when the user wants to see how users interact with different experiment variants,\
+      \ identify usab\u2026"
+  - name: speckit.posthog.assessing-heatmaps
+    file: skills/assessing-heatmaps/SKILL.md
+    description: "Assesses what a page's heatmap is telling you and recommends concrete changes. Pulls\
+      \ click / rageclick / scroll-depth data for a URL, names the hot elements by cross-referencing autocapture\
+      \ events on\u2026"
+  - name: speckit.posthog.auditing-endpoints
+    file: skills/auditing-endpoints/SKILL.md
+    description: "Audit every endpoint in a PostHog project for staleness, failed materialisations, and\
+      \ unused materialised versions. Use when the user asks \"what endpoints can I clean up?\", \"are\
+      \ any of my endpoints b\u2026"
+  - name: speckit.posthog.auditing-experiments-flags
+    file: skills/auditing-experiments-flags/SKILL.md
+    description: "Audit PostHog experiments and feature flags for configuration issues, staleness, and\
+      \ best-practice violations. Read when the user asks to audit, health-check, or review experiments\
+      \ or feature flags,\u2026"
+  - name: speckit.posthog.auditing-warehouse-source-health
+    file: skills/auditing-warehouse-source-health/SKILL.md
+    description: "Audit the health of a PostHog project's data warehouse sources and syncs \u2014 find\
+      \ every broken or degraded source connection, sync schema, and webhook channel. Use when the user\
+      \ asks \"why are my import\u2026"
+  - name: speckit.posthog.auditing-warehouse-view-health
+    file: skills/auditing-warehouse-view-health/SKILL.md
+    description: "Audit the health of a PostHog project's materialized views (saved queries) \u2014 find\
+      \ every failed materialization and flag unused or stale materialized views that cost storage and\
+      \ compute. Use when the\u2026"
+  - name: speckit.posthog.authoring-error-tracking-alerts
+    file: skills/authoring-error-tracking-alerts/SKILL.md
+    description: "Author error tracking alerts that fire when an issue is created, reopened, or starts\
+      \ spiking. Use when the user asks to set up error notifications, route exceptions to Slack/webhook/Linear,\
+      \ or evalua\u2026"
+  - name: speckit.posthog.authoring-log-alerts
+    file: skills/authoring-log-alerts/SKILL.md
+    description: "Author useful, low-noise log alerts on services in a PostHog project. Use when the user\
+      \ asks to set up alerts for their logs, suggest alerts they should add, or evaluate whether a service\
+      \ is worth mo\u2026"
+  - name: speckit.posthog.authoring-signals-scouts
+    file: skills/authoring-signals-scouts/SKILL.md
+    description: "How to author, edit, and adapt PostHog Signals scouts \u2014 the scheduled agents that\
+      \ scan a project and emit findings into the Signals inbox. Use when a user wants to customize a\
+      \ canonical scout for the\u2026"
+  - name: speckit.posthog.building-workflows
+    file: skills/building-workflows/SKILL.md
+    description: "Build, edit, test, enable, and monitor PostHog workflows over MCP. Author the action/edge\
+      \ graph so it runs and opens cleanly in the visual editor, then change drafts surgically with patch\
+      \ operations.\u2026"
+  - name: speckit.posthog.choosing-trend-or-slope-view
+    file: skills/choosing-trend-or-slope-view/SKILL.md
+    description: "Clarify how to visualize change over a time range before building a trend. Use whenever\
+      \ the user asks how much something changed, grew, dropped, improved, or regressed between two points\
+      \ or periods \u2014\u2026"
+  - name: speckit.posthog.cleaning-up-stale-feature-flags
+    file: skills/cleaning-up-stale-feature-flags/SKILL.md
+    description: "Identify and clean up stale feature flags in a PostHog project. Use when the user wants\
+      \ to find unused, fully rolled out, or abandoned feature flags, review them for safety, and then\
+      \ disable or delet\u2026"
+  - name: speckit.posthog.configuring-experiment-analytics
+    file: skills/configuring-experiment-analytics/SKILL.md
+    description: "Configures the analytics side of a PostHog experiment \u2014 exposure criteria (default\
+      \ `$feature_flag_called` vs custom exposure events), primary and secondary metrics, the supported\
+      \ metric types (count,\u2026"
+  - name: speckit.posthog.configuring-experiment-rollout
+    file: skills/configuring-experiment-rollout/SKILL.md
+    description: "Configures the rollout shape of a PostHog experiment \u2014 the variant split (50/50,\
+      \ 80/20, A/B/C ratios), the overall rollout percentage that gates how many users enter the experiment,\
+      \ and the disambigu\u2026"
+  - name: speckit.posthog.consuming-endpoints-from-client-code
+    file: skills/consuming-endpoints-from-client-code/SKILL.md
+    description: "Wire a PostHog endpoint into a client app or SDK. Covers fetching the OpenAPI spec,\
+      \ generating a typed client with openapi-generator or @hey-api/openapi-ts, sending the right auth\
+      \ header, shaping the\u2026"
+  - name: speckit.posthog.copying-flags-across-projects
+    file: skills/copying-flags-across-projects/SKILL.md
+    description: "Copy a feature flag from one PostHog project to one or more target projects in the same\
+      \ organization. Use when the user wants to duplicate a flag, promote a flag from staging to production,\
+      \ sync flag\u2026"
+  - name: speckit.posthog.creating-ai-subscription
+    file: skills/creating-ai-subscription/SKILL.md
+    description: "Create a recurring AI-generated PostHog report \u2014 schedule a free-text prompt to\
+      \ run on a cron, with the LLM-synthesized markdown delivered to email or Slack on each tick. Use\
+      \ when the user wants a re\u2026"
+  - name: speckit.posthog.creating-an-endpoint
+    file: skills/creating-an-endpoint/SKILL.md
+    description: "Create a PostHog endpoint with the right shape on the first try \u2014 covers query\
+      \ kind choice, name conventions, what to expose as variables (HogQL code_name vs insight breakdown),\
+      \ data_freshness_second\u2026"
+  - name: speckit.posthog.creating-experiments
+    file: skills/creating-experiments/SKILL.md
+    description: "Guides agents through the 3-step experiment creation flow: defining the hypothesis,\
+      \ configuring rollout, and setting up analytics. Delegates rollout decisions to configuring-experiment-rollout\
+      \ and me\u2026"
+  - name: speckit.posthog.creating-replay-vision-scanners
+    file: skills/creating-replay-vision-scanners/SKILL.md
+    description: "Guides agents through creating and safely sizing a Replay Vision scanner: choosing the\
+      \ scanner type (monitor/classifier/scorer/summarizer), shaping the RecordingsQuery that selects\
+      \ sessions, and \u2014 cr\u2026"
+  - name: speckit.posthog.debugging-local-replay
+    file: skills/debugging-local-replay/SKILL.md
+    description: "Debugs why session recordings aren't appearing in the local dev environment. Use when\
+      \ a developer reports that local replay ingestion isn't working, recordings aren't showing up despite\
+      \ /s calls, or\u2026"
+  - name: speckit.posthog.debugging-signals-pipeline
+    file: skills/debugging-signals-pipeline/SKILL.md
+    description: "Debug the signals pipeline locally end-to-end. Covers emitting test signals from fixtures,\
+      \ monitoring Temporal workflows via the REST API, reading sandbox agent logs from object storage,\
+      \ inspecting D\u2026"
+  - name: speckit.posthog.designing-email-templates
+    file: skills/designing-email-templates/SKILL.md
+    description: "Author, save, and edit email templates in the PostHog workflows library \u2014 compose\
+      \ email design JSON with Liquid personalization and create and round-trip-edit templates over MCP.\
+      \ Use when asked to de\u2026"
+  - name: speckit.posthog.diagnosing-ci-and-merge-bottlenecks
+    file: skills/diagnosing-ci-and-merge-bottlenecks/SKILL.md
+    description: "Diagnoses CI and pull-request pipeline health for a GitHub repo using the engineering\
+      \ analytics MCP tools \u2014 pull-requests (PR list with CI status), workflow-health (per-workflow\
+      \ CI trends), and pr-li\u2026"
+  - name: speckit.posthog.diagnosing-endpoint-performance
+    file: skills/diagnosing-endpoint-performance/SKILL.md
+    description: "Diagnose why a PostHog endpoint is slow or expensive and propose a concrete fix \u2014\
+      \ bump the cache TTL, enable materialisation, restructure variables, or rewrite the query. Use when\
+      \ the user says \"this\u2026"
+  - name: speckit.posthog.diagnosing-experiment-results
+    file: skills/diagnosing-experiment-results/SKILL.md
+    description: "Diagnoses bias, anomalies, and strange-looking results on a specific PostHog experiment.\
+      \ Covers empty / 0-exposure experiments, sample ratio mismatch, identity fragmentation, multi-variant\
+      \ exposure,\u2026"
+  - name: speckit.posthog.diagnosing-failed-warehouse-syncs
+    file: skills/diagnosing-failed-warehouse-syncs/SKILL.md
+    description: "Diagnose why a data warehouse sync is failing and recommend the right recovery action.\
+      \ Use when the user asks \"why isn't my Stripe/Postgres/Hubspot sync working?\", \"this table has\
+      \ been stuck for hour\u2026"
+  - name: speckit.posthog.diagnosing-missing-recordings
+    file: skills/diagnosing-missing-recordings/SKILL.md
+    description: "Diagnoses why a session recording is missing or was not captured. Use when a user asks\
+      \ why a session has no replay, why recordings aren't appearing, or wants to troubleshoot session\
+      \ replay capture is\u2026"
+  - name: speckit.posthog.diagnosing-sdk-health
+    file: skills/diagnosing-sdk-health/SKILL.md
+    description: "Diagnoses the health of a project's PostHog SDK integrations \u2014 which SDKs are out\
+      \ of date and how to fix them. Use when a user asks about PostHog SDK versions, outdated SDKs, upgrade\
+      \ recommendations,\u2026"
+  - name: speckit.posthog.diagnosing-stacktrace-symbolication
+    file: skills/diagnosing-stacktrace-symbolication/SKILL.md
+    description: "Help users debug PostHog Error Tracking stack-trace symbolication for any supported\
+      \ platform \u2014 JavaScript/TypeScript web, React Native (Hermes), Android (Proguard / R8), or\
+      \ iOS / macOS (dSYM). The Po\u2026"
+  - name: speckit.posthog.downloading-batch-export-files
+    file: skills/downloading-batch-export-files/SKILL.md
+    description: "Export PostHog events, persons, or sessions on demand and download the resulting files.\
+      \ Use when the user asks to download/export raw PostHog data, create a one-off file export, fetch\
+      \ a Parquet or JS\u2026"
+  - name: speckit.posthog.exploring-apm-traces
+    file: skills/exploring-apm-traces/SKILL.md
+    description: "Investigates distributed application performance using PostHog APM (OpenTelemetry span)\
+      \ data via MCP. Use when the user asks about service traces, slow HTTP/database spans, error spans,\
+      \ error-rate tr\u2026"
+  - name: speckit.posthog.exploring-autocapture-events
+    file: skills/exploring-autocapture-events/SKILL.md
+    description: "Guides exploration of $autocapture events captured by posthog-js to understand user\
+      \ interactions, find CSS selectors (especially data-attr attributes), evaluate selector uniqueness,\
+      \ query matching cl\u2026"
+  - name: speckit.posthog.exploring-endpoint-execution-logs
+    file: skills/exploring-endpoint-execution-logs/SKILL.md
+    description: "Explore and diagnose a PostHog endpoint's execution logs \u2014 error messages, failed\
+      \ runs, cache misses, slow runs, or unexpected row counts during endpoint invocations. Use when\
+      \ the user says \"my endpo\u2026"
+  - name: speckit.posthog.exploring-live-traffic
+    file: skills/exploring-live-traffic/SKILL.md
+    description: "Inspects PostHog Web analytics Live tab data \u2014 current users online, last-30-minutes\
+      \ pageviews, top pages, referrers, devices, browsers, countries, bot traffic, and the per-minute\
+      \ bot/users charts. U\u2026"
+  - name: speckit.posthog.exploring-llm-clusters
+    file: skills/exploring-llm-clusters/SKILL.md
+    description: "Investigate AI observability clusters \u2014 understand usage patterns in AI/LLM traffic,\
+      \ compare cluster behavior, compute cost/latency metrics, and drill into individual traces within\
+      \ clusters."
+  - name: speckit.posthog.exploring-llm-costs
+    file: skills/exploring-llm-costs/SKILL.md
+    description: "Investigate LLM spend in PostHog \u2014 total cost over time, cost by model, provider,\
+      \ user, trace, or custom dimension, token and cache-hit economics, and cost regressions. Use when\
+      \ the user asks \"how mu\u2026"
+  - name: speckit.posthog.exploring-llm-evaluations
+    file: skills/exploring-llm-evaluations/SKILL.md
+    description: "Investigate AI observability evaluations \u2014 `hog` (deterministic code-based), `llm_judge`\
+      \ (LLM-prompt-based), and `sentiment` (user-message sentiment). Find existing evaluations, inspect\
+      \ their configu\u2026"
+  - name: speckit.posthog.exploring-llm-traces
+    file: skills/exploring-llm-traces/SKILL.md
+    description: "ABSOLUTE MUST to debug and inspect LLM/AI agent traces using PostHog's MCP tools. Use\
+      \ when the user pastes a trace or session URL (e.g. /ai-observability/traces/<id> or /ai-observability/sessions/<id\u2026"
+  - name: speckit.posthog.exploring-mcp-intent-clusters
+    file: skills/exploring-mcp-intent-clusters/SKILL.md
+    description: "Explore PostHog MCP intent clusters \u2014 agent goals grouped by semantic similarity,\
+      \ with each cluster's tool distribution and error rates. Use when the user asks \"what are agents\
+      \ trying to do with the\u2026"
+  - name: speckit.posthog.exploring-mcp-sessions
+    file: skills/exploring-mcp-sessions/SKILL.md
+    description: "Investigate individual PostHog MCP sessions \u2014 the sequence of tool calls a single\
+      \ agent made in one run, what it was trying to do, and where it went wrong. Use when the user asks\
+      \ \"what did this MCP s\u2026"
+  - name: speckit.posthog.exploring-mcp-tool-quality
+    file: skills/exploring-mcp-tool-quality/SKILL.md
+    description: "Investigate the quality of PostHog MCP tool calls \u2014 error rates, latency, reach,\
+      \ and which tools are failing or slow. Use when the user asks \"which MCP tool has the highest error\
+      \ rate?\", \"what's the\u2026"
+  - name: speckit.posthog.exploring-signals-scouts
+    file: skills/exploring-signals-scouts/SKILL.md
+    description: "How to explore and make sense of PostHog Signals scouts \u2014 the scheduled agents\
+      \ that scan a project and emit findings into the Signals inbox. Use when a user wants to understand\
+      \ what scouts they have,\u2026"
+  - name: speckit.posthog.feature-usage-feed
+    file: skills/feature-usage-feed/SKILL.md
+    description: "Set up an LLM-judge evaluation that extracts canonical use cases for a PostHog feature\
+      \ at scale and streams the results to a Slack channel as a live feed. Use when someone wants to\
+      \ understand how use\u2026"
+  - name: speckit.posthog.finding-deleted-feature-flags
+    file: skills/finding-deleted-feature-flags/SKILL.md
+    description: "Find feature flags that were soft-deleted in the active project within a recent time\
+      \ window. Use when the user asks \"what flags were deleted in the last N days\", \"show me recently\
+      \ deleted feature fla\u2026"
+  - name: speckit.posthog.finding-experiments
+    file: skills/finding-experiments/SKILL.md
+    description: "Resolves a PostHog experiment reference from natural language to a concrete experiment\
+      \ ID by browsing `experiment-list` (not feature-flag tools), with disambiguation when multiple experiments\
+      \ match.\u2026"
+  - name: speckit.posthog.finding-replay-for-issue
+    file: skills/finding-replay-for-issue/SKILL.md
+    description: "Finds the most informative session recording linked to an error tracking issue. Use\
+      \ when a user has an error tracking issue ID and wants to watch a replay showing what the user was\
+      \ doing when the err\u2026"
+  - name: speckit.posthog.finding-sessions-to-watch
+    file: skills/finding-sessions-to-watch/SKILL.md
+    description: "Guides a user from \"I want to watch recordings but don't know which ones\" to a short,\
+      \ high-signal list of sessions worth watching. Use when the user asks which sessions or replays\
+      \ to watch, wants hel\u2026"
+  - name: speckit.posthog.formatting-insight-axes
+    file: skills/formatting-insight-axes/SKILL.md
+    description: "Pick the right y-axis unit when creating or updating a TrendsQuery insight via `posthog:insight-create`\
+      \ or `posthog:insight-update`. Use when the agent is about to add a `formula` purely to convert\
+      \ u\u2026"
+  - name: speckit.posthog.grouping-noisy-errors
+    file: skills/grouping-noisy-errors/SKILL.md
+    description: "Consolidate PostHog error tracking issues that are the same actual error reported under\
+      \ different fingerprints. Use when the user asks \"why do I have so many TypeError issues that look\
+      \ the same?\", \"m\u2026"
+  - name: speckit.posthog.inbox-exploration
+    file: skills/inbox-exploration/SKILL.md
+    description: "Explore PostHog's Inbox and act on what it surfaces \u2014 the place where signal reports\
+      \ cluster into actionable issues and trends. Use when the user asks \"what's in my inbox?\", \"\
+      what should I look at?\",\u2026"
+  - name: speckit.posthog.instrument-error-tracking
+    file: skills/instrument-error-tracking/SKILL.md
+    description: "Add PostHog error tracking to capture and monitor exceptions. Use after implementing\
+      \ features or reviewing PRs to ensure errors are tracked with stack traces and source maps. Also\
+      \ handles initial Pos\u2026"
+  - name: speckit.posthog.instrument-feature-flags
+    file: skills/instrument-feature-flags/SKILL.md
+    description: "Add PostHog feature flags to gate new functionality. Use after implementing features\
+      \ or reviewing PRs to ensure safe rollouts with feature flag controls. Also handles initial PostHog\
+      \ SDK setup if not\u2026"
+  - name: speckit.posthog.instrument-integration
+    file: skills/instrument-integration/SKILL.md
+    description: "Add PostHog SDK integration to your application. Use when setting up PostHog for the\
+      \ first time or reviewing PRs that need PostHog initialization. Covers SDK installation, provider\
+      \ setup, and basic c\u2026"
+  - name: speckit.posthog.instrument-llm-analytics
+    file: skills/instrument-llm-analytics/SKILL.md
+    description: "Add PostHog LLM analytics to trace AI model usage. Use after implementing LLM features\
+      \ or reviewing PRs to ensure all generations are captured with token counts, latency, and costs.\
+      \ Also handles init\u2026"
+  - name: speckit.posthog.instrument-logs
+    file: skills/instrument-logs/SKILL.md
+    description: "Add PostHog log capture to track application logs. Use after implementing features or\
+      \ reviewing PRs to ensure meaningful log events are captured with structured properties. Also handles\
+      \ initial OTLP\u2026"
+  - name: speckit.posthog.instrument-product-analytics
+    file: skills/instrument-product-analytics/SKILL.md
+    description: "Add PostHog product analytics events to track user behavior. Use after implementing\
+      \ new features or reviewing PRs to ensure meaningful user actions are captured. Also handles initial\
+      \ PostHog SDK setu\u2026"
+  - name: speckit.posthog.investigate-metric
+    file: skills/investigate-metric/SKILL.md
+    description: "Diagnose why a product metric changed (dropped, spiked, or plateaued) by orchestrating\
+      \ breakdowns, actors, paths, lifecycle, retention, and annotations queries. Use when the user reports\
+      \ an anomaly,\u2026"
+  - name: speckit.posthog.investigating-error-issue
+    file: skills/investigating-error-issue/SKILL.md
+    description: "Investigates a single PostHog error tracking issue end-to-end. Use when the user provides\
+      \ an issue ID or pastes an issue URL (`/error_tracking/<id>`) and wants to understand the error\
+      \ \u2014 who it affect\u2026"
+  - name: speckit.posthog.investigating-metric-anomalies
+    file: skills/investigating-metric-anomalies/SKILL.md
+    description: "Investigates server/infrastructure metric anomalies in PostHog Metrics \u2014 from \"\
+      this metric is rising/dropping/spiking\" or a fired alert to a probable cause with evidence. Use\
+      \ when asked why a metric\u2026"
+  - name: speckit.posthog.investigating-replay
+    file: skills/investigating-replay/SKILL.md
+    description: "Investigates a session recording by gathering metadata, person profile, same-session\
+      \ events, and linked error tracking issues in one pass. Use when a user provides a recording or\
+      \ session ID and wants\u2026"
+  - name: speckit.posthog.managing-endpoint-versions
+    file: skills/managing-endpoint-versions/SKILL.md
+    description: "Work safely with endpoint versions \u2014 preview a draft in the playground, roll back\
+      \ to an older version, update settings on one version without bumping query history, deactivate\
+      \ a specific version. Use\u2026"
+  - name: speckit.posthog.managing-experiment-lifecycle
+    file: skills/managing-experiment-lifecycle/SKILL.md
+    description: "Guides experiment state transitions: launching, pausing, resuming, ending, shipping\
+      \ variants, archiving, resetting, duplicating, and copying to another project. Covers preconditions,\
+      \ implications for\u2026"
+  - name: speckit.posthog.managing-path-cleaning-rules
+    file: skills/managing-path-cleaning-rules/SKILL.md
+    description: "Inspects URL paths and proposes, tests, orders, and applies project-level path cleaning\
+      \ rules so dynamic segments (numeric IDs, UUIDs, slugs, dates) collapse into readable aliases. Use\
+      \ when the user\u2026"
+  - name: speckit.posthog.managing-reminders
+    file: skills/managing-reminders/SKILL.md
+    description: "Create and manage PostHog reminders \u2014 private, human-paced nudges that fire as\
+      \ in-app notifications on a schedule, optionally linked to a PostHog resource. Use when the user\
+      \ says \"remind me to\u2026\", wan\u2026"
+  - name: speckit.posthog.managing-subscriptions
+    file: skills/managing-subscriptions/SKILL.md
+    description: "Manage PostHog subscriptions \u2014 scheduled email, Slack, or webhook deliveries of\
+      \ insight or dashboard snapshots, optionally with an AI-written summary attached to each delivery.\
+      \ Use when the user want\u2026"
+  - name: speckit.posthog.planning-user-interviews
+    file: skills/planning-user-interviews/SKILL.md
+    description: "Plan a user interview topic in PostHog \u2014 pick who to target (cohort, emails, or\
+      \ PostHog distinct IDs), draft what to ask about, and prepare the voice-agent context plus a question\
+      \ list. Use when the\u2026"
+  - name: speckit.posthog.querying-posthog-data
+    file: skills/querying-posthog-data/SKILL.md
+    description: "Required reading before writing any HogQL/SQL or calling execute-sql against PostHog.\
+      \ Use whenever the user wants to search, find, or do complex aggregations PostHog entities (insights,\
+      \ dashboards, c\u2026"
+  - name: speckit.posthog.setting-up-a-data-warehouse-source
+    file: skills/setting-up-a-data-warehouse-source/SKILL.md
+    description: "Guide the user through connecting a new data warehouse source \u2014 Postgres, MySQL,\
+      \ Stripe, Hubspot, MongoDB, Salesforce, BigQuery, Snowflake, and so on. Use when the user wants\
+      \ to \"connect Stripe\", \"im\u2026"
+  - name: speckit.posthog.signals
+    file: skills/signals/SKILL.md
+    description: "How to query the document_embeddings table for raw signal data using HogQL. Use when\
+      \ you need to perform semantic search over signals, fetch every signal that contributed to a specific\
+      \ report, or lis\u2026"
+  - name: speckit.posthog.signals-scout-ai-observability
+    file: skills/signals-scout-ai-observability/SKILL.md
+    description: "Focused Signals scout for PostHog projects using AI observability. Rotates through a\
+      \ set of lenses \u2014 cost, latency, errors, volume, eval performance, eval/enrichment config,\
+      \ clusters, and tool usage\u2026"
+  - name: speckit.posthog.signals-scout-anomaly-detection
+    file: skills/signals-scout-anomaly-detection/SKILL.md
+    description: "Signals scout that watches a PostHog project's most-viewed dashboards and insights for\
+      \ recent anomalies \u2014 sudden bursts, drops, flat-lines, and trend breaks at the daily or hourly\
+      \ level. It discovers\u2026"
+  - name: speckit.posthog.signals-scout-csp-violations
+    file: skills/signals-scout-csp-violations/SKILL.md
+    description: "Focused Signals scout for PostHog projects collecting Content Security Policy (CSP)\
+      \ violation reports. Watches `$csp_violation` events for fresh blocked-URL clusters, per-directive\
+      \ bursts, page-scope\u2026"
+  - name: speckit.posthog.signals-scout-customer-analytics
+    file: skills/signals-scout-customer-analytics/SKILL.md
+    description: "Focused Signals scout for PostHog projects using Customer analytics (the Accounts product\
+      \ \u2014 `system.accounts`, where an account is a customer organization keyed by a group). Watches\
+      \ per-account produ\u2026"
+  - name: speckit.posthog.signals-scout-data-pipelines
+    file: skills/signals-scout-data-pipelines/SKILL.md
+    description: "Focused Signals scout for PostHog projects moving data through pipelines. Watches the\
+      \ three delivery surfaces \u2014 CDP destinations and transformations (hog functions), batch exports,\
+      \ and hog flows (wor\u2026"
+  - name: speckit.posthog.signals-scout-error-tracking
+    file: skills/signals-scout-error-tracking/SKILL.md
+    description: "Focused Signals scout for PostHog projects using error tracking. Watches `$exception`\
+      \ bursts, stuck loops, multi-fingerprint clusters, status regressions, and stack-trace activity-name\
+      \ patterns. Emit\u2026"
+  - name: speckit.posthog.signals-scout-experiments
+    file: skills/signals-scout-experiments/SKILL.md
+    description: "Focused Signals scout for PostHog projects running A/B experiments. Watches running\
+      \ experiments for validity threats (sample ratio mismatch, multi-variant contamination, exposure\
+      \ stalls, mid-run flag\u2026"
+  - name: speckit.posthog.signals-scout-feature-flags
+    file: skills/signals-scout-feature-flags/SKILL.md
+    description: "Focused Signals scout for PostHog projects using feature flags. Watches the flag roster\
+      \ and the `$feature_flag_called` evaluation stream for contradictions between a flag's configured\
+      \ state and its r\u2026"
+  - name: speckit.posthog.signals-scout-general
+    file: skills/signals-scout-general/SKILL.md
+    description: "General Signals scout for PostHog projects. Cross-product explorer that scans a team's\
+      \ project and emits findings into the Signals inbox. Sibling signals-scout-* specialists each watch\
+      \ a single produ\u2026"
+  - name: speckit.posthog.signals-scout-health-checks
+    file: skills/signals-scout-health-checks/SKILL.md
+    description: "Focused Signals scout for PostHog setup health. Reads the project's active health issues\
+      \ \u2014 the deterministic findings of PostHog's own health checks (no live events, outdated SDKs,\
+      \ missing reverse pr\u2026"
+  - name: speckit.posthog.signals-scout-inbox-validation
+    file: skills/signals-scout-inbox-validation/SKILL.md
+    description: "Follow-up scout for the Signals inbox itself. Watches reports that recently transitioned\
+      \ to resolved (an implementation PR merged) and, after a deployment soak window, re-measures the\
+      \ underlying prob\u2026"
+  - name: speckit.posthog.signals-scout-logs
+    file: skills/signals-scout-logs/SKILL.md
+    description: "Focused Signals scout for PostHog projects using logs. Watches for volume bursts, severity-distribution\
+      \ shifts, service silence, fresh message patterns, and trace-correlated bursts via the logs inges\u2026"
+  - name: speckit.posthog.signals-scout-observability-gaps
+    file: skills/signals-scout-observability-gaps/SKILL.md
+    description: "Focused Signals scout for finding observability gaps in PostHog itself \u2014 significant\
+      \ event volumes the team isn't tracking, custom events with no insight or dashboard coverage, insights\
+      \ pointing at e\u2026"
+  - name: speckit.posthog.signals-scout-product-analytics
+    file: skills/signals-scout-product-analytics/SKILL.md
+    description: "Focused Signals scout for the core product-analytics surface \u2014 the behavioral primitives\
+      \ the product-analytics product is built on: funnels, retention, lifecycle, stickiness, and paths.\
+      \ It watches th\u2026"
+  - name: speckit.posthog.signals-scout-replay-vision
+    file: skills/signals-scout-replay-vision/SKILL.md
+    description: "Focused Signals scout for PostHog projects running Replay Vision scanners \u2014 the\
+      \ standing LLM probes that watch session recordings and write `$recording_observed` events. Watches\
+      \ two promises: that en\u2026"
+  - name: speckit.posthog.signals-scout-revenue-analytics
+    file: skills/signals-scout-revenue-analytics/SKILL.md
+    description: "Focused Signals scout for PostHog projects using revenue analytics. Watches the derived\
+      \ revenue product for upstream failures (Stripe sync stalls, capture regressions), config drift\
+      \ (missing subscrip\u2026"
+  - name: speckit.posthog.signals-scout-session-replay
+    file: skills/signals-scout-session-replay/SKILL.md
+    description: "Focused Signals scout for PostHog projects using session replay. Watches two promises\
+      \ the replay product makes: that sessions are actually being recorded (capture integrity \u2014\
+      \ recording volume vanishi\u2026"
+  - name: speckit.posthog.signals-scout-surveys
+    file: skills/signals-scout-surveys/SKILL.md
+    description: "Focused Signals scout for PostHog projects running surveys. Watches active surveys for\
+      \ score regressions (NPS / CSAT / rating drops), response-volume drops, abandonment spikes, and\
+      \ targeting drift, A\u2026"
+  - name: speckit.posthog.signals-scout-web-analytics
+    file: skills/signals-scout-web-analytics/SKILL.md
+    description: "Focused Signals scout for PostHog projects with web traffic. Watches the acquisition\
+      \ and site-health layer the web analytics product reports on: per-channel session volume diverging\
+      \ from the site's o\u2026"
+  - name: speckit.posthog.skills-store
+    file: skills/skills-store/SKILL.md
+    description: Discover and use shared team skills stored in PostHog. Use when the user asks to list,
+      browse, load, or manage "shared skills", "team skills", or references the "skills store" / "skill
+      store".
+  - name: speckit.posthog.suggesting-data-imports
+    file: skills/suggesting-data-imports/SKILL.md
+    description: "Use when the user asks about revenue, payments, subscriptions, billing, CRM deals, support\
+      \ tickets, production database tables, or other data that PostHog does not collect natively. Also\
+      \ use when a q\u2026"
+  - name: speckit.posthog.suppressing-noisy-errors
+    file: skills/suppressing-noisy-errors/SKILL.md
+    description: "Create PostHog error tracking suppression rules to drop high-volume, low-value errors\
+      \ at ingestion. Use when the user asks \"stop capturing this error\", \"drop browser extension errors\"\
+      , \"ignore Resize\u2026"
+  - name: speckit.posthog.triaging-error-issues
+    file: skills/triaging-error-issues/SKILL.md
+    description: "Triage PostHog error tracking issues during a daily or on-call review. Use when the\
+      \ user asks \"what's broken?\", \"what new errors do we have?\", \"show me top errors today\", \"\
+      what should I look at this\u2026"
+  - name: speckit.posthog.triaging-visual-review-runs
+    file: skills/triaging-visual-review-runs/SKILL.md
+    description: "Inspects PostHog Visual Review (VR) runs that gate PR merges with screenshot regression\
+      \ checks. Use when the user mentions \"visual review\", \"VR\", \"snapshot diff\", \"screenshot\
+      \ test\", \"storybook regres\u2026"
+  - name: speckit.posthog.tuning-incremental-sync-config
+    file: skills/tuning-incremental-sync-config/SKILL.md
+    description: "Change the sync configuration of an existing data warehouse schema \u2014 switch sync_type,\
+      \ pick a different incremental_field, set primary_key_columns, choose cdc_table_mode, or change\
+      \ sync_frequency. Us\u2026"
+  - name: speckit.posthog.working-with-skills
+    file: skills/working-with-skills/SKILL.md
+    description: "Best practices for agents managing PostHog skills via the MCP `skill-*` tools \u2014\
+      \ how to discover, read, create, update, and refactor skills efficiently, especially large skills\
+      \ with many bundled files\u2026"
+  - name: speckit.posthog.agent-error-analyzer
+    file: agents/error-analyzer.md
+    description: Analyze multiple PostHog errors in parallel to identify patterns, root causes, and prioritize
+      fixes based on user impact.
+tags:
+- analytics
+- feature-flags
+- experiments
+- error-tracking
+- a/b-testing
+- surveys
+- dashboards
+- llm-analytics

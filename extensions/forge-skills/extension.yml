@@ -1,0 +1,49 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/atlassian/forge-skills)
+# Source: https://developer.atlassian.com/platform/forge/
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: forge-skills
+  name: forge-skills
+  version: 0.1.0
+  description: Forge app builder skill bundle with Forge MCP configuration for Atlassian Forge workflows.
+  author: Atlassian Labs
+  license: Apache-2.0
+  repository: https://developer.atlassian.com/platform/forge/
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.forge-skills.forge-app-builder
+    file: skills/forge-app-builder/SKILL.md
+    description: "Guides building, deploying, troubleshooting, and installing Atlassian Forge apps \u2014\
+      \ custom extensions built with the Forge CLI (forge create, forge deploy, forge install). Use when\
+      \ the user wants to c\u2026"
+  - name: speckit.forge-skills.forge-app-review
+    file: skills/forge-app-review/SKILL.md
+    description: "Performs a lightweight pre-release readiness review of Atlassian Forge apps across manifest/module\
+      \ wiring, architecture, runtime compatibility, dependency posture, tests, deploy readiness, and\
+      \ obviou\u2026"
+  - name: speckit.forge-skills.forge-connector
+    file: skills/forge-connector/SKILL.md
+    description: "Guides building and deploying Atlassian Forge Teamwork Graph connector apps that ingest\
+      \ external data into Atlassian's Teamwork Graph, making it searchable in Rovo Search and surfaced\
+      \ in Rovo Chat. U\u2026"
+  - name: speckit.forge-skills.forge-cost-optimizer
+    file: skills/forge-cost-optimizer/SKILL.md
+    description: "Optimizes Atlassian Forge apps to reduce platform consumption and avoid unnecessary\
+      \ costs using Atlassian's \"Optimise Forge platform costs\" guidance. Use when the user asks to\
+      \ optimize Forge app cost\u2026"
+  - name: speckit.forge-skills.forge-debugger
+    file: skills/forge-debugger/SKILL.md
+    description: "Diagnoses and fixes issues in Atlassian Forge apps. Use this skill whenever a Forge\
+      \ app has errors, crashes, shows blank UI, fails to deploy, doesn't appear after installation, has\
+      \ permission issues,\u2026"
+  - name: speckit.forge-skills.forge-security-review
+    file: skills/forge-security-review/SKILL.md
+    description: "Performs a white-box security review of Atlassian Forge apps using structured, Forge-specific\
+      \ security rules and evidence-driven reporting. Use when the user asks for a Forge security review,\
+      \ securit\u2026"
+tags:
+- development

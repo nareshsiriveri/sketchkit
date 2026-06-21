@@ -1,0 +1,71 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gopigment/ai-plugins)
+# Source: https://www.pigment.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: pigment
+  name: pigment
+  version: 1.0.8
+  description: Analyze business data and build planning models in your Pigment workspace
+  author: Pigment
+  license: Apache-2.0
+  repository: https://www.pigment.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.pigment.analyzing-pigment-data
+    file: skills/analyzing-pigment-data/SKILL.md
+    description: "Always use this skill when querying, exploring, or analyzing existing data in a Pigment\
+      \ workspace. Covers the analysis workflow, query formulation, data concepts, analysis patterns,\
+      \ ambiguity handlin\u2026"
+  - name: speckit.pigment.designing-boards
+    file: skills/designing-boards/SKILL.md
+    description: Always use when creating or editing a Board. This skill includes supporting files in
+      this directory - explore as needed.
+  - name: speckit.pigment.designing-views
+    file: skills/designing-views/SKILL.md
+    description: Always use this skill when creating or editing Views, or needing to pick a View.
+  - name: speckit.pigment.formatting-and-highlighting
+    file: skills/formatting-and-highlighting/SKILL.md
+    description: "Best practices for metric default formatting. Covers: decimals, prefix, suffix, currency\
+      \ ($/\u20AC), percent (%), K/M/bp/thousand/million scaling, thousand separator, sign / zero / negative\
+      \ handling, text\u2026"
+  - name: speckit.pigment.integrating-external-data
+    file: skills/integrating-external-data/SKILL.md
+    description: "Always use this skill when creating new lists to import CSV data into, importing CSV\
+      \ files into Pigment, mapping CSV columns to properties, deciding whether to import into dimensions\
+      \ vs transaction l\u2026"
+  - name: speckit.pigment.modeling-pigment-applications
+    file: skills/modeling-pigment-applications/SKILL.md
+    description: "Always use this skill when designing or modifying Pigment applications. Provides the\
+      \ mental model of a Pigment app (Application, Dimensions, Calendars, Metrics, Transaction Lists,\
+      \ Tables), the core c\u2026"
+  - name: speckit.pigment.optimizing-pigment-performance
+    file: skills/optimizing-pigment-performance/SKILL.md
+    description: "Always use this skill when troubleshooting slow calculations or timeouts, analyzing\
+      \ profiler output to identify bottlenecks, understanding scope propagation, managing sparsity, optimizing\
+      \ formula per\u2026"
+  - name: speckit.pigment.planning-cycles-pigment-applications
+    file: skills/planning-cycles-pigment-applications/SKILL.md
+    description: "Always use this skill when the user mentions or implies versions, Actual, Actuals, Budget,\
+      \ Budgeting, Forecast, Reforecast, Rolling Forecast, Version, Versioning, Plan, switchover, scenarios,\
+      \ snapsho\u2026"
+  - name: speckit.pigment.securing-pigment-applications
+    file: skills/securing-pigment-applications/SKILL.md
+    description: "Always use this skill when designing, applying, or debugging Access Rights and security\
+      \ in Pigment applications. Provides the AR mental model (User, Role, dimension axis, AR Metric,\
+      \ Apply rule), the\u2026"
+  - name: speckit.pigment.solving-specific-use-cases
+    file: skills/solving-specific-use-cases/SKILL.md
+    description: "Always use this skill when building or extending models for specific planning domains\
+      \ \u2014 FP&A, Workforce Planning, Sales Performance Management, Supply Chain Planning, or Financial\
+      \ Consolidation. Cove\u2026"
+  - name: speckit.pigment.writing-pigment-formulas
+    file: skills/writing-pigment-formulas/SKILL.md
+    description: "Always use this skill when writing, editing, or debugging Pigment formulas \u2014 including\
+      \ conditional logic, blank handling, date-range logic, aggregation, prior-period lookups, and dimensional\
+      \ transfor\u2026"
+tags:
+- productivity

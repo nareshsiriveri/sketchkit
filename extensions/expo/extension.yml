@@ -1,0 +1,88 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/expo/skills)
+# Source: https://github.com/expo/skills/blob/main/plugins/expo/README.md
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: expo
+  name: expo
+  version: 1.3.0
+  description: Official Expo skills for building, deploying, upgrading, and debugging Expo apps
+  author: Expo Team
+  license: Apache-2.0
+  repository: https://github.com/expo/skills/blob/main/plugins/expo/README.md
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.expo.add-app-clip
+    file: skills/add-app-clip/SKILL.md
+    description: "Add an iOS App Clip target to an Expo app. Use when the user mentions App Clip, AASA,\
+      \ apple-app-site-association, appclips, smart app banner, or wants to ship a lightweight iOS Clip\
+      \ invoked from a UR\u2026"
+  - name: speckit.expo.building-native-ui
+    file: skills/building-native-ui/SKILL.md
+    description: Complete guide for building beautiful apps with Expo Router. Covers fundamentals, styling,
+      components, navigation, animations, patterns, and native tabs.
+  - name: speckit.expo.eas-update-insights
+    file: skills/eas-update-insights/SKILL.md
+    description: "Check the health of published EAS Updates: crash rates, install/launch counts, unique\
+      \ users, payload size, and the split between embedded and OTA users per channel. Use when the user\
+      \ asks how an upda\u2026"
+  - name: speckit.expo.expo-api-routes
+    file: skills/expo-api-routes/SKILL.md
+    description: Guidelines for creating API routes in Expo Router with EAS Hosting
+  - name: speckit.expo.expo-brownfield
+    file: skills/expo-brownfield/SKILL.md
+    description: "Integrate Expo and React Native into an existing native iOS or Android app. Use when\
+      \ the user mentions brownfield, embedding React Native in a native app, AAR/XCFramework, or adding\
+      \ Expo to an existi\u2026"
+  - name: speckit.expo.expo-cicd-workflows
+    file: skills/expo-cicd-workflows/SKILL.md
+    description: "Helps understand and write EAS workflow YAML files for Expo projects. Use this skill\
+      \ when the user asks about CI/CD or workflows in an Expo or EAS context, mentions .eas/workflows/,\
+      \ or wants help wit\u2026"
+  - name: speckit.expo.expo-deployment
+    file: skills/expo-deployment/SKILL.md
+    description: Deploying Expo apps to iOS App Store, Android Play Store, web hosting, and API routes
+  - name: speckit.expo.expo-dev-client
+    file: skills/expo-dev-client/SKILL.md
+    description: Build and distribute Expo development clients locally or via TestFlight
+  - name: speckit.expo.expo-examples
+    file: skills/expo-examples/SKILL.md
+    description: "Expo's official example projects \u2014 the expo/examples repo of ~70 `with-*` integrations\
+      \ (Stripe, Clerk, Supabase, OpenAI, maps, Reanimated, SQLite, Skia, NativeWind, and more). Use when\
+      \ integrating a\u2026"
+  - name: speckit.expo.expo-module
+    file: skills/expo-module/SKILL.md
+    description: "Guide for creating and writing Expo native modules and views using the Expo Modules\
+      \ API (Swift, Kotlin, TypeScript). Covers module definition DSL, native views, shared objects, config\
+      \ plugins, lifecy\u2026"
+  - name: speckit.expo.expo-observe
+    file: skills/expo-observe/SKILL.md
+    description: "Use for anything related to EAS Observe \u2014 adding `expo-observe` to an Expo project\
+      \ (AppMetricsRoot/ObserveRoot HOC, markInteractive, the useObserve hook, and the Expo Router / React\
+      \ Navigation integr\u2026"
+  - name: speckit.expo.expo-tailwind-setup
+    file: skills/expo-tailwind-setup/SKILL.md
+    description: Set up Tailwind CSS v4 in Expo with react-native-css and NativeWind v5 for universal
+      styling
+  - name: speckit.expo.expo-ui
+    file: skills/expo-ui/SKILL.md
+    description: "Build native UI with the @expo/ui package: real SwiftUI on iOS and Jetpack Compose on\
+      \ Android rendered from React in an Expo or React Native app. Covers universal cross-platform components\
+      \ (Host, Col\u2026"
+  - name: speckit.expo.native-data-fetching
+    file: skills/native-data-fetching/SKILL.md
+    description: "Use when implementing or debugging ANY network request, API call, or data fetching.\
+      \ Covers fetch API, React Query, SWR, error handling, caching, offline support, and Expo Router\
+      \ data loaders (`useLoa\u2026"
+  - name: speckit.expo.upgrading-expo
+    file: skills/upgrading-expo/SKILL.md
+    description: Guidelines for upgrading Expo SDK versions and fixing dependency issues
+  - name: speckit.expo.use-dom
+    file: skills/use-dom/SKILL.md
+    description: Use Expo DOM components to run web code in a webview on native and as-is on web. Migrate
+      web code to native incrementally.
+tags:
+- development

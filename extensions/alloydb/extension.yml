@@ -1,0 +1,47 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/gemini-cli-extensions/alloydb)
+# Source: https://cloud.google.com/alloydb
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: alloydb
+  name: alloydb
+  version: 0.2.0
+  description: Create, connect, and interact with an AlloyDB for PostgreSQL database and data.
+  author: Google LLC
+  license: Apache-2.0
+  repository: https://cloud.google.com/alloydb
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.alloydb.alloydb-postgres-access-management
+    file: skills/alloydb-postgres-access-management/SKILL.md
+    description: Use these skills when you need to manage database users, inspect permissions and roles,
+      and verify global configuration parameters related to security and access control.
+  - name: speckit.alloydb.alloydb-postgres-admin
+    file: skills/alloydb-postgres-admin/SKILL.md
+    description: Use these skills when you need to provision new AlloyDB clusters and instances, monitor
+      their creation status, and retrieve high-level configuration or health data for the environment.
+  - name: speckit.alloydb.alloydb-postgres-data
+    file: skills/alloydb-postgres-data/SKILL.md
+    description: Use these skills when you need to explore the database schema, identify objects like
+      views and triggers, and execute custom SQL queries to interact with your data.
+  - name: speckit.alloydb.alloydb-postgres-health
+    file: skills/alloydb-postgres-health/SKILL.md
+    description: Use these skills when you need to optimize storage, identify index issues, analyze table
+      statistics, or manage autovacuum and tablespace configurations to maintain peak database health.
+  - name: speckit.alloydb.alloydb-postgres-monitor
+    file: skills/alloydb-postgres-monitor/SKILL.md
+    description: Use these skills when you need to troubleshoot slow performance, analyze query execution
+      plans, identify resource-heavy processes, and monitor system-level PromQL metrics.
+  - name: speckit.alloydb.alloydb-postgres-optimize
+    file: skills/alloydb-postgres-optimize/SKILL.md
+    description: Use these skills when you need to discover and manage PostgreSQL extensions or fine-tune
+      engine-level settings such as memory allocation and server configuration parameters.
+  - name: speckit.alloydb.alloydb-postgres-replication
+    file: skills/alloydb-postgres-replication/SKILL.md
+    description: Use these skills when you need to monitor replication health, manage sync states between
+      nodes, and ensure the high availability and data distribution of your AlloyDB cluster.
+tags:
+- database

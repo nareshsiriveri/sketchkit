@@ -1,0 +1,58 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/fastly/fastly-agent-toolkit)
+# Source: https://github.com/fastly/fastly-agent-toolkit/blob/main/README.md
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: fastly-agent-toolkit
+  name: fastly-agent-toolkit
+  version: 0.1.0
+  description: Fastly development tools and platform skills
+  author: Fastly
+  license: Apache-2.0
+  repository: https://github.com/fastly/fastly-agent-toolkit/blob/main/README.md
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.fastly-agent-toolkit.falco
+    file: skills/falco/SKILL.md
+    description: "Lints, tests, simulates, and formats Fastly VCL code using the falco tool. Also serves\
+      \ as the authoritative VCL reference via the falco Go source, which implements Fastly's full VCL\
+      \ dialect. Use when\u2026"
+  - name: speckit.fastly-agent-toolkit.fastlike
+    file: skills/fastlike/SKILL.md
+    description: "Runs Fastly Compute WASM binaries locally and serves as the authoritative reference\
+      \ for Compute platform internals. The fastlike source code is highly readable and covers the host\
+      \ ABI, caching and pu\u2026"
+  - name: speckit.fastly-agent-toolkit.fastly
+    file: skills/fastly/SKILL.md
+    description: "Configures, manages, and debugs the Fastly CDN platform \u2014 covering service and\
+      \ backend setup, caching and VCL, security features like DDoS/WAF/NGWAF/rate limiting/bot management,\
+      \ TLS certificates and\u2026"
+  - name: speckit.fastly-agent-toolkit.fastly-cli
+    file: skills/fastly-cli/SKILL.md
+    description: "Executes Fastly CLI commands for managing CDN services, Compute deploys, and edge infrastructure.\
+      \ Use when running `fastly` CLI commands, creating or managing Fastly services from the terminal,\
+      \ deplo\u2026"
+  - name: speckit.fastly-agent-toolkit.fastly-ngwaf
+    file: skills/fastly-ngwaf/SKILL.md
+    description: "Performs an internal audit of Fastly Next-Gen WAF (NGWAF) workspaces to audit that critical\
+      \ templated protection rules are configured and enabled. Use when auditing NGWAF workspace security\
+      \ posture,\u2026"
+  - name: speckit.fastly-agent-toolkit.viceroy
+    file: skills/viceroy/SKILL.md
+    description: "Runs Fastly Compute WASM applications locally with Viceroy, specifically for Rust and\
+      \ Component Model projects. Use when starting a local Fastly Compute dev server with Viceroy, configuring\
+      \ fastly.to\u2026"
+  - name: speckit.fastly-agent-toolkit.xvcl
+    file: skills/xvcl/SKILL.md
+    description: "Extends Fastly VCL with loops, functions, constants, macros, conditionals, and includes\
+      \ via XVCL \u2014 a VCL transpiler that compiles .xvcl files into standard VCL. Use when writing\
+      \ VCL for Fastly, worki\u2026"
+tags:
+- fastly
+- edge
+- compute
+- vcl
+- cdn

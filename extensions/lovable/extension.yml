@@ -1,0 +1,34 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/lovablelabs/mcp)
+# Source: https://lovable.dev
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: lovable
+  name: lovable
+  version: 0.1.0
+  description: Build, iterate on, deploy, and manage Lovable apps from Claude Code. Bundles the official
+    Lovable MCP server (remote, OAuth 2.1) and adds focused commands for the common build/iterate/database
+    workflows, with credit- and publish-safety prompts.
+  author: Lovable
+  license: Apache-2.0
+  repository: https://lovable.dev
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.lovable.build
+    file: commands/build.md
+    description: Build a new Lovable app from a prompt and optionally deploy it
+  - name: speckit.lovable.db
+    file: commands/db.md
+    description: Provision or query a Lovable project's Cloud (Postgres) database
+  - name: speckit.lovable.iterate
+    file: commands/iterate.md
+    description: Send a change request to a Lovable project's agent and review the diff
+tags:
+- lovable
+- app-builder
+- deploy
+- full-stack
+- mcp

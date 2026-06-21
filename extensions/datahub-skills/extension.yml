@@ -1,0 +1,119 @@
+# Converted from a Claude Code plugin in anthropics/claude-plugins-official (via https://github.com/datahub-project/datahub-skills)
+# Source: https://datahub.com
+# License: Apache-2.0
+
+schema_version: '1.0'
+extension:
+  id: datahub-skills
+  name: datahub-skills
+  version: 1.4.1
+  description: DataHub development and interaction toolkit with connector planning, PR review, catalog
+    search, metadata enrichment, lineage tracing, data quality management, and connection setup skills
+  author: DataHub Project
+  license: Apache-2.0
+  repository: https://datahub.com
+requires:
+  speckit_version: '>=0.2.0'
+provides:
+  commands:
+  - name: speckit.datahub-skills.catalog-enrich
+    file: commands/catalog-enrich.md
+    description: Add or update metadata in DataHub - descriptions, tags, glossary terms, ownership
+  - name: speckit.datahub-skills.catalog-lineage
+    file: commands/catalog-lineage.md
+    description: Explore lineage, trace data dependencies, and perform impact analysis
+  - name: speckit.datahub-skills.catalog-quality
+    file: commands/catalog-quality.md
+    description: "Manage data quality \u2014 assertions, incidents, and subscriptions"
+  - name: speckit.datahub-skills.catalog-search
+    file: commands/catalog-search.md
+    description: Search the DataHub catalog and answer questions about your data
+  - name: speckit.datahub-skills.catalog-setup
+    file: commands/catalog-setup.md
+    description: Set up DataHub connection, install CLI, configure authentication and default scopes
+  - name: speckit.datahub-skills.connector-planning
+    file: commands/connector-planning.md
+    description: Plan a new DataHub connector - research the source system, map entities, design architecture,
+      and create a planning document
+  - name: speckit.datahub-skills.connector-review
+    file: commands/connector-review.md
+    description: Review DataHub connector code for standards compliance and quality
+  - name: speckit.datahub-skills.load-standards
+    file: commands/load-standards.md
+    description: Read and confirm all golden connector standard files have been loaded.
+  - name: speckit.datahub-skills.datahub-connector-planning
+    file: skills/datahub-connector-planning/SKILL.md
+    description: "Plans new DataHub connectors by classifying the source system, researching it using\
+      \ a dedicated agent or inline research, and generating a _PLANNING.md blueprint with entity mapping\
+      \ and architecture\u2026"
+  - name: speckit.datahub-skills.datahub-connector-pr-review
+    file: skills/datahub-connector-pr-review/SKILL.md
+    description: "Reviews DataHub connector implementations against 22 golden standards for compliance,\
+      \ code quality, silent failures, test coverage, type design, and merge readiness. Use when reviewing\
+      \ connector code\u2026"
+  - name: speckit.datahub-skills.datahub-enrich
+    file: skills/datahub-enrich/SKILL.md
+    description: "Use this skill when the user wants to add or update metadata in DataHub: descriptions,\
+      \ tags, glossary terms, ownership, deprecation, domains, data products, structured properties, documents,\
+      \ or field\u2026"
+  - name: speckit.datahub-skills.datahub-lineage
+    file: skills/datahub-lineage/SKILL.md
+    description: "Use this skill when the user wants to explore lineage, trace data dependencies, perform\
+      \ impact analysis, find root causes, map data pipelines, or understand how data flows between systems.\
+      \ Triggers o\u2026"
+  - name: speckit.datahub-skills.datahub-mfe-configure-app
+    file: skills/datahub-mfe-configure-app/SKILL.md
+    description: "Configure a DataHub instance to load and display a Micro Frontend (MFE) app. Use when\
+      \ the user wants to register an MFE with DataHub, add an MFE to the nav sidebar, set up MFE config\
+      \ for local dev or\u2026"
+  - name: speckit.datahub-skills.datahub-mfe-create-app
+    file: skills/datahub-mfe-create-app/SKILL.md
+    description: Scaffold a new DataHub Micro Frontend (MFE) app with all boilerplate files. Use when
+      the user wants to create a new micro frontend, MFE, remote app, or Module Federation app for DataHub.
+  - name: speckit.datahub-skills.datahub-quality
+    file: skills/datahub-quality/SKILL.md
+    description: "Use this skill when the user wants to manage data quality in DataHub: create or run\
+      \ assertions, check assertion outcomes, raise or resolve incidents, create notification subscriptions,\
+      \ or diagnose he\u2026"
+  - name: speckit.datahub-skills.datahub-search
+    file: skills/datahub-search/SKILL.md
+    description: "Use this skill when the user wants to search the DataHub catalog, discover entities,\
+      \ answer ad-hoc questions about their data, find datasets, or browse by platform or domain. Triggers\
+      \ on: \"search Dat\u2026"
+  - name: speckit.datahub-skills.datahub-setup
+    file: skills/datahub-setup/SKILL.md
+    description: "Use this skill when the user needs to set up a DataHub connection, install the DataHub\
+      \ CLI, configure authentication, verify connectivity, set default scopes, or create agent configuration\
+      \ profiles.\u2026"
+  - name: speckit.datahub-skills.load-standards-skill
+    file: skills/load-standards/SKILL.md
+    description: "Loads all 22 DataHub connector golden standards into context. Use before starting connector\
+      \ development or review work to ensure the full set of standards is available for reference. Triggers\
+      \ on: \"lo\u2026"
+  - name: speckit.datahub-skills.using-datahub
+    file: skills/using-datahub/SKILL.md
+    description: "This skill provides routing guidance for all DataHub interaction skills. It is injected\
+      \ at session start and helps map user intent to the correct skill. Do not invoke this skill directly\
+      \ \u2014 it is load\u2026"
+  - name: speckit.datahub-skills.agent-comment-resolution-checker
+    file: agents/comment-resolution-checker.md
+    description: "Use this agent when you need to verify whether a PR author has genuinely addressed previous\
+      \ review comments before re-review. This agent fetches review comments, classifies them by type\
+      \ (code change\u2026"
+  - name: speckit.datahub-skills.agent-connector-researcher
+    file: agents/connector-researcher.md
+    description: "Research source systems for DataHub connector development. Gathers documentation, finds\
+      \ similar connectors, identifies entity mappings, and assesses implementation complexity. Returns\
+      \ structured find\u2026"
+  - name: speckit.datahub-skills.agent-connector-validator
+    file: agents/connector-validator.md
+    description: "Run provided validation scripts, analyze their output, and report results for DataHub\
+      \ connector verification steps. Handles extraction verification, capability checks, code quality\
+      \ gates, source conn\u2026"
+  - name: speckit.datahub-skills.agent-metadata-searcher
+    file: agents/metadata-searcher.md
+    description: "Execute DataHub search, browse, and lineage operations, retrieve entity metadata, and\
+      \ return structured results. Used by the datahub-search and datahub-lineage skills to delegate catalog\
+      \ queries. <ex\u2026"
+tags:
+- database
